@@ -57,7 +57,7 @@ nav_next:
 就像一小圈信任與安全官員無法引導全球社群媒體一樣，沒有少數研究人員能夠成功地為世界對齊通用 AI 系統。
 
 <div class="overview-section">
-<noscript><img src="/img/gpt-value-correlation-tw.png" alt="GPT 與跨文化人類價值反應之間的相關性" class="overview-image" width="1024" height="1024" loading="lazy" decoding="async"></noscript>
+<noscript><img src="/img/gpt-value-correlation-tw.jpg" alt="GPT 與跨文化人類價值反應之間的相關性" class="overview-image" width="1024" height="1024" loading="lazy" decoding="async"></noscript>
 <p class="figure-caption"><strong>圖 1.</strong> GPT 與跨文化人類價值反應之間的相關性。隨著與美國——高度 WEIRD（西方、受過教育、工業化、富裕和民主）參考點——的文化距離增加，GPT 與當地人類價值觀的對齊程度下降。這種模式說明了若全球 AI 系統僅在狹隘的文化背景下訓練，就可能大規模嵌入並放大單一的道德世界觀——這對多元主義和民主自決是一個微妙但系統性的風險。來源：<a href="https://osf.io/preprints/psyarxiv/5b26t_v1">PsyArXiv Preprints, “Which Humans?”</a> (via <a href="https://www.adalovelaceinstitute.org/blog/cultural-misalignment-llms/">Ada Lovelace Institute, 2025</a>).</p>
 </div>
 

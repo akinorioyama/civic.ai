@@ -58,7 +58,7 @@ This is exactly the kind of attentiveness that is lacking in current AI alignmen
 Just as a small circle of trust and safety officials could not steer global social media, no handful of researchers can successfully align general-purpose AI systems for the world.
 
 <div class="overview-section">
-<noscript><img src="/img/gpt-value-correlation.png" alt="Correlation between GPT and human values across cultures" class="overview-image" width="1600" height="1506" loading="lazy" decoding="async"></noscript>
+<noscript><img src="/img/gpt-value-correlation.jpg" alt="Correlation between GPT and human values across cultures" class="overview-image" width="1600" height="1506" loading="lazy" decoding="async"></noscript>
 <p class="figure-caption"><strong>Figure 1.</strong> Correlation between GPT and human value responses across cultures. As the cultural distance from the United States — a highly WEIRD (Western, Educated, Industrialised, Rich, and Democratic) reference point — increases, GPT’s alignment with local human values declines. This pattern illustrates how global AI systems, trained within narrow cultural contexts, can embed and amplify a single moral worldview at scale — a subtle but systemic risk to pluralism and democratic self-determination. Source: <a href="https://osf.io/preprints/psyarxiv/5b26t_v1">PsyArXiv Preprints, “Which Humans?”</a> (via <a href="https://www.adalovelaceinstitute.org/blog/cultural-misalignment-llms/">Ada Lovelace Institute, 2025</a>).</p>
 </div>
 
