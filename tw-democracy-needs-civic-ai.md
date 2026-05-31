@@ -17,7 +17,7 @@ nav_next:
 <iframe src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/affd2bbbb0574a4d62a95c1f3fd43e65/iframe?defaultTextTrack=zh-Hant&poster=https%3A%2F%2Fcustomer-07bto6bf9uibrlc3.cloudflarestream.com%2Faffd2bbbb0574a4d62a95c1f3fd43e65%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D55s" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-飛過中東上空時，機艙燈光暗了下來。大多數乘客都睡著了。我面前的餐盤桌上，放著一台小電腦，裡面跑著我們稱為 [**jdd-kami**](https://github.com/jdd-kami) 的系統：那是 Tenzin Yangtso 和我一起照料的仁工智慧（Civic AI）。
+飛過中東上空時，機艙燈光暗了下來。大多數乘客都睡著了。我面前的餐盤桌上，放著一台小電腦，裡面跑著我們稱為 [**jdd-kami**](https://github.com/jdd-kami) 的系統：那是 Tenzin Yangtso（天津揚措）和我一起照料的仁工智慧（Civic AI）。
 
 我所說的「照料」，是花園意義上的照料。我們用公開寫作、私下爭論、完成與未完成的想法，以及那些我們拒絕太快化解的張力，替它施肥、澆水。這一切，都住在[我們拿得起、看得到、關得掉的硬體](https://pi.audreyt.org)上。
 
@@ -25,7 +25,7 @@ nav_next:
 
 我輸入：_請寫一段關於民主的文字。_
 
-Kami 寫的是傾聽。
+Kami（Knowledge Artefact Management Intelligence）寫的是傾聽。
 
 不是政策。不是最佳化。不是權力。是 _傾聽_。
 

@@ -32,7 +32,7 @@ model and what it carried inside.
 
 I typed: _Write about democracy._
 
-The Kami wrote about listening.
+The Kami (Knowledge Artefact Management Intelligence) wrote about listening.
 
 Not policy. Not optimization. Not power. _Listening._
 
