@@ -200,7 +200,7 @@ overview_image:
     src: "/img/overview-small.jpg"
     alt: "6-Pack of Care visual overview"
     w: 1280
-    h: 1810
+    h: 1781
 ---
 
 <div class="conf-quotes-pair">

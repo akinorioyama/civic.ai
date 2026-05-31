@@ -18,7 +18,7 @@ next_action:
 ---
 
 <div class="overview-section">
-<noscript><img src="/img/overview-small.jpg" alt="6-Pack of Care visual overview" class="overview-image" width="1280" height="1810" fetchpriority="high" decoding="async"></noscript>
+<noscript><img src="/img/overview-small.jpg" alt="6-Pack of Care visual overview" class="overview-image" width="1280" height="1781" fetchpriority="high" decoding="async"></noscript>
 </div>
 
 **Governance should feel like a daily capability, not just a periodic vote.**

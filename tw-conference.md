@@ -199,8 +199,8 @@ packs:
 overview_image:
     src: "/img/overview-small-tw.jpg"
     alt: "關懷六力概覽圖"
-    w: 1131
-    h: 1600
+    w: 1280
+    h: 1781
 ---
 
 <div class="conf-quotes-pair">

@@ -17,7 +17,7 @@ next_action:
 ---
 
 <div class="overview-section">
-<noscript><img src="/img/overview-small-tw.jpg" alt="關懷六力概覽圖" class="overview-image" width="1131" height="1600" fetchpriority="high" decoding="async"></noscript>
+<noscript><img src="/img/overview-small-tw.jpg" alt="關懷六力概覽圖" class="overview-image" width="1280" height="1781" fetchpriority="high" decoding="async"></noscript>
 </div>
 
 **治理應該是日常能力，不只是定期投票。**
