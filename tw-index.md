@@ -111,4 +111,4 @@ next_action:
 
 </div>
 
-本計畫介於[計畫宣言](/tw/manifesto/)、一組可操作的 pack 頁面，以及一本預計 2026 年出版的書之間。唐鳳與 Caroline Green 已於 2026 年 3 月 25 日在牛津羅德學院的[仁工智慧研討會（Civic AI Conference）](/tw/conference/)發表本框架——該頁有大會議程、部分演講，以及社群關於 AI 與關懷的 Polis 意義建構成果。
+本計畫介於[計畫宣言](/tw/manifesto/)、一組可操作的 pack 頁面，以及一本預計 2027 年初由 Wiley 出版的書之間。唐鳳與 Caroline Green 已於 2026 年 3 月 25 日在牛津羅德學院的[仁工智慧研討會（Civic AI Conference）](/tw/conference/)發表本框架——該頁有大會議程、部分演講，以及社群關於 AI 與關懷的 Polis 意義建構成果。
