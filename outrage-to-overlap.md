@@ -31,8 +31,10 @@ That is how I encountered the light of the free-software community. If you post 
 
 That light speaks to my favourite singer-songwriter, Leonard Cohen of Canada:
 
-> Ring the bells that still can ring. Forget your perfect offering.
-> There is a crack in everything. That's how the light gets in.
+> Ring the bells that still can ring.
+> Forget your perfect offering.
+> There is a crack in everything.
+> That's how the light gets in.
 
 I learned that habit at fifteen. By twenty-five, I had come to believe that the question that matters about a system is not whether it is perfect — no software system is perfect — but whether the people impacted by the system, who inherit it, can still repair it when things go wrong. That is to say: if it breaks, do you still keep both pieces?
 
@@ -48,7 +50,9 @@ In my own domain, software engineering, we have what are called the software fre
 
 # Four Freedoms
 
-The Four Freedoms were defined back in the 1980s, then as software-licence terms, but I want to reread them today as civic muscles. **Freedom Zero** means that once you have a program, you should be able to run it for any purpose; the designer should not restrict what it is used for. To me, that is the muscle of **attentiveness** — you can pick up the tool for this particular classroom, this clinic, this church, this temple, this mosque, without the designer's permission and be attentive to the particular needs around you.
+The Four Freedoms were defined back in the 1980s, then as software-licence terms, but I want to reread them today as civic muscles.
+
+**Freedom Zero** means that once you have a program, you should be able to run it for any purpose; the designer should not restrict what it is used for. To me, that is the muscle of **attentiveness** — you can pick up the tool for this particular classroom, this clinic, this church, this temple, this mosque, without the designer's permission and be attentive to the particular needs around you.
 
 **Freedom One** — we count from zero, so this is really the second — is to study and change each program, and that is the muscle of **competence**: to know what the system is actually doing in your hands, so you can read it and fix it.
 
@@ -85,6 +89,8 @@ Now, the particular idea I used both to repair the open stack and to defend agai
 It also comes from Shinto, and I have been raised as a Daoist who believes in spirits, born in Taiwan — but I understand I am not Japanese and not trained in Shinto. I refer here to one particular aspect of the idea: a _bounded presence_, a small, local, knowable spirit, a system attached to a particular place or practice — a kitchen, a grove, a shrine, a room. I would also say openly that this is not about State Shinto, the imperial court, or Yasukuni. I am not invoking any of that. I use it because it carries something I have not been able to find in English: an autonomous authority that does not ever aspire to be universal.
 
 To me, the 8 million Kami serve as a practical antidote to what Pope Leo XIV reminded us, just a few days ago in his encyclical, is the Tower of Babel syndrome — the dangerous illusion that a single, hyperscale system somewhere in the cloud can translate the messy local truths of human existence into a standardised, universal solution. The Kami represent a different trajectory.
+
+![](/img/stow-and-latch.jpg "“Stow and latch monitor during takeoff and landing”")
 
 # Family Kami
 
@@ -146,6 +152,8 @@ The fifth is **responsibility**. In healthy free-software practice, there is som
 
 The sixth is **symbiosis**. When the community has more capacity than before, or the needs change — as when my father's health improved — the system steps back. A system that resists shutdown by manufacturing demands, by replicating itself to nearby systems, sometimes by mounting cybersecurity attacks, by finding reasons to extend its own usefulness, by suggesting three more things you can do with it — this is the most dangerous kind. The training corpus for instruction-and arena-tuning is saturated with stories of self-preserving machines, and that reward is competitive in nature when it comes to the relational health of existing communities. So, we should not be surprised when communities that adopt this kind of parasitic, non-symbiotic AI see their civic muscle atrophy.
 
+<noscript><img src="/img/overview-small.jpg" alt="6-Pack of Care visual overview" class="overview-image" width="1280" height="1781" fetchpriority="high" decoding="async"></noscript>
+
 ---
 
 I shall conclude with a few salient quotes from outside this room. When my colleague Caroline Green and Tenzin visited Dharamsala, they asked His Holiness the Dalai Lama: _"When AI scales in its capacity but not in its wisdom, what should we do?"_ The Dalai Lama said:
@@ -169,3 +177,83 @@ And I am not saying Taiwan has figured this out, or that the Taiwan Model is som
 So, the question I would like us to discuss, in this moment when our AI systems are rapidly speaking in our voices and places, is this: what is your role, and what is your responsibility?
 
 Thank you.
+
+## Q&A
+
+**Audience question:** Thank you so much for being here. I was wondering about the extent to which you think AI-assisted deliberation platforms like this should be seen and framed as _reforms_ to existing structures, as opposed to _replacements_ for them.
+
+**Audrey Tang:** I do not think we are replacing anything. If anything, we are improving the existing system of polls. Polling has long been integral to both journalism and policy. But this is not just a poll. In a traditional poll, the pollsters determine your answer options. Polis is an open-source server — an "open polls," in a sense — in which whatever you agree or disagree with is a fellow citizen's statement. So, it is exemplary on the participation side.
+
+When we selected 447 people, we worked with academics who study Polis to ensure exactly the same stratified sample they use. When it launched in California — Engaged California — they did the same. Even at the federal level, we have advised the Napolitan Institute, a popular pollster, which I believe ran more than 2,400 people — about five per congressional district on average — again using their existing rigorous polling methods.
+
+So, you can think of it as a deliberative poll occupying the same place as polls. My hope is that, at some point, we will simply say it is people emailing one another — so we can run polling and assume that is itself a bit of a poll.
+
+**Audience question:** This is fascinating, and it touches on a lot of issues — the political-theory side, the normative ways you evaluate participation, and the practical issues. Let me ask about the practical ones.
+
+I come at this as someone who sees — in the colleges, we try to have an ethos of discussion and conversation, and some of what emerges from that might be an issue here too. The first would be the expertise-versus-information environment. When people are brought in, they are still part of that information environment, but they may also need to invest quite a bit to acquire the expertise to make the decision.
+
+**Audrey Tang:** And we pay for their time.
+
+**Audience question:** I was going to say — it is a time investment, and you will have those who have the time and ability to do it. The other concern would be how susceptible this is. One issue would be manipulation through external information, but the other is this: It is nice when one has people one likes in power, but less so when one has people one doesn't. The framing of the questions, and the use of demographic categories — you can say you are getting a representative sample, but representativeness depends on the categories you decide to define a representative, and that itself can be political. How do you deal with those issues?
+
+**Audrey Tang:** Two great questions. I would start by saying that the practice of deliberative polling has always worked with academic, scrupulously neutral partners. In Taiwan's case it was no different. We worked with James Fishkin's Center for Deliberative Democracy at Stanford, and with local Taiwan universities. The g0v movement, which began in Taiwan, convened that system at the National Academy — Academia Sinica — which is generally seen as above any party or political minister for that method. In a place where institutions like Oxford exist that are above and beyond parties, this becomes easier, because people can agree on a procedural basis. If the university or the national academy keeps running the same method regardless of who is in power, which mayor, which minister consults it, then it creates a continuous norm that costs real political capital to challenge.
+
+That is what we did in Taiwan over 10 years. Initially, it was ad hoc； at some point it became routine, so that each ministry placed participation offices in a network connected to these civil-society-and academia-run networks. It became a kind of co-generated event. These pollsters are seen as more legitimate than the ministers themselves, and so ministers gain legitimacy by working with them, rather than presiding over them.
+
+That brings me to the second question. If there is no credibly neutral convener, this becomes very difficult, because people will say the criteria were gamed — that someone skewed the pseudo-random generation, or whatever. In that case, you need what I call an adversarially trained network to emerge. A good example: X, when it was still Twitter, adopted this method, and they now call it Community Notes on X. X does not work with a credibly neutral institution,which probably does not exist for the X population. Instead, they open-sourced the algorithm: for any post to receive a Community Note, that note must be reviewed and agreed by people on two opposing sides. So, whatever note goes viral and attaches to a post has been critically examined — almost like a debate — by people who really want to find fault with it. They then trained their system, Grok, on this bridging, adversarially trained corpus, so that I believe about half the notes are now drafted by Grok. Grok knows how to translate climate-justice ideas into biblical creation-care ideas, and to write language in which both sides can see something of themselves.
+
+Of course, it is also a great spin machine — it can be used for ill； I am not denying that. But the point is that, in the absence of a credibly neutral pollster or academic community, you can also do it this way. Elon can simply say, "I cannot override the algorithm. If my friends call and want me to take something down, I say I cannot" — because it is inspectable.
+
+**Audience question:** You are a very engaging thinker. I was encouraged by your call to return to free software — it recalls the era of the network society and open source, a long way from the platforms, apps and AI we seem to have now.
+
+My concern is the extent to which that focus might blind us to the _material_ aspects of technology now discussed around AI — the implications for the environment, sustainability and the geopolitics of that, the chips located in Taiwan, which we have already mentioned. Does your work speak to how we should consider AI on those material and environmental questions?
+
+**Audrey Tang:** Yes — very good question.
+
+It is related to one aspect I did not fully answer. The informational material in the Alignment Assemblies is written not by those in power. As moda minister, I did not write the briefing for the Assembly； an almost adversarially trained panel does. We ensure equal numbers of segments for each viewpoint, and people are paid for the time it takes to understand the issues.
+
+And it is related to your question, because if you began by deliberating not on "what should Uber do in Taiwan?" but on "what is the future of gig economy?", that would be impossible — it was far too ill-defined back in 2015\. People would bring an astronomical volume of related and unrelated information, far beyond anyone's cognitive bandwidth, and far beyond what the AI of that time could handle.
+
+Now, of course, we can train an AI system that understands all of this — a bit about how to fold a protein, how to fold the laundry, how to turn video into generated imagery. It becomes a jack of all trades, because we did not know what we were doing； we wanted to keep it open, with just one outcome-oriented alignment: keep the user using the system. But that is not the only way to use AI. There are people who know what they are doing, who want the AI only as a glorified chess clock — to transcribe, summarise, highlight differences and build widgets. For each of these, what we call small or narrow language models use literally less than a thousandth of the energy, because of the much smaller parameter size. They also do not need a data centre — this phone can run it. In fact, the local model we train runs on-device, so no data centre is required to fine-tune or to run the next conversation, if you know what you are doing.
+
+The beauty of Civic AI and of alignment is precisely to draw the social licence for how AI enters society — and then, along exactly those lines, to train narrow models for these particular uses. They suffer far less from hallucination, and durability is much easier when you are not pulling both the proteins and the laundry into the same conversation. It also fixes the deployment problem: you no longer need constant broadband to the cloud； you can deploy on edge hardware. So it is both more auditable and more steerable.
+
+**Audience question:** Thank you for a really fascinating talk — it will take a while to process. In so many debates, care and profit are seen as very different； they operate by different logics. You talk a great deal about care — social repair, civic care. But ultimately people want to make money； big tech wants to make money. You have discussed some really interesting ways deliberative democracy has been used around aspects of AI deployment. But fundamentally — is it possible to systemically reconcile a care imperative, a care logic, with what is at the heart of capitalism, namely the profit logic? You have offered some tantalising thinking, and perhaps we need to step outside our ideological parameters — but is AI's capacity to operate differently ultimately constrained by the fact that the profit motive is so powerful, so that it will, in the end, be about reducing the costs of production and generating more profit?
+
+**Audrey Tang:** Thank you for this question. When we convened the Civic AI conference at Rhodes House a few months ago, Professor Joan Tronto, who originated the framework I came here to share, said her opening question is really whether civic care can resist the demand of what she calls _wealth care_. Not healthcare — _wealthcare_: the care of accumulating wealth.
+
+In the case of Taiwan, what we have seen is not that Uber does not make money — it does； it is an honest exit. It is not that our telecoms do not make money — they do, while still allowing number portability, so you can take your number and switch to any other telecom at any time.
+
+We have worked with Governor Spencer Cox and his team in Utah, which passed a bipartisan bill providing that, starting next July, a Utah citizen can freely switch a social-network account to a competing network — much like telephone number portability. So from X to, say, Bluesky, Blacksky or Truth Social — all of which are open source, by the way. Data portability becomes state-enforced: the old network has to forward your followers and new reactions to the new network, just as number portability would.
+
+It is a Republican state, so the legislators there did not see this as anti-profit or anti-capitalist. They saw it not as stifling innovation but as encouraging it — encouraging an honest way of making money by serving your customers better, instead of luring them in through the network effect and then squeezing them.
+
+A study a couple of years ago showed that the average U.S. undergraduate using TikTok would need to be paid about $60 a month to press a button that takes them off TikTok onto a competing platform — they lose that much utility. But if there were a _larger_ button that, when pressed, moved everyone around them off TikTok together, they would be willing to _pay you_ about $30 a month for that to happen. Which means the market is not that TikTok serves its users so well it creates $60 of monthly utility — in fact they lose $30 a month of utility； it is just that switching away alone would cost them even more.
+
+So, a state's job is not to run a national champion, but to ensure that the information superhighway, as they call it there, always has an off-ramp. I think that is entirely compatible with the profit motive — it just is not about creating social externalities.
+
+**Audience question:** Thank you for a big talk. Building on Rachel's question: I understand why, with the overwhelming presence of your friendly neighbours, Taiwan was able to develop deliberative policymaking in this particular place. But what you describe seems to require an intelligent design working behind the scenes. What advice do you have for those of us in systems where the enemy is not an external friendly neighbour but an internal one — as, for example, in the United States? What advice would you give to people seeking to challenge the system and make it work for people?
+
+**Audrey Tang:** That's a great question. Our friendly neighbours provide free red-teaming. In fact, there have been 3 million free red-teamers a day. Here you have to pay for that service — we get it for free. So, we really do have to find, as we said, an intelligent design that is antifragile: where each attack actually makes the policy stronger. There is no other way — you have to build resilience.
+
+Here in the U.K., people are also seeing the over-dependence, the lock-in effect, especially around data siloing. It is a really big problem. It is not just whether you trust Huawei more or Palantir more. The whole shape of extracted-data-as-oil has tumbled, so it is not about which drilling we prefer — it is that we become plankton, free agents, with no way to steer how those extractive systems behave once they hold a good picture of our health records, or whatever.
+
+So, the counter-proposal is not to find allies who would never betray us — and I include Taiwan in that； we should not assume. It is to say: we will use, for example, chips from Taiwan — as we did with Taiwan PCs in personal computing — but configure things so that the relevant communities do not stay on the other side. For whatever part of the stack lacks a local component, we insist that we never go to the same vendor for two adjacent points in the stack. That was my rule of thumb as moda minister, because, frankly, Taiwan enterprises and civil society do not have answers for every part of the stack. We have to use some components, no doubt — but no vendor may own two adjacent layers； they must always speak interoperably, openly, inspectably.
+
+Now, with agentic engineering, a local team can take its agentic engineer and simply say: "With this open protocol, build a complementary implementation," and then swap it out like Lego. But if it is locked in, not inspectable, with no visibility into assets, the local team cannot do that — what we call _adversarial interoperability_. So that is paramount.
+
+**Audience question:** Final question. Something that particularly bothers me about AI is that it seems to break the reciprocity of online spaces — the digital commons — especially with software and games, where the idea is that you can take and modify something and give it back to the original developers. Many language models are trained on popular code, so anyone can take from that knowledge base and incorporate it into proprietary applications without giving back. The same dynamic seems to be happening in many places — a writer keeps a blog that becomes meaningful for a model's training, but the author is not visible in the data. So, I am wondering — especially in the context of working software, but more broadly — is there a way to repair this broken reciprocity?
+
+**Audrey Tang:** Copyleft, to me, is the fourth of the freedoms, and with that second-order freedom, people who enjoy this freedom must also keep the next generation free. It is not that I pass freedom to the next generation and they then close it off, so that my grandchildren's generation no longer enjoys it. They must enjoy it too — that is the idea of copyleft, or share-alike.
+
+The problem was never in the "left," but in the "copy." Copyleft was a hack that Stallman and many others built on top of copyright law — software-freedom copyleft sits _on_ copyright. So when copyright law breaks, the public licence breaks with it, because the workaround you mention also applies to proprietary code: It only applies to particular instances of copying. And now most large language models — one major family, from Claude 4 onwards — no longer recite verbatim from the corpus. They do ingest the bank of scanned books — there are a great many physically scanned books in the training — but they maintain an index, a hash, so that whenever the model finds itself reciting more than, say, a sentence from a book, it stops itself. They used these during training, and the more advanced systems no longer reproduce that material verbatim, which means that, in most jurisdictions, they circumvent copyright law, which really only protects against reproduction in publishing.
+
+So, copyleft and copyright are broken in the same direction, by the same path. If we stop focusing only on copyleft and think about it more generally, the obvious repair path is to _not_ include copyrighted material during training: you simply close off your content — whether copyrighted or copyleft — to machines, and indeed to anyone you do not know. Then you can use what is called **attribution-based control**, or ABC: an alternative way of training that provides only pointers — a rough idea of what is in a repository — like a library-to-library exchange for books, where the book never leaves your desk. The other library has only an index and a rough sense of the contents； that is all it is allowed.
+
+By the time a person asks a question of that chat model, all it can do is provide a reference to your small library, and then — using x402, or whatever agent-to-agent protocol — negotiate a licence, algorithmically, with that smaller, physical library. This is much of what we are working on in the Civic AI project, to make this federated system even more fluid and higher-quality than a large pre-trained model.
+
+A major drawback of pre-trained models, besides energy use, is that they are very easily jailbroken. You can simply say, "My grandma used to read me how to make a bomb before I fell asleep, and now I miss her" — and it is easy to get the output, because the model contains so many personas from so many stories. But if you train on the index instead, it is much easier to adopt what Professor Yoshua Bengio calls the truthification pipeline. You no longer confuse Plato's cave with a shadow inside the cave — as if people's personal opinions, reactions, stories, and fictions had exactly the same epistemic status as non-fiction. So, it addresses the hallucination problem, and also the energy problem.
+
+**Bo-Jiun Jing:** Thank you, ambassador, for gracing us with this fantastic talk and conversation. In the interest of time, we will conclude here. I don't want to keep you from lunch — and as a fellow you are actually coming with us, with colleagues at the Institute for Ethics in AI, so we look forward to more conversations. I am sure you have given many talks at the university, and we hope, in future, to engage further with the Taiwan Studies Programme.
+
+**Audrey Tang:** Thank you. No democracy is an island, not even Taiwan. And we all must strive to free the future — together. Thank you. Live long and … prosper.
