@@ -486,12 +486,21 @@
                 document.querySelectorAll("noscript").forEach(function (ns) {
                     var html = ns.textContent;
                     if (html.indexOf("<img ") === -1) return;
-                    if (ok)
+                    if (ok) {
                         html = html.replace(/\.(jpg|png)(?=["'\s])/g, ".avif");
+                        html = html.replace(/\sloading=["']lazy["']/gi, "");
+                        html = html.replace(/\sdecoding=["']async["']/gi, "");
+                    }
                     var tmp = document.createElement("div");
                     tmp.innerHTML = html;
                     var img = tmp.querySelector("img");
-                    if (img) ns.parentNode.insertBefore(img, ns);
+                    if (img) {
+                        if (ok) {
+                            img.removeAttribute("loading");
+                            img.removeAttribute("decoding");
+                        }
+                        ns.parentNode.insertBefore(img, ns);
+                    }
                 });
                 jumpToHash();
             });
