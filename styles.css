@@ -473,6 +473,12 @@ body.interview-page main p:has(> strong:first-child) strong:first-child {
     margin-bottom: 24px;
 }
 
+.team-photos a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .team-photos p {
     text-align: center;
     font-family: var(--serif);

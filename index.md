@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Civic AI — 6-Pack of Care"
-description: "Research project by Audrey Tang and Caroline Green"
+description: "Research project by Audrey Tang and Caroline Emmer De Albuquerque Green"
 lang: en-gb
 alt_lang_url: "/tw/"
 openclaw_discovery: true
@@ -92,10 +92,10 @@ Six design principles translate care ethics into something institutions can buil
 </a></div>
 
 <div><a href="https://www.oxford-aiethics.ox.ac.uk/caroline-emmer-de-albuquerque-green">
-<noscript><img src="/img/caroline.jpg" alt="Photo of Dr. Caroline Green" width="2510" height="2510" loading="lazy" decoding="async"></noscript>
-<p>Caroline Green</p>
+<noscript><img src="/img/caroline.jpg" alt="Photo of Dr Caroline Emmer De Albuquerque Green" width="2510" height="2510" loading="lazy" decoding="async"></noscript>
+<p>Caroline Emmer De Albuquerque Green</p>
 </a></div>
 
 </div>
 
-The project sits between a [manifesto](/manifesto/), a set of operational pack pages, and a book arriving early 2027 with Wiley. Audrey Tang and Caroline Green presented the framework at the [Civic AI Conference](/conference/) at Rhodes House, Oxford, on 25 March 2026 — that page has the agenda, selected talks, and the community's Polis sensemaking on AI and care.
+The project sits between a [manifesto](/manifesto/), a set of operational pack pages, and a book arriving early 2027 with Wiley. We presented the framework at the [Civic AI Conference](/conference/) at Rhodes House, Oxford, on 25 March 2026 — that page has the agenda, selected talks, and the community's Polis sensemaking on AI and care.

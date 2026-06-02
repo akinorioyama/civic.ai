@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "仁工智慧 · 關懷六力"
-description: "唐鳳與 Caroline Green 的研究計畫"
+description: "唐鳳與 Caroline Emmer De Albuquerque Green 的研究計畫"
 lang: zh-tw
 alt_lang_url: "/"
 permalink: "/tw/"
@@ -101,9 +101,9 @@ next_action:
 
 <a href="https://www.oxford-aiethics.ox.ac.uk/caroline-emmer-de-albuquerque-green">
 
-<noscript><img src="/img/caroline.jpg" alt="Caroline Green 博士個人照片" width="2510" height="2510" loading="lazy" decoding="async"/></noscript>
+<noscript><img src="/img/caroline.jpg" alt="Caroline Emmer De Albuquerque Green 博士個人照片" width="2510" height="2510" loading="lazy" decoding="async"/></noscript>
 
-<p>Caroline Green</p>
+<p>Caroline Emmer De Albuquerque Green</p>
 
 </a>
 
@@ -111,4 +111,4 @@ next_action:
 
 </div>
 
-本計畫介於[計畫宣言](/tw/manifesto/)、一組可操作的 pack 頁面，以及一本預計 2027 年初由 Wiley 出版的書之間。唐鳳與 Caroline Green 已於 2026 年 3 月 25 日在牛津羅德學院的[仁工智慧研討會（Civic AI Conference）](/tw/conference/)發表本框架——該頁有大會議程、部分演講，以及社群關於 AI 與關懷的 Polis 意義建構成果。
+本計畫介於[計畫宣言](/tw/manifesto/)、一組可操作的「六力」頁面，以及一本預計 2027 年初由 Wiley 出版的書之間。我們已於 2026 年 3 月 25 日在牛津羅德學院的[仁工智慧研討會（Civic AI Conference）](/tw/conference/)發表本框架——該頁有大會議程、部分演講，以及社群關於 AI 與關懷的 Polis 意義建構成果。
