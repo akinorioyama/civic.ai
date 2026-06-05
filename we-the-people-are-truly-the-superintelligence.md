@@ -7,7 +7,7 @@ lang: en-gb
 alt_lang_url: "/tw/we-the-people-are-truly-the-superintelligence"
 permalink: "/we-the-people-are-truly-the-superintelligence/"
 date: 2026-05-14T12:00:00Z
-og_image: "https://i.ytimg.com/vi/cOv7fxsbAew/maxresdefault.jpg"
+og_image: "https://i.ytimg.com/vi/fqvdaHWH7a0/maxresdefault.jpg"
 nav_prev:
     url: "/"
     text: "Home"
@@ -17,7 +17,7 @@ nav_next:
 ---
 
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/cOv7fxsbAew" title="We the People are Truly the Superintelligence — Audrey Tang at MIT SOLVE 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/fqvdaHWH7a0?start=5" title="We the People are Truly the Superintelligence — Audrey Tang at MIT SOLVE 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 Thank you to every Solver in this room.

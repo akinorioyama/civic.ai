@@ -7,7 +7,7 @@ lang: zh-tw
 alt_lang_url: "/we-the-people-are-truly-the-superintelligence"
 permalink: "/tw/we-the-people-are-truly-the-superintelligence/"
 date: 2026-05-14T12:00:00Z
-og_image: "https://i.ytimg.com/vi/cOv7fxsbAew/maxresdefault.jpg"
+og_image: "https://i.ytimg.com/vi/fqvdaHWH7a0/maxresdefault.jpg"
 nav_prev:
     url: "/tw/"
     text: "首頁"
@@ -17,7 +17,7 @@ nav_next:
 ---
 
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/cOv7fxsbAew" title="我們全民，才是超級智慧 — 唐鳳於 MIT SOLVE 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/fqvdaHWH7a0?start=5" title="我們全民，才是超級智慧 — 唐鳳於 MIT SOLVE 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 謝謝這個會場裡的每一位 Solver。
