@@ -1,6 +1,7 @@
 ---
 layout: chapter
 title: "Measures"
+meta_description: "One headline public measure per pack, with supporting diagnostics — how to tell whether a Civic AI deployment really embodies the 6-Pack of Care."
 lang: en-gb
 alt_lang_url: "/tw/measures"
 permalink: "/measures/"

@@ -1,6 +1,7 @@
 ---
 layout: chapter
 title: "Frequently Asked Questions"
+meta_description: "Answers on Civic AI and the 6-Pack of Care: care ethics and AI alignment, the Kami, corrigibility, sunset conditions, and democratic AI governance."
 lang: en-gb
 alt_lang_url: "/tw/faq"
 permalink: "/faq/"

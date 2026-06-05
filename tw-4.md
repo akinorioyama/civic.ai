@@ -1,6 +1,7 @@
 ---
 layout: chapter
 title: "四：回應力——接收關懷"
+meta_description: "仁工智慧的回應力：可被糾正的系統，讓受影響的人能提出異議、促成修補。「關懷六力」的第四力。"
 lang: zh-tw
 alt_lang_url: "/4"
 permalink: "/tw/4/"

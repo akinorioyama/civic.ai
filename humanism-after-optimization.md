@@ -1,8 +1,13 @@
-# Humanism After Optimization
+---
+layout: chapter
+title: "Humanism After Optimization"
+author: "Audrey Tang"
+lang: en-gb
+permalink: "/humanism-after-optimization/"
+description: "Audrey Tang on why the real threat of AI is not imitation but optimization — institutions that train people to be legible and reactive — and what a humanistic technology should leave behind."
+---
 
 _The real danger of AI is not that machines will imitate us too well. It is that institutions built around optimization will teach people to become more legible, more reactive, and less capable of governing themselves together. A humanistic technology should leave stronger relationships, more accountable institutions, and more room for public judgment after it is used._
-
-_By Audrey Tang_
 
 Whenever people ask whether AI threatens humanism, I think the question arrives a little late. The deeper threat came earlier, when digital systems learned to sort attention at industrial scale. Long before generative models could write essays, compose songs, or simulate conversation, many people had already been trained to behave like components inside ranking systems: always visible, always reactive, always measurable. By the time synthetic fluency arrived, a quieter transformation was already underway. We were becoming easier to score.
 

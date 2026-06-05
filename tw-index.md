@@ -2,6 +2,7 @@
 layout: default
 title: "仁工智慧 · 關懷六力"
 description: "唐鳳與 Caroline Emmer De Albuquerque Green 的研究計畫"
+meta_description: "仁工智慧是會向受其影響的人們負責的人工智慧：社群可以擁有、檢視、修正並隨時關閉的在地化小型智慧體。唐鳳與 Caroline Green 在牛津大學 AI 倫理研究所提出的「關懷六力」研究計畫。"
 lang: zh-tw
 alt_lang_url: "/"
 permalink: "/tw/"

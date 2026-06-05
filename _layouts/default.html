@@ -13,7 +13,6 @@
                 );
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{{ title }} — {{ subtitle | default: site.title }}</title>
         <meta
             name="theme-color"
             content="#0f1923"
@@ -25,29 +24,22 @@
             media="(prefers-color-scheme: light)"
         />
         <meta name="color-scheme" content="light dark" />
-        {% assign og_desc = description | default: site.description | strip_html
-        %} {% if og_image %}{% assign og_img = og_image %}{% elsif thumbnail.src
-        %}{% assign og_img = thumbnail.src %}{% elsif thumbnail %}{% assign
-        og_img = thumbnail %}{% elsif lang2 == 'zh' %}{% assign og_img =
-        '/img/overview-small-tw.jpg' %}{% else %}{% assign og_img =
-        '/img/overview-small.jpg' %}{% endif %} {% unless og_img contains '://'
-        %}{% assign og_img_first_char = og_img | slice: 0, 1 %}{% if
-        og_img_first_char == '/' %}{% assign og_img = site.url | append: og_img
-        %}{% else %}{% assign og_img = site.url | append: '/' | append: og_img
-        %}{% endif %}{% endunless %}
-        <meta property="og:title" content="{{ title }}" />
-        <meta property="og:description" content="{{ og_desc }}" />
-        <meta property="og:image" content="{{ og_img }}" />
-        <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="{{ title }}" />
-        <meta name="twitter:description" content="{{ og_desc }}" />
-        <meta name="twitter:image" content="{{ og_img }}" />
-        {% if openclaw_discovery %}{% if lang2 == 'zh' %}{% assign
-        openclaw_guide_url = openclaw_bootstrap.urls.guide.tw %}{% else %}{%
-        assign openclaw_guide_url = openclaw_bootstrap.urls.guide.en %}{% endif
-        %}
+        {% assign site_desc = site.description %}{% if lang2 == 'zh' %}{% assign
+        site_desc = site.description_zh | default: site.description %}{% endif
+        %} {% assign og_desc = meta_description | default: description |
+        default: site_desc | strip_html %} {% if og_image %}{% assign og_img =
+        og_image %}{% elsif thumbnail.src %}{% assign og_img = thumbnail.src
+        %}{% elsif thumbnail %}{% assign og_img = thumbnail %}{% elsif lang2 ==
+        'zh' %}{% assign og_img = '/img/overview-small-tw.jpg' %}{% else %}{%
+        assign og_img = '/img/overview-small.jpg' %}{% endif %} {% unless og_img
+        contains '://' %}{% assign og_img_first_char = og_img | slice: 0, 1 %}{%
+        if og_img_first_char == '/' %}{% assign og_img = site.url | append:
+        og_img %}{% else %}{% assign og_img = site.url | append: '/' | append:
+        og_img %}{% endif %}{% endunless %} {% assign og_type = 'website' %} {%
+        include "seo-head.html" %} {% if openclaw_discovery %}{% if lang2 ==
+        'zh' %}{% assign openclaw_guide_url = openclaw_bootstrap.urls.guide.tw
+        %}{% else %}{% assign openclaw_guide_url =
+        openclaw_bootstrap.urls.guide.en %}{% endif %}
         <link
             rel="alternate"
             type="text/markdown"
@@ -277,14 +269,28 @@
             {
                 "@context": "https://schema.org",
                 "@type": "WebSite",
-                "name": "6-Pack of Care — Civic AI",
+                "name": "Civic AI",
+                "alternateName": [
+                    "6-Pack of Care",
+                    "仁工智慧",
+                    "Civic AI — 6-Pack of Care"
+                ],
                 "url": "{{ site.url }}",
+                "inLanguage": ["en-GB", "zh-Hant"],
                 "description": "{{ site.description }}",
+                "sameAs": [
+                    "https://afp.oxford-aiethics.ox.ac.uk/civic-ai",
+                    "https://afp.oxford-aiethics.ox.ac.uk/6-pack-of-care"
+                ],
                 "author": [
                     {
                         "@type": "Person",
                         "name": "Audrey Tang",
-                        "url": "https://audreyt.org"
+                        "url": "https://audreyt.org",
+                        "sameAs": [
+                            "https://en.wikipedia.org/wiki/Audrey_Tang",
+                            "https://www.wikidata.org/wiki/Q15025"
+                        ]
                     },
                     {
                         "@type": "Person",
@@ -295,7 +301,11 @@
                 "publisher": {
                     "@type": "Organization",
                     "name": "Oxford Institute for Ethics in AI",
-                    "url": "https://www.oxford-aiethics.ox.ac.uk/"
+                    "url": "https://www.oxford-aiethics.ox.ac.uk/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "{{ site.url }}/img/oxford-logo.svg"
+                    }
                 }
             }
         </script>

@@ -1,0 +1,61 @@
+{%- comment -%} Shared SEO head block. Included by every layout (default /
+chapter / conference). Reads from the surrounding scope: title, subtitle, lang,
+og_desc, og_img, og_type, alt_lang_url, plus globals site and page. Emits a
+de-duplicated
+<title>
+    , meta description, robots directive, self-referencing canonical, bilingual
+    hreflang alternates, Open Graph and Twitter cards, and (when configured) the
+    Google Search Console token. {%- endcomment -%} {%- assign seo_lang2 = lang
+    | split: '-' | first -%} {%- assign brand = site.title -%} {%- if seo_lang2
+    == 'zh' -%}{%- assign brand = site.title_zh | default: site.title -%}{%-
+    endif -%} {%- capture page_title -%}{{ title }}{%- if subtitle %} — {{
+    subtitle }}{%- endif -%}{%- endcapture -%} <title>{% if page_title contains
+    brand %}{{ page_title }}{% else %}{{ page_title }} — {{ brand }}{% endif %}
+</title>
+<meta name="description" content="{{ og_desc }}" />
+<meta
+    name="robots"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+/>
+<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+{%- if site.google_site_verification != blank %}
+<meta
+    name="google-site-verification"
+    content="{{ site.google_site_verification }}"
+/>
+{%- endif -%} {%- if alt_lang_url -%} {%- assign seo_alt = alt_lang_url -%} {%-
+assign seo_altlast = seo_alt | slice: -1 -%} {%- unless seo_alt contains '#'
+-%}{%- if seo_altlast != '/' -%}{%- assign seo_alt = seo_alt | append: '/'
+-%}{%- endif -%}{%- endunless -%} {%- if seo_lang2 == 'zh' %}
+<link rel="alternate" hreflang="zh-Hant" href="{{ site.url }}{{ page.url }}" />
+<link rel="alternate" hreflang="en" href="{{ site.url }}{{ seo_alt }}" />
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ seo_alt }}" />
+{%- else %}
+<link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.url }}" />
+<link rel="alternate" hreflang="zh-Hant" href="{{ site.url }}{{ seo_alt }}" />
+<link
+    rel="alternate"
+    hreflang="x-default"
+    href="{{ site.url }}{{ page.url }}"
+/>
+{%- endif -%} {%- endif -%}
+<meta property="og:title" content="{{ page_title }}" />
+<meta property="og:description" content="{{ og_desc }}" />
+<meta property="og:image" content="{{ og_img }}" />
+<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+<meta property="og:type" content="{{ og_type | default: 'website' }}" />
+<meta property="og:site_name" content="{{ brand }}" />
+<meta
+    property="og:locale"
+    content="{% if seo_lang2 == 'zh' %}zh_TW{% else %}en_GB{% endif %}"
+/>
+{%- if alt_lang_url %}
+<meta
+    property="og:locale:alternate"
+    content="{% if seo_lang2 == 'zh' %}en_GB{% else %}zh_TW{% endif %}"
+/>
+{%- endif %}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ page_title }}" />
+<meta name="twitter:description" content="{{ og_desc }}" />
+<meta name="twitter:image" content="{{ og_img }}" />

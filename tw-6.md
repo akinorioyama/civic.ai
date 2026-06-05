@@ -1,6 +1,7 @@
 ---
 layout: chapter
 title: "六：共生力——地神般的關懷"
+meta_description: "仁工智慧的共生力：讓系統保持有界、在地、可日落，而非固化為永久統治。「關懷六力」的第六力。"
 lang: zh-tw
 alt_lang_url: "/6"
 permalink: "/tw/6/"

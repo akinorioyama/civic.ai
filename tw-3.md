@@ -1,6 +1,7 @@
 ---
 layout: chapter
 title: "三：勝任力——給予關懷"
+meta_description: "仁工智慧的勝任力：系統在現實中真的管用——可稽核、可解釋、容許安全失敗。「關懷六力」的第三力。"
 lang: zh-tw
 alt_lang_url: "/3"
 permalink: "/tw/3/"

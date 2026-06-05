@@ -1,6 +1,7 @@
 ---
 layout: chapter
 title: "SOLVE at MIT 2026"
+meta_description: "唐鳳 2026 年 SOLVE at MIT 主題演講：為何真正的超智慧是「我們人民」而非單一模型，以及仁工智慧如何守護這一點。"
 subtitle: "主題演講與爐邊對談"
 author: "唐鳳"
 lang: zh-tw

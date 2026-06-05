@@ -3,8 +3,16 @@
 <html lang="{{ lang | default: 'en' }}">
     <head>
         <meta charset="UTF-8" />
+        <script>
+            if (location.hostname === "6pack.care")
+                location.replace(
+                    "https://civic.ai" +
+                        location.pathname +
+                        location.search +
+                        location.hash
+                );
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{{ title }} — {{ subtitle | default: site.title }}</title>
         <meta
             name="theme-color"
             content="#0f1923"
@@ -16,25 +24,19 @@
             media="(prefers-color-scheme: light)"
         />
         <meta name="color-scheme" content="light dark" />
-        {% assign og_desc = description | default: site.description | strip_html
-        %} {% if og_image %}{% assign og_img = og_image %}{% elsif thumbnail.src
-        %}{% assign og_img = thumbnail.src %}{% elsif thumbnail %}{% assign
-        og_img = thumbnail %}{% elsif lang2 == 'zh' %}{% assign og_img =
-        '/img/overview-small-tw.jpg' %}{% else %}{% assign og_img =
-        '/img/overview-small.jpg' %}{% endif %} {% unless og_img contains '://'
-        %}{% assign og_img_first_char = og_img | slice: 0, 1 %}{% if
-        og_img_first_char == '/' %}{% assign og_img = site.url | append: og_img
-        %}{% else %}{% assign og_img = site.url | append: '/' | append: og_img
-        %}{% endif %}{% endunless %}
-        <meta property="og:title" content="{{ title }}" />
-        <meta property="og:description" content="{{ og_desc }}" />
-        <meta property="og:image" content="{{ og_img }}" />
-        <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="{{ title }}" />
-        <meta name="twitter:description" content="{{ og_desc }}" />
-        <meta name="twitter:image" content="{{ og_img }}" />
+        {% assign site_desc = site.description %}{% if lang2 == 'zh' %}{% assign
+        site_desc = site.description_zh | default: site.description %}{% endif
+        %} {% assign og_desc = meta_description | default: description |
+        default: site_desc | strip_html %} {% if og_image %}{% assign og_img =
+        og_image %}{% elsif thumbnail.src %}{% assign og_img = thumbnail.src
+        %}{% elsif thumbnail %}{% assign og_img = thumbnail %}{% elsif lang2 ==
+        'zh' %}{% assign og_img = '/img/overview-small-tw.jpg' %}{% else %}{%
+        assign og_img = '/img/overview-small.jpg' %}{% endif %} {% unless og_img
+        contains '://' %}{% assign og_img_first_char = og_img | slice: 0, 1 %}{%
+        if og_img_first_char == '/' %}{% assign og_img = site.url | append:
+        og_img %}{% else %}{% assign og_img = site.url | append: '/' | append:
+        og_img %}{% endif %}{% endunless %} {% assign og_type = 'article' %} {%
+        include "seo-head.html" %}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}" />
@@ -307,20 +309,26 @@
                 "headline": "{{ title }}",
                 "description": "{{ og_desc }}",
                 "url": "{{ site.url }}{{ page.url }}",
+                "mainEntityOfPage": "{{ site.url }}{{ page.url }}",
+                "inLanguage": "{% if lang2 == 'zh' %}zh-Hant{% else %}en-GB{% endif %}",
                 "image": "{{ og_img }}",
                 {% if date %}"datePublished": "{{ date | date: '%Y-%m-%d' }}",{% endif %}
                 "author": [
-                    { "@type": "Person", "name": "Audrey Tang", "url": "https://audreyt.org" },
-                    { "@type": "Person", "name": "Caroline Green", "url": "https://www.oxford-aiethics.ox.ac.uk/caroline-emmer-de-albuquerque-green" }
+                    {% if author %}{ "@type": "Person", "name": "{{ author }}" }{% else %}{ "@type": "Person", "name": "Audrey Tang", "url": "https://audreyt.org", "sameAs": ["https://en.wikipedia.org/wiki/Audrey_Tang", "https://www.wikidata.org/wiki/Q15025"] },
+                    { "@type": "Person", "name": "Caroline Green", "url": "https://www.oxford-aiethics.ox.ac.uk/caroline-emmer-de-albuquerque-green" }{% endif %}
                 ],
                 "publisher": {
                     "@type": "Organization",
                     "name": "Oxford Institute for Ethics in AI",
-                    "url": "https://www.oxford-aiethics.ox.ac.uk/"
+                    "url": "https://www.oxford-aiethics.ox.ac.uk/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "{{ site.url }}/img/oxford-logo.svg"
+                    }
                 },
                 "isPartOf": {
                     "@type": "WebSite",
-                    "name": "6-Pack of Care — Civic AI",
+                    "name": "Civic AI",
                     "url": "{{ site.url }}"
                 }
             }

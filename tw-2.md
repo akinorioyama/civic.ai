@@ -1,6 +1,7 @@
 ---
 layout: chapter
 title: "二：負責力——承擔關懷"
+meta_description: "仁工智慧的負責力：由誰負責、握有什麼權限、失職時又會如何。唐鳳與 Caroline Green「關懷六力」的第二力。"
 lang: zh-tw
 alt_lang_url: "/2"
 permalink: "/tw/2/"

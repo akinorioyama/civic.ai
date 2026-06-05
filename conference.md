@@ -3,6 +3,7 @@ layout: conference
 lang: en-gb
 permalink: /conference/
 title: "Unpacking the 6-Pack of Care"
+meta_description: "The Civic AI Conference at Rhodes House, Oxford, 25 March 2026 — Audrey Tang, Caroline Green, Joan Tronto, Rosalind Picard, Iason Gabriel and more on care ethics and AI alignment."
 subtitle: "Civic AI Conference 2026"
 date_line: "25 March 2026 — Rhodes House, Oxford"
 og_description: "25 March 2026 — Rhodes House, Oxford"

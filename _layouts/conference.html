@@ -13,7 +13,6 @@
                 );
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{{ title }} — {{ subtitle }}</title>
         <meta
             name="theme-color"
             content="#0f1923"
@@ -25,9 +24,12 @@
             media="(prefers-color-scheme: light)"
         />
         <meta name="color-scheme" content="light dark" />
-        {% assign og_desc = og_description | default: description %} {% if
-        og_image %}{% assign og_img = og_image %}{% elsif thumbnail.src %}{%
-        assign og_img = thumbnail.src %}{% elsif thumbnail %}{% assign og_img =
+        {% assign site_desc = site.description %}{% if lang2 == 'zh' %}{% assign
+        site_desc = site.description_zh | default: site.description %}{% endif
+        %} {% assign og_desc = meta_description | default: og_description |
+        default: description | default: site_desc | strip_html %} {% if og_image
+        %}{% assign og_img = og_image %}{% elsif thumbnail.src %}{% assign
+        og_img = thumbnail.src %}{% elsif thumbnail %}{% assign og_img =
         thumbnail %}{% elsif overview_image.src %}{% assign og_img =
         overview_image.src %}{% elsif lang2 == 'zh' %}{% assign og_img =
         '/img/overview-small-tw.jpg' %}{% else %}{% assign og_img =
@@ -35,16 +37,8 @@
         %}{% assign og_img_first_char = og_img | slice: 0, 1 %}{% if
         og_img_first_char == '/' %}{% assign og_img = site.url | append: og_img
         %}{% else %}{% assign og_img = site.url | append: '/' | append: og_img
-        %}{% endif %}{% endunless %}
-        <meta property="og:title" content="{{ title }} — {{ subtitle }}" />
-        <meta property="og:description" content="{{ og_desc }}" />
-        <meta property="og:image" content="{{ og_img }}" />
-        <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="{{ title }} — {{ subtitle }}" />
-        <meta name="twitter:description" content="{{ og_desc }}" />
-        <meta name="twitter:image" content="{{ og_img }}" />
+        %}{% endif %}{% endunless %} {% assign og_type = 'website' %} {% include
+        "seo-head.html" %}
         <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}" />
         <link
             rel="preload"
@@ -461,6 +455,20 @@
                 "name": "{{ title }} — {{ subtitle }}",
                 "url": "{{ site.url }}{{ page.url }}",
                 "description": "{{ og_desc }}",
+                "startDate": "2026-03-25",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "image": "{{ og_img }}",
+                "location": {
+                    "@type": "Place",
+                    "name": "Rhodes House",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "South Park Road",
+                        "addressLocality": "Oxford",
+                        "addressCountry": "GB"
+                    }
+                },
                 "organizer": {
                     "@type": "Organization",
                     "name": "Oxford Institute for Ethics in AI",

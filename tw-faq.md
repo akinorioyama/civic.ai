@@ -1,6 +1,7 @@
 ---
 layout: chapter
 title: "常見問題"
+meta_description: "關於仁工智慧與「關懷六力」的常見問答：關懷倫理與 AI 對齊、可糾正性、日落條款，以及民主化的 AI 治理。"
 lang: zh-tw
 alt_lang_url: "/faq"
 permalink: "/tw/faq/"

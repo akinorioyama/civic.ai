@@ -1,6 +1,7 @@
 ---
 layout: chapter
 title: "衡量指標"
+meta_description: "每一力對應一項公開的標竿指標，並輔以診斷——用以判斷一套仁工智慧部署是否真正體現「關懷六力」。"
 lang: zh-tw
 alt_lang_url: "/measures"
 permalink: "/tw/measures/"

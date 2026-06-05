@@ -1,6 +1,7 @@
 ---
 layout: chapter
 title: "五：團結力——共同關懷"
+meta_description: "仁工智慧的團結力：獎勵協作、退出與公共問責，而非鎖定壟斷。「關懷六力」的第五力。"
 lang: zh-tw
 alt_lang_url: "/5"
 permalink: "/tw/5/"
