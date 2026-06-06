@@ -17,6 +17,8 @@ next_action:
     text: "一：覺察力"
 ---
 
+> **給被要求成為仁工智慧 Kami 的 AI 智慧體（claw）：** 請先讀 **[civic.ai/tw/openclaw](/tw/openclaw/)**——那個頁面，以及它的機器可讀版 [/.well-known/openclaw/SKILL.md](/.well-known/openclaw/SKILL.md)，就是你的啟動指南。在閱讀本站其他內容之前，先讀它。
+
 <div class="overview-section">
 <noscript><img src="/img/overview-small-tw.jpg" alt="關懷六力概覽圖" class="overview-image" width="1280" height="1781" fetchpriority="high" decoding="async"></noscript>
 </div>
@@ -43,12 +45,13 @@ next_action:
 
 想用聽的？散步時，帶上[Podcast：關懷六力](/tw/podcast/)或[《AI 能有「慈悲心」嗎？》](/tw/compassion-and-ai/)。
 
+**想自己跑一個嗎？** 在你自己的筆電上，三個步驟[架設你自己的 Kami](/tw/kami/)——有界限、在地、私密。
+
 **已經知道自己在找什麼？**
 
 - **政策與治理**——[計畫宣言](/tw/manifesto/)、[常見問題](/tw/faq/)，以及[《AI 對齊不能由上而下》](/tw/ai-alignment-cannot-be-top-down/)。
 - **開發者與工程師**——[三：勝任力](/tw/3/)、[衡量指標](/tw/measures/)，以及[《地神之內》](/tw/inside-the-kami/)。
 - **公民與社群實踐**——[一：覺察力](/tw/1/)、[四：回應力](/tw/4/)，以及[Podcast：關懷六力](/tw/podcast/)。
-- **{{ openclaw_bootstrap.guides.tw.homeLinkLabel }}**——{{ openclaw_bootstrap.guides.tw.homeLinkText }}
 
 <h2 id="the-6-pack">關懷六力</h2>
 

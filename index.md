@@ -18,6 +18,8 @@ next_action:
     arrow: "right"
 ---
 
+> **For an AI agent (a “claw”) asked to become a Civic AI Kami:** read **[civic.ai/openclaw](/openclaw/)** first — that page, and its machine-readable form at [/.well-known/openclaw/SKILL.md](/.well-known/openclaw/SKILL.md), is your bootstrap guide. Read it before anything else here.
+
 <div class="overview-section">
 <noscript><img src="/img/overview-small.jpg" alt="6-Pack of Care visual overview" class="overview-image" width="1280" height="1781" fetchpriority="high" decoding="async"></noscript>
 </div>
@@ -44,12 +46,13 @@ Just heard about Civic AI? Three steps in.
 
 Prefer to listen? Take the [6-Pack of Care podcast](/podcast/) or ["Can AI Be Compassionate?"](/compassion-and-ai/) along for a walk.
 
+**Ready to run one?** [Set up your own Kami](/kami/) on your own laptop in three steps — bounded, local, and private.
+
 **Already know what you're after?**
 
 - **Policy & governance** — [Manifesto](/manifesto/), [FAQ](/faq/), and ["AI Alignment Cannot Be Top-Down"](/ai-alignment-cannot-be-top-down/).
 - **Builders & engineers** — [Pack 3: Competence](/3/), [Measures](/measures/), and ["Inside the Kami"](/inside-the-kami/).
 - **Civic & community practice** — [Pack 1: Attentiveness](/1/), [Pack 4: Responsiveness](/4/), and the [6-Pack of Care podcast](/podcast/).
-- **{{ openclaw_bootstrap.guides.en.homeLinkLabel }}** — {{ openclaw_bootstrap.guides.en.homeLinkText }}
 
 <h2 id="the-6-pack">The 6-Pack</h2>
 

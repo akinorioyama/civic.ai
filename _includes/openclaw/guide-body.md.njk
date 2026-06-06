@@ -56,4 +56,10 @@ label_separator = "." %}{% endif %}
 - **`{{ item.file | safe }}`** — {{ item.text | safe }}
 {% endfor %}
 
+{% if guide.memoryHeading %}
+## {{ guide.memoryHeading | safe }}
+
+{{ guide.memoryIntro | safe }}
+{% endif %}
+
 {{ guide.closing | safe }}
