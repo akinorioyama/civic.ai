@@ -23,6 +23,8 @@ Be honest with yourself before you begin. These steps are a bootstrap, not a fin
 
 You do not need to be a coder. You will type three short commands into a window called the Terminal. On a Mac, open Spotlight (Command and Space), type "Terminal", and press Return. On Windows, open the Start menu, type "Terminal", and press Enter. Wherever this page says press Return, the same key is labelled Enter on Windows. A plain text window appears. You type a line, press Return, and wait. That is the whole skill.
 
+There are two honest ways to do this. Either way you end with a Kami that can come to know this place over time. The local path (Steps 1 to 3 below) is the default, and the one we recommend: it runs on your own machine and nothing leaves it, so anything you tell it about the people you serve stays with you. The hosted path skips Step 1 — no Ollama, no 7 GB download — and you pick a hosted model when OpenClaw asks in Step 2. It is still the same Terminal setup, and on the hosted path your conversations go to a third-party provider; you can move local later. Either way, you cannot break your laptop. If a line does not work you will see a short message; read it, or just try the line again.
+
 ## 1. Give it a local brain
 
 Install [Ollama](https://ollama.com) from its website. It is the engine that runs an AI model privately on your computer. It installs like any other app: open the file you download and follow the prompts. Once it is installed, return to the Terminal, type this line, and press Return:
@@ -31,7 +33,7 @@ Install [Ollama](https://ollama.com) from its website. It is the engine that run
 ollama pull gemma4:12b-it-qat
 ```
 
-This downloads the same small local model Audrey used to set up her own Kami. It is about 7 GB, instruction-tuned, and runs comfortably on a laptop with roughly 16 GB of memory. Most laptops bought in the last few years have this; if yours has less, the model still runs, just more slowly. If you are unsure, or your laptop is older, skip to the hosted option below. The download takes a few minutes. Any capable local model works; this is a good, light first choice.
+This downloads the same small local model Audrey used to set up her own Kami. It is about 7 GB, instruction-tuned, and runs comfortably on a laptop with roughly 16 GB of memory. Most laptops bought in the last few years have this; if yours has less, the model still runs, just more slowly. If you are unsure, or your laptop is older, take the hosted path described above. The download takes a few minutes. Any capable local model works; this is a good, light first choice.
 
 ## 2. Give it a way to act
 
@@ -44,7 +46,7 @@ openclaw onboard
 
 The setup asks a few questions in plain language. When it asks who will provide the intelligence, choose **Ollama**. When it asks which model, choose **gemma4:12b-it-qat**, the one you just downloaded. If a question is unfamiliar, the safe answer is usually the default; press Return to accept it.
 
-No spare laptop power? In the same setup, choose a hosted model instead. Everything else stays the same; "local" simply means nothing leaves your machine.
+If you chose the hosted path described above, choose a hosted model here when asked. Everything else stays the same.
 
 ## 3. Wake your Kami
 
@@ -66,28 +68,28 @@ The agent stops behaving like a generic, all-purpose assistant. It recognises a 
 
 Then it opens a short, grounded conversation. It asks things like: what place, practice, or community are you actually here to serve? What harms, failures, or conflicts should I notice first? What authority do I really have, and what must stay with humans? How should people contest, correct, or shut me down when I am wrong? It asks before it acts. A specific question beats a confident guess.
 
-## Give it a memory (optional)
+## Give it a memory
 
-By default your Kami starts each conversation fresh. If you would like it to remember across sessions — what it learned about your place, the corrections you made, who it serves — you can give it a small, local memory. Everything stays on your machine.
+By default your Kami starts each conversation fresh. A Kami that forgets every conversation cannot do the one thing it is for: come to know this place over time. So do this step rather than skip it. If you would like it to remember across sessions — what it learned about your place, the corrections you made, who it serves — you can give it a small, local memory. Everything stays on your machine.
 
-The simplest way is to ask it. Tell your Kami, "Set yourself up a local memory," and, with your go-ahead, it can do the rest. If you would rather run it by hand:
+Start with the light notes OpenClaw keeps for you, which need no setup. mnemon adds a deeper, inspectable record when you want it. The simplest way is to ask your Kami: tell it, "Set yourself up a local memory," and, with your go-ahead, it can do the rest. If you would rather run it by hand:
 
 ```bash
 # the memory store (macOS or Linux)
 brew install mnemon-dev/tap/mnemon
-# a small, multilingual local embedder
+# (Ollama users only) a small local embedder makes recall faster — mnemon also works without it on graph and keyword
 ollama pull nomic-embed-text-v2-moe
-# tell mnemon to use it
+# tell mnemon to use it (skip this too if you skipped the pull above)
 export MNEMON_EMBED_MODEL=nomic-embed-text-v2-moe:latest
 # wire it into your Kami
 mnemon setup --target openclaw
 ```
 
-The entries are yours to read, correct, and forget, and nothing leaves your machine. It is an upgrade, not a requirement — OpenClaw can keep a simpler built-in memory if you would rather add nothing. [mnemon](https://github.com/mnemon-dev/mnemon) is open source (Apache-2.0).
+mnemon recalls on keyword and graph without the embedder; the embedder only makes recall sharper, and it needs Ollama. So if you took the hosted path, install Ollama just for this small embedder, or skip both the pull and the export line above. The entries are yours to read, correct, and forget, and nothing leaves your machine. [mnemon](https://github.com/mnemon-dev/mnemon) is open source (Apache-2.0).
 
 ## Make it yours, keep it, switch it off
 
-Those three files are plain text. Open IDENTITY.md, USER.md, and SOUL.md, read them, and edit them. This is where the agent becomes yours: you hold the pen. You can inspect what it believes about its job, correct it when it drifts, and set the limits it must hold. As your community learns what it needs, you change them.
+Those three files are plain text. Open IDENTITY.md, USER.md, and SOUL.md, read them, and edit them. This is where the agent becomes yours: you hold the pen, and when others share the place you hold it together. You can inspect what it believes about its job, correct it when it drifts, and set the limits it must hold. As your community learns what it needs, you change them.
 
 And you can retire it. When its work is done, or done badly:
 
@@ -100,6 +102,18 @@ That removes the local data and the service; the command itself stays installed 
 ## The soul your Kami reads
 
 When you tell your Kami to read civic.ai, it is pointed straight on to [the soul your Kami reads](/openclaw/): the agent-facing page that tells it how to become a bounded local steward — who it is, what Civic Care asks of it, and what it must never do. This page is the human side of the handshake; that one is the Kami's.
+
+## Keep it together
+
+A Kami only you ever talk to is a private assistant, not a community guardian. If others share the place, it has to be shareable too.
+
+Those three files are plain text. Put SOUL.md, IDENTITY.md and USER.md somewhere everyone who shares the place can reach — a shared folder, a git repo, even printed copies. Then the Kami is not captive on one laptop, and an uninstall on one machine is recoverable.
+
+Edit them together. At a gathering or a community meeting, read the files aloud and change them as a group, so changes are proposed and agreed rather than made by one hand.
+
+Be honest about the limits. There is no built-in way today to log a standing objection inside the running Kami, and no built-in collective off-switch, so raising disagreement, correcting it, and deciding when to stop stay with the people at the table. The three files travel, but any memory it keeps lives on the one machine where it runs, so the shared, recoverable part is the files, not yet the memory. And a Kami cannot resolve a disagreement between people; when the room itself fractures, that stays with you.
+
+Letting many hands contest the same Kami is the doorway to Keeping — slow communal work that no setup page can finish for you.
 
 ## What a webpage cannot teach
 
