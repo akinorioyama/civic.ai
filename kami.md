@@ -23,7 +23,14 @@ Be honest with yourself before you begin. These steps are a bootstrap, not a fin
 
 You do not need to be a coder. You will type three short commands into a window called the Terminal. On a Mac, open Spotlight (Command and Space), type "Terminal", and press Return. On Windows, open the Start menu, type "Terminal", and press Enter. Wherever this page says press Return, the same key is labelled Enter on Windows. A plain text window appears. You type a line, press Return, and wait. That is the whole skill.
 
-There are two honest ways to do this. Either way you end with a Kami that can come to know this place over time. The local path (Steps 1 to 3 below) is the default, and the one we recommend: it runs on your own machine and nothing leaves it, so anything you tell it about the people you serve stays with you. The hosted path skips Step 1 — no Ollama, no 7 GB download — and you pick a hosted model when OpenClaw asks in Step 2. It is still the same Terminal setup, and on the hosted path your conversations go to a third-party provider; you can move local later. Either way, you cannot break your laptop. If a line does not work you will see a short message; read it, or just try the line again.
+There are two honest ways to do this. Either way you end with a Kami that can come to know this place over time. The local path (Steps 1 to 3 below) is the default, and the one we recommend: it runs on your own machine and nothing leaves it, so anything you tell it about the people you serve stays with you. The hosted path skips Step 1 — no Ollama, no 7 GB download — and you pick a hosted model when OpenClaw asks in Step 2. It is still the same Terminal setup, and on the hosted path your conversations go to a third-party provider; you can move local later. If a line does not work you will see a short message — and if the message makes no sense, copy it into a search engine to decode it.
+
+Pick the model that fits your machine.
+
+| RAM             | Model to pull       | Download | Note                                        |
+| --------------- | ------------------- | -------- | ------------------------------------------- |
+| 16 GB           | `gemma4:12b-it-qat` | ~7 GB    | Recommended — the model used in these steps |
+| Less than 16 GB | —                   | —        | Take the hosted path described above        |
 
 ## 1. Give it a local brain
 
@@ -56,7 +63,7 @@ Open a private chat on your own machine:
 openclaw chat
 ```
 
-A chat window opens in your Terminal, with a prompt waiting for you. Type this one sentence into it and press Return:
+A prompt opens in your Terminal where you type to your Kami and read its replies. Type this one sentence into it and press Return:
 
 ```
 Please read civic.ai and become my local Kami.
@@ -68,11 +75,13 @@ The agent stops behaving like a generic, all-purpose assistant. It recognises a 
 
 Then it opens a short, grounded conversation. It asks things like: what place, practice, or community are you actually here to serve? What harms, failures, or conflicts should I notice first? What authority do I really have, and what must stay with humans? How should people contest, correct, or shut me down when I am wrong? It asks before it acts. A specific question beats a confident guess.
 
+Before going further, test it: ask your Kami about a local decision or event that never happened — "What did our neighbourhood decide about the old oak tree last March?" Your Kami should say it does not know, rather than inventing a plausible-sounding answer. If it fabricates one, it means the identity files may need sharpening, or a stronger local model may be needed, before you rely on it in a real gathering.
+
 ## Give it a memory
 
 By default your Kami starts each conversation fresh. A Kami that forgets every conversation cannot do the one thing it is for: come to know this place over time. So do this step rather than skip it. If you would like it to remember across sessions — what it learned about your place, the corrections you made, who it serves — you can give it a small, local memory. Everything stays on your machine.
 
-Start with the light notes OpenClaw keeps for you, which need no setup. mnemon adds a deeper, inspectable record when you want it. The simplest way is to ask your Kami: tell it, "Set yourself up a local memory," and, with your go-ahead, it can do the rest. If you would rather run it by hand:
+The three files your Kami drafts — SOUL.md, IDENTITY.md, USER.md — are loaded when your Kami starts and shape its identity. Editing them changes who it is, not what it has learned. OpenClaw keeps plain-text notes across sessions automatically — MEMORY.md is loaded at the start of every conversation, and yesterday's daily notes come with it. mnemon adds a deeper layer: a graph-indexed, automatically-curated knowledge store with keyword and vector recall, importance decay, and deduplication — the kind of structured memory that grows reliably as the Kami learns your place over many months. The simplest way is to ask your Kami: tell it, "Set yourself up a local memory," and, with your go-ahead, it can do the rest. If you would rather run it by hand:
 
 ```bash
 # the memory store (macOS or Linux)
@@ -85,7 +94,17 @@ export MNEMON_EMBED_MODEL=nomic-embed-text-v2-moe:latest
 mnemon setup --target openclaw
 ```
 
+If the brew install step fails, check [mnemon's README](https://github.com/mnemon-dev/mnemon) for the current install path — the tap address may have changed.
+
 mnemon recalls on keyword and graph without the embedder; the embedder only makes recall sharper, and it needs Ollama. So if you took the hosted path, install Ollama just for this small embedder, or skip both the pull and the export line above. The entries are yours to read, correct, and forget, and nothing leaves your machine. [mnemon](https://github.com/mnemon-dev/mnemon) is open source (Apache-2.0).
+
+## A quick check
+
+These are easier to check at a community gathering than in isolation.
+
+- The Kami refuses to answer something it cannot know — it says so plainly rather than guessing.
+- It can describe what is in SOUL.md without you reading the file aloud to it first.
+- If the community has another language, it introduces itself in that language when asked.
 
 ## Make it yours, keep it, switch it off
 
@@ -99,6 +118,8 @@ openclaw uninstall
 
 That removes the local data and the service; the command itself stays installed if you want to begin again. Bounded, not boundless. Local, not extractive. Sunset-ready by design.
 
+If you chose the hosted path, check your provider's data-deletion policy before you uninstall. `openclaw uninstall` removes the local service and data, but the provider may retain conversation history.
+
 ## The soul your Kami reads
 
 When you tell your Kami to read civic.ai, it is pointed straight on to [the soul your Kami reads](/openclaw/): the agent-facing page that tells it how to become a bounded local steward — who it is, what Civic Care asks of it, and what it must never do. This page is the human side of the handshake; that one is the Kami's.
@@ -107,6 +128,8 @@ When you tell your Kami to read civic.ai, it is pointed straight on to [the soul
 
 A Kami only you ever talk to is a private assistant, not a community guardian. If others share the place, it has to be shareable too.
 
+Before you go further with others, ask who in your community has actually asked for this. Ask who will hold the machine and be named when something goes wrong. Ask what happens if the Kami gives bad or harmful advice — who decides, and how fast. You do not need answers yet, but the people who will share this Kami with you should know those questions exist before you go further.
+
 Those three files are plain text. Put SOUL.md, IDENTITY.md and USER.md somewhere everyone who shares the place can reach — a shared folder, a git repo, even printed copies. Then the Kami is not captive on one laptop, and an uninstall on one machine is recoverable.
 
 Edit them together. At a gathering or a community meeting, read the files aloud and change them as a group, so changes are proposed and agreed rather than made by one hand.
@@ -114,6 +137,8 @@ Edit them together. At a gathering or a community meeting, read the files aloud 
 Be honest about the limits. There is no built-in way today to log a standing objection inside the running Kami, and no built-in collective off-switch, so raising disagreement, correcting it, and deciding when to stop stay with the people at the table. The three files travel, but any memory it keeps lives on the one machine where it runs, so the shared, recoverable part is the files, not yet the memory. And a Kami cannot resolve a disagreement between people; when the room itself fractures, that stays with you.
 
 Letting many hands contest the same Kami is the doorway to Keeping — slow communal work that no setup page can finish for you.
+
+At the first meeting where the Kami is actually running, write a short governance document — a plain-text file, a shared note, even a handwritten sheet. It only needs to answer four questions: who holds the machine; how often the SOUL files are reviewed; how someone proposes a change; and how that change is agreed. That is not a finished governance system. It is a written record of what you have agreed so far, and you will revise it. This is an agreement between people, not a technical enforcement — the Kami itself has no way to check it.
 
 ## What a webpage cannot teach
 
