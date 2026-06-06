@@ -2790,3 +2790,92 @@ footer a:hover {
         background: color-mix(in srgb, var(--status-color) 15%, var(--surface));
     }
 }
+
+/* Inline code + terminal-style copy-box for command blocks */
+:not(pre) > code {
+    font-family:
+        ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono",
+        monospace;
+    font-size: 0.86em;
+    background: color-mix(in srgb, var(--muted) 16%, transparent);
+    padding: 0.12em 0.36em;
+    border-radius: 4px;
+}
+
+.code-block {
+    position: relative;
+}
+
+pre {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.85rem 1rem;
+    margin: 1.1rem 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+pre code {
+    font-family:
+        ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono",
+        monospace;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: var(--text);
+    background: none;
+    padding: 0;
+    white-space: pre;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 0.45rem;
+    right: 0.45rem;
+    font-family:
+        system-ui,
+        -apple-system,
+        sans-serif;
+    font-size: 0.68rem;
+    line-height: 1;
+    padding: 0.3em 0.6em;
+    color: var(--muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition:
+        opacity 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.copy-btn:hover,
+.copy-btn:focus-visible {
+    opacity: 1;
+    color: var(--teal);
+    border-color: var(--teal);
+}
+
+.copy-btn.copied {
+    opacity: 1;
+    color: var(--teal);
+    border-color: var(--teal);
+}
+
+/* Agent bootstrap directive: fine print tucked under the hero; present and machine-readable */
+.agent-note {
+    text-align: center;
+    font-size: 0.6rem;
+    line-height: 1.4;
+    color: var(--muted);
+    opacity: 0.4;
+    margin: 0.55rem auto 0;
+    padding: 0 1rem;
+}
+
+.agent-note a {
+    color: inherit;
+    text-decoration: underline;
+}

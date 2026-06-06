@@ -73,10 +73,14 @@ openclaw chat
 最簡單的方式，就是直接請它做。對你的 Kami 說：「幫你自己設一份在地記憶。」在你點頭之後，它就能完成其餘的事。如果你想親手來：
 
 ```bash
-brew install mnemon-dev/tap/mnemon            # 記憶儲存庫（macOS 或 Linux）
-ollama pull nomic-embed-text-v2-moe           # 一個小型、多語言的在地嵌入模型
+# 記憶儲存庫（macOS 或 Linux）
+brew install mnemon-dev/tap/mnemon
+# 一個小型、多語言的在地嵌入模型
+ollama pull nomic-embed-text-v2-moe
+# 告訴 mnemon 使用它
 export MNEMON_EMBED_MODEL=nomic-embed-text-v2-moe:latest
-mnemon setup --target openclaw                # 把它接到你的 Kami
+# 把它接到你的 Kami
+mnemon setup --target openclaw
 ```
 
 那些記憶條目由你來讀取、修正與遺忘，而且沒有任何東西離開你的機器。這是一項升級，而非必需——如果你寧可什麼都不加，OpenClaw 也能保有一份較簡單的內建記憶。[mnemon](https://github.com/mnemon-dev/mnemon) 是開源軟體（Apache-2.0）。

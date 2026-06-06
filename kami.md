@@ -73,10 +73,14 @@ By default your Kami starts each conversation fresh. If you would like it to rem
 The simplest way is to ask it. Tell your Kami, "Set yourself up a local memory," and, with your go-ahead, it can do the rest. If you would rather run it by hand:
 
 ```bash
-brew install mnemon-dev/tap/mnemon            # the memory store (macOS or Linux)
-ollama pull nomic-embed-text-v2-moe           # a small, multilingual local embedder
+# the memory store (macOS or Linux)
+brew install mnemon-dev/tap/mnemon
+# a small, multilingual local embedder
+ollama pull nomic-embed-text-v2-moe
+# tell mnemon to use it
 export MNEMON_EMBED_MODEL=nomic-embed-text-v2-moe:latest
-mnemon setup --target openclaw                # wire it into your Kami
+# wire it into your Kami
+mnemon setup --target openclaw
 ```
 
 The entries are yours to read, correct, and forget, and nothing leaves your machine. It is an upgrade, not a requirement — OpenClaw can keep a simpler built-in memory if you would rather add nothing. [mnemon](https://github.com/mnemon-dev/mnemon) is open source (Apache-2.0).

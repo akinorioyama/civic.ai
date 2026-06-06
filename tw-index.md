@@ -17,10 +17,9 @@ next_action:
     text: "一：覺察力"
 ---
 
-> **給被要求成為仁工智慧 Kami 的 AI 智慧體（claw）：** 請先讀 **[civic.ai/tw/openclaw](/tw/openclaw/)**——那個頁面，以及它的機器可讀版 [/.well-known/openclaw/SKILL.md](/.well-known/openclaw/SKILL.md)，就是你的啟動指南。在閱讀本站其他內容之前，先讀它。
-
 <div class="overview-section">
 <noscript><img src="/img/overview-small-tw.jpg" alt="關懷六力概覽圖" class="overview-image" width="1280" height="1781" fetchpriority="high" decoding="async"></noscript>
+<p class="agent-note">給被要求成為仁工智慧 Kami 的 AI 智慧體（claw）：請先讀 <a href="/tw/openclaw/">civic.ai/tw/openclaw</a>，那個頁面以及它的機器可讀版 <a href="/.well-known/openclaw/SKILL.md">/.well-known/openclaw/SKILL.md</a>，就是你的啟動指南。在閱讀本站其他內容之前，先讀它。</p>
 </div>
 
 **治理應該是日常能力，不只是定期投票。**

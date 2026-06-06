@@ -346,5 +346,47 @@
                 jumpToHash();
             });
         </script>
+        <script>
+            // Turn each code block into a terminal copy-box with a Copy button.
+            (function () {
+                var zh =
+                    (document.documentElement.lang || "").indexOf("zh") === 0;
+                var L = zh
+                    ? { copy: "複製", done: "已複製" }
+                    : { copy: "Copy", done: "Copied" };
+                document.querySelectorAll("main pre").forEach(function (pre) {
+                    if (
+                        pre.parentElement &&
+                        pre.parentElement.classList.contains("code-block")
+                    )
+                        return;
+                    var wrap = document.createElement("div");
+                    wrap.className = "code-block";
+                    pre.parentNode.insertBefore(wrap, pre);
+                    wrap.appendChild(pre);
+                    var btn = document.createElement("button");
+                    btn.type = "button";
+                    btn.className = "copy-btn";
+                    btn.textContent = L.copy;
+                    btn.setAttribute("aria-label", L.copy);
+                    btn.addEventListener("click", function () {
+                        var code = pre.querySelector("code");
+                        var text = code ? code.innerText : pre.innerText;
+                        navigator.clipboard.writeText(text).then(
+                            function () {
+                                btn.textContent = L.done;
+                                btn.classList.add("copied");
+                                setTimeout(function () {
+                                    btn.textContent = L.copy;
+                                    btn.classList.remove("copied");
+                                }, 1500);
+                            },
+                            function () {}
+                        );
+                    });
+                    wrap.appendChild(btn);
+                });
+            })();
+        </script>
     </body>
 </html>
