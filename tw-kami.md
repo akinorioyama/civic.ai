@@ -86,17 +86,17 @@ openclaw chat
 ```bash
 # 記憶儲存庫（macOS 或 Linux）
 brew install mnemon-dev/tap/mnemon
-# （僅 Ollama 使用者）一個小型的在地嵌入模型能讓回想更快——mnemon 在圖譜與關鍵字上即使沒有它也能運作
+# （僅 Ollama 使用者）選用小型的在地嵌入模型能讓回想更快
 ollama pull nomic-embed-text-v2-moe
-# 告訴 mnemon 使用它（如果上面那次下載你也跳過了，這一步同樣跳過）
-export MNEMON_EMBED_MODEL=nomic-embed-text-v2-moe:latest
+# 存起來，這樣你的 Kami 每次都會載入它（如果上面那次下載你也跳過了，這一步同樣跳過）
+echo 'MNEMON_EMBED_MODEL=nomic-embed-text-v2-moe:latest' >> ~/.openclaw/.env
 # 把它接到你的 Kami
 mnemon setup --target openclaw
 ```
 
 如果 brew install 這步失敗了，請查看 [mnemon 的 README](https://github.com/mnemon-dev/mnemon)，確認目前的安裝路徑——tap 位址可能已經異動。
 
-mnemon 不靠嵌入模型，也能以關鍵字與圖譜回想；嵌入模型只是讓回想更精準，而它需要 Ollama。所以如果你走的是託管這條路，就為這個小小的嵌入模型單獨裝一個 Ollama，或者把上面那次下載和那行 export 都跳過。那些記憶條目由你來讀取、修正與遺忘，而且沒有任何東西離開你的機器。[mnemon](https://github.com/mnemon-dev/mnemon) 是開源軟體（Apache-2.0）。
+mnemon 不靠嵌入模型，也能以關鍵字與圖譜回想；嵌入模型只是讓回想更精準，而它需要 Ollama。所以如果你走的是託管這條路，就為這個小小的嵌入模型單獨裝一個 Ollama，或者把上面那次下載和那行 .env 都跳過。那些記憶條目由你來讀取、修正與遺忘，而且沒有任何東西離開你的機器。[mnemon](https://github.com/mnemon-dev/mnemon) 是開源軟體（Apache-2.0）。
 
 ## 快速檢查
 

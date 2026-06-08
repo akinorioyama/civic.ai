@@ -86,17 +86,17 @@ The three files your Kami drafts — SOUL.md, IDENTITY.md, USER.md — are loade
 ```bash
 # the memory store (macOS or Linux)
 brew install mnemon-dev/tap/mnemon
-# (Ollama users only) a small local embedder makes recall faster — mnemon also works without it on graph and keyword
+# (Ollama users only) an optional local embedder makes recall faster
 ollama pull nomic-embed-text-v2-moe
-# tell mnemon to use it (skip this too if you skipped the pull above)
-export MNEMON_EMBED_MODEL=nomic-embed-text-v2-moe:latest
+# save it so your Kami loads it every time (skip this too if you skipped the pull above)
+echo 'MNEMON_EMBED_MODEL=nomic-embed-text-v2-moe:latest' >> ~/.openclaw/.env
 # wire it into your Kami
 mnemon setup --target openclaw
 ```
 
 If the brew install step fails, check [mnemon's README](https://github.com/mnemon-dev/mnemon) for the current install path — the tap address may have changed.
 
-mnemon recalls on keyword and graph without the embedder; the embedder only makes recall sharper, and it needs Ollama. So if you took the hosted path, install Ollama just for this small embedder, or skip both the pull and the export line above. The entries are yours to read, correct, and forget, and nothing leaves your machine. [mnemon](https://github.com/mnemon-dev/mnemon) is open source (Apache-2.0).
+mnemon recalls on keyword and graph without the embedder; the embedder only makes recall sharper, and it needs Ollama. So if you took the hosted path, install Ollama just for this small embedder, or skip both the pull and the .env line above. The entries are yours to read, correct, and forget, and nothing leaves your machine. [mnemon](https://github.com/mnemon-dev/mnemon) is open source (Apache-2.0).
 
 ## A quick check
 
