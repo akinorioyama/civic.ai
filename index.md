@@ -29,11 +29,11 @@ Civic AI is artificial intelligence that answers to the people it affects. Inste
 
 Each of these local stewards has a name — the **Kami** (**k**nowledge **a**rtefact **m**anagement **i**ntelligence): a spirit of place, not a universal governor.
 
-Most AI _alignment_ work — the effort to get AI to act in line with human values — tries to solve those values from the top down: write better rules, infer better preferences, train better models. Those tools matter. They are not enough on their own. The 6-Pack of Care starts somewhere else. It asks who gets heard, who is accountable, how failures are repaired, and when a system should stop. Alignment is not solved once. It is maintained in public.
+Most AI _alignment_ work — the effort to get AI to act in line with human values — tries to solve those values from the top down: write better rules, infer better preferences, train better models. Those tools matter. They are not enough on their own. The 6-Pack of Care starts somewhere else. It asks who gets heard, who is accountable, how failures are repaired, and when a system should stop. Alignment is not solved once. It is maintained in public — an accountable civic procedure the book calls _alignment-by-process_.
 
-Kami help neighbourhoods, schools, unions, faith groups, cities, and diasporas do what collective self-government has always promised but rarely delivered at scale: listen across difference, deliberate in the open, remember faithfully, and act together. No central model owns them. No platform extracts from them. Communities govern them, inspect them, contest them, and shut them down.
+Kamis help neighbourhoods, schools, unions, faith groups, cities, and diasporas do what collective self-government has always promised but rarely delivered at scale: listen across difference, deliberate in the open, remember faithfully, and act together. No central model owns them. No platform extracts from them. Communities govern them, inspect them, contest them, and shut them down.
 
-The breakthrough is not smarter chatbots. It is stronger self-government: institutions that show their work, repair harm in public, and carry civic memory across generations.
+The breakthrough is not smarter chatbots. It is stronger self-government: institutions that show their work, repair harm in public, and carry civic memory across generations. The superintelligence does not need to come. It is already here. It is us.
 
 ## Start here
 
@@ -55,7 +55,7 @@ Prefer to listen? Take the [6-Pack of Care podcast](/podcast/) or ["Can AI Be Co
 
 <h2 id="the-6-pack">The 6-Pack</h2>
 
-The 6-Pack is an application of [⿻ Plurality](https://plurality.net) to AI governance. Packs 1–4 form a feedback loop (Attentiveness → Responsibility → Competence → Responsiveness → back to Attentiveness). Pack 5 scales that loop across organisations. Pack 6 is the boundary condition that keeps every deployment local, plural, and sunset-ready. The unit of deployment is the **Kami** — a bounded local steward, not a universal governor.
+The 6-Pack is an application of [⿻ Plurality](https://plurality.net) to AI governance. Packs 1–4 form a feedback loop — the care cycle (Attentiveness → Responsibility → Competence → Responsiveness → back to Attentiveness). Pack 5 scales that loop across organisations. Pack 6 is the boundary condition that keeps every deployment local, plural, and sunset-ready. The unit of deployment is the **Kami** — a bounded local steward, not a universal governor.
 
 Six design principles translate care ethics into something institutions can build and inspect:
 
@@ -70,9 +70,11 @@ Six design principles translate care ethics into something institutions can buil
 ## Four proof points
 
 - **A public-policy case.** ["AI Alignment Cannot Be Top-Down"](/ai-alignment-cannot-be-top-down/) shows how Taiwan used an Alignment Assembly to respond to AI-enabled scam ads.
-- **A technical case.** ["Inside the Kami"](/inside-the-kami/) argues that bounded, specialised systems are easier to govern than general-purpose agents.
+- **A technical case.** ["Inside the Kami"](/inside-the-kami/) argues that bounded, specialised systems are easier to govern than a general-purpose governor.
 - **A civic-practice case.** ["Ciudadanía Digital"](/ciudadania-digital/) and [Podcast: AI and Democracy](/ai-democracy-podcast/) show how this work connects to participation, legitimacy, and everyday public problem-solving.
 - **A long-term care case.** ["Attentiveness in Long-Term Care AI"](/care-ai/) examines how a cross-sector collaboration co-produced a care-centric definition of responsible AI with the people closest to the problem.
+
+The book widens these into seven case studies: Taiwan's Alignment Assemblies, Team Mirai in Japan, Engaged California, Monlam AI, the ROOST federated safety network — and two emerging projects whose stage the book is honest about. Dedicate is a community system taking root in the United Kingdom that helps unpaid carers find peers, experts, and local services in one place. Lifting the Voices of Older Persons is a global listening effort that sets out to gather older people's priorities in underserved communities, to inform a new convention on the rights of older persons being negotiated within the United Nations.
 
 ## Publications
 
@@ -101,4 +103,4 @@ Six design principles translate care ethics into something institutions can buil
 
 </div>
 
-The project sits between a [manifesto](/manifesto/), a set of operational pack pages, and a book arriving early 2027 with Wiley. We presented the framework at the [Civic AI Conference](/conference/) at Rhodes House, Oxford, on 25 March 2026 — that page has the agenda, selected talks, and the community's Polis sensemaking on AI and care.
+The project sits between a [manifesto](/manifesto/), a set of operational pack pages, and the book _Civic AI: 6-Pack of Care_, arriving with Wiley in February 2027. We presented the framework at the [Civic AI Conference](/conference/) at Rhodes House, Oxford, on 25 March 2026 — that page has the agenda, selected talks, and the community's Polis sensemaking on AI and care.
