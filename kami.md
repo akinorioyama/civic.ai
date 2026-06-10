@@ -23,7 +23,7 @@ Be honest with yourself before you begin. These steps are a bootstrap, not a fin
 
 You do not need to be a coder. You will type three short commands into a window called the Terminal. On a Mac, open Spotlight (Command and Space), type "Terminal", and press Return. On Windows, open the Start menu, type "Terminal", and press Enter. Wherever this page says press Return, the same key is labelled Enter on Windows. A plain text window appears. You type a line, press Return, and wait. That is the whole skill.
 
-There are two honest ways to do this. Either way you end with a Kami that can come to know this place over time. The local path (Steps 1 to 3 below) is the default, and the one we recommend: it runs on your own machine and nothing leaves it, so anything you tell it about the people you serve stays with you. The hosted path skips Step 1 — no Ollama, no 7 GB download — and you pick a hosted model when OpenClaw asks in Step 2. It is still the same Terminal setup, and on the hosted path your conversations go to a third-party provider; you can move local later. If a line does not work you will see a short message — and if the message makes no sense, copy it into a search engine to decode it.
+There are two honest ways to do this. Either way you end with a Kami that can come to know this place over time. The local path (Steps 1 to 3 below) is the default, and the one we recommend: it runs on your own machine and nothing leaves it, so anything you tell it about the people you serve stays with you. The hosted path skips Step 1 — no Ollama, no 7 GB download — and you pick a hosted model when OpenClaw asks in Step 2. It is still the same Terminal setup, and on the hosted path your conversations go to a third-party provider; you can move local later. If you are choosing for a room rather than only for yourself, let the consequence of a breach decide — if a leaked transcript would cost only time and goodwill, hosted is fine; if the conversations will carry people's care, dignity or private lives, stay local, on a machine the room owns. (The Civic AI book calls this the Trust & Sovereignty Spectrum.) If a line does not work you will see a short message — and if the message makes no sense, copy it into a search engine to decode it.
 
 Pick the model that fits your machine.
 
@@ -40,7 +40,7 @@ Install [Ollama](https://ollama.com) from its website. It is the engine that run
 ollama pull gemma4:12b-it-qat
 ```
 
-This downloads the same small local model Audrey used to set up her own Kami. It is about 7 GB, instruction-tuned, and runs comfortably on a laptop with roughly 16 GB of memory. Most laptops bought in the last few years have this; if yours has less, the model still runs, just more slowly. If you are unsure, or your laptop is older, take the hosted path described above. The download takes a few minutes. Any capable local model works; this is a good, light first choice.
+This downloads the same small local model Audrey first used to bootstrap a Kami of her own. It is about 7 GB, instruction-tuned, and runs comfortably on a laptop with roughly 16 GB of memory. Most laptops bought in the last few years have this; if yours has less, the model still runs, just more slowly. If you are unsure, or your laptop is older, take the hosted path described above. The download takes a few minutes. Any capable local model works; this is a good, light first choice.
 
 ## 2. Give it a way to act
 
@@ -116,7 +116,7 @@ And you can retire it. When its work is done, or done badly:
 openclaw uninstall
 ```
 
-That removes the local data and the service; the command itself stays installed if you want to begin again. Bounded, not boundless. Local, not extractive. Sunset-ready by design.
+That removes the local data and the service; the command itself stays installed if you want to begin again. Bounded, not boundless. Local, not extractive. Sunset-ready by design. Retiring well is itself a small discipline: tell the people who shared it, with a date and a reason; name who takes over anything still needed; keep the three files — and any override ledger your group keeps (see "Keep it together" below) — as the record of who it was and how the room corrected it. A Kami that outlives its room becomes a landlord, kept running out of habit rather than need.
 
 If you chose the hosted path, check your provider's data-deletion policy before you uninstall. `openclaw uninstall` removes the local service and data, but the provider may retain conversation history.
 
@@ -128,17 +128,17 @@ When you tell your Kami to read civic.ai, it is pointed straight on to [the soul
 
 A Kami only you ever talk to is a private assistant, not a community guardian. If others share the place, it has to be shareable too.
 
-Before you go further with others, ask who in your community has actually asked for this. Ask who will hold the machine and be named when something goes wrong. Ask what happens if the Kami gives bad or harmful advice — who decides, and how fast. You do not need answers yet, but the people who will share this Kami with you should know those questions exist before you go further.
+Before you go further with others, ask who in your community has actually asked for this. Ask who will hold the machine and be named when something goes wrong. Ask what happens if the Kami gives bad or harmful advice — who decides, and how fast. Ask when it should end — a sunset named in advance, not assumed. You do not need answers yet, but the people who will share this Kami with you should know those questions exist before you go further.
 
 Those three files are plain text. Put SOUL.md, IDENTITY.md and USER.md somewhere everyone who shares the place can reach — a shared folder, a git repo, even printed copies. Then the Kami is not captive on one laptop, and an uninstall on one machine is recoverable.
 
 Edit them together. At a gathering or a community meeting, read the files aloud and change them as a group, so changes are proposed and agreed rather than made by one hand.
 
-Be honest about the limits. There is no built-in way today to log a standing objection inside the running Kami, and no built-in collective off-switch, so raising disagreement, correcting it, and deciding when to stop stay with the people at the table. The three files travel, but any memory it keeps lives on the one machine where it runs, so the shared, recoverable part is the files, not yet the memory. And a Kami cannot resolve a disagreement between people; when the room itself fractures, that stays with you.
+Be honest about the limits. There is no built-in way today to log a standing objection inside the running Kami, and no built-in collective off-switch, so raising disagreement, correcting it, and deciding when to stop stay with the people at the table. A plain-text override ledger helps here: a dated note, kept where everyone can read it, of each time someone said no to the Kami — what it proposed, who overrode it (by role, not name), why in their own words, and what changed afterwards. It needs no software; a sheet on a clipboard will do. Overrides are not failures — they are the room's working memory of how the Kami is and is not yet serving it. The three files travel, but any memory it keeps lives on the one machine where it runs, so the shared, recoverable part is the files, not yet the memory. And a Kami cannot resolve a disagreement between people; when the room itself fractures, that stays with you.
 
 Letting many hands contest the same Kami is the doorway to Keeping — slow communal work that no setup page can finish for you.
 
-At the first meeting where the Kami is actually running, write a short governance document — a plain-text file, a shared note, even a handwritten sheet. It only needs to answer four questions: who holds the machine; how often the SOUL files are reviewed; how someone proposes a change; and how that change is agreed. That is not a finished governance system. It is a written record of what you have agreed so far, and you will revise it. This is an agreement between people, not a technical enforcement — the Kami itself has no way to check it.
+At the first meeting where the Kami is actually running, write a short governance charter — a plain-text file, a shared note, even a handwritten sheet. It only needs to answer four questions: who holds the machine; how often the SOUL files are reviewed; how a change is proposed and agreed; and when the Kami should be retired. That is not a finished governance system. It is a written record of what you have agreed so far, and you will revise it. This is an agreement between people, not a technical enforcement — the Kami itself has no way to check it.
 
 ## What a webpage cannot teach
 
