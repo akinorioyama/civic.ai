@@ -1579,6 +1579,116 @@ footer a:hover {
     }
 }
 
+/* ─── COMICS GALLERY ─── */
+body.comics-page main {
+    max-width: 1120px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.comics-gallery {
+    margin: 2em 0;
+}
+
+.comics-overview {
+    text-align: center;
+    margin-bottom: 2.5em;
+}
+
+.comics-overview-link {
+    display: block;
+    text-decoration: none;
+}
+
+.comics-overview .figure-caption {
+    margin-bottom: 0;
+}
+
+.comics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* Markdown wraps each card in <p>; flatten so anchors are grid items */
+.comics-grid > p {
+    display: contents;
+    margin: 0;
+}
+
+.comics-page-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--surface);
+    transition:
+        border-color 0.15s,
+        box-shadow 0.15s;
+}
+
+.comics-page-link:hover,
+.comics-page-link:focus-visible {
+    border-color: var(--gold-light);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.comics-page-link img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+    border: none;
+}
+
+.comics-page-label {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 12px;
+    text-align: center;
+    background: var(--warm);
+}
+
+.comics-page-pack {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--heading);
+    line-height: 1.3;
+}
+
+.comics-page-type {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+}
+
+.comics-credit {
+    margin-top: 2.5em;
+    font-size: 0.9em;
+    color: var(--muted);
+    text-align: center;
+}
+
+@media (max-width: 719px) {
+    body.comics-page main {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media (max-width: 520px) {
+    .comics-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ─── POLIS REPORT ─── */
 .polis-overview {
     display: grid;

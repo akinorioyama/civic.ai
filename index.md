@@ -45,6 +45,8 @@ Just heard about Civic AI? Three steps in.
 
 Prefer to listen? Take the [6-Pack of Care podcast](/podcast/) or ["Can AI Be Compassionate?"](/compassion-and-ai/) along for a walk.
 
+Prefer visuals? Browse [all comics](/comics/) — Nicky Case's illustrated overview and twelve chapter pages.
+
 **Ready to run one?** [Set up your own Kami](/kami/) on your own laptop in three steps — bounded, local, and private.
 
 **Already know what you're after?**

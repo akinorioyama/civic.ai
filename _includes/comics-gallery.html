@@ -1,0 +1,59 @@
+{% assign lang2 = lang | split: '-' | first %}{% if lang2 == 'zh' %}{% assign cl
+= 'tw' %}{% assign base = '/tw/' %}{% else %}{% assign cl = 'en' %}{% assign
+base = '/' %}{% endif %}{% assign overview = comics.overview[cl] %}
+<div class="comics-gallery">
+    <section class="comics-overview">
+        <a href="{{ base }}#the-6-pack" class="comics-overview-link"
+            ><noscript
+                ><img
+                    src="{{ overview.src | relative_url }}"
+                    alt="{{ overview.alt }}"
+                    class="overview-image"
+                    width="{{ overview.width }}"
+                    height="{{ overview.height }}"
+                    loading="lazy"
+                    decoding="async" /></noscript></a
+        >{% if lang2 == 'zh' %}
+        <p class="figure-caption">
+            <strong>概覽圖。</strong>六力一覽，由 Nicky Case 繪製。
+        </p>
+        {% else %}
+        <p class="figure-caption">
+            <strong>Overview.</strong> All six packs at a glance, illustrated by
+            Nicky Case.
+        </p>
+        {% endif %}
+    </section>
+    <div class="comics-grid">
+        {% for pack in comics.packs %}{% for page in pack.pages %}{% if lang2 ==
+        'zh' %}{% capture img_src %}/img/pack{{ pack.num }}-{{ page.id
+        }}-tw.jpg{% endcapture %}{% else %}{% capture img_src %}/img/pack{{
+        pack.num }}-{{ page.id }}.jpg{% endcapture %}{% endif %}<a
+            href="{{ base }}{{ pack.slug }}/"
+            class="comics-page-link"
+            id="pack-{{ pack.num }}-{{ page.id }}"
+            ><noscript
+                ><img
+                    src="{{ img_src | relative_url }}"
+                    alt="{{ page.alt[cl] }}"
+                    width="1437"
+                    height="1999"
+                    loading="lazy"
+                    decoding="async" /></noscript
+            ><span class="comics-page-label"
+                ><span class="comics-page-pack">{{ pack.title[cl] }}</span
+                ><span class="comics-page-type">{{ page.type[cl] }}</span></span
+            ></a
+        >{% endfor %}{% endfor %}
+    </div>
+    <p class="comics-credit">
+        {% if lang2 == 'zh' %}插圖由
+        <a href="https://ncase.me">Nicky Case</a> 繪製（CC0）。<a
+            href="{{ comics.source_repo }}"
+            >原始檔案</a
+        >見 GitHub。{% else %}Illustrated by
+        <a href="https://ncase.me">Nicky Case</a> (CC0).
+        <a href="{{ comics.source_repo }}">Source files</a> on GitHub.{% endif
+        %}
+    </p>
+</div>

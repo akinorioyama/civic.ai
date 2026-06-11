@@ -1,0 +1,21 @@
+---
+layout: chapter
+page_class: comics-page
+title: "關懷六力漫畫"
+description: "Nicky Case 繪製的全部漫畫插圖——每一力的問題頁與解方頁，並連結至完整章節。"
+meta_description: "瀏覽 Nicky Case 為「關懷六力」繪製的全部漫畫：概覽圖與十二張章節頁，一鍵進入各章。"
+lang: zh-tw
+alt_lang_url: "/comics"
+permalink: "/tw/comics/"
+og_image: "/img/overview-small-tw.jpg"
+nav_prev:
+    url: "/tw"
+    text: "首頁"
+nav_next:
+    url: "/tw/1"
+    text: "一：覺察力"
+---
+
+Nicky Case 將「關懷六力」畫成漫畫：一張概覽圖，加上十二張章節頁（每一力各有一頁「問題」、一頁「解方」）。點選任一頁面，即可閱讀完整章節。
+
+<div>{% include "comics-gallery.html" %}</div>

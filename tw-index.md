@@ -44,6 +44,8 @@ next_action:
 
 想用聽的？散步時，帶上[Podcast：關懷六力](/tw/podcast/)或[《AI 能有「慈悲心」嗎？》](/tw/compassion-and-ai/)。
 
+想看圖？瀏覽[全部漫畫](/tw/comics/)——Nicky Case 繪製的概覽圖與十二張章節頁。
+
 **想自己跑一個嗎？** 在你自己的筆電上，三個步驟[架設你自己的 Kami](/tw/kami/)——有界限、在地、私密。
 
 **已經知道自己在找什麼？**

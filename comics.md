@@ -1,0 +1,21 @@
+---
+layout: chapter
+page_class: comics-page
+title: "6-Pack Comics"
+description: "All comic illustrations by Nicky Case — problem and solution pages for each pack, with links to the full chapters."
+meta_description: "Browse all Nicky Case comic illustrations for the 6-Pack of Care: overview plus twelve chapter pages, with one-click access to each pack."
+lang: en-gb
+alt_lang_url: "/tw/comics"
+permalink: "/comics/"
+og_image: "/img/overview-small.jpg"
+nav_prev:
+    url: "/"
+    text: "Home"
+nav_next:
+    url: "/1"
+    text: "Pack 1: Attentiveness"
+---
+
+Nicky Case illustrated the 6-Pack of Care as a comic: one overview and twelve chapter pages (problem and solution for each pack). Click any page to read the full chapter.
+
+<div>{% include "comics-gallery.html" %}</div>
