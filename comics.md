@@ -16,6 +16,4 @@ nav_next:
     text: "Pack 1: Attentiveness"
 ---
 
-Nicky Case illustrated the 6-Pack of Care as a comic: one overview and twelve chapter pages (problem and solution for each pack). Click any page to read the full chapter.
-
 <div>{% include "comics-gallery.html" %}</div>

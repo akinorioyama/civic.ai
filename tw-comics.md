@@ -16,6 +16,4 @@ nav_next:
     text: "一：覺察力"
 ---
 
-Nicky Case 將「關懷六力」畫成漫畫：一張概覽圖，加上十二張章節頁（每一力各有一頁「問題」、一頁「解方」）。點選任一頁面，即可閱讀完整章節。
-
 <div>{% include "comics-gallery.html" %}</div>
