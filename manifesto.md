@@ -128,7 +128,7 @@ Care ethics focuses on the internal characteristics of actors and the quality of
 
 Tronto's foundational argument in _Moral Boundaries_ is that care was excluded from serious moral and political consideration by historically constructed boundaries — between morality and politics, public and private life, and a "moral point of view" that prizes detachment over responsiveness. These boundaries are contingent, not natural, and they were built to keep care invisible. AI governance is reproducing the same pattern: by constructing "alignment" and "safety" as purely technical categories, it draws new boundaries that exclude relational concerns from the conversation before it even begins.
 
-What the philosopher Margaret Urban Walker calls "expressive-collaborative morality" — the view that moral life is a continuing negotiation among people, not the application of principles from above — is the philosophical foundation for this approach. The 6-Pack's reliance on bridging, deliberation, and alignment assemblies is expressive-collaborative morality in practice: moral norms emerge from democratic encounter, not from expert decree (Margaret Urban Walker, _Moral Understandings: A Feminist Study in Ethics_, 1998/2007).
+What the philosopher Margaret Urban Walker calls "expressive-collaborative morality" — the view that moral life is a continuing negotiation among people, not the application of principles from above — is the philosophical foundation for this approach. The 6-Pack's reliance on bridging, deliberation, and alignment assemblies is expressive-collaborative morality in practice: moral norms emerge from democratic encounter, not from expert decree.
 
 The 6-Pack is a governance architecture — it gives societies leverage even when technical alignment is imperfect, making failures legible, contestable, and reversible. This is a deliberate trade-off: a governance framework can create conditions where moral attention is rewarded and its absence is visible, but the moral attention itself still requires human judgment that no procedure can replace. The following "6-Pack" translates care ethics into design primitives we can code into agentic systems to steer towards relational health.
 
@@ -162,7 +162,7 @@ Good intentions require working code. Competence is shipping systems that delive
 
 This competence is where we implement decision traces, shadow mode, canaries, fallbacks, and security constraints. The point is not to guess what the community values, but to prove the system can act safely within the bounds already set.
 
-Security is also a competence — and a moral — question. An agent that can be hijacked cannot tend its place. Prompt injection, privilege escalation, and scope creep are care failures, not merely technical ones. A Kami with real resources runs in a strict sandbox: least-privilege permissions, validated inputs, no implicit trust of anything upstream.
+Security is also a competence — and a moral — question. An agent that can be hijacked cannot tend its place. Prompt injection, privilege escalation, and lateral movement are care failures, not merely technical ones. A Kami with real resources runs in a strict sandbox: least-privilege permissions, validated inputs, no implicit trust of anything upstream.
 
 _Rule of thumb: Security failures are moral failures of those who build and deploy, not merely technical oversights._
 
