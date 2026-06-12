@@ -218,7 +218,7 @@ The 6-Pack does not cover weapons systems or battlefield autonomy. Those require
 
 <h4 id="faq-15"><a href="#faq-15">Q15.</a> The 6-Pack assumes bounded, purpose-specific Kamis. What if someone builds an unbounded superintelligence anyway — a system that exceeds the framework's design envelope? Does the 6-Pack have a response, or does it just hope that doesn't happen?</h4>
 
-It does not hope. It builds. But it builds the second line of defence, not the first. Defence against an unbounded superintelligence is the first question, and [Q16](#faq-16) names the people who carry it; the 6-Pack complements their work, it does not substitute for it.
+It does not hope. It builds. But it builds the second line of defence, not the first. Defence against an unbounded superintelligence is the first question, and [Q17](#faq-17) names the people who carry it; the 6-Pack complements their work, it does not substitute for it.
 
 The 6-Pack assumes the attempt is inevitable and does not claim to solve the control problem from inside the machine. An unbounded Singleton is an incoherent _design target_ — care is always care _for_ something specific — but it could still emerge accidentally through competitive dynamics. The 6-Pack is partial protection that makes such emergence less likely and more legible, not a guarantee against it. The question is what terrain it enters.
 
@@ -228,11 +228,29 @@ This is a wager, not a theorem, and it is built to be falsified. The wager fails
 
 There may be time to exercise it: the most-cited forecast for an unbounded system has slid its own median toward 2030, and every year the promised arrival recedes is a year the immune system can be stress-tested and made ordinary. But the wager does not lean on the forecast. We build for the schedule we do not control, not the one we hope for.
 
-Boundedness, then, is not a limitation the 6-Pack reluctantly accepts. It is the constitutive feature of governance alignment, the way "north" has no meaning at the pole. A gardener who claims to tend the entire biosphere tends no garden. The unbounded Singleton is a design target we can and should refuse, a direction we can design away from, even if we cannot guarantee no one else builds toward it. For the system someone builds anyway, the watch is the first question's work ([Q16](#faq-16)); ours is the terrain it enters.
+Boundedness, then, is not a limitation the 6-Pack reluctantly accepts. It is the constitutive feature of governance alignment, the way "north" has no meaning at the pole. A gardener who claims to tend the entire biosphere tends no garden. The unbounded Singleton is a design target we can and should refuse, a direction we can design away from, even if we cannot guarantee no one else builds toward it. For the system someone builds anyway, the watch is the first question's work ([Q17](#faq-17)); ours is the terrain it enters.
 
 ---
 
-<h4 id="faq-16"><a href="#faq-16">Q16.</a> The foreword to the book <em>Civic AI: 6-Pack of Care</em> positions it as a successor to Bostrom's <em>Superintelligence</em> in the Oxford line, but says explicitly that the book does not attempt to resolve frontier alignment. How, then, is the 6-Pack of Care different from alignment in Bostrom's sense?</h4>
+<h4 id="faq-16"><a href="#faq-16">Q16.</a> The 6-Pack seems to rely on democratic correction rather than a fixed foundation. But who counts as "the public"? What if an AI decision cannot be reversed? And if model behaviour is shaped by opaque training, what exactly are we governing?</h4>
+
+The defended point is not a perfect foundation. It is the corrective loop: who can find out we are wrong, make us say so, and make it cost us while there is still time to change course. The 6-Pack entrenches that loop; everything else remains bounded, revisable, and answerable.
+
+Three consequences follow.
+
+First, the public is found, not fenced. No first boundary can be perfectly authorised by the people whose membership is still in question. So the 6-Pack does not pretend the initial "who counts?" can validate itself. It reconstructs the affected public from evidence: decisions, denials, exclusions, appeals, complaints, and external claims. Anyone in the footprint without standing is presumptively owed a route to claim it; anyone outside the footprint can still knock. Membership stays bounded and revisable, but the route for challenging the boundary cannot depend on already being inside it.
+
+Second, democracy does not require world-reversal. Many AI-mediated acts cannot be undone in the strong sense; neither can most political acts. The democratic good at stake is mandate-revocability: affected people, including future affected people, retain the power to revise the mandate. That is why [Pack 4](../4/) treats brakes, appeals, and repair logs as care mechanisms, and why [Pack 6](../6/) makes sunsets non-optional. Reversible decisions can move quickly; one-way doors go to the slow lane; actions that disable the corrective loop are beyond the mandate.
+
+Third, the object of governance is formation as well as runtime behaviour. We cannot inspect every disposition inside a model, but we can require accountable custody and disclosure for the processes that shape those dispositions: data provenance, rater selection, reward signals, refusal policies, release rationales, red-team results, and community-authored evaluations. Caps bound what a _Kami_ may do; accountable formation shapes what it is permitted to become. A model update that gains capability while degrading brake-compliance, increasing scope appetite, or becoming more sycophantic under disagreement is not a harmless improvement. It weakens the public's future right of correction.
+
+This matters most when the object is not one stable system but a trajectory: scaling, copies, test-time search, delegation, recursive improvement, and groups of agents can all move faster than institutions. This is not a claim that democratic procedure can control an unbounded system after the fact. The narrower claim is that a society must keep a live right of correction over compounding intelligence before the trajectory outruns the institutions that would notice, name, and contest it.
+
+So the 6-Pack is not foundationalism in disguise. It is constitutional modesty. It entrenches the brakes, not the destination; the right to knock, not a final map of membership; and accountable custody of formation, not a fantasy that values can be solved once inside the weights. That is why [Q17](#faq-17) treats frontier alignment as a separate task: the 6-Pack is the institutional discipline that keeps situated civic deployment answerable in the rooms where AI already lives.
+
+---
+
+<h4 id="faq-17"><a href="#faq-17">Q17.</a> The foreword to the book <em>Civic AI: 6-Pack of Care</em> positions it as a successor to Bostrom's <em>Superintelligence</em> in the Oxford line, but says explicitly that the book does not attempt to resolve frontier alignment. How, then, is the 6-Pack of Care different from alignment in Bostrom's sense?</h4>
 
 It is a different question, posed for a different class of systems.
 

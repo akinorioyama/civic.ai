@@ -132,6 +132,8 @@ What the philosopher Margaret Urban Walker calls "expressive-collaborative moral
 
 The 6-Pack is a governance architecture — it gives societies leverage even when technical alignment is imperfect, making failures legible, contestable, and reversible. This is a deliberate trade-off: a governance framework can create conditions where moral attention is rewarded and its absence is visible, but the moral attention itself still requires human judgment that no procedure can replace. The following "6-Pack" translates care ethics into design primitives we can code into agentic systems to steer towards relational health.
 
+The defended point is not a perfect foundation. We do not answer "what grounds this?" with a bigger foundation. We answer: who can find out we are wrong, make us say so, and make it cost us now? That corrective loop is entrenched. Everything else remains bounded, revisable, and answerable: the public is found in the footprint of what the system touches; one-way doors go slow; and any system that weakens the right of correction cannot claim the 6-Pack's mandate.
+
 # Attentiveness: **"Caring about"**
 
 Before optimising, we must choose what to notice. We must notice what people closest to the pain are noticing, turning local knowledge into common knowledge.
