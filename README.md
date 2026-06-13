@@ -47,10 +47,26 @@ bun run dev          # local dev server at http://127.0.0.1:8080
 bun run build        # production build → ./docs/
 ```
 
+## Repository map
+
+| Path                         | What it is                                                                                       |
+| ---------------------------- | ------------------------------------------------------------------------------------------------ |
+| `*.md` (top level)           | Page content, British English. One file per page.                                                |
+| `tw-*.md`                    | Traditional Mandarin counterpart of each English page (keep in parity).                          |
+| `_layouts/`                  | Page templates: `default.html` (home-style) and `chapter.html` (book pages, with prev/next nav). |
+| `_includes/`                 | Shared template partials pulled into the layouts.                                                |
+| `_data/`                     | Global data (site config, comics, OpenClaw bootstrap, Polis report).                             |
+| `img/`, `fonts/`, `audio/`   | Static assets, passthrough-copied to the build.                                                  |
+| `styles.css`                 | All site styles (mobile-first; uses CSS custom properties).                                      |
+| `eleventy.config.js`         | Build config: passthrough rules, Markdown tweaks, filters.                                       |
+| `.github/doc_sync_config.py` | Single source of truth for Google-Doc sync scope.                                                |
+| `specs/`                     | Internal design & implementation docs (not published; see `.eleventyignore`).                    |
+| `docs/`                      | **Generated** build output — never edit by hand.                                                 |
+
 ## Contributing
 
 Pull requests are welcome. By contributing, you agree to release your work under the [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) public domain dedication.
 
-When editing content, maintain parity between English (`*.md`) and Traditional Mandarin (`tw-*.md`) variants.
+When editing content, maintain parity between English (`*.md`) and Traditional Mandarin (`tw-*.md`) variants. English files use a spaced single em dash (—); `tw-*` files use a double em dash (——, no spaces). Reuse the project's locked Traditional Mandarin terminology rather than coining new translations.
 
 Part of the [Accelerator Fellowship Programme](https://afp.oxford-aiethics.ox.ac.uk/), [Oxford Institute for Ethics in AI](https://www.oxford-aiethics.ox.ac.uk/).
