@@ -2,3 +2,4 @@
 # an inline-<script>-bearing partial changes the rendered bytes and breaks the
 # refactor's byte-identical build check. Keep partials with inline <script> here.
 _includes/page-head.html
+_includes/scripts.html

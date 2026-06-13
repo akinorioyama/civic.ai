@@ -178,42 +178,6 @@
                 }
             }
         </script>
-        <script>
-            // userMoved guard is registered in <head> (before first paint).
-            function jumpToHash() {
-                if (window.__userMoved || location.hash.length < 2) return;
-                var id;
-                try {
-                    id = decodeURIComponent(location.hash.slice(1));
-                } catch (e) {
-                    id = location.hash.slice(1);
-                }
-                var target = document.getElementById(id);
-                if (target) target.scrollIntoView();
-            }
-            window.addEventListener("load", jumpToHash);
-            window.__avif.then(function (ok) {
-                document.querySelectorAll("noscript").forEach(function (ns) {
-                    var html = ns.textContent;
-                    if (html.indexOf("<img ") === -1) return;
-                    if (ok) {
-                        html = html.replace(/\.(jpg|png)(?=["'\s])/g, ".avif");
-                        html = html.replace(/\sloading=["']lazy["']/gi, "");
-                        html = html.replace(/\sdecoding=["']async["']/gi, "");
-                    }
-                    var tmp = document.createElement("div");
-                    tmp.innerHTML = html;
-                    var img = tmp.querySelector("img");
-                    if (img) {
-                        if (ok) {
-                            img.removeAttribute("loading");
-                            img.removeAttribute("decoding");
-                        }
-                        ns.parentNode.insertBefore(img, ns);
-                    }
-                });
-                jumpToHash();
-            });
-        </script>
+        {% include "scripts.html" %}
     </body>
 </html>

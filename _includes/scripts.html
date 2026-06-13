@@ -1,0 +1,79 @@
+        <script>
+            // userMoved guard is registered in <head> (before first paint).
+            function jumpToHash() {
+                if (window.__userMoved || location.hash.length < 2) return;
+                var id;
+                try {
+                    id = decodeURIComponent(location.hash.slice(1));
+                } catch (e) {
+                    id = location.hash.slice(1);
+                }
+                var target = document.getElementById(id);
+                if (target) target.scrollIntoView();
+            }
+            window.addEventListener("load", jumpToHash);
+            window.__avif.then(function (ok) {
+                document.querySelectorAll("noscript").forEach(function (ns) {
+                    var html = ns.textContent;
+                    if (html.indexOf("<img ") === -1) return;
+                    if (ok) {
+                        html = html.replace(/\.(jpg|png)(?=["'\s])/g, ".avif");
+                        html = html.replace(/\sloading=["']lazy["']/gi, "");
+                        html = html.replace(/\sdecoding=["']async["']/gi, "");
+                    }
+                    var tmp = document.createElement("div");
+                    tmp.innerHTML = html;
+                    var img = tmp.querySelector("img");
+                    if (img) {
+                        if (ok) {
+                            img.removeAttribute("loading");
+                            img.removeAttribute("decoding");
+                        }
+                        ns.parentNode.insertBefore(img, ns);
+                    }
+                });
+                jumpToHash();
+            });
+        </script>
+        <script>
+            // Turn each code block into a terminal copy-box with a Copy button.
+            (function () {
+                var zh =
+                    (document.documentElement.lang || "").indexOf("zh") === 0;
+                var L = zh
+                    ? { copy: "複製", done: "已複製" }
+                    : { copy: "Copy", done: "Copied" };
+                document.querySelectorAll("main pre").forEach(function (pre) {
+                    if (
+                        pre.parentElement &&
+                        pre.parentElement.classList.contains("code-block")
+                    )
+                        return;
+                    var wrap = document.createElement("div");
+                    wrap.className = "code-block";
+                    pre.parentNode.insertBefore(wrap, pre);
+                    wrap.appendChild(pre);
+                    var btn = document.createElement("button");
+                    btn.type = "button";
+                    btn.className = "copy-btn";
+                    btn.textContent = L.copy;
+                    btn.setAttribute("aria-label", L.copy);
+                    btn.addEventListener("click", function () {
+                        var code = pre.querySelector("code");
+                        var text = code ? code.innerText : pre.innerText;
+                        navigator.clipboard.writeText(text).then(
+                            function () {
+                                btn.textContent = L.done;
+                                btn.classList.add("copied");
+                                setTimeout(function () {
+                                    btn.textContent = L.copy;
+                                    btn.classList.remove("copied");
+                                }, 1500);
+                            },
+                            function () {}
+                        );
+                    });
+                    wrap.appendChild(btn);
+                });
+            })();
+        </script>
