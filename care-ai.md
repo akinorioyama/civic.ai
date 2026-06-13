@@ -1,6 +1,7 @@
 ---
 layout: chapter
 title: "Attentiveness in Long-Term Care AI"
+summary: "A true story of how more than 100 people across the UK's care community — recipients, carers, workers, providers — co-produced a definition of responsible AI in care, starting from what people value rather than what technology can optimise."
 author: "Caroline Emmer De Albuquerque Green"
 lang: en-gb
 alt_lang_url: "/tw/care-ai"

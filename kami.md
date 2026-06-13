@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Set up your own Kami"
+summary: "Three short commands stand up your own Kami: a bounded, local Civic AI steward that runs on your laptop and answers to the people it serves. Setup is quick; earning a community's trust is the slow work that follows."
 description: "The simplest way to run your own Kami: a bounded, local, private Civic AI steward on your own laptop, in three steps."
 lang: en-gb
 alt_lang_url: "/tw/kami/"

@@ -7,6 +7,7 @@ alt_lang_url: "/tw/inside-the-kami"
 permalink: "/inside-the-kami/"
 date: 2026-03-05
 description: "What recent ML research suggests goes inside a bounded Civic AI — and what it cannot provide."
+summary: "Three lines of ML research — Bengio, LeCun and Taniguchi's collective predictive coding — converge on a bounded, specialised Kami that negotiates shared meaning rather than ruling from above. The substrate can stay honest and narrow; legitimacy, pace and justice remain ours."
 nav_next:
     url: "/"
     text: "Home"

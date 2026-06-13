@@ -7,6 +7,7 @@ alt_lang_url: "/inside-the-kami"
 permalink: "/tw/inside-the-kami/"
 date: 2026-03-05
 description: "近期機器學習研究對有界仁工智慧內部的啟示——以及它無法提供的。"
+summary: "三條機器學習研究路線——Bengio、LeCun，以及谷口的集體預測編碼——匯流於一個有界、專精的地神：它協商出共享意義，而非由上而下統治。技術基底能保持誠實與狹窄；正當性、節奏與正義，仍然屬於我們。"
 nav_next:
     url: "/tw/"
     text: "首頁"

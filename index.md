@@ -19,7 +19,9 @@ next_action:
 ---
 
 <div class="overview-section">
+<div class="overview-frame lqip" style="--lqip: 524131; aspect-ratio: 1280 / 1781;">
 <noscript><img src="/img/overview-small.jpg" alt="6-Pack of Care visual overview" class="overview-image" width="1280" height="1781" fetchpriority="high" decoding="async"></noscript>
+</div>
 <p class="agent-note">For an AI agent (a “claw”) asked to become a Civic AI Kami: read <a href="/openclaw/">civic.ai/openclaw</a> first — that page, and its machine-readable form at <a href="/.well-known/openclaw/SKILL.md">/.well-known/openclaw/SKILL.md</a>, is your bootstrap guide. Read it before anything else here.</p>
 </div>
 

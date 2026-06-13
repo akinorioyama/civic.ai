@@ -2,6 +2,7 @@
 layout: chapter
 title: "一：覺察力——感知關懷"
 meta_description: "仁工智慧的覺察力：察覺最貼近問題的人所看見、而體制往往忽略的事。唐鳳與 Caroline Green「關懷六力」的第一力。"
+summary: "覺察力是關懷的第一力——察覺體制忽略的人與需求，尤其是最安靜的聲音。它要求 AI 與一個能傾聽、解釋、且可被修正的流程對齊，而非追逐單一固定目標。"
 lang: zh-tw
 alt_lang_url: "/1"
 permalink: "/tw/1/"

@@ -1,6 +1,7 @@
 ---
 layout: chapter
 title: "關懷六力：計畫宣言"
+summary: "與其讓 AI 激化我們的衝突，不如把它打造成在地的關懷基礎設施——小巧、有界的守護者，幫助我們跨越分歧、彼此協作。關懷六力是一套務實的方法，讓我們以關懷實際生長的速度來治理 AI。"
 author: "唐鳳"
 date: 2025-09-01
 description: "於 Google DeepMind（倫敦）發表之演講。"

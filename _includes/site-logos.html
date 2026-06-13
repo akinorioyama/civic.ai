@@ -36,7 +36,7 @@
         alt="加速哲人徽章"
     />
 </a>
-{% endif %}
+{% endif %} {% if alt_lang_url %}
 <div style="position: absolute; top: 20px; right: 20px">
     {% if lang2 == 'en' %}
     <a href="{{ alt_lang_url | relative_url }}" class="lang-toggle">華文</a>
@@ -44,3 +44,4 @@
     <a href="{{ alt_lang_url | relative_url }}" class="lang-toggle">English</a>
     {% endif %}
 </div>
+{% endif %}
