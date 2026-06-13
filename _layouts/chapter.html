@@ -82,26 +82,7 @@
             <p class="chapter-date">{{ author }}</p>
             {% endif %} {% if description %}
             <p>{{ description }}</p>
-            {% endif %}
-
-            <nav
-                class="site-nav"
-                aria-label="{% if lang2 == 'en' %}Site sections{% else %}網站導覽{% endif %}"
-            >
-                {% if lang2 == 'en' %}
-                <a href="{{ '/' | relative_url }}">Home</a>
-                <a href="{{ '/manifesto/' | relative_url }}">Manifesto</a>
-                <a href="{{ '/#the-6-pack' | relative_url }}">The 6-Pack</a>
-                <a href="{{ '/faq/' | relative_url }}">FAQ</a>
-                <a href="{{ '/conference/' | relative_url }}">Conference</a>
-                {% else %}
-                <a href="{{ '/tw/' | relative_url }}">首頁</a>
-                <a href="{{ '/tw/manifesto/' | relative_url }}">計畫宣言</a>
-                <a href="{{ '/tw/#the-6-pack' | relative_url }}">關懷六力</a>
-                <a href="{{ '/tw/faq/' | relative_url }}">常見問題</a>
-                <a href="{{ '/tw/conference/' | relative_url }}">研討會</a>
-                {% endif %}
-            </nav>
+            {% endif %} {% include "site-nav.html" %}
         </header>
 
         <main id="main">
