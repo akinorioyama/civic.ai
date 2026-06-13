@@ -3132,6 +3132,11 @@ h4[id] {
     gap: 14px;
     margin: 0.8em 0 1.5em;
 }
+/* Markdown can inject a stray empty <p> as the first grid child; keep it out
+   of the grid so the three cards stay in one clean row. */
+.reading-paths > p {
+    display: none;
+}
 @media (max-width: 560px) {
     .reading-paths {
         grid-template-columns: 1fr;
