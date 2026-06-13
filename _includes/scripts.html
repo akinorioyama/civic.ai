@@ -77,3 +77,39 @@
                 });
             })();
         </script>
+        <script>
+            // Build an on-this-page table of contents for long pages.
+            (function () {
+                var main = document.getElementById("main");
+                if (!main) return;
+                if (main.querySelector(".page-toc")) return;
+                var heads = main.querySelectorAll(
+                    "h1[id],h2[id],h3[id],h4[id]"
+                );
+                if (heads.length < 6) return;
+                var zh =
+                    (document.documentElement.lang || "").indexOf("zh") === 0;
+                var details = document.createElement("details");
+                details.className = "page-toc";
+                details.setAttribute("role", "navigation");
+                details.setAttribute("aria-label", zh ? "本頁內容" : "On this page");
+                details.open = window.matchMedia("(min-width: 720px)").matches;
+                var sum = document.createElement("summary");
+                sum.textContent = zh ? "本頁內容" : "On this page";
+                details.appendChild(sum);
+                var ul = document.createElement("ul");
+                heads.forEach(function (h) {
+                    var li = document.createElement("li");
+                    li.className = "page-toc__" + h.tagName.toLowerCase();
+                    var a = document.createElement("a");
+                    a.href = "#" + h.id;
+                    a.textContent = (h.textContent || "").trim();
+                    li.appendChild(a);
+                    ul.appendChild(li);
+                });
+                details.appendChild(ul);
+                var card = main.querySelector(".in-short");
+                if (card) card.insertAdjacentElement("afterend", details);
+                else main.insertBefore(details, main.firstChild);
+            })();
+        </script>

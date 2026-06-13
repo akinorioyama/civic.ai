@@ -2,6 +2,7 @@
 layout: chapter
 title: "Frequently Asked Questions"
 meta_description: "Answers on Civic AI and the 6-Pack of Care: care ethics and AI alignment, the Kami, corrigibility, sunset conditions, and democratic AI governance."
+summary: "Plain-language answers to the hardest questions about Civic AI and the 6-Pack of Care — whether cooperative Kamis can survive a profit-driven AI arms race, how alignment-by-process replaces top-down control, who stays accountable, and how a bounded local steward stays safe, contestable, and can be switched off."
 lang: en-gb
 alt_lang_url: "/tw/faq"
 permalink: "/faq/"

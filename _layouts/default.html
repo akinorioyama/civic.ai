@@ -47,7 +47,7 @@
             {% endif %} {% include "site-nav.html" %}
         </header>
 
-        <main id="main">{{ content }}</main>
+        <main id="main">{% include "in-short.html" %} {{ content }}</main>
 
         {% if next_action or prev_action %}
         <section class="next-action">

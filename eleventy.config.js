@@ -1,5 +1,6 @@
 import htmlmin from "html-minifier";
 import footnote from "markdown-it-footnote";
+import anchor from "markdown-it-anchor";
 
 export default function (eleventyConfig) {
     // Fix markdown-it CJK emphasis: CommonMark's flanking rules break when
@@ -8,6 +9,15 @@ export default function (eleventyConfig) {
     // open or close emphasis, matching how CJK text actually works.
     eleventyConfig.amendLibrary("md", (mdLib) => {
         mdLib.use(footnote);
+        const cjkSlugify = (s) => {
+            const out = String(s)
+                .trim()
+                .toLowerCase()
+                .replace(/\s+/g, "-")
+                .replace(/[^\p{L}\p{N}_-]/gu, "");
+            return out || "section";
+        };
+        mdLib.use(anchor, { slugify: cjkSlugify, permalink: false });
         const CJK =
             /[\u2E80-\u9FFF\uF900-\uFAFF\uFE30-\uFE4F\uFF00-\uFFEF\u3000-\u303F\u3040-\u309F\u30A0-\u30FF]/;
         const State = mdLib.inline.State;
@@ -82,6 +92,17 @@ export default function (eleventyConfig) {
             return `${d.getFullYear()} 年 ${d.getMonth() + 1} 月 ${d.getDate()} 日`;
         }
         return d.toDateString();
+    });
+
+    eleventyConfig.addFilter("readingTime", function (content, lang) {
+        const text = String(content || "").replace(/<[^>]+>/g, " ");
+        const lang2 = String(lang || "").split("-")[0];
+        if (lang2 === "zh") {
+            const chars = (text.match(/[㐀-鿿]/g) || []).length;
+            return Math.max(1, Math.ceil(chars / 360));
+        }
+        const words = (text.trim().match(/\S+/g) || []).length;
+        return Math.max(1, Math.ceil(words / 220));
     });
 
     eleventyConfig.ignores.add("AGENTS.md");

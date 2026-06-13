@@ -1,0 +1,17 @@
+{% if summary %}
+<aside
+    class="in-short"
+    aria-label="{% if lang2 == 'en' %}In short{% else %}簡單講{% endif %}"
+>
+    <p class="in-short__meta">
+        <span class="in-short__label"
+            >{% if lang2 == 'en' %}In short{% else %}簡單講{% endif %}</span
+        >
+        <span class="in-short__time"
+            >{{ content | readingTime: lang }} {% if lang2 == 'en' %}min read{%
+            else %}分鐘閱讀{% endif %}</span
+        >
+    </p>
+    <p class="in-short__body">{{ summary }}</p>
+</aside>
+{% endif %}
