@@ -49,19 +49,19 @@ bun run build        # production build → ./docs/
 
 ## Repository map
 
-| Path                         | What it is                                                                                       |
-| ---------------------------- | ------------------------------------------------------------------------------------------------ |
-| `*.md` (top level)           | Page content, British English. One file per page.                                                |
-| `tw-*.md`                    | Traditional Mandarin counterpart of each English page (keep in parity).                          |
-| `_layouts/`                  | Page templates: `default.html` (home-style) and `chapter.html` (book pages, with prev/next nav). |
-| `_includes/`                 | Shared template partials pulled into the layouts.                                                |
-| `_data/`                     | Global data (site config, comics, OpenClaw bootstrap, Polis report).                             |
-| `img/`, `fonts/`, `audio/`   | Static assets, passthrough-copied to the build.                                                  |
-| `styles.css`                 | All site styles (mobile-first; uses CSS custom properties).                                      |
-| `eleventy.config.js`         | Build config: passthrough rules, Markdown tweaks, filters.                                       |
-| `.github/doc_sync_config.py` | Single source of truth for Google-Doc sync scope.                                                |
-| `specs/`                     | Internal design & implementation docs (not published; see `.eleventyignore`).                    |
-| `docs/`                      | **Generated** build output — never edit by hand.                                                 |
+| Path                         | What it is                                                                                                                 |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `*.md` (top level)           | Page content, British English. One file per page.                                                                          |
+| `tw-*.md`                    | Traditional Mandarin counterpart of each English page (keep in parity).                                                    |
+| `_layouts/`                  | Page templates: `default.html` (home), `chapter.html` (book pages, prev/next nav), `conference.html` (conference page).    |
+| `_includes/`                 | Shared template partials pulled into the layouts (`page-head`, `site-logos`, `site-nav`, `scripts`, `footer`, `seo-head`). |
+| `_data/`                     | Global data (site config, comics, OpenClaw bootstrap, Polis report).                                                       |
+| `img/`, `fonts/`, `audio/`   | Static assets, passthrough-copied to the build.                                                                            |
+| `styles.css`                 | All site styles (mobile-first; uses CSS custom properties).                                                                |
+| `eleventy.config.js`         | Build config: passthrough rules, Markdown tweaks, filters.                                                                 |
+| `.github/doc_sync_config.py` | Single source of truth for Google-Doc sync scope.                                                                          |
+| `specs/`                     | Internal design & implementation docs (not published; see `.eleventyignore`).                                              |
+| `docs/`                      | **Generated** build output — never edit by hand.                                                                           |
 
 ## Contributing
 
