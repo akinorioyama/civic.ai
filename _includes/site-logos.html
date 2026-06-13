@@ -39,16 +39,8 @@
 {% endif %}
 <div style="position: absolute; top: 20px; right: 20px">
     {% if lang2 == 'en' %}
-    <a
-        href="{{ alt_lang_url | default: '/tw/' | relative_url }}"
-        class="lang-toggle"
-        >華文</a
-    >
+    <a href="{{ alt_lang_url | relative_url }}" class="lang-toggle">華文</a>
     {% else %}
-    <a
-        href="{{ alt_lang_url | default: '/' | relative_url }}"
-        class="lang-toggle"
-        >English</a
-    >
+    <a href="{{ alt_lang_url | relative_url }}" class="lang-toggle">English</a>
     {% endif %}
 </div>
