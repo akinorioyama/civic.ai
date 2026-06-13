@@ -5,7 +5,7 @@
 
 ```bash
 bun install          # install dependencies
-bun run dev          # local dev server with live reload at http://127.0.0.1:4000
+bun run dev          # local dev server with live reload at http://127.0.0.1:8080
 bun run build        # production build → ./docs/
 ```
 
