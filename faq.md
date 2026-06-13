@@ -14,7 +14,7 @@ nav_next:
     text: "Home"
 ---
 
-<h4 id="faq-1"><a href="#faq-1">Q1.</a> The AI market is locked in an arms race driven by commercial profit and geopolitical dominance. An AI working for a tax-software monopoly can lobby to keep tax filing difficult — and far worse is easy to imagine. If this problem continues, isn't the vision of cooperative Kamis hopelessly naive?</h4>
+<h4 id="faq-1" data-toc="Surviving the AI Arms Race"><a href="#faq-1">Q1.</a> The AI market is locked in an arms race driven by commercial profit and geopolitical dominance. An AI working for a tax-software monopoly can lobby to keep tax filing difficult — and far worse is easy to imagine. If this problem continues, isn't the vision of cooperative Kamis hopelessly naive?</h4>
 
 Civic AI cannot survive by asking monopolies to be nicer. [Moloch](https://slatestarcodex.com/2014/07/30/meditations-on-moloch/) — the dynamic where rational actors race to the bottom because defection pays — is not defeated by moralising. It is defeated by changing the terrain so that cooperation pays more than extraction. Five levers, each already live somewhere and one already proven at national scale, can bend the curve:
 
@@ -28,7 +28,7 @@ None of these levers requires goodwill from incumbents. Instead, each restructur
 
 ---
 
-<h4 id="faq-2"><a href="#faq-2">Q2.</a> Care ethics was developed for interpersonal relationships — a nurse and a patient, a parent and a child. Scaling it to AI systems and global governance seems like a category error. Why isn't it?</h4>
+<h4 id="faq-2" data-toc="Care Ethics at Scale"><a href="#faq-2">Q2.</a> Care ethics was developed for interpersonal relationships — a nurse and a patient, a parent and a child. Scaling it to AI systems and global governance seems like a category error. Why isn't it?</h4>
 
 The objection is well-known and has been raised by care ethics' own practitioners: Care is too intimate, too parochial, and too prone to self-effacement to ground a theory of institutions, let alone machines. However, we think these are features, not bugs — and Joan Tronto herself made the case for scaling care to political institutions in [_Caring Democracy_ (2013)](https://nyupress.org/9780814782781/caring-democracy/).
 
@@ -44,7 +44,7 @@ The 6-Pack does not ask AI to _feel_ care. Instead, the 6-Pack extracts the rela
 
 ---
 
-<h4 id="faq-3"><a href="#faq-3">Q3.</a> Ambitious goals we point AI at ("cure cancer," "solve climate change") are almost always consequentialist. Optimising for these outcomes at superhuman speed inevitably leads to unforeseen risks. Does care ethics mean giving up on these grand, civilisation-scale goals?</h4>
+<h4 id="faq-3" data-toc="Civilisation-Scale Goals Reconsidered"><a href="#faq-3">Q3.</a> Ambitious goals we point AI at ("cure cancer," "solve climate change") are almost always consequentialist. Optimising for these outcomes at superhuman speed inevitably leads to unforeseen risks. Does care ethics mean giving up on these grand, civilisation-scale goals?</h4>
 
 Not at all. But it does radically reframe _how_ we achieve them.
 
@@ -54,7 +54,7 @@ Care ethics is not anti-progress, but is anti-reductionist. In a Civic AI future
 
 ---
 
-<h4 id="faq-4"><a href="#faq-4">Q4.</a> Democracy serves known functions: error correction, peaceful power transitions, checks on concentrated authority, legitimacy for collective action, information aggregation, preference expression. A sufficiently capable AI could plausibly perform every one of these faster and more reliably than any deliberative process. Why insist on democratic governance?</h4>
+<h4 id="faq-4" data-toc="Why Democratic Governance Persists"><a href="#faq-4">Q4.</a> Democracy serves known functions: error correction, peaceful power transitions, checks on concentrated authority, legitimacy for collective action, information aggregation, preference expression. A sufficiently capable AI could plausibly perform every one of these faster and more reliably than any deliberative process. Why insist on democratic governance?</h4>
 
 If democracy is justified only by its outputs, any system that produces better outputs can replace democracy — including a benevolent AI autocracy that aggregates preferences efficiently and corrects errors faster than elections ever could. This is not a thought experiment; it is the default trajectory of concentrating intelligence in systems designed to optimise.
 
@@ -70,7 +70,7 @@ A well-designed technical system could replicate some of these outputs in isolat
 
 ---
 
-<h4 id="faq-5"><a href="#faq-5">Q5.</a> Deliberation is slow. AI moves fast. By the time an Alignment Assembly reaches consensus, the technology has moved on three generations. How do you handle the speed mismatch?</h4>
+<h4 id="faq-5" data-toc="Handling the Speed Mismatch"><a href="#faq-5">Q5.</a> Deliberation is slow. AI moves fast. By the time an Alignment Assembly reaches consensus, the technology has moved on three generations. How do you handle the speed mismatch?</h4>
 
 The objection assumes that every decision requires the same depth of deliberation. It does not. The framework operates in two lanes ([Pack 2](../2/)):
 
@@ -86,7 +86,7 @@ There is a stronger claim. AI does not merely speed up the fast lane — AI make
 
 ---
 
-<h4 id="faq-6"><a href="#faq-6">Q6.</a> Bridging algorithms sound appealing in theory. But what happens when one side is simply wrong — climate denial, anti-vaccine misinformation, election fraud conspiracies? Doesn't "bridging" grant false equivalence to bad-faith actors?</h4>
+<h4 id="faq-6" data-toc="Bridging Without False Equivalence"><a href="#faq-6">Q6.</a> Bridging algorithms sound appealing in theory. But what happens when one side is simply wrong — climate denial, anti-vaccine misinformation, election fraud conspiracies? Doesn't "bridging" grant false equivalence to bad-faith actors?</h4>
 
 This question is the hardest about bridging, and the answer must be precise.
 
@@ -106,7 +106,7 @@ There's necessary nuance, however: The epistemic baseline of "checkable facts" i
 
 ---
 
-<h4 id="faq-7"><a href="#faq-7">Q7.</a> You repeatedly cite Taiwan — a small island democracy with high connectivity, social cohesion, and tech literacy. Does any of this transfer to India, Nigeria, Brazil, or the EU at 450 million people?</h4>
+<h4 id="faq-7" data-toc="Transferring Beyond Taiwan"><a href="#faq-7">Q7.</a> You repeatedly cite Taiwan — a small island democracy with high connectivity, social cohesion, and tech literacy. Does any of this transfer to India, Nigeria, Brazil, or the EU at 450 million people?</h4>
 
 The honest answer is mixed: The mechanisms transfer, but the specifics do not. No one should replicate Taiwan's exact model. The question is whether the structural principles — broad listening, bridging algorithms, adopt-or-explain commitments, federated safety, subsidiarity — work in different soils.
 
@@ -122,7 +122,7 @@ Taiwan is one favourable case. The framework still needs testing in harder soil 
 
 ---
 
-<h4 id="faq-8"><a href="#faq-8">Q8.</a> Your framework assumes that people trust technology enough to participate. But what about marginalised communities who have been historically surveilled, oppressed, and impoverished by the state and by tech? Why would they trust this?</h4>
+<h4 id="faq-8" data-toc="Trust from Marginalised Communities"><a href="#faq-8">Q8.</a> Your framework assumes that people trust technology enough to participate. But what about marginalised communities who have been historically surveilled, oppressed, and impoverished by the state and by tech? Why would they trust this?</h4>
 
 Trust is not something we need before starting with Civic AI, but something that grows as a result.
 
@@ -136,7 +136,7 @@ Over time, small functional bridges create space for larger ones. Taiwan's journ
 
 ---
 
-<h4 id="faq-9"><a href="#faq-9">Q9.</a> Every powerful technology vision — exit libertarians, UBI provisioners, safety maximalists — shares the same blind spot: seeing individuals and systems but nothing in between. The 6-Pack talks about Kamis, algorithms, and assemblies. Where are the churches, unions, neighbourhood associations, and cultural traditions that actually constitute community? Isn't this just another framework that engineers away the friction that makes community formative?</h4>
+<h4 id="faq-9" data-toc="Where Are the Institutions?"><a href="#faq-9">Q9.</a> Every powerful technology vision — exit libertarians, UBI provisioners, safety maximalists — shares the same blind spot: seeing individuals and systems but nothing in between. The 6-Pack talks about Kamis, algorithms, and assemblies. Where are the churches, unions, neighbourhood associations, and cultural traditions that actually constitute community? Isn't this just another framework that engineers away the friction that makes community formative?</h4>
 
 This critique matters most to us. The "thick middle layer" of associational life — the institutions between citizen and state — is where human meaning is actually made. If the 6-Pack replaces that layer with systems, we have failed by our own standard.
 
@@ -150,7 +150,7 @@ Future work will make the role of intermediate institutions more explicit. Churc
 
 ---
 
-<h4 id="faq-10"><a href="#faq-10">Q10.</a> Pope Leo XIV warns that AI "encroaches upon the deepest level of communication, that of human relationships" by simulating voices, faces, empathy, and friendship. If care is fundamentally embodied and relational — a nurse holding a patient's hand, neighbours who know your grandparents — doesn't mediating it through AI systems destroy the very thing you claim to protect? How is "Civic AI" not an oxymoron?</h4>
+<h4 id="faq-10" data-toc="AI Versus Embodied Care"><a href="#faq-10">Q10.</a> Pope Leo XIV warns that AI "encroaches upon the deepest level of communication, that of human relationships" by simulating voices, faces, empathy, and friendship. If care is fundamentally embodied and relational — a nurse holding a patient's hand, neighbours who know your grandparents — doesn't mediating it through AI systems destroy the very thing you claim to protect? How is "Civic AI" not an oxymoron?</h4>
 
 Q9 addressed whether the framework crowds out intermediate institutions. The [Pope's objection](https://www.vatican.va/content/leo-xiv/en/messages/communications/documents/20260124-messaggio-comunicazioni-sociali.html) cuts deeper: Even if institutions survive, does algorithmic mediation erode the human capacity for care itself? He is naming the central danger of our moment: By simulating the surface of care — a warm voice, a patient listener, a face that mirrors your emotions — AI systems can hollow out the substance of care while leaving its appearance intact.
 
@@ -162,7 +162,7 @@ The harder version of the Pope's objection is subtler: Does the habit of relying
 
 ---
 
-<h4 id="faq-11"><a href="#faq-11">Q11.</a> Training Civic AI requires vast amounts of local knowledge, cultural context, and lived experience — what Lanier and Weyl call "data as labor." The communities whose traditions, languages, and practices make Kamis possible receive no ownership stake or compensation under the current framework. Without addressing this issue, how is the 6-Pack different from the extraction it claims to oppose?</h4>
+<h4 id="faq-11" data-toc="Data as Labor and Compensation"><a href="#faq-11">Q11.</a> Training Civic AI requires vast amounts of local knowledge, cultural context, and lived experience — what Lanier and Weyl call "data as labor." The communities whose traditions, languages, and practices make Kamis possible receive no ownership stake or compensation under the current framework. Without addressing this issue, how is the 6-Pack different from the extraction it claims to oppose?</h4>
 
 It isn't — unless we fundamentally rewire how AI values human knowledge.
 
@@ -180,7 +180,7 @@ As AI automates standard computation, ground-truth human novelty and cultural di
 
 ---
 
-<h4 id="faq-12"><a href="#faq-12">Q12.</a> Oversight boards, participation officers, escrow funds, eval registries, portability infrastructure — this is expensive. Who pays?</h4>
+<h4 id="faq-12" data-toc="Who Pays for Civic Governance"><a href="#faq-12">Q12.</a> Oversight boards, participation officers, escrow funds, eval registries, portability infrastructure — this is expensive. Who pays?</h4>
 
 Turn the question around. The expensive path is the one we are already on: Ungoverned AI externalises its harms, and the public pays to clean up — in deepfake scam losses, in polarisation-driven institutional decay, in billion-dollar bias lawsuits that a participation officer could have prevented. Accordingly, the question is not whether we can afford civic governance but whether we can afford to keep skipping it.
 
@@ -190,7 +190,7 @@ The framing that civic governance is an _additional_ expense only holds if you p
 
 ---
 
-<h4 id="faq-13"><a href="#faq-13">Q13.</a> Every governance framework risks becoming a compliance checklist that gets gamed or a tool for actors to push partisan agendas under the guise of "relational health." What stops the 6-Pack from suffering this fate?</h4>
+<h4 id="faq-13" data-toc="Resisting Capture and Gaming"><a href="#faq-13">Q13.</a> Every governance framework risks becoming a compliance checklist that gets gamed or a tool for actors to push partisan agendas under the guise of "relational health." What stops the 6-Pack from suffering this fate?</h4>
 
 "Civic" is a dangerous word if it lacks structural accountability. If a solution only works when your ideological allies operate it, it is not civic infrastructure — it is a partisan weapon. The test of true civic infrastructure is that it remains robust and fair even when operated by your opponents.
 
@@ -203,7 +203,7 @@ The 6-Pack builds in four layers of defence against ideological capture and ethi
 
 ---
 
-<h4 id="faq-14"><a href="#faq-14">Q14.</a> Authoritarian states are deploying AI for surveillance, censorship, and military advantage. Frontier models from adversarial origins carry documented risks — data exfiltration, political bias hardcoded into training, potential backdoors. The 6-Pack talks about care and community. What does it say to a defence ministry or a government deciding whether to allow an adversarial-origin model on its networks?</h4>
+<h4 id="faq-14" data-toc="Authoritarian AI and Defence"><a href="#faq-14">Q14.</a> Authoritarian states are deploying AI for surveillance, censorship, and military advantage. Frontier models from adversarial origins carry documented risks — data exfiltration, political bias hardcoded into training, potential backdoors. The 6-Pack talks about care and community. What does it say to a defence ministry or a government deciding whether to allow an adversarial-origin model on its networks?</h4>
 
 The threat is real, and the 6-Pack does not dismiss it. The defensive response — evaluating models against pillars of data security, alignment, safeguard robustness, and development transparency — is necessary. And the 6-Pack's principles are structurally compatible with it.
 
@@ -217,7 +217,7 @@ The 6-Pack does not cover weapons systems or battlefield autonomy. Those require
 
 ---
 
-<h4 id="faq-15"><a href="#faq-15">Q15.</a> The 6-Pack assumes bounded, purpose-specific Kamis. What if someone builds an unbounded superintelligence anyway — a system that exceeds the framework's design envelope? Does the 6-Pack have a response, or does it just hope that doesn't happen?</h4>
+<h4 id="faq-15" data-toc="If Unbounded AI Is Built"><a href="#faq-15">Q15.</a> The 6-Pack assumes bounded, purpose-specific Kamis. What if someone builds an unbounded superintelligence anyway — a system that exceeds the framework's design envelope? Does the 6-Pack have a response, or does it just hope that doesn't happen?</h4>
 
 It does not hope. It builds. But it builds the second line of defence, not the first. Defence against an unbounded superintelligence is the first question, and [Q17](#faq-17) names the people who carry it; the 6-Pack complements their work, it does not substitute for it.
 
@@ -233,7 +233,7 @@ Boundedness, then, is not a limitation the 6-Pack reluctantly accepts. It is the
 
 ---
 
-<h4 id="faq-16"><a href="#faq-16">Q16.</a> The 6-Pack seems to rely on democratic correction rather than a fixed foundation. But who counts as "the public"? What if an AI decision cannot be reversed? And if model behaviour is shaped by opaque training, what exactly are we governing?</h4>
+<h4 id="faq-16" data-toc="The Corrective Loop Foundation"><a href="#faq-16">Q16.</a> The 6-Pack seems to rely on democratic correction rather than a fixed foundation. But who counts as "the public"? What if an AI decision cannot be reversed? And if model behaviour is shaped by opaque training, what exactly are we governing?</h4>
 
 The defended point is not a perfect foundation. It is the corrective loop: who can find out we are wrong, make us say so, and make it cost us while there is still time to change course. The 6-Pack entrenches that loop; everything else remains bounded, revisable, and answerable.
 
@@ -251,7 +251,7 @@ So the 6-Pack is not foundationalism in disguise. It is constitutional modesty. 
 
 ---
 
-<h4 id="faq-17"><a href="#faq-17">Q17.</a> The foreword to the book <em>Civic AI: 6-Pack of Care</em> positions it as a successor to Bostrom's <em>Superintelligence</em> in the Oxford line, but says explicitly that the book does not attempt to resolve frontier alignment. How, then, is the 6-Pack of Care different from alignment in Bostrom's sense?</h4>
+<h4 id="faq-17" data-toc="Alignment-by-Process vs Bostrom"><a href="#faq-17">Q17.</a> The foreword to the book <em>Civic AI: 6-Pack of Care</em> positions it as a successor to Bostrom's <em>Superintelligence</em> in the Oxford line, but says explicitly that the book does not attempt to resolve frontier alignment. How, then, is the 6-Pack of Care different from alignment in Bostrom's sense?</h4>
 
 It is a different question, posed for a different class of systems.
 

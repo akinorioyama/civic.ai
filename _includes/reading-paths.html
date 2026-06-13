@@ -1,0 +1,25 @@
+{% assign lang2 = lang | default: 'en-gb' | split: '-' | first %}
+<nav
+    class="reading-paths"
+    aria-label="{% if lang2 == 'en' %}Reading paths by audience{% else %}依讀者類型的閱讀路徑{% endif %}"
+>
+    {% for p in paths %}
+    <div class="reading-path">
+        <h3 class="reading-path__title">
+            {% if lang2 == 'en' %}{{ p.label_en }}{% else %}{{ p.label_tw }}{%
+            endif %}
+        </h3>
+        <ol class="reading-path__steps">
+            {% for s in p.steps %}
+            <li>
+                <a
+                    href="{% if lang2 == 'en' %}{{ s.url | relative_url }}{% else %}{{ s.url_tw | relative_url }}{% endif %}"
+                    >{% if lang2 == 'en' %}{{ s.label_en }}{% else %}{{
+                    s.label_tw }}{% endif %}</a
+                >
+            </li>
+            {% endfor %}
+        </ol>
+    </div>
+    {% endfor %}
+</nav>

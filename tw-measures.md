@@ -2,6 +2,7 @@
 layout: chapter
 title: "衡量指標"
 meta_description: "每一力對應一項公開的標竿指標，並輔以診斷——用以判斷一套仁工智慧部署是否真正體現「關懷六力」。"
+summary: "每個「力」各有一項對外公開的主指標，外加輔助診斷——用來判斷一個仁工智慧部署是否真正落實關懷六力。這些指標追求的是滿足化，而非最大化：跨過社群「夠好」的門檻，而不是追逐總體分數。"
 lang: zh-tw
 alt_lang_url: "/measures"
 permalink: "/tw/measures/"

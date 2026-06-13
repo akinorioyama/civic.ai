@@ -103,7 +103,7 @@
                     li.className = "page-toc__" + h.tagName.toLowerCase();
                     var a = document.createElement("a");
                     a.href = "#" + h.id;
-                    a.textContent = (h.textContent || "").trim();
+                    a.textContent = (h.getAttribute("data-toc") || h.textContent || "").trim();
                     li.appendChild(a);
                     ul.appendChild(li);
                 });

@@ -51,9 +51,7 @@ Prefer visuals? Browse [all comics](/comics/) — Nicky Case's illustrated overv
 
 **Already know what you're after?**
 
-- **Policy & governance** — [Manifesto](/manifesto/), [FAQ](/faq/), and ["AI Alignment Cannot Be Top-Down"](/ai-alignment-cannot-be-top-down/).
-- **Builders & engineers** — [Pack 3: Competence](/3/), [Measures](/measures/), and ["Inside the Kami"](/inside-the-kami/).
-- **Civic & community practice** — [Pack 1: Attentiveness](/1/), [Pack 4: Responsiveness](/4/), and the [6-Pack of Care podcast](/podcast/).
+{% include "reading-paths.html" %}
 
 <h2 id="the-6-pack">The 6-Pack</h2>
 

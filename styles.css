@@ -3063,8 +3063,6 @@ h4[id] {
 .page-toc ul {
     margin: 0.8em 0 0.2em;
     padding-left: 1.1em;
-    max-height: 45vh;
-    overflow-y: auto;
     list-style: none;
 }
 .page-toc li {
@@ -3093,4 +3091,64 @@ h4[id] {
     .page-toc {
         display: none;
     }
+}
+
+/* ─── READING PATHS ─── */
+.reading-paths {
+    display: grid;
+    gap: 14px;
+    margin: 0.8em 0 1.5em;
+}
+@media (min-width: 720px) {
+    .reading-paths {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 1080px) {
+    .reading-paths {
+        width: 820px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.reading-path {
+    background: var(--warm);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 16px 18px;
+}
+.reading-path__title {
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    margin: 0 0 0.5em;
+    padding: 0;
+    border: none;
+    color: var(--heading);
+}
+.reading-path__steps {
+    margin: 0;
+    padding-left: 1.2em;
+    font-size: 0.9rem;
+}
+.reading-path__steps li {
+    margin: 0.3em 0;
+    line-height: 1.5;
+}
+
+/* ─── GLOSSARY LIST ─── */
+.glossary-list {
+    margin: 1.5em 0;
+}
+.glossary-list dt {
+    font-family: var(--sans);
+    font-weight: 600;
+    color: var(--heading);
+    margin-top: 1.3em;
+    scroll-margin-top: 24px;
+}
+.glossary-list dd {
+    margin: 0.3em 0 0;
+    padding-left: 0;
+    line-height: 1.6;
 }

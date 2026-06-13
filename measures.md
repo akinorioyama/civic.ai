@@ -2,6 +2,7 @@
 layout: chapter
 title: "Measures"
 meta_description: "One headline public measure per pack, with supporting diagnostics — how to tell whether a Civic AI deployment really embodies the 6-Pack of Care."
+summary: "One headline public measure per pack, plus supporting diagnostics — a practical way to tell whether a Civic AI deployment really lives the 6-Pack of Care. The metrics aim at sufficiency, not maximisation: cross the community's 'good enough' threshold rather than chase a totalising score."
 lang: en-gb
 alt_lang_url: "/tw/measures"
 permalink: "/measures/"

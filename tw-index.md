@@ -50,9 +50,7 @@ next_action:
 
 **已經知道自己在找什麼？**
 
-- **政策與治理**——[計畫宣言](/tw/manifesto/)、[常見問題](/tw/faq/)，以及[《AI 對齊不能由上而下》](/tw/ai-alignment-cannot-be-top-down/)。
-- **開發者與工程師**——[三：勝任力](/tw/3/)、[衡量指標](/tw/measures/)，以及[《地神之內》](/tw/inside-the-kami/)。
-- **公民與社群實踐**——[一：覺察力](/tw/1/)、[四：回應力](/tw/4/)，以及[Podcast：關懷六力](/tw/podcast/)。
+{% include "reading-paths.html" %}
 
 <h2 id="the-6-pack">關懷六力</h2>
 

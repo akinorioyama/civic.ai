@@ -60,6 +60,23 @@ export default function (eleventyConfig) {
         return content;
     });
 
+    // Asciify the machine-readable OpenClaw SKILL.md so a raw .md never shows
+    // mojibake to agents. Scoped to this one file; HTML guides keep typography.
+    eleventyConfig.addTransform("asciifySkill", function (content) {
+        const out = this.page && this.page.outputPath;
+        if (!out || !out.endsWith("/.well-known/openclaw/SKILL.md"))
+            return content;
+        return content
+            .replace(/—/g, "--")
+            .replace(/[–‑]/g, "-")
+            .replace(/[''′]/g, "'")
+            .replace(/[""″]/g, '"')
+            .replace(/…/g, "...")
+            .replace(/→/g, "->")
+            .replace(/[    ]/g, " ")
+            .replace(/[^\x00-\x7F]/g, "");
+    });
+
     // Filter for relative_url compatibility with Jekyll
     eleventyConfig.addFilter("relative_url", function (url) {
         if (typeof url !== "string" || !url.length) {
