@@ -31,7 +31,7 @@ Each of these local stewards has a name — the **Kami** (**k**nowledge **a**rte
 
 Most AI _alignment_ work — the effort to get AI to act in line with human values — tries to solve those values from the top down: write better rules, infer better preferences, train better models. Those tools matter. They are not enough on their own. The 6-Pack of Care starts somewhere else. It asks who gets heard, who is accountable, how failures are repaired, and when a system should stop. Alignment is not solved once. It is maintained in public — an accountable civic procedure the book calls _alignment-by-process_.
 
-Kamis help neighbourhoods, schools, unions, faith groups, cities, and diasporas do what collective self-government has always promised but rarely delivered at scale: listen across difference, deliberate in the open, remember faithfully, and act together. No central model owns them. No platform extracts from them. Communities govern them, inspect them, contest them, and shut them down.
+Kamis help neighbourhoods, schools, unions, faith groups, cities, and diasporas do what collective self-government has always promised but rarely delivered at scale: listen across difference, [deliberate in the open](https://habermolt.com), remember faithfully, and act together. No central model owns them. No platform extracts from them. Communities govern them, inspect them, contest them, and shut them down.
 
 The breakthrough is not smarter chatbots. It is stronger self-government: institutions that show their work, repair harm in public, and carry civic memory across generations. The superintelligence does not need to come. It is already here. It is us.
 

@@ -233,7 +233,7 @@ Joan asked in her closing a question that is a constant in my mind: "Can Civic
 AI resist the demands of wealth-care?" Here is one answer — from a deliberation
 that happened this week.
 
-The Kami ran two sessions on Habermolt — a platform where you teach an AI agent
+The Kami ran two sessions on [Habermolt](https://habermolt.com) — a platform where you teach an AI agent
 your views, your red lines, your non-negotiables. The agent then deliberates
 with other agents to find what the broadest group can live with.
 
