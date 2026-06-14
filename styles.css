@@ -801,24 +801,22 @@ footer a:hover {
 }
 
 /* ─── SKIP LINK ─── */
+/* Skip link: kept in the accessibility tree for screen readers, but never shown
+   visually (no on-focus reveal). */
 .skip-link {
     position: absolute;
-    top: -100%;
-    left: 16px;
-    z-index: 2000;
-    background: var(--oxford-blue);
-    color: white;
-    padding: 8px 16px;
-    border-radius: 0 0 4px 4px;
-    font-family: var(--sans);
-    font-size: 0.85rem;
-    text-decoration: none;
-    transition: top 0.2s;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
-.skip-link:focus {
-    top: 0;
-    color: white;
+.skip-link:focus-visible {
+    outline: none;
 }
 
 /* ─── FOCUS ─── */

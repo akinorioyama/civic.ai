@@ -32,14 +32,16 @@
         "term_en": "⿻ Plurality",
         "term_tw": "⿻ 多元宇宙",
         "def_en": "The principle — symbolised by the character ⿻ — that differences between people are fuel rather than fire: a horizontal vision of AI that augments cooperation across diversity instead of converging on a single superintelligence. The 6-Pack of Care is Plurality's application to AI governance.",
-        "def_tw": "一種以 ⿻ 符號象徵的原則——人與人之間的差異是燃料而非火焰：一個水平的 AI 願景，增進我們跨越多樣性的協作能力，而非收斂至單一超級智慧。關懷六力正是多元宇宙在 AI 治理上的應用。"
+        "def_tw": "一種以 ⿻ 符號象徵的原則——人與人之間的差異是燃料而非火焰：一個水平的 AI 願景，增進我們跨越多樣性的協作能力，而非收斂至單一超級智慧。關懷六力正是多元宇宙在 AI 治理上的應用。",
+        "aliases_tw": ["⿻多元宇宙", "多元宇宙"]
     },
     {
         "id": "care-ethics",
         "term_en": "care ethics (Joan Tronto)",
         "term_tw": "關懷倫理學（Joan Tronto）",
         "def_en": "A moral framework developed by philosopher Joan Tronto that starts from relationships and mutual dependence rather than from abstract rules or outcomes alone. In Tronto's formulation, to perceive a need is to recognise a claim on shared responsibility — a foundation the 6-Pack of Care translates into machine-checkable design primitives.",
-        "def_tw": "由哲學家 Joan Tronto 發展的道德框架，從關係與相互依存出發，而非僅從抽象規則或結果出發。在 Tronto 的論述中，覺察到需求，就是承認它對我們共同責任的主張——關懷六力正是以此為基礎，將其轉化為機器可檢驗的設計要素。"
+        "def_tw": "由哲學家 Joan Tronto 發展的道德框架，從關係與相互依存出發，而非僅從抽象規則或結果出發。在 Tronto 的論述中，覺察到需求，就是承認它對我們共同責任的主張——關懷六力正是以此為基礎，將其轉化為機器可檢驗的設計要素。",
+        "aliases_tw": ["關懷倫理"]
     },
     {
         "id": "polis",
@@ -88,7 +90,8 @@
         "term_en": "subsidiarity",
         "term_tw": "輔助性原則",
         "def_en": "Solving problems at the most local capable level, escalating only when a lower level genuinely cannot cope — a core principle within Pack 6 (Symbiosis) that stops a Kami's scope from creeping upward.",
-        "def_tw": "在最基層、有能力處理的層級解決問題，只有當下層確實無力承擔時才上呈——這是第六力（共生力）的核心原則之一，避免地神的權責範圍向上擴張。"
+        "def_tw": "在最基層、有能力處理的層級解決問題，只有當下層確實無力承擔時才上呈——這是第六力（共生力）的核心原則之一，避免地神的權責範圍向上擴張。",
+        "aliases_tw": ["輔助原則"]
     },
     {
         "id": "federation",

@@ -1,5 +1,5 @@
         <script>
-            window.__GLOSSARY__ = [{% for t in glossary %}{"t":"{% if lang2 == 'zh' %}{{ t.term_tw }}{% else %}{{ t.term_en }}{% endif %}","id":"{{ t.id }}"}{% unless forloop.last %},{% endunless %}{% endfor %}];
+            window.__GLOSSARY__ = [{% for t in glossary %}{"t":"{% if lang2 == 'zh' %}{{ t.term_tw }}{% else %}{{ t.term_en }}{% endif %}","id":"{{ t.id }}","alt":[{% assign al = t.aliases_en %}{% if lang2 == 'zh' %}{% assign al = t.aliases_tw %}{% endif %}{% if al %}{% for a in al %}"{{ a }}"{% unless forloop.last %},{% endunless %}{% endfor %}{% endif %}]}{% unless forloop.last %},{% endunless %}{% endfor %}];
             window.__GLOSSARY_BASE__ = "{% if lang2 == 'zh' %}/tw/glossary/{% else %}/glossary/{% endif %}";
         </script>
         <script>
@@ -83,7 +83,18 @@
 
                     var entries = [];
                     for (var i = 0; i < g.length; i++) {
-                        var candidates = buildCandidates(g[i].t);
+                        // Build candidates from the term plus any alias forms (alt),
+                        // so zh-TW prose variants still match (e.g. 輔助原則 for
+                        // 輔助性原則; ⿻多元宇宙 / 多元宇宙 for ⿻ 多元宇宙).
+                        var raws = [g[i].t].concat(g[i].alt || []);
+                        var candidates = [];
+                        var seenC = {};
+                        for (var ri = 0; ri < raws.length; ri++) {
+                            var cs = buildCandidates(raws[ri]);
+                            for (var cj = 0; cj < cs.length; cj++) {
+                                if (!seenC[cs[cj]]) { seenC[cs[cj]] = true; candidates.push(cs[cj]); }
+                            }
+                        }
                         if (!candidates.length) continue;
                         // Longest candidate drives sort order
                         var maxLen = 0;
