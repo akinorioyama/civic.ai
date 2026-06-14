@@ -283,6 +283,24 @@ main tr:last-child td {
     border-bottom: none;
 }
 
+/* Two-column comparison table (e.g. inside-the-kami "the shared design lesson"):
+   balance the columns and let both wrap, so a long first cell can't force the
+   column wide and trigger horizontal scroll. Overrides the global block/nowrap
+   table behaviour for this scoped case only. */
+.compare-table table {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.compare-table th:first-child,
+.compare-table td:first-child {
+    width: 40%;
+    white-space: normal;
+}
+.compare-table td {
+    vertical-align: top;
+}
+
 /* ─── MAIN CONTENT ─── */
 main {
     max-width: 680px;
