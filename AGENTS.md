@@ -17,8 +17,6 @@ There is no automated test suite. Verify changes by building successfully and ch
 
 **Content files** are top-level Markdown with YAML front matter.
 
-**Doc sync config:** `.github/doc_sync_config.py` is the single source of truth for Google Doc synchronization scope via `SYNC_FILES` and `TAB_MAP`; keep both structures aligned.
-
 **Layouts** in `_layouts/`:
 
 - `default.html` — main template (header with logos, language toggle, footer)
@@ -30,7 +28,7 @@ There is no automated test suite. Verify changes by building successfully and ch
 
 **Config:** `eleventy.config.js` — passthrough copy rules, `relative_url` filter (Jekyll compat), date filter, output to `docs/`
 
-**Deployment:** GitHub Actions (`.github/workflows/static.yml`) auto-deploys to GitHub Pages on push to main. A separate manual workflow syncs content from a published Google Doc.
+**Deployment:** GitHub Actions (`.github/workflows/static.yml`) auto-deploys to GitHub Pages on push to main.
 
 ## Conventions
 
@@ -41,9 +39,3 @@ There is no automated test suite. Verify changes by building successfully and ch
 - Optimize images before committing; reuse existing typography tokens in CSS
 - When adding/editing content, maintain parity between British English and Traditional Mandarin variants
 - Em dashes: English files use `—` (spaced single); Mandarin `tw-*.md` files use `——` (double, no spaces)
-
-## Doc sync
-
-- Edit `.github/doc_sync_config.py` to change sync scope and tab mapping.
-- Keep `SYNC_FILES` and `TAB_MAP` aligned to avoid mismatches.
-- Validate locally with `python3 .github/doc_sync_config.py --check`.
