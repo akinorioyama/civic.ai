@@ -53,6 +53,17 @@ The book's Parts List catalogues every instrument a practitioner is asked to bui
 - **The brake (circuit breaker)** (Packs 3-4) — a single, prominent, wired-and-tested control that stops the system now, accessible at the speed of human recognition, so a person can halt a wrong action in the moment rather than only signalling for later.
 - **Override ledger** (Pack 4) — a room's plain-text working memory recording every time a human said "no" to the Kami — evidence that its [governance charter](/kami/) is live and the room still holds standing to correct it.
 
+### What each measure refuses to reward
+
+Each headline measure names not only what it rewards but what it must refuse, so that a good number cannot be mistaken for good care.
+
+- **Representation gap (Pack 1).** Counts only when the least-heard groups gain real standing in the record, never when a gap narrows by averaging dissenters into the middle.
+- **Promise fidelity (Pack 2).** Rewards promises that are owned and honoured, never promises that are merely well-worded, so a high score requires authority and funding that match the duty rather than language that gestures at it.
+- **Verified execution rate (Pack 3).** Rises only when traces are reconstructable by an independent auditor and canaries are genuinely representative, never when the system passes on easy cases and calls the ceremony proof.
+- **Trust-under-loss (Pack 4).** Counts only when tied to accountable identity and corroborated by an independent signal — a return to the service, a withdrawn appeal, a third party who can attest — never a sentiment a campaign can manufacture, since self-reported trust after a repair can be astroturfed by the very actor who caused the harm.
+- **Bridge index (Pack 5).** Rewards groups that listen across lines, never groups that fall silent, and must be read alongside a floor that protects standing opposition, so it does not pathologise legitimate, sustained disagreement by treating a persistent minority as a failure to engineer away.
+- **Exit readiness (Pack 6).** Counts only when a system can hand off or shut down on schedule without rights loss, continuity failure, or recentralisation, never when exit exists only on paper.
+
 ### How to read them
 
 - **Trust is decomposed, not collapsed.** Pack 1 asks whether people were heard. Pack 2 asks whether promises were real. Pack 3 asks whether delivery held up under inspection. Pack 4 asks whether repair worked after harm. Pack 5 asks whether groups can act together fairly. Pack 6 asks whether stewardship can remain bounded over time.
