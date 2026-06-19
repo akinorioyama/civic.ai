@@ -150,7 +150,7 @@ adopt-or-explain duties.
 **Pack 3: Competence.** Better-calibrated uncertainty makes decision traces
 more honest. A trace that says "0.92 likely" should mean what it says. But
 Pack 3 is broader than prediction quality. Sandboxing, least power, data
-minimalism and graduated release remain operational duties. CPC contributes one further competence claim: an apprentice that learns through accept/reject turn-taking with its master — the Apprentice Model of shadow mode, canary and general release — is performing an approximate Bayesian inference whose convergence is now mathematically characterised. Apprenticeship is no longer a metaphor for shadow-mode deployment; it is a recognised algorithm with known limits.
+minimalism and graduated release remain operational duties. CPC contributes one further competence claim: an apprentice that learns through accept/reject turn-taking with its cultivator — the Apprentice Model of shadow mode, canary and general release — is performing an approximate Bayesian inference whose convergence is now mathematically characterised. Apprenticeship is no longer a metaphor for shadow-mode deployment; it is a recognised algorithm with known limits.
 
 **Pack 4: Responsiveness.** A truth-tracking model gives cleaner failure
 analysis: was the factual judgement wrong, was uncertainty miscalibrated or was
