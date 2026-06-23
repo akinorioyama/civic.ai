@@ -1,11 +1,11 @@
-# Design Spec: Terminology Update (產物 -> 工藝)
+# Design Spec: Terminology Update (工藝 -> 工藝)
 
-This spec outlines the global terminology replacement of "產物" (product/artefact) to "工藝" (craft/artefact) across the Traditional Chinese translation files in the repository.
+This spec outlines the global terminology replacement of "工藝" (product/artefact) to "工藝" (craft/artefact) across the Traditional Chinese translation files in the repository.
 
 ## Context & Requirements
 
-- **Goal**: Change all instances of the term "產物" to "工藝" inside Traditional Chinese translation files.
-- **Acronym Expansion**: Specifically, the acronym for **Kami** contains "Artefact 產物", which should be updated to "Artefact 工藝".
+- **Goal**: Change all instances of the term "工藝" to "工藝" inside Traditional Chinese translation files.
+- **Acronym Expansion**: Specifically, the acronym for **Kami** contains "Artefact 工藝", which should be updated to "Artefact 工藝".
 - **Affected Files**:
     - `tw-1.md`
     - `tw-2.md`

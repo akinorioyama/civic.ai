@@ -13,6 +13,7 @@ docs/
 # Editor
 .vscode/
 .idea/
+specs/
 *.swp
 *.swo
 
