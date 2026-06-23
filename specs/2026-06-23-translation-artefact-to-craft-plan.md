@@ -1,8 +1,8 @@
-# Translation Update (工藝 -> 工藝) Implementation Plan
+# Translation Update (產物 -> 工藝) Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Replace all occurrences of "工藝" with "工藝" in Traditional Chinese source and metadata files, then rebuild the site.
+**Goal:** Replace all occurrences of "產物" with "工藝" in Traditional Chinese source and metadata files, then rebuild the site.
 
 **Architecture:** A Python search-and-replace script will run across all markdown/JSON files (excluding `docs/`, `.git/`, and `node_modules/`), followed by a standard Eleventy site build to regenerate the `docs/` output.
 
@@ -37,7 +37,7 @@
 
 **Interfaces:**
 
-- Consumes: Existing files containing the string "工藝".
+- Consumes: Existing files containing the string "產物".
 - Produces: Files updated with the string "工藝".
 
 - [ ] **Step 1: Write and run Python find-and-replace script**
@@ -47,7 +47,7 @@ Execute the following Python snippet via the `eval` tool to perform the replacem
 ```python
 import os
 
-target = "工藝"
+target = "產物"
 replacement = "工藝"
 skip_dirs = {"node_modules", "docs", ".git"}
 skip_exts = {".png", ".jpg", ".jpeg", ".gif", ".avif", ".webp", ".mp3", ".pdf", ".zip", ".tar", ".gz", ".db", ".sqlite", ".sqlite3"}
@@ -77,7 +77,7 @@ print("Modified files:", modified_files)
 
 - [ ] **Step 2: Run verification search**
 
-Execute the search script in Python again to ensure no occurrences of "工藝" remain in source content:
+Execute the search script in Python again to ensure no occurrences of "產物" remain in source content:
 
 ```python
 # (Check if target is in any of the files, print any remaining lines)
@@ -92,7 +92,7 @@ Expected output: Eleventy successfully builds pages to `./docs/` without errors.
 
 Check git diff on the generated files inside `docs/` to confirm that the changes propagated correctly from source to generated output:
 Run: `git diff docs/`
-Expected output: In diff of generated html files under `docs/`, `工藝` is changed to `工藝`.
+Expected output: In diff of generated html files under `docs/`, `產物` is changed to `工藝`.
 
 - [ ] **Step 5: Commit changes**
 
@@ -100,5 +100,5 @@ Run:
 
 ```bash
 git add .
-git commit -m "translate: update 工藝 to 工藝 in source files and rebuild"
+git commit -m "translate: update 產物 to 工藝 in source files and rebuild"
 ```
