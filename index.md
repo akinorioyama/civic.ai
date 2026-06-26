@@ -46,6 +46,7 @@ Just heard about Civic AI? Three steps in.
 3. **See it work.** ["AI Alignment Cannot Be Top-Down"](/ai-alignment-cannot-be-top-down/) tells how Taiwan answered a wave of AI-enabled scam ads — the framework in the real world.
 
 Prefer to listen? Take the [6-Pack of Care podcast](/podcast/) or ["Can AI Be Compassionate?"](/compassion-and-ai/) along for a walk.
+Prefer to watch? Audrey and Caroline introduce the framework in ["Reimagining AI Alignment"](/reimagining-ai-alignment/) — a 30-minute fireside chat.
 
 Prefer visuals? Browse [all comics](/comics/) — Nicky Case's illustrated overview and twelve chapter pages.
 
