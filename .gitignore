@@ -24,3 +24,5 @@ specs/
 # Local scratch files
 z/
 z-*
+
+.worktrees/
