@@ -2073,7 +2073,7 @@ body.comics-page main {
     .faq-filter button:focus-visible,
     .faq-filter button[aria-pressed="true"] {
         background: var(--teal);
-        color: #fff;
+        color: var(--ink);
     }
 
     .polis-bar-disagree {
