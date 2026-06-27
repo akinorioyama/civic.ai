@@ -106,7 +106,7 @@ There's necessary nuance, however: The epistemic baseline of "checkable facts" i
 
 ---
 
-<h4 id="faq-7" data-faq-category="social" data-faq-label="Social legitimacy" data-toc="Transferring Beyond Taiwan"><a href="#faq-7">Q7.</a> You repeatedly cite Taiwan — a small island democracy with high connectivity, social cohesion, and tech literacy. Does any of this transfer to India, Nigeria, Brazil, or the EU at 450 million people?</h4>
+<h4 id="faq-7" data-faq-category="social" data-faq-label="Communities and trust" data-toc="Transferring Beyond Taiwan"><a href="#faq-7">Q7.</a> You repeatedly cite Taiwan — a small island democracy with high connectivity, social cohesion, and tech literacy. Does any of this transfer to India, Nigeria, Brazil, or the EU at 450 million people?</h4>
 
 The honest answer is mixed: The mechanisms transfer, but the specifics do not. No one should replicate Taiwan's exact model. The question is whether the structural principles — broad listening, bridging algorithms, adopt-or-explain commitments, federated safety, subsidiarity — work in different soils.
 
@@ -122,7 +122,7 @@ Taiwan is one favourable case. The framework still needs testing in harder soil 
 
 ---
 
-<h4 id="faq-8" data-faq-category="social" data-faq-label="Social legitimacy" data-toc="Trust from Marginalised Communities"><a href="#faq-8">Q8.</a> Your framework assumes that people trust technology enough to participate. But what about marginalised communities who have been historically surveilled, oppressed, and impoverished by the state and by tech? Why would they trust this?</h4>
+<h4 id="faq-8" data-faq-category="social" data-faq-label="Communities and trust" data-toc="Trust from Marginalised Communities"><a href="#faq-8">Q8.</a> Your framework assumes that people trust technology enough to participate. But what about marginalised communities who have been historically surveilled, oppressed, and impoverished by the state and by tech? Why would they trust this?</h4>
 
 Trust is not something we need before starting with Civic AI, but something that grows as a result.
 
@@ -136,7 +136,7 @@ Over time, small functional bridges create space for larger ones. Taiwan's journ
 
 ---
 
-<h4 id="faq-9" data-faq-category="social" data-faq-label="Social legitimacy" data-toc="Where Are the Institutions?"><a href="#faq-9">Q9.</a> Every powerful technology vision — exit libertarians, UBI provisioners, safety maximalists — shares the same blind spot: seeing individuals and systems but nothing in between. The 6-Pack talks about Kamis, algorithms, and assemblies. Where are the churches, unions, neighbourhood associations, and cultural traditions that actually constitute community? Isn't this just another framework that engineers away the friction that makes community formative?</h4>
+<h4 id="faq-9" data-faq-category="social" data-faq-label="Communities and trust" data-toc="Where Are the Institutions?"><a href="#faq-9">Q9.</a> Every powerful technology vision — exit libertarians, UBI provisioners, safety maximalists — shares the same blind spot: seeing individuals and systems but nothing in between. The 6-Pack talks about Kamis, algorithms, and assemblies. Where are the churches, unions, neighbourhood associations, and cultural traditions that actually constitute community? Isn't this just another framework that engineers away the friction that makes community formative?</h4>
 
 This critique matters most to us. The "thick middle layer" of associational life — the institutions between citizen and state — is where human meaning is actually made. If the 6-Pack replaces that layer with systems, we have failed by our own standard.
 
@@ -150,7 +150,7 @@ Future work will make the role of intermediate institutions more explicit. Churc
 
 ---
 
-<h4 id="faq-10" data-faq-category="social" data-faq-label="Social legitimacy" data-toc="AI Versus Embodied Care"><a href="#faq-10">Q10.</a> Pope Leo XIV warns that AI "encroaches upon the deepest level of communication, that of human relationships" by simulating voices, faces, empathy, and friendship. If care is fundamentally embodied and relational — a nurse holding a patient's hand, neighbours who know your grandparents — doesn't mediating it through AI systems destroy the very thing you claim to protect? How is "Civic AI" not an oxymoron?</h4>
+<h4 id="faq-10" data-faq-category="social" data-faq-label="Communities and trust" data-toc="AI Versus Embodied Care"><a href="#faq-10">Q10.</a> Pope Leo XIV warns that AI "encroaches upon the deepest level of communication, that of human relationships" by simulating voices, faces, empathy, and friendship. If care is fundamentally embodied and relational — a nurse holding a patient's hand, neighbours who know your grandparents — doesn't mediating it through AI systems destroy the very thing you claim to protect? How is "Civic AI" not an oxymoron?</h4>
 
 Q9 addressed whether the framework crowds out intermediate institutions. The [Pope's objection](https://www.vatican.va/content/leo-xiv/en/messages/communications/documents/20260124-messaggio-comunicazioni-sociali.html) cuts deeper: Even if institutions survive, does algorithmic mediation erode the human capacity for care itself? He is naming the central danger of our moment: By simulating the surface of care — a warm voice, a patient listener, a face that mirrors your emotions — AI systems can hollow out the substance of care while leaving its appearance intact.
 
@@ -273,7 +273,7 @@ The foreword's positioning, then, is this: Bostrom's _Superintelligence_ opened 
 
 ---
 
-<h4 id="faq-18" data-faq-category="social" data-faq-label="Social legitimacy" data-toc="Protecting the Solo User"><a href="#faq-18">Q18.</a> Every mechanism in the 6-Pack seems to need a community to function — alignment assemblies, remedy escrow, Weval registries, exit rights. But most people do not use AI inside a community; they use it alone. Take an isolated, vulnerable user running a highly tunable Kami locally, with no civic scaffolding around them. What stops that Kami from becoming a more private, lower-friction, and therefore more dangerous GPT-4o? How does "local and private" deliver the protection you claim when there is no community at all?</h4>
+<h4 id="faq-18" data-faq-category="social" data-faq-label="Communities and trust" data-toc="Protecting the Solo User"><a href="#faq-18">Q18.</a> Every mechanism in the 6-Pack seems to need a community to function — alignment assemblies, remedy escrow, Weval registries, exit rights. But most people do not use AI inside a community; they use it alone. Take an isolated, vulnerable user running a highly tunable Kami locally, with no civic scaffolding around them. What stops that Kami from becoming a more private, lower-friction, and therefore more dangerous GPT-4o? How does "local and private" deliver the protection you claim when there is no community at all?</h4>
 
 No civic assembly in the room is the stress test the question names, and it deserves a straight answer. Extractive consumer AI is dangerous because it is intimate and frictionless; a local model can make that worse by removing anyone who might notice. **Local and private is not the protection.** What changes the risk profile is motive and scale of care — not the absence of a crowd.
 
