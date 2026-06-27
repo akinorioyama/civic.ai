@@ -316,7 +316,9 @@
                     li.className = "page-toc__" + h.tagName.toLowerCase();
                     var a = document.createElement("a");
                     a.href = "#" + h.id;
-                    a.textContent = (h.getAttribute("data-toc") || h.textContent || "").trim();
+                    var label = (h.getAttribute("data-toc") || h.textContent || "").trim();
+                    var faqMatch = h.id && h.id.match(/^faq-(\d+)$/);
+                    a.textContent = faqMatch ? "Q" + faqMatch[1] + ". " + label : label;
                     li.appendChild(a);
                     ul.appendChild(li);
                 });
