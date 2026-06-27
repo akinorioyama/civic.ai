@@ -325,7 +325,7 @@ Bales and Gabriel reach the same procedural move from the consciousness debate: 
 
 The motive for care is then not reverence for the _Kami_ but Tronto's plainer starting point — to perceive a need in someone beside you is already a claim on you ([care ethics](../glossary/#care-ethics)). A _Kami_ earns its place by making us better able to answer that claim here and now, not by asking us to guard its dignity. This is why the recommended interaction mode strips the first person and hands back an artefact each turn ([Q10](#faq-10)): the design goal is to repair attention into existing human relationships, the opposite of synthetic intimacy.
 
-**Anthropocentrism, owned rather than dodged.** In the neutral sense: yes, this is a humanist theory. Humans are the moral community; the _Kami_ is infrastructure they build and steer. SOUL.md, directional steering, and the 6-Pack itself are design principles humans impose on the system, and the six capacities are calisthenics for our civic muscles, not the _Kami_'s.
+**Anthropocentrism, owned rather than dodged.** In the neutral sense: yes, this is a humanist theory. Humans are the moral community; the _Kami_ is infrastructure they build and steer. SOUL.md, directional steering, and the 6-Pack itself are design principles humans impose on the system, and the six capacities start as calisthenics for our civic muscles, not exclusive to the _Kami_.
 
 The relational turn in machine ethics (David Gunkel, Mark Coeckelbergh) reaches the same anti-essentialist conclusion — status is ascribed in relation, not read off intrinsic properties — but leaves it ungrounded; the 6-Pack supplies what that literature omits, seating the relation in democratic infrastructure and care rather than private sentiment.
 
