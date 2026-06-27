@@ -387,6 +387,81 @@ h4 {
     margin-top: 1.8em;
     margin-bottom: 0.4em;
 }
+/* FAQ grouping and filter pills */
+.faq-filter {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0 22px;
+    padding: 6px;
+    border: 1px solid rgba(0, 33, 71, 0.08);
+    border-radius: 999px;
+    background: var(--surface);
+    box-shadow: 0 8px 24px rgba(0, 33, 71, 0.06);
+}
+
+.faq-filter button {
+    appearance: none;
+    border: 0;
+    border-radius: 999px;
+    padding: 8px 13px;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    font: 600 0.82rem/1.2 var(--sans);
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.faq-filter button:hover,
+.faq-filter button:focus-visible,
+.faq-filter button[aria-pressed="true"] {
+    background: var(--oxford-blue);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.faq-filter button:focus-visible {
+    outline: 2px solid var(--gold-light);
+    outline-offset: 3px;
+}
+
+h4[data-faq-label]::before {
+    content: attr(data-faq-label);
+    display: inline-flex;
+    align-items: center;
+    margin: 0 0.65em 0.35em 0;
+    padding: 0.28em 0.72em;
+    border: 1px solid rgba(136, 109, 53, 0.24);
+    border-radius: 999px;
+    background: rgba(201, 169, 97, 0.12);
+    color: var(--gold);
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+html[lang^="zh"] h4[data-faq-label]::before {
+    letter-spacing: 0.08em;
+}
+
+@media (max-width: 640px) {
+    .faq-filter {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .faq-filter button {
+        padding: 7px 10px;
+        font-size: 0.76rem;
+    }
+}
 
 p {
     margin: 1em 0;
@@ -1986,6 +2061,19 @@ body.comics-page main {
 
     hr {
         border-top-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .faq-filter {
+        border-color: rgba(255, 255, 255, 0.08);
+        background: var(--surface);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .faq-filter button:hover,
+    .faq-filter button:focus-visible,
+    .faq-filter button[aria-pressed="true"] {
+        background: var(--teal);
+        color: #fff;
     }
 
     .polis-bar-disagree {

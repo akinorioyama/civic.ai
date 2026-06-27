@@ -326,3 +326,129 @@
                 else main.insertBefore(details, main.firstChild);
             })();
         </script>
+        <script>
+            // Add lightweight FAQ category pills and filtering.
+            (function () {
+                var main = document.getElementById("main");
+                if (!main) return;
+                var heads = Array.prototype.slice.call(
+                    main.querySelectorAll('h4[id^="faq-"][data-faq-category]')
+                );
+                if (!heads.length) return;
+
+                var zh =
+                    (document.documentElement.lang || "").indexOf("zh") === 0;
+                var order = [
+                    "foundations",
+                    "governance",
+                    "social",
+                    "economy",
+                    "security",
+                ];
+                var labels = {};
+                heads.forEach(function (head) {
+                    var key = head.getAttribute("data-faq-category");
+                    if (!labels[key]) {
+                        labels[key] =
+                            head.getAttribute("data-faq-label") || key;
+                    }
+                });
+
+                var nav = document.createElement("nav");
+                nav.className = "faq-filter";
+                nav.setAttribute(
+                    "aria-label",
+                    zh ? "篩選常見問題" : "Filter frequently asked questions"
+                );
+
+                function addButton(key, label, active) {
+                    var button = document.createElement("button");
+                    button.type = "button";
+                    button.textContent = label;
+                    button.setAttribute("data-faq-filter", key);
+                    button.setAttribute("aria-pressed", active ? "true" : "false");
+                    nav.appendChild(button);
+                }
+
+                addButton("all", zh ? "全部問題" : "All questions", true);
+                order.forEach(function (key) {
+                    if (labels[key]) addButton(key, labels[key], false);
+                });
+
+                var toc = main.querySelector(".page-toc");
+
+                function tocItemFor(head) {
+                    if (!toc) return null;
+                    var link = toc.querySelector('a[href="#' + head.id + '"]');
+                    return link ? link.parentElement : null;
+                }
+
+                var entries = heads.map(function (head) {
+                    var nodes = [];
+                    var node = head;
+                    while (node) {
+                        nodes.push(node);
+                        node = node.nextElementSibling;
+                        if (
+                            node &&
+                            node.tagName === "H4" &&
+                            node.id &&
+                            node.id.indexOf("faq-") === 0
+                        ) {
+                            break;
+                        }
+                    }
+                    return {
+                        category: head.getAttribute("data-faq-category"),
+                        nodes: nodes,
+                        tocItem: tocItemFor(head),
+                    };
+                });
+
+                var currentCategory = "all";
+
+                function show(category) {
+                    currentCategory = category;
+                    nav.querySelectorAll("button").forEach(function (button) {
+                        button.setAttribute(
+                            "aria-pressed",
+                            button.getAttribute("data-faq-filter") === category
+                                ? "true"
+                                : "false"
+                        );
+                    });
+                    entries.forEach(function (entry) {
+                        var visible =
+                            category === "all" || entry.category === category;
+                        entry.nodes.forEach(function (node) {
+                            node.hidden = !visible;
+                        });
+                        if (entry.tocItem) entry.tocItem.hidden = !visible;
+                    });
+                }
+
+                nav.addEventListener("click", function (event) {
+                    var button = event.target.closest("[data-faq-filter]");
+                    if (!button) return;
+                    show(button.getAttribute("data-faq-filter"));
+                });
+
+                function revealHashTarget() {
+                    var id = decodeURIComponent(
+                        (window.location.hash || "").slice(1)
+                    );
+                    if (id.indexOf("faq-") !== 0) return;
+                    var target = document.getElementById(id);
+                    if (!target || !target.hidden) return;
+                    if (currentCategory !== "all") show("all");
+                    window.requestAnimationFrame(function () {
+                        target.scrollIntoView();
+                    });
+                }
+
+                window.addEventListener("hashchange", revealHashTarget);
+
+                if (toc) toc.insertAdjacentElement("beforebegin", nav);
+                else main.insertBefore(nav, heads[0]);
+            })();
+        </script>
