@@ -12,13 +12,7 @@ nav_next:
     text: "Home"
 ---
 
-<em>Audrey Tang and Caroline Green in a fireside chat at Protein Studios, 2 June 2026 — introducing the 6-Pack of Care, a reframing of AI alignment that rejects vertical control in favour of horizontal cooperation.</em>
-
-## In brief
-
-Audrey Tang and Caroline Green introduce the **6-Pack of Care** — a reframing of AI alignment from vertical control toward horizontal, civic cooperation, run as a Kami.
-
-### Key takeaways
+### In Brief
 
 - **Outcome alignment** optimises for engagement or profit, even when that amplifies deepfake scam ads.
 - **Process alignment** invites the people affected to steer the system in place of top-down bans.
