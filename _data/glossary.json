@@ -82,8 +82,8 @@
         "id": "boundedness",
         "term_en": "boundedness",
         "term_tw": "有界性",
-        "def_en": "The design principle that an AI system's scope, resources, and authority are intentionally limited to the specific relationships it was created to serve — enforced through resource caps, sunset timers, non-expansion pacts, and fresh democratic authority for any scope change. Boundedness is the architectural alternative to the Singleton.",
-        "def_tw": "一種設計原則，透過資源上限、落日計時器、不擴張協定，以及任何範疇變更都需要新的民主授權，刻意限制 AI 系統的範疇、資源與權力，使其專注於它所設計服務的特定關係。有界性是單一主宰的架構性替代方案。"
+        "def_en": "The design principle that an AI system's scope, resources, and authority are intentionally limited to the specific relationships it was created to serve — enforced through resource caps, sunset timers, non-expansion pacts, and fresh democratic authority for any scope change. Boundedness is the architectural alternative to the Singleton. The same architectural intuition was set out earlier in Eric Drexler's Comprehensive AI Services (CAIS), a 2019 Future of Humanity Institute report at Oxford that reframed advanced AI as a system of bounded, specialised services rather than a single agent.",
+        "def_tw": "一種設計原則，透過資源上限、落日計時器、不擴張協定，以及任何範疇變更都需要新的民主授權，刻意限制 AI 系統的範疇、資源與權力，使其專注於它所設計服務的特定關係。有界性是單一主宰的架構性替代方案。同樣的架構直覺，早已見於 Eric Drexler 的《全面 AI 服務》（Comprehensive AI Services，CAIS）——這份 2019 年牛津大學人類未來研究所（Future of Humanity Institute）的報告，把先進 AI 重新理解為一套有界、專精的服務，而非單一代理者。"
     },
     {
         "id": "subsidiarity",
@@ -104,8 +104,8 @@
         "id": "singleton",
         "term_en": "Singleton",
         "term_tw": "單一主宰",
-        "def_en": "A hypothetical scenario in which a single AI system eventually manages everything — the convergence point the 6-Pack is explicitly designed to avoid. The Kami ecosystem of many bounded, purpose-specific stewards is the direct architectural alternative to the Singleton.",
-        "def_tw": "一種假設性情境：單一 AI 系統最終管理一切——這正是六力在架構上明確設計以避免的收斂終點。由眾多有界、專用守護者組成的地神生態系，是單一主宰的直接架構性替代方案。"
+        "def_en": "A hypothetical scenario in which a single AI system eventually manages everything — the convergence point the 6-Pack is explicitly designed to avoid. The Kami ecosystem of many bounded, purpose-specific stewards is the direct architectural alternative to the Singleton. Eric Drexler's 2019 Comprehensive AI Services (CAIS) framed this same alternative — advanced capability delivered as many bounded services rather than one agent — within Bostrom's own Oxford tradition.",
+        "def_tw": "一種假設性情境：單一 AI 系統最終管理一切——這正是六力在架構上明確設計以避免的收斂終點。由眾多有界、專用守護者組成的地神生態系，是單一主宰的直接架構性替代方案。Eric Drexler 在 2019 年的《全面 AI 服務》（Comprehensive AI Services，CAIS）中，於博斯特倫所屬的同一牛津傳統內，提出了同一種替代方案——以眾多有界服務、而非單一代理者來實現先進能力。"
     },
     {
         "id": "meronymity",

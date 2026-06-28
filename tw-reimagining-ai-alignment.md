@@ -6,7 +6,7 @@ alt_lang_url: "/reimagining-ai-alignment/"
 permalink: "/tw/reimagining-ai-alignment/"
 date: 2026-06-02
 description: "唐鳳與 Caroline Green 在爐邊對談中介紹「關懷六力」——把 AI 對齊從垂直控制，重新想像為水平的公民協作。"
-thumbnail: "https://customer-07bto6bf9uibrlc3.cloudflarestream.com/31300d382e14451bfa87219f650c7c40/thumbnails/thumbnail.jpg?time=55s"
+thumbnail: "https://customer-07bto6bf9uibrlc3.cloudflarestream.com/31300d382e14451bfa87219f650c7c40/thumbnails/thumbnail.jpg?time=1s"
 nav_next:
     url: "/tw/"
     text: "首頁"
@@ -16,19 +16,18 @@ nav_next:
 
 ## 摘要
 
-AI 對齊——確保 AI 系統與人類價值一致、服務人類需求——仍是一項未解的挑戰，而隨著前沿實驗室競相打造自主與超智慧系統，它愈發迫切。在這場爐邊對談中，唐鳳與 Caroline Green 介紹「關懷六力」，一種拒絕垂直控制、改採水平協作的 AI 對齊重新想像。關懷六力立基於既有的倫理框架與成熟的民主參與技術，提供一套程序，讓 AI 系統與人類社群持續協作，使人的尊嚴與福祉始終處於 AI 部署的核心。
+唐鳳與 Caroline Green 介紹「關懷六力」——把 AI 對齊從垂直控制重新想像為水平、公民的協作，並以地神（Kami）運作。
 
 ### 重點
 
-- 以結果對齊是預設模式：當推薦引擎為點擊率與利潤最佳化時，即使它「按設計運作」，也會放大深偽詐騙廣告——例如臺灣假的黃仁勳加密貨幣推銷。
-- 以程序對齊邀請受影響的人共同導向系統：臺灣沒有自上而下禁止廣告，而是從可信賴的 111 號碼發出 20 萬則簡訊，邀請公民參與如陪審義務般的審議。
-- 關懷六力將關懷倫理學轉譯成社群能運作的設計原則，並能以地神（Kami）實踐——有界限的在地守護者，而非普世治理者。
-- 仁工智慧透過社群與 AI 的持續協作，讓人的尊嚴與福祉保持在核心，而不是把一次性的規則寫死在模型裡。
+- **以結果對齊**為參與度或利潤最佳化，即使那會放大深偽詐騙廣告。
+- **以程序對齊**邀請受影響的人共同導向系統，取代自上而下的禁止。
+- **關懷六力**將關懷倫理學轉譯成社群能運作的設計原則，作為有界限的在地守護者。
 
 ## 觀看
 
 <div class="video-embed">
-<iframe src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/31300d382e14451bfa87219f650c7c40/iframe?defaultTextTrack=zh-Hant" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/31300d382e14451bfa87219f650c7c40/iframe?defaultTextTrack=zh-Hant&poster=https%3A%2F%2Fcustomer-07bto6bf9uibrlc3.cloudflarestream.com%2F31300d382e14451bfa87219f650c7c40%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D1s" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## 完整逐字稿

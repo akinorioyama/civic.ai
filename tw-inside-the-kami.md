@@ -20,6 +20,7 @@ nav_next:
 - Yoshua Bengio 與 Yann LeCun 的近期研究，都指向有界、專精的系統，而不是一個包辦一切的通用統治者。
 - 第三條研究路線——谷口忠大（Tadahiro Taniguchi）與同事的「集體預測編碼」（Collective Predictive Coding，CPC）——補上了先前缺少的數學：這些有界系統如何與自己的人類社群協商出共享意義，而不是由上而下接受意義。我參與合著的 2026 年《Artificial Life》論文，把這一點形式化為「共生對齊」（symbiotic alignment）。
 - 這三個計畫匯流於一處：Bengio 說明內部如何保持誠實，LeCun 說明內部為何應保持狹窄，CPC 則說明許多這樣的內部如何在沒有單一監督者的情況下共構意義。
+- 這種匯流的形狀並非新創：早在 2019 年，與博斯特倫《超智慧》同屬牛津傳統的 Eric Drexler，其《全面 AI 服務》（Comprehensive AI Services，CAIS）就已把先進 AI 重新理解為一個由有界、專精服務構成的生態系，而非單一代理者。六力所補上的，是 CAIS 留白的那一層公民性。
 - 這種匯流並不能解決政治問題，但它確實縮小了技術搜尋空間。
 - 系統內部仍然無法決定正當性、參與資格、節奏或正義；那些依然是制度問題。
 
@@ -30,6 +31,8 @@ nav_next:
 兩個近期的機器學習計畫——Yoshua Bengio 的[科學家 AI](https://lawzero.org/)與 Yann LeCun 的[超人類可適應智慧](https://arxiv.org/abs/2602.23643)（SAI）——匯聚出一個有用的設計結論：「仁工智慧」最好的技術基底，不是萬能代理者，而是有界、專精，且把行動權限留在人類授權層的系統。
 
 這種匯流並未解決政治問題。但它縮小了技術搜尋空間。
+
+這並不是新的直覺。早在 2019 年，同樣出自孕育博斯特倫《超智慧》的牛津傳統，Eric Drexler 的[《重構超智慧：全面 AI 服務》](https://web.archive.org/web/20250905024310/https://www.fhi.ox.ac.uk/wp-content/uploads/Reframing_Superintelligence_FHI-TR-2019-1.1-1.pdf)（CAIS）就主張：先進 AI 最可能的樣貌，不是單一自我改進的代理者，而是一個不斷生長、由有界專精服務構成的生態系——正是 Bengio 與 LeCun 如今從信任與能力的論證所抵達的同一種形狀。CAIS 留白之處，恰是六力所補上的：不是有界性的架構，而是它的正當性——誰授權一項服務、誰有資格得到回答、誰能撤回授權。
 
 ## Bengio：求真而無欲
 

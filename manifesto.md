@@ -220,7 +220,7 @@ The solution is not to create a bigger AI to rule over them. Instead, we create 
 1.  **Federation:** The AIs agree on a shared set of rules for how to interact peacefully, like countries agreeing on trade laws and diplomatic protocols. This agreement creates a common ground for cooperation.
 2.  **Subsidiarity:** This idea is simple but profound: **problems should always be solved at the most local level possible.** The national-level AI shouldn't interfere with the city-level AI unless there's a problem the city truly cannot solve on its own. This separation protects the autonomy and purpose of each local _Kami_.
 
-The vision of a **"society of AI permaculturists"** is the direct alternative to the **"singleton"** — the idea of a single AI that eventually manages everything. Instead of one monolithic intelligence, we envision a vibrant, diverse ecosystem of many specialised intelligences.
+The vision of a **"society of AI permaculturists"** is the direct alternative to the **"singleton"** — the idea of a single AI that eventually manages everything. Instead of one monolithic intelligence, we envision a vibrant, diverse ecosystem of many specialised intelligences. The architectural case for this — that advanced AI is better reached as bounded, specialised services than as one all-managing agent — was set out within the same Oxford tradition by Eric Drexler's [Comprehensive AI Services](https://web.archive.org/web/20250905024310/https://www.fhi.ox.ac.uk/wp-content/uploads/Reframing_Superintelligence_FHI-TR-2019-1.1-1.pdf) (2019); what the 6-Pack adds is the democratic legitimacy that decides who tends each garden.
 
 _Rule of thumb: Build for "enough," not forever._
 

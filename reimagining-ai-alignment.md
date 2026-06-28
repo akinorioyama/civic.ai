@@ -6,7 +6,7 @@ alt_lang_url: "/tw/reimagining-ai-alignment/"
 permalink: "/reimagining-ai-alignment/"
 date: 2026-06-02
 description: "Audrey Tang and Caroline Green introduce the 6-Pack of Care — a fireside-chat reframing of AI alignment from vertical control to horizontal, civic cooperation."
-thumbnail: "https://customer-07bto6bf9uibrlc3.cloudflarestream.com/31300d382e14451bfa87219f650c7c40/thumbnails/thumbnail.jpg?time=55s"
+thumbnail: "https://customer-07bto6bf9uibrlc3.cloudflarestream.com/31300d382e14451bfa87219f650c7c40/thumbnails/thumbnail.jpg?time=1s"
 nav_next:
     url: "/"
     text: "Home"
@@ -16,19 +16,18 @@ nav_next:
 
 ## In brief
 
-AI alignment — ensuring AI systems align with human values and serve human needs — remains an unsolved challenge that grows more urgent as frontier labs pursue autonomous and superintelligent systems. In this fireside chat, Audrey Tang and Caroline Green introduce the "6-Pack of Care," a reframing of AI alignment that rejects vertical control in favour of horizontal cooperation. Drawing on established ethical frameworks and proven technology for democratic engagement, the 6-Pack of Care offers a process where AI systems and human communities continuously collaborate to keep human dignity and well-being at the centre of AI deployment throughout society.
+Audrey Tang and Caroline Green introduce the **6-Pack of Care** — a reframing of AI alignment from vertical control toward horizontal, civic cooperation, run as a Kami.
 
 ### Key takeaways
 
-- Alignment by outcome is the default: when a recommendation engine optimises for click-through and profit, it amplifies deepfake scam ads — like Taiwan's fake Jensen Huang crypto pitches — even while "working as designed."
-- Alignment by process invites the people affected to steer the system: Taiwan sent 200,000 messages from the trusted 111 number inviting citizens to a jury-duty-style deliberation, rather than banning ads top-down.
-- The 6-Pack of Care translates care ethics into design primitives a community can run as a Kami — a bounded local steward, not a universal governor.
-- Civic AI keeps human dignity and well-being central through continuous community–AI collaboration, not one-off rules baked into a model.
+- **Outcome alignment** optimises for engagement or profit, even when that amplifies deepfake scam ads.
+- **Process alignment** invites the people affected to steer the system in place of top-down bans.
+- **The 6-Pack of Care** turns care ethics into design primitives a community can run as a bounded local steward.
 
 ## Watch
 
 <div class="video-embed">
-<iframe src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/31300d382e14451bfa87219f650c7c40/iframe?defaultTextTrack=en" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://customer-07bto6bf9uibrlc3.cloudflarestream.com/31300d382e14451bfa87219f650c7c40/iframe?defaultTextTrack=en&poster=https%3A%2F%2Fcustomer-07bto6bf9uibrlc3.cloudflarestream.com%2F31300d382e14451bfa87219f650c7c40%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D1s" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Full transcript

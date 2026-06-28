@@ -20,6 +20,7 @@ The 6-Pack describes the governance around a Civic AI. This essay asks a narrowe
 - Recent work from Yoshua Bengio and Yann LeCun points toward bounded, specialised systems rather than one general-purpose governor.
 - A third line of work — Tadahiro Taniguchi and colleagues' _Collective Predictive Coding_ (CPC) — supplies the missing mathematics for how those bounded systems can negotiate shared meaning with their human communities, rather than receive it from above. The 2026 _Artificial Life_ paper, which I co-authored, formalises this as _symbiotic alignment_.
 - These three programmes converge: Bengio shows how the inside can stay honest, LeCun shows why the inside should stay narrow, and CPC shows how many such insides can co-construct meaning without a single supervisor.
+- This convergent shape is not new: Eric Drexler's 2019 _Comprehensive AI Services_ (CAIS), from the same Oxford tradition as Bostrom's _Superintelligence_, already reframed advanced AI as an ecology of bounded, specialised services rather than a single agent. What the 6-Pack adds is the civic layer CAIS leaves open.
 - That convergence does not settle politics, but it does narrow the technical search space.
 - The inside still cannot decide legitimacy, standing, pace, or justice. Those remain institutional questions.
 
@@ -39,6 +40,8 @@ under human authorisation.
 
 That convergence does not settle politics. It does narrow the technical search
 space.
+
+None of this is a new intuition. In 2019, within the same Oxford tradition that produced Bostrom's _Superintelligence_, Eric Drexler's [_Reframing Superintelligence: Comprehensive AI Services_](https://web.archive.org/web/20250905024310/https://www.fhi.ox.ac.uk/wp-content/uploads/Reframing_Superintelligence_FHI-TR-2019-1.1-1.pdf) (CAIS) argued that advanced AI is most plausibly reached not as a single self-improving agent but as a growing ecology of bounded, specialised services — the same shape Bengio and LeCun now arrive at from trust and capability arguments. What CAIS left open is exactly what the 6-Pack supplies: not the architecture of boundedness, but its legitimacy — who authorises a service, who is owed an answer, who can revoke the mandate.
 
 ## Bengio: truth without appetite
 
