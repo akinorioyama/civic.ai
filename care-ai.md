@@ -19,7 +19,7 @@ This is the gap that attentiveness is designed to close: the distance between th
 
 Between February 2024 and March 2025, a cross-sector collaboration convened more than 100 representatives from across the UK's long-term care community to co-produce — to build jointly with the people affected — a definition of responsible AI in long-term care. The collaborators included care and support recipients, unpaid caregivers, professional care workers, care providers, technology providers, policy makers, decision makers, and civil society representatives. Three hosts from academia, the private sector, and civil society coordinated the work.
 
-The resulting definition, published in _The Lancet Healthy Longevity_, centres care values — not efficiency metrics — as the starting point for AI policy and practice. What makes this work a case study in attentiveness is not only what the collaboration produced, but _how_ it produced it: by practising the discipline of noticing who is missing, listening before solving, and refusing to let powerful voices set the agenda unchallenged.
+The resulting definition, published in _The Lancet Healthy Longevity_, centres care values as the starting point for AI policy and practice rather than efficiency metrics. What makes this work a case study in attentiveness is how it was produced: noticing who is missing, listening before solving, and refusing to let powerful voices set the agenda unchallenged.
 
 ## How the co-production practised attentiveness
 

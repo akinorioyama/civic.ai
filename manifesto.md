@@ -163,11 +163,11 @@ _Rule of thumb: No unchecked power; answers are required._
 
 Good intentions require working code. Competence is shipping systems that deliver care and build trust, backed by auditing and evaluation.
 
-This competence is where we implement decision traces, shadow mode, canaries, fallbacks, and security constraints. The point is not to guess what the community values, but to prove the system can act safely within the bounds already set.
+This competence is where we implement decision traces, shadow mode, canaries, fallbacks, and security constraints. Prove the system can act safely within bounds already set; do not guess what the community values.
 
-Security is also a competence — and a moral — question. An agent that can be hijacked cannot tend its place. Prompt injection, privilege escalation, and lateral movement are care failures, not merely technical ones. A Kami with real resources runs in a strict sandbox: least-privilege permissions, validated inputs, no implicit trust of anything upstream.
+Security is also competence, and a moral question. A hijacked _Kami_ cannot tend its place. Permissions spend trust: prompt injection, privilege escalation, and lateral movement are care failures before they are technical findings. A _Kami_ with real resources runs in a strict sandbox, with least-privilege permissions, validated inputs, and no implicit trust of anything upstream.
 
-_Rule of thumb: Security failures are moral failures of those who build and deploy, not merely technical oversights._
+_Rule of thumb: Security failures reveal moral failure in build and deployment before they read as technical oversights._
 
 # Responsiveness: **"Care-receiving"**
 

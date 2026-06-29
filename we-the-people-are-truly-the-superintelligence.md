@@ -87,7 +87,7 @@ As minister, I said: anything that reaches rough consensus here, I will present 
 
 In the U.S., with the strong support of Governor Gavin Newsom, the [Engaged California](https://engaged.ca.gov/) platform is doing the same. It launched as a wildfire mitigation and prevention consultation after the Eaton Fire. It moved on to a conversation with more than 1,400 state employees, who proposed more than 2,600 ideas, and that turned into executive action.
 
-As we speak, Engaged California is canvassing input statewide from anyone who feels their job is being impacted by AI — which is everybody — and making sure there is a committed live deliberation with the relevant public this summer. A bill working its way through the state legislature would make this a permanent part of California’s institutions: not one governor’s idea, but permanent civic infrastructure.
+Right now, Engaged California is seeking input from anyone whose job is being impacted by AI, effectively everybody, and making sure there is a committed live deliberation with the relevant public this summer. A bill working its way through the state legislature would make this durable civic infrastructure, available beyond one governor or one administration.
 
 In Japan, a young AI engineer, Takahiro Anno, read the book we wrote, _Plurality_, and decided to run for governor of Tokyo. He livestreamed as a VTuber, and anyone could call his AI version to suggest platform improvements that he announced on YouTube.
 
