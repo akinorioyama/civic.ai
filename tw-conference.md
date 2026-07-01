@@ -139,12 +139,12 @@ agenda:
             }
     - time: "14:45"
       title: "可及智慧"
-      speaker: "唐鳳主持，Geshe Lobsang、Tenzin Gayche、Clenton Farquharson"
+      speaker: "唐鳳主持，Geshe Lobsang Monlam、Tenzin Gayche、Clenton Farquharson"
       photos:
           - { src: "/img/audrey.jpg", alt: "唐鳳", w: 512, h: 512 }
           - {
                 src: "/img/geshe-lobsang.jpg",
-                alt: "Geshe Lobsang",
+                alt: "Geshe Lobsang Monlam",
                 w: 800,
                 h: 800,
             }

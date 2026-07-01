@@ -49,7 +49,7 @@ Twelve years ago in Taiwan, the government’s approval rating was at 9 percent.
 
 In a country of 23.5 million people, that meant almost anything the president said, 20 million people were against.
 
-Half a million of us occupied the parliament for three weeks, peacefully. It is called the Sunflower Movement. But we did not call ourselves protesters. We were demonstrators.
+Hundreds of us occupied the parliament peacefully for three weeks; half a million stood in the streets outside. It is called the Sunflower Movement. But we did not call ourselves protesters. We were demonstrators.
 
 Civic technologists put on demos: the Loomio system from Occupy Wellington, the Polis system from Occupy Seattle. Every day, using those tools, we looked at the divisions, the uncommon grounds that people could agree on, and the remaining disagreements. One bridge at a time, we converged on a coherent set of proposals. Three weeks later, the head of the parliament simply said: OK, the crowdsourced version has passed. Go home.
 
@@ -85,7 +85,7 @@ The reason this worked is not just the tech. We were pre-committed to close the 
 
 As minister, I said: anything that reaches rough consensus here, I will present to parliament in a live deliberation. Otherwise, it just becomes a beautiful report that goes unread.
 
-In the U.S., with the strong support of Governor Gavin Newsom, the [Engaged California](https://engaged.ca.gov/) platform is doing the same. It launched as a wildfire mitigation and prevention consultation after the Eaton Fire. It moved on to a conversation with more than 1,400 state employees, who proposed more than 2,600 ideas, and that turned into executive action.
+In the U.S., with the strong support of Governor Gavin Newsom, the [Engaged California](https://engaged.ca.gov/) platform is doing the same. It launched as a wildfire mitigation and prevention consultation after the January 2025 Eaton and Palisades fires. It moved on to a conversation with more than 1,400 state employees, who proposed more than 2,600 ideas, and that turned into executive action.
 
 Right now, Engaged California is seeking input from anyone whose job is being impacted by AI, effectively everybody, and making sure there is a committed live deliberation with the relevant public this summer. A bill working its way through the state legislature would make this durable civic infrastructure, available beyond one governor or one administration.
 

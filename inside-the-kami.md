@@ -17,9 +17,9 @@ The 6-Pack describes the governance around a Civic AI. This essay asks a narrowe
 
 ## In brief
 
-- Recent work from Yoshua Bengio and Yann LeCun points toward bounded, specialised systems rather than one general-purpose governor.
+- Recent work from Yoshua Bengio's Scientist AI and the SAI line from LeCun and colleagues points toward bounded, specialised systems rather than one general-purpose governor.
 - A third line of work — Tadahiro Taniguchi and colleagues' _Collective Predictive Coding_ (CPC) — supplies the missing mathematics for how those bounded systems can negotiate shared meaning with their human communities, rather than receive it from above. The 2026 _Artificial Life_ paper, which I co-authored, formalises this as _symbiotic alignment_.
-- These three programmes converge: Bengio shows how the inside can stay honest, LeCun shows why the inside should stay narrow, and CPC shows how many such insides can co-construct meaning without a single supervisor.
+- These three programmes converge: Bengio shows how the inside can stay honest, SAI shows why the inside should stay narrow, and CPC shows how many such insides can co-construct meaning without a single supervisor.
 - This convergent shape is not new: Eric Drexler's 2019 _Comprehensive AI Services_ (CAIS), from the same Oxford tradition as Bostrom's _Superintelligence_, already reframed advanced AI as an ecology of bounded, specialised services rather than a single agent. What the 6-Pack adds is the civic layer CAIS leaves open.
 - That convergence does not settle politics, but it does narrow the technical search space.
 - The inside still cannot decide legitimacy, standing, pace, or justice. Those remain institutional questions.
@@ -33,8 +33,8 @@ combat. A general-purpose optimiser strains every boundary. An opaque
 system makes Pack 3 impossible to verify.
 
 Two recent ML programmes — Yoshua Bengio's [Scientist AI](https://lawzero.org/)
-and Yann LeCun's [Superhuman Adaptable Intelligence](https://arxiv.org/abs/2602.23643)
-agenda — converge on a useful design lesson: the best substrate for Civic AI is
+and the [Superhuman Adaptable Intelligence](https://arxiv.org/abs/2602.23643)
+(SAI) agenda from LeCun and colleagues — converge on a useful design lesson: the best substrate for Civic AI is
 not a universal agent. It is a bounded, specialised system whose action remains
 under human authorisation.
 
@@ -75,7 +75,7 @@ where governance belongs.
 
 ## SAI: capability through specialisation
 
-LeCun's SAI programme attacks a different myth: that the right goal is one
+The SAI programme of LeCun and colleagues attacks a different myth: that the right goal is one
 general intelligence good at everything.
 
 Its case is mathematical before it is political. The No Free Lunch theorem — a
@@ -98,7 +98,7 @@ smarter AI requires one system to do everything.
 
 ## Taniguchi: meaning by negotiation, not by decree
 
-A third programme, less prominent in the Western AI-safety conversation but load-bearing for Civic AI, comes from Tadahiro Taniguchi and colleagues' _Collective Predictive Coding_ (CPC). Its 2026 _Artificial Life_ paper, which I co-authored, frames the next step beyond Bengio's epistemic honesty and LeCun's specialisation: how should a community of bounded, specialised systems and their human counterparts negotiate the shared meanings — words, norms, categories, agreements — that make coordination possible at all?
+A third programme, less prominent in the Western AI-safety conversation but load-bearing for Civic AI, comes from Tadahiro Taniguchi and colleagues' _Collective Predictive Coding_ (CPC). Its 2026 _Artificial Life_ paper, which I co-authored, frames the next step beyond Bengio's epistemic honesty and SAI's specialisation: how should a community of bounded, specialised systems and their human counterparts negotiate the shared meanings — words, norms, categories, agreements — that make coordination possible at all?
 
 The dominant alignment paradigm answers this top-down. A supervisor — a single human, a model card, a reinforcement-learning-from-human-feedback (RLHF) preference dataset — holds a privileged "ground-truth" distribution, and every other system is taught to converge on it. The paper calls this _hierarchical alignment_, and is precise about its political cost: alignment becomes the imposition of one community's values on all others, which is exactly the singleton condition the 6-Pack is built to refuse.
 

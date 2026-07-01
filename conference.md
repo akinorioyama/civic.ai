@@ -139,12 +139,12 @@ agenda:
             }
     - time: "14:45"
       title: "Accessible Intelligence"
-      speaker: "Audrey Tang chairs Geshe Lobsang, Tenzin Gayche, Clenton Farquharson"
+      speaker: "Audrey Tang chairs Geshe Lobsang Monlam, Tenzin Gayche, Clenton Farquharson"
       photos:
           - { src: "/img/audrey.jpg", alt: "Audrey Tang", w: 512, h: 512 }
           - {
                 src: "/img/geshe-lobsang.jpg",
-                alt: "Geshe Lobsang",
+                alt: "Geshe Lobsang Monlam",
                 w: 800,
                 h: 800,
             }
