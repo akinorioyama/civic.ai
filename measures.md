@@ -69,3 +69,17 @@ Each headline measure names not only what it rewards but what it must refuse, so
 - **Trust is decomposed, not collapsed.** Pack 1 asks whether people were heard. Pack 2 asks whether promises were real. Pack 3 asks whether delivery held up under inspection. Pack 4 asks whether repair worked after harm. Pack 5 asks whether groups can act together fairly. Pack 6 asks whether stewardship can remain bounded over time.
 - **Artefacts are not metrics.** Bridging maps, engagement contracts, repair logs, and exit drills are governance evidence. They matter because they support the headline measures; they are not scores by themselves.
 - **Training signals are not the public audit.** Cross-group endorsement may inform model tuning or routing, but its public, conference-facing role in this framework is the Pack 5 bridge index. Pack 4 owns whether affected people could correct the system and whether repair restored trust.
+- **The record is small and named.** Most strong cases come from places with unusually strong civic infrastructure — thresholds are earned room by room, not inherited from Taiwan or California.
+
+### Before you call it Civic AI
+
+The measures above audit a running deployment. These six questions gate whether a deployment should carry the name at all:
+
+1. **Human standing** (Pack 1) — can affected people prove standing without surrendering unnecessary identity?
+2. **Adversarial load** (Packs 1, 5) — what stops synthetic publics, bots, or paid campaigns from flooding the channel?
+3. **Decision force** (Pack 2) — where does the output bind actual decisions, and where is it only advice?
+4. **Repair path** (Pack 4) — who can appeal, who pays for harm, and where is the repair logged?
+5. **Exit capacity** (Packs 5, 6) — can the community migrate, fork, pause, or shut down without losing service continuity?
+6. **Boundary honesty** (Pack 6) — what problem is out of scope, and who is carrying that problem instead?
+
+If the answer to any of these is vague, the deployment is not ready. The point is not to defend the 6-Pack. The point is to make the room answerable.
