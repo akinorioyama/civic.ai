@@ -81,6 +81,7 @@ next_action:
 
 ## 學術發表
 
+- [〈AI 與數位公共廣場的未來〉](https://journals.sagepub.com/doi/10.1177/26339137261459441)：唐鳳與 Beth Goldberg、Hélène Landemore 等二十多位共同作者，描繪 LLM 如何強化數位公共廣場——集體對話、搭橋系統、社群調解與真人驗證——這份經同儕審查的研究議程直接引用了關懷六力。_(Collective Intelligence, 2026)_
 - [〈以資料為土壤，守護主權〉](/tw/safer-sovereignty/)：唐鳳將關懷六力應用於企業 AI——資料是土壤，不是石油；韌性來自聯邦式安全下的有界在地守護者，而非單一的全球大腦。_(原刊於 The Kyndryl Institute，2026 年 4 月 28 日)_
 - [〈廢除 Section 230，釋放第一修正案〉](https://cacm.acm.org/opinion/sunset-section-230-and-unleash-the-first-amendment/)：唐鳳、Jaron Lanier 與 Allison Stanger 主張終結演算法放大的免責保護，同時保護人類言論——這是 Pack 5 核心的觸及而非言論改革。_(Communications of the ACM, 2026 年 1 月)_
 - [〈惡意 AI 群集如何威脅民主〉](https://www.science.org/doi/10.1126/science.adz1697)：唐鳳與 Maria Ressa、Nick Bostrom、Nicholas Christakis 等 18 位研究者共同記錄 LLM 驅動的智慧體群集如何滲透社群、在人口規模上製造假共識。_(Science, 2026)_
