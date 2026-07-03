@@ -42,10 +42,9 @@ Each pack answers a distinct phase question in the care cycle. Packs 1-5 measure
 
 The book's Parts List catalogues every instrument a practitioner is asked to build or run. The ones the measures above depend on:
 
-- **Engagement contract** (Pack 2) — a short, legible public document for every significant Kami deployment, recording what the system is supposed to do, who is answerable for it doing that, what happens when it goes wrong, and how the deployment will eventually end.
+- **Engagement contract** (Pack 2) — a short, legible public document for every significant Kami deployment, recording what the system is supposed to do, who is answerable for it doing that, what happens when it goes wrong, and how the deployment will eventually end; Pack 6 renders the same contract machine-readable, so its purpose bounds, consent rules, data-retention limits, portability guarantees, and shutdown procedures are enforced by infrastructure.
 - **Adopt-or-explain** (Pack 2) — the rule that when an Alignment Assembly produces a recommendation, the team either integrates it into the system's behaviour or publishes a reasoned explanation of why not, with the remedy offered instead.
 - **Obligation ledger** (Pack 2) — a public, weekly, digitally signed record of what the deployment has committed to deliver and whether it is meeting those commitments, kept by a named Participation Officer.
-- **Civic Care Licence** (Pack 6) — a public, machine-readable rulebook encoding a deployment's purpose bounds, consent rules, data-retention limits, portability guarantees, and shutdown procedures, the machine-enforceable expression of the engagement contract.
 - **Shadow mode** (Pack 3) — the first stage of the Apprentice Model: the system sees real inputs and proposes real actions but does not act, its proposals compared against the human or prior system so divergences can be studied before trust is granted.
 - **Canary release** (Pack 3) — the second stage: deployment to a small, stratified, representative slice of real cases with automatic rollback triggers if drift exceeds defined bounds.
 - **Decision trace** (Pack 3) — the per-action record showing which rule fired, which sources were consulted, and what uncertainty the system carried, the operational counterpart that makes the engagement contract live rather than merely written.
