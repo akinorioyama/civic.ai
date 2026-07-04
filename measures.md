@@ -20,14 +20,14 @@ Each pack answers a distinct question. Packs 1-4 form a feedback loop — the ca
 
 ### Headline public measures
 
-| Pack               | Phase question                                           | Headline public measure | What it answers                                                                                                               |
-| ------------------ | -------------------------------------------------------- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| 1 — Attentiveness  | Did we look at the right things?                         | Representation gap      | Which materially affected groups are still missing or badly under-represented in the record?                                  |
-| 2 — Responsibility | Did we make the right promises in an enforceable form?   | Promise fidelity        | What share of material obligations are explicitly owned, properly authorised, and kept on their published terms?              |
-| 3 — Competence     | Did we execute correctly?                                | Verified execution rate | What share of audited decisions or releases pass guardrails, include a usable trace, and stay inside release bounds?          |
-| 4 — Responsiveness | Did the care land well, and did repair restore standing? | Trust-under-loss        | After a bad outcome and attempted repair, do affected people report that the system became more trustworthy rather than less? |
-| 5 — Solidarity     | Are groups acting together across lines?                 | Uncommon-ground index   | Are shared decisions showing real cross-group participation and co-endorsement, rather than separate silos?                   |
-| 6 — Symbiosis      | Can the system stay bounded and still hand off or stop?  | Exit readiness          | Could this system hand over or shut down on schedule without rights loss, continuity failure, or recentralisation?            |
+| Pack               | Phase question                                           | Headline public measure                                           | What it answers                                                                                                               |
+| ------------------ | -------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| 1 — Attentiveness  | Did we look at the right things?                         | <span id="representation-gap">Representation gap</span>           | Which materially affected groups are still missing or badly under-represented in the record?                                  |
+| 2 — Responsibility | Did we make the right promises in an enforceable form?   | <span id="promise-fidelity">Promise fidelity</span>               | What share of material obligations are explicitly owned, properly authorised, and kept on their published terms?              |
+| 3 — Competence     | Did we execute correctly?                                | <span id="verified-execution-rate">Verified execution rate</span> | What share of audited decisions or releases pass guardrails, include a usable trace, and stay inside release bounds?          |
+| 4 — Responsiveness | Did the care land well, and did repair restore standing? | <span id="trust-under-loss">Trust-under-loss</span>               | After a bad outcome and attempted repair, do affected people report that the system became more trustworthy rather than less? |
+| 5 — Solidarity     | Are groups acting together across lines?                 | <span id="uncommon-ground-index">Uncommon-ground index</span>     | Are shared decisions showing real cross-group participation and co-endorsement, rather than separate silos?                   |
+| 6 — Symbiosis      | Can the system stay bounded and still hand off or stop?  | <span id="exit-readiness">Exit readiness</span>                   | Could this system hand over or shut down on schedule without rights loss, continuity failure, or recentralisation?            |
 
 ### Supporting diagnostics
 
