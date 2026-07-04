@@ -72,7 +72,7 @@ A well-designed technical system could replicate some of these outputs in isolat
 
 <h4 id="faq-5" data-faq-category="governance" data-faq-label="Governance process" data-toc="Handling the Speed Mismatch"><a href="#faq-5">Q5.</a> Deliberation is slow. AI moves fast. By the time an Alignment Assembly reaches consensus, the technology has moved on three generations. How do you handle the speed mismatch?</h4>
 
-The objection assumes that every decision requires the same depth of deliberation. It does not. The framework operates in two lanes ([Pack 2](../2/)):
+The objection assumes that every decision requires the same depth of deliberation. It does not. The framework operates in two lanes — a slow lane that sets boundaries ([Pack 2](../2/)), and a fast lane that operates within them ([Pack 3](../3/)):
 
 **Slow lane: Setting boundaries.** Alignment Assemblies, citizen deliberations, and engagement contracts — the written agreements between a community and an AI's operators about what the system may do and who answers when it breaks — establish the guardrails: the rights that cannot be traded, the red lines, the severity classifications, the conditions that trigger a pause. These rights draw on the liberal political tradition — exactly the tradition Tronto herself says care ethics requires to function. Rights are the threshold conditions that make relational participation possible: you cannot be heard in a bridging process if your basic existence is under erasure. These are constitutional-level decisions, and they should be slow, because their purpose is durability. Taiwan's anti-scam Assembly set principles that have outlasted multiple model generations without needing revision.
 

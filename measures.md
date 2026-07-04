@@ -14,7 +14,7 @@ nav_next:
     text: "FAQ"
 ---
 
-Each pack answers a distinct phase question in the care cycle. Packs 1-5 measure how care is practised. Pack 6 measures the boundary condition that keeps that care local, plural, and endable. To preserve the public promise of one headline public measure per pack, each pack has one headline public measure plus supporting diagnostics.
+Each pack answers a distinct question. Packs 1-4 form a feedback loop — the care cycle (Attentiveness → Responsibility → Competence → Responsiveness). Pack 5 scales that loop across organisations. Pack 6 is the boundary condition that keeps every deployment local, plural, and sunset-ready. To preserve the public promise of one headline public measure per pack, each pack has one headline public measure plus supporting diagnostics.
 
 **These metrics are designed for sufficiency, not maximisation.** Each deployment context defines a threshold — "good enough" for that community. Crossing the threshold is the goal; score-chasing beyond it risks the same metric gaming the 6-Pack warns against. A headline measure is a public test, not a totalising score.
 
@@ -76,7 +76,7 @@ Each headline measure names not only what it rewards but what it must refuse, so
 The measures above audit a running deployment. These six questions gate whether a deployment should carry the name at all:
 
 1. **Human standing** (Pack 1) — can affected people prove standing without surrendering unnecessary identity?
-2. **Adversarial load** (Packs 1, 5) — what stops synthetic publics, bots, or paid campaigns from flooding the channel?
+2. **Adversarial load** (Packs 1, 4, 5) — what stops synthetic publics, bots, or paid campaigns from flooding the channel?
 3. **Decision force** (Pack 2) — where does the output bind actual decisions, and where is it only advice?
 4. **Repair path** (Pack 4) — who can appeal, who pays for harm, and where is the repair logged?
 5. **Exit capacity** (Packs 5, 6) — can the community migrate, fork, pause, or shut down without losing service continuity?

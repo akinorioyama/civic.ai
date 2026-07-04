@@ -3,8 +3,8 @@
         "id": "civic-ai",
         "term_en": "Civic AI",
         "term_tw": "仁工智慧",
-        "def_en": "AI designed as local care infrastructure — helping communities cooperate across differences rather than supercharging conflict. Where most AI optimises for individual engagement or commercial extraction, Civic AI treats relational health as a first-class metric and is governed by the communities it serves.",
-        "def_tw": "將 AI 設計為在地的關懷基礎設施——幫助社群跨越分歧、彼此協作，而非激化衝突。仁工智慧以關係健康度為首要衡量指標，並由它所服務的社群進行治理。"
+        "def_en": "AI designed as local care infrastructure — helping communities cooperate across differences rather than supercharging conflict. Where most AI optimises for individual engagement or commercial extraction, Civic AI treats relational health as a first-class design concern, decomposed into six public measures, and is governed by the communities it serves.",
+        "def_tw": "將 AI 設計為在地的關懷基礎設施——幫助社群跨越分歧、彼此協作，而非激化衝突。仁工智慧以關係健康為首要設計關切，並拆解為六項公開主指標，由它所服務的社群進行治理。"
     },
     {
         "id": "kami",
@@ -17,7 +17,7 @@
         "id": "6-pack-of-care",
         "term_en": "6-Pack of Care",
         "term_tw": "關懷六力",
-        "def_en": "A governance architecture translating Joan Tronto's care ethics into six design primitives for AI systems: Attentiveness, Responsibility, Competence, Responsiveness, Solidarity, and Symbiosis. The first four form a feedback loop; the fifth scales care across organisations; the sixth keeps every deployment bounded, plural, and sunset-ready.",
+        "def_en": "A governance architecture translating Joan Tronto's care ethics into six design primitives for AI systems: Attentiveness, Responsibility, Competence, Responsiveness, Solidarity, and Symbiosis. The first four form a feedback loop; the fifth scales care across organisations; the sixth keeps every deployment local, plural, and sunset-ready.",
         "def_tw": "一套治理架構，將 Joan Tronto 的關懷倫理學轉化為 AI 系統的六項設計要素：覺察力、負責力、勝任力、回應力、團結力、共生力。前四力構成回饋迴圈；第五力將關懷擴展至跨組織；第六力確保每次部署保持在地、多元、可退場。"
     },
     {
@@ -26,6 +26,20 @@
         "term_tw": "以程序對齊",
         "def_en": "The understanding that AI alignment is not a fixed property held inside a model's weights but the ongoing outcome of an accountable civic procedure — who was heard, who was authorised, who could override, and who must answer when the record is checked. A model can be well-aligned in the abstract yet fail alignment-by-process in a particular room.",
         "def_tw": "一種理解：AI 對齊不是固定在模型權重中的靜態屬性，而是一套可問責的公民程序持續產出的結果——誰被聽見、誰獲得授權、誰可以推翻決定、當記錄被查核時誰必須作答。一個前沿模型可以在抽象意義上是對齊的，卻未在特定的房間裡做到以程序對齊。"
+    },
+    {
+        "id": "corrective-loop",
+        "term_en": "corrective loop",
+        "term_tw": "矯正迴路",
+        "def_en": "The framework's defended point: who can find out we are wrong, make us say so, and make it cost us while there is still time to change course. The 6-Pack entrenches this loop — rights baseline, engagement contracts, responsiveness, adopt-or-explain, escrowed remedies, brakes — through feedback, contestation, repair, and mandate-revocation where reversal is no longer possible; everything else stays bounded, revisable, and answerable.",
+        "def_tw": "整套框架真正捍衛的核心：誰能發現我們錯了、迫使我們承認，並在還來得及改變方向時讓錯誤付出代價。關懷六力把這條迴路固定下來——權利底線、參與契約、回應力、採納或解釋、預先注資的補救、煞車——透過回饋、爭議、修復，以及在無法回復時撤回授權；其餘一切保持有界、可修訂、可問責。"
+    },
+    {
+        "id": "accountable-formation",
+        "term_en": "accountable formation",
+        "term_tw": "可問責的形成過程",
+        "def_en": "The requirement that the processes shaping an AI system's dispositions — data provenance, rater selection, reward signals, refusal policies, release rationales — carry public custody and disclosure, not only its runtime behaviour. Caps bound what a Kami may do; accountable formation shapes what it is permitted to become.",
+        "def_tw": "一項要求：塑造 AI 系統傾向的過程——資料來源、評分者選擇、獎勵訊號、拒絕政策、釋出理由——必須具備可問責的監護與公開揭露，而不只稽核其運行時的行為。上限約束地神可以做什麼；可問責的形成過程，形塑它被允許成為什麼。"
     },
     {
         "id": "plurality",
@@ -65,11 +79,25 @@
         "def_tw": "一種演算法方法，獎勵獲得跨群體認可的內容，而非單純的互動量。採用搭橋式排序的平台——如 X 平台的社群備註——浮現能同時打動對立群體的想法，使重疊而非憤怒成為演算法觸及的路徑。關懷六力的罕見共識指數（Pack 5）正是承接這支文獻：同樣的跨群體共同背書訊號，不用於排序資訊流，而是在共同決策的層級接受稽核。"
     },
     {
+        "id": "uncommon-ground-index",
+        "term_en": "uncommon ground / uncommon-ground index",
+        "term_tw": "罕見共識 / 罕見共識指數",
+        "def_en": "Uncommon ground is what a well-facilitated bridging process surfaces: the specific, actionable proposals that earn endorsement across otherwise divided groups, not the centrist average. The uncommon-ground index is Pack 5's headline public measure — the share of shared decisions that actually land there — and it is read against Pack 1's representation gap, so a curated room cannot fake it.",
+        "def_tw": "罕見共識是一場好的搭橋過程所浮現的東西：能獲得原本對立群體共同背書、具體可行的提案，而不是中間值的平均。罕見共識指數是團結力（Pack 5）的公開主指標——實際落在罕見共識上的共同決策比例——並且必須對照覺察力（Pack 1）的代表性落差閱讀，先篩選過的房間無法造假。"
+    },
+    {
         "id": "alignment-assembly",
         "term_en": "Alignment Assembly",
         "term_tw": "對齊大會",
         "def_en": "A structured deliberative gathering where people listen across differences and reach an informed recommendation together, combining a broad open phase (often using a democracy lottery) with a protected deliberation phase of demographically representative citizens. Taiwan's 2024 anti-scam Alignment Assembly reached over 85 per cent cross-partisan support, and its principles passed into law within months.",
         "def_tw": "一種有結構的審議聚會，讓人們跨越差異彼此聆聽，並共同形成知情建議；它結合廣泛開放的探索階段（通常採用民主抽籤）與由人口代表性公民組成的受保護審議階段。臺灣 2024 年的反詐騙對齊大會獲得超過 85% 的跨黨派支持，相關原則在數月內化為法律。"
+    },
+    {
+        "id": "engagement-contract",
+        "term_en": "engagement contract",
+        "term_tw": "參與契約",
+        "def_en": "A short, legible public agreement carried by every significant Kami deployment: what the system is supposed to do, who is answerable for it doing that, what happens when it goes wrong, and how the deployment will eventually end. Pack 2's core artefact; Pack 6 renders the same contract machine-readable so its bounds are enforced by infrastructure. It scales down as far as care does: a household version can be a note on the fridge.",
+        "def_tw": "每一次重要的地神部署都攜帶的一份簡短、易讀的公開約定：系統應該做什麼、由誰為此作答、出錯時會發生什麼，以及這次部署最終如何結束。它是負責力（Pack 2）的核心產物；共生力（Pack 6）再把同一份契約寫成機器可讀，使其邊界由基礎設施執行。它能隨關懷的尺度縮小：家庭版可以是貼在冰箱上的一張便條。"
     },
     {
         "id": "corrigibility",
