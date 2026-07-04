@@ -16,4 +16,4 @@ nav_next:
     text: "Pack 1: Attentiveness"
 ---
 
-<div>{% include "comics-gallery.html" %}</div>
+<!-- astro:comics-gallery -->

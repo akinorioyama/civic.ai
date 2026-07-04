@@ -13,9 +13,4 @@ nav_next:
     text: "Concept Map"
 ---
 
-<dl class="glossary-list">
-{% for t in glossary %}
-<dt id="{{ t.id }}">{{ t.term_en }}</dt>
-<dd>{{ t.def_en }}</dd>
-{% endfor %}
-</dl>
+<!-- astro:glossary-list -->

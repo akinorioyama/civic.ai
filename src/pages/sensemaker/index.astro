@@ -1,0 +1,5 @@
+---
+import { readRawHtmlDocument } from "../../lib/pages";
+const html = readRawHtmlDocument("sensemaker.html");
+---
+<Fragment set:html={html} />

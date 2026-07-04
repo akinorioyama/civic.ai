@@ -1,0 +1,36 @@
+---
+import type { PageRecord } from "../lib/pages";
+import { formatDateDisplay, lang2, normalizeAltUrl } from "../lib/site";
+import SiteLogos from "./SiteLogos.astro";
+import SiteNav from "./SiteNav.astro";
+
+interface Props { page: PageRecord; headerTitle?: string; headerSubtitle?: string; headerDate?: string; }
+const { page, headerTitle, headerSubtitle, headerDate } = Astro.props;
+const zh = lang2(page.data.lang) === "zh";
+const isHome = page.url === "/" || page.url === "/tw/";
+const displayTitle = headerTitle || page.data.header_title || page.data.title;
+const displaySubtitle = headerSubtitle || page.data.subtitle;
+const alt = normalizeAltUrl(page.data.alt_lang_url);
+---
+<header class:list={["site-header", isHome ? "site-header--home" : "site-header--interior"]}>
+  {isHome ? <>
+    <SiteLogos lang={page.data.lang} />
+    <h1><span style="white-space: nowrap">{displayTitle}</span>{displaySubtitle && <><span style="font-weight: 300">-</span><span style="white-space: nowrap">{displaySubtitle}</span></>}</h1>
+    {page.data.description && <p>{page.data.description}</p>}
+    {page.data.manifesto_link && <><br /><a href={page.data.manifesto_link} class="next-action-button"><span class="button-text">{page.data.manifesto_text}</span></a></>}
+    <SiteNav lang={page.data.lang} />
+  </> : <>
+    <div class="site-header__brand"><SiteLogos lang={page.data.lang} /></div>
+    <div class="site-header__title-block">
+      <h1>{displayTitle}{displaySubtitle && <span>{displaySubtitle}</span>}</h1>
+      {headerDate ? <p class="chapter-date">{headerDate}</p> : page.data.date ? <p class="chapter-date">{formatDateDisplay(page.data.date, page.data.lang)}</p> : null}
+      {page.data.author && <p class="chapter-date">{page.data.author}</p>}
+      {page.data.description && <p>{page.data.description}</p>}
+    </div>
+    <div class="site-header__nav"><SiteNav lang={page.data.lang} /></div>
+  </>}
+  <div class="site-header__tools">
+    {alt && <a href={alt} class="lang-toggle">{zh ? "English" : "繁體中文"}</a>}
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label={zh ? "切換明暗主題" : "Toggle light and dark theme"}>◐</button>
+  </div>
+</header>

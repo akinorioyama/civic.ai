@@ -88,7 +88,11 @@ const files =
         : await Array.fromAsync(
               glob("**/*.md", {
                   exclude: (p) =>
-                      p.startsWith("node_modules/") || p.startsWith("docs/"),
+                      p.startsWith("node_modules/") ||
+                      p.startsWith("docs/") ||
+                      p.startsWith("dist/") ||
+                      p.startsWith("public/") ||
+                      p.startsWith(".astro/"),
               })
           );
 

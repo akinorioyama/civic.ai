@@ -1,0 +1,45 @@
+---
+import type { PageRecord } from "../lib/pages";
+import { lang2, site } from "../lib/site";
+import ClientScripts from "../components/ClientScripts.astro";
+import Footer from "../components/Footer.astro";
+import InShort from "../components/InShort.astro";
+import PageHead from "../components/PageHead.astro";
+import PartnerColophon from "../components/PartnerColophon.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+
+interface Props { page: PageRecord; }
+const { page } = Astro.props;
+const zh = lang2(page.data.lang) === "zh";
+const websiteLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: site.title,
+    alternateName: ["6-Pack of Care", "仁工智慧", "Civic AI — 6-Pack of Care"],
+    url: site.url,
+    inLanguage: ["en-GB", "zh-Hant"],
+    description: site.description,
+    sameAs: ["https://www.oxford-aiethics.ox.ac.uk/", "https://afp.oxford-aiethics.ox.ac.uk/"],
+    author: [
+        { "@type": "Person", name: "Audrey Tang", url: "https://audreyt.org", sameAs: ["https://en.wikipedia.org/wiki/Audrey_Tang", "https://www.wikidata.org/wiki/Q181916"] },
+        { "@type": "Person", name: "Caroline Green", url: "https://www.oxford-aiethics.ox.ac.uk/caroline-emmer-de-albuquerque-green" },
+    ],
+    publisher: { "@type": "Organization", name: "Oxford Institute for Ethics in AI", url: "https://www.oxford-aiethics.ox.ac.uk/", logo: { "@type": "ImageObject", url: `${site.url}/img/oxford-logo.svg` } },
+};
+---
+<!doctype html>
+<html lang={page.data.lang || "en"}>
+  <head><PageHead page={page} ogType="website" preloadFont="/fonts/outfit-latin.woff2" /></head>
+  <body>
+    <a class="skip-link" href="#main">{zh ? "跳至內容" : "Skip to content"}</a>
+    <SiteHeader page={page} />
+    <main id="main"><InShort page={page} /><slot /></main>
+    {(page.data.next_action || page.data.prev_action) && <section class="next-action"><div class="next-action-content">
+      {page.data.prev_action && <a href={page.data.prev_action.url} class="next-action-button"><span class="button-arrow">←</span><span class="button-text">{page.data.prev_action.text}</span></a>}
+      {page.data.next_action && <a href={page.data.next_action.url} class="next-action-button"><span class="button-text">{page.data.next_action.text}</span><span class="button-arrow">→</span></a>}
+    </div></section>}
+    {page.url === "/" || page.url === "/tw/" ? <Footer lang={page.data.lang} /> : <PartnerColophon lang={page.data.lang} />}
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(websiteLd)}></script>
+    <ClientScripts page={page} />
+  </body>
+</html>

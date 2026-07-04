@@ -1,0 +1,11 @@
+---
+import type { PageRecord } from "../lib/pages";
+import { lang2, readingTime } from "../lib/site";
+interface Props { page: PageRecord; }
+const { page } = Astro.props;
+const zh = lang2(page.data.lang) === "zh";
+---
+{page.data.summary && <aside class="in-short" aria-label={zh ? "簡單講" : "In short"}>
+  <p class="in-short__meta"><span class="in-short__label">{zh ? "簡單講" : "In short"}</span><span class="in-short__time">{readingTime(page.html, page.data.lang)} {zh ? "分鐘閱讀" : "min read"}</span></p>
+  <p class="in-short__body">{page.data.summary}</p>
+</aside>}

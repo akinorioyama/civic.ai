@@ -54,7 +54,7 @@ Prefer visuals? Browse [all comics](/comics/) — Nicky Case's illustrated overv
 
 **Already know what you're after?**
 
-{% include "reading-paths.html" %}
+<!-- astro:reading-paths -->
 
 <h2 id="the-6-pack">The 6-Pack</h2>
 

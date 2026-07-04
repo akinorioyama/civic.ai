@@ -1,8 +1,7 @@
 import { readFileSync, existsSync, statSync } from "fs";
 import { resolve, dirname, join } from "path";
-import { globSync } from "fs";
 
-const DOCS = resolve("docs");
+const DOCS = resolve(process.env.BUILD_DIR || "dist");
 const htmlFiles = [];
 
 // Collect all HTML files recursively

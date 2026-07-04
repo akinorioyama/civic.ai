@@ -16,4 +16,4 @@ nav_next:
     text: "一：覺察力"
 ---
 
-<div>{% include "comics-gallery.html" %}</div>
+<!-- astro:comics-gallery -->

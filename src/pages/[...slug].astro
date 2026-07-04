@@ -1,0 +1,14 @@
+---
+import Default from "../layouts/Default.astro";
+import Chapter from "../layouts/Chapter.astro";
+import Conference from "../layouts/Conference.astro";
+import { getDynamicPagePaths, type PageRecord } from "../lib/pages";
+
+export function getStaticPaths() {
+    return getDynamicPagePaths();
+}
+
+interface Props { page: PageRecord }
+const { page } = Astro.props;
+---
+{page.data.layout === "conference" ? <Conference page={page} /> : page.data.layout === "chapter" ? <Chapter page={page} /> : <Default page={page} />}

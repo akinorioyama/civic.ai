@@ -1,0 +1,49 @@
+---
+import type { PageRecord } from "../lib/pages";
+import { cssVersion, lang2, site } from "../lib/site";
+import SeoHead from "./SeoHead.astro";
+
+interface Props {
+    page: PageRecord;
+    ogType: "website" | "article";
+    preloadFont: string;
+}
+
+const { page, ogType, preloadFont } = Astro.props;
+const zh = lang2(page.data.lang) === "zh";
+const siteDesc = zh ? site.description_zh || site.description : site.description;
+const ogDesc = (page.data.meta_description || page.data.og_description || page.data.description || siteDesc).replace(/<[^>]+>/g, "");
+const thumb = page.data.thumbnail;
+const thumbSrc = typeof thumb === "string" ? thumb : thumb?.src;
+const fallbackImg = zh ? "/img/overview-small-tw.jpg" : "/img/overview-small.jpg";
+const imagePath = page.data.og_image || thumbSrc || fallbackImg;
+const ogImg = imagePath.includes("://") ? imagePath : `${site.url}${imagePath}`;
+const pageTitle = `${page.data.title || site.title}${page.data.subtitle ? ` — ${page.data.subtitle}` : ""}`;
+const version = cssVersion();
+---
+<meta charset="UTF-8" />
+<script is:inline>
+if (location.hostname === "6pack.care") location.replace("https://civic.ai" + location.pathname + location.search + location.hash);
+</script>
+<script is:inline>
+(function(){try{var stored=localStorage.getItem("civic-ai-theme");var systemDark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;var theme=stored==="light"||stored==="dark"?stored:systemDark?"dark":"light";document.documentElement.dataset.theme=theme;}catch(e){document.documentElement.dataset.theme="light";}})();
+</script>
+<script is:inline>
+document.documentElement.classList.add("fonts-loading");
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#f8f4ed" />
+<meta name="color-scheme" content="light dark" />
+<SeoHead page={page} ogType={ogType} ogDesc={ogDesc} ogImg={ogImg} pageTitle={pageTitle} />
+{page.data.openclaw_discovery && <link rel="alternate" type="text/markdown" href="/.well-known/openclaw/SKILL.md" title="Civic AI OpenClaw Bootstrap Skill" />}
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href={`/styles.css?v=${version}`} />
+<link rel="preload" as="font" href={preloadFont} type="font/woff2" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" /></noscript>
+<script is:inline>
+function __imgProbe(s){return new Promise(function(r){var i=new Image();i.onload=function(){r(i.width>0)};i.onerror=function(){r(!1)};i.src=s})}window.__avif=__imgProbe('/img/probe.avif');window.__userMoved=false;function __markMoved(){window.__userMoved=true}window.addEventListener('wheel',__markMoved,{passive:true,once:true});window.addEventListener('touchmove',__markMoved,{passive:true,once:true});window.addEventListener('keydown',__markMoved,{once:true});
+</script>

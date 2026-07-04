@@ -2,35 +2,23 @@
     "name": "civic.ai",
     "type": "module",
     "private": true,
-    "devDependencies": {
-        "@11ty/eleventy": "^3.1.6",
-        "@types/bun": "latest",
-        "html-minifier": "^4.0.0",
-        "husky": "^9.1.7",
-        "lint-staged": "^16.4.0",
-        "prettier": "^3.8.4"
-    },
-    "peerDependencies": {
-        "typescript": "^5.9.3"
-    },
     "scripts": {
-        "dev": "eleventy --serve",
-        "build": "eleventy",
+        "dev": "bun run sync:public && astro dev --host 127.0.0.1",
+        "build": "bun run sync:public && astro build && bun run minify-html",
         "lint": "prettier --check . && bun run pangu-format.mjs --check && node scripts/check-tw-typography.mjs",
         "format": "prettier --write . && bun run pangu-format.mjs",
         "prepare": "husky",
-        "check-links": "bun run check-links.mjs",
+        "check": "astro check && tsgo --noEmit",
+        "test": "bun test",
+        "sync:public": "bun run scripts/sync-public.mjs",
+        "minify-html": "bun run scripts/minify-html.mjs",
+        "check-links": "BUILD_DIR=dist bun run check-links.mjs",
+        "check:hybrid": "BUILD_DIR=dist bun run scripts/check-hybrid-design.mjs",
+        "check:astro-output": "BUILD_DIR=dist bun run scripts/check-astro-output.mjs",
+        "check:parity": "BUILD_DIR=dist BASELINE_IN=tests/fixtures/eleventy-build-baseline.json bun run scripts/check-build-parity.mjs",
         "import-comics": "node import-comics.mjs",
         "en": "node scripts/review-set.mjs en",
         "tw": "node scripts/review-set.mjs tw"
-    },
-    "lint-staged": {
-        "**/*": "prettier --write --ignore-unknown",
-        "**/*.md": [
-            "bun run pangu-format.mjs",
-            "node scripts/check-tw-typography.mjs"
-        ],
-        "_data/glossary.json": "node scripts/check-tw-typography.mjs"
     },
     "dependencies": {
         "markdown-it-anchor": "^9.2.0",
@@ -39,6 +27,30 @@
         "remark": "^15.0.1",
         "remark-pangu": "^2.2.0",
         "remark-parse": "^11.0.0",
-        "remark-stringify": "^11.0.0"
+        "remark-stringify": "^11.0.0",
+        "astro": "^7.0.6",
+        "gray-matter": "^4.0.3",
+        "markdown-it": "^14.1.0",
+        "nunjucks": "^3.2.4"
+    },
+    "devDependencies": {
+        "@types/bun": "latest",
+        "html-minifier": "^4.0.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.4.0",
+        "prettier": "^3.8.4",
+        "@types/markdown-it": "^14.1.2",
+        "@typescript/native-preview": "^7.0.0-dev.20260703.1",
+        "typescript": "^5.9.3",
+        "@astrojs/check": "^0.9.4",
+        "@types/nunjucks": "^3.2.6"
+    },
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown",
+        "**/*.md": [
+            "bun run pangu-format.mjs",
+            "node scripts/check-tw-typography.mjs"
+        ],
+        "_data/glossary.json": "node scripts/check-tw-typography.mjs"
     }
 }

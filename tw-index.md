@@ -53,7 +53,7 @@ next_action:
 
 **已經知道自己在找什麼？**
 
-{% include "reading-paths.html" %}
+<!-- astro:reading-paths -->
 
 <h2 id="the-6-pack">關懷六力</h2>
 

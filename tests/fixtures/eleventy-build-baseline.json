@@ -1,0 +1,2802 @@
+{
+    "html": [
+        {
+            "path": "1/index.html",
+            "lang": "en-gb",
+            "title": "Pack 1: Attentiveness — Caring About — Civic AI",
+            "description": "Attentiveness in Civic AI: noticing what the people closest to a problem see that institutions miss. Pack 1 of the 6-Pack of Care by Audrey Tang and Caroline Green.",
+            "canonical": "https://civic.ai/1/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/1/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/1/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/1/"
+                }
+            ],
+            "ids": [
+                "a-closing-image-the-jolly-hostess-who-can-still-say-no",
+                "buildable-tools",
+                "definition",
+                "from-ideas-to-practice",
+                "interfaces",
+                "main",
+                "one-case-the-flood-bot",
+                "what-could-go-wrong",
+                "what-it-looks-like-in-practice",
+                "why-it-matters"
+            ]
+        },
+        {
+            "path": "2/index.html",
+            "lang": "en-gb",
+            "title": "Pack 2: Responsibility — Taking Care Of — Civic AI",
+            "description": "Responsibility in Civic AI: who is accountable, with what authority, and what happens when they fail. Pack 2 of the 6-Pack of Care by Audrey Tang and Caroline Green.",
+            "canonical": "https://civic.ai/2/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/2/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/2/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/2/"
+                }
+            ],
+            "ids": [
+                "a-closing-image-the-signed-work-order",
+                "a-second-case-the-deepfake-liability-flywheel",
+                "core-artefact-the-engagement-contract",
+                "definition",
+                "from-ideas-to-practice",
+                "interfaces",
+                "main",
+                "one-case-the-flood-bot",
+                "oversight-with-teeth",
+                "what-could-go-wrong",
+                "why-it-matters"
+            ]
+        },
+        {
+            "path": "3/index.html",
+            "lang": "en-gb",
+            "title": "Pack 3: Competence — Care-Giving — Civic AI",
+            "description": "Competence in Civic AI: systems that actually work in practice — audited, explainable, and safe to fail. Pack 3 of the 6-Pack of Care by Audrey Tang and Caroline Green.",
+            "canonical": "https://civic.ai/3/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/3/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/3/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/3/"
+                }
+            ],
+            "ids": [
+                "a-closing-image-the-bridge-with-inspection-tags",
+                "buildable-tools",
+                "definition",
+                "from-ideas-to-practice",
+                "interfaces",
+                "main",
+                "one-case-the-flood-bot",
+                "the-apprentice-model",
+                "what-could-go-wrong",
+                "what-it-looks-like-in-practice",
+                "why-it-matters"
+            ]
+        },
+        {
+            "path": "4/index.html",
+            "lang": "en-gb",
+            "title": "Pack 4: Responsiveness — Care-Receiving — Civic AI",
+            "description": "Responsiveness in Civic AI: corrigible systems that affected people can contest and force to repair. Pack 4 of the 6-Pack of Care by Audrey Tang and Caroline Green.",
+            "canonical": "https://civic.ai/4/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/4/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/4/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/4/"
+                }
+            ],
+            "ids": [
+                "a-closing-image-the-workshop-wall-of-retired-broken-parts",
+                "buildable-tools",
+                "definition",
+                "from-ideas-to-practice",
+                "interfaces",
+                "main",
+                "one-case-the-flood-bot",
+                "the-brake-as-a-care-mechanism",
+                "what-could-go-wrong",
+                "what-it-looks-like-in-practice",
+                "why-it-matters"
+            ]
+        },
+        {
+            "path": "5/index.html",
+            "lang": "en-gb",
+            "title": "Pack 5: Solidarity — Caring With — Civic AI",
+            "description": "Solidarity in Civic AI: rewarding cooperation, exit, and public accountability over lock-in. Pack 5 of the 6-Pack of Care by Audrey Tang and Caroline Green.",
+            "canonical": "https://civic.ai/5/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/5/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/5/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/5/"
+                }
+            ],
+            "ids": [
+                "a-closing-image-the-well-marked-interchange",
+                "buildable-tools",
+                "definition",
+                "from-ideas-to-practice",
+                "interfaces",
+                "main",
+                "one-case-the-flood-bot",
+                "open-stacks-and-anti-rival-resources",
+                "what-could-go-wrong",
+                "what-it-looks-like-in-practice",
+                "why-it-matters"
+            ]
+        },
+        {
+            "path": "6/index.html",
+            "lang": "en-gb",
+            "title": "Pack 6: Symbiosis — Kami of Care — Civic AI",
+            "description": "Symbiosis in Civic AI: systems that stay bounded, local, and sunset-ready instead of hardening into permanent rule. Pack 6 of the 6-Pack of Care.",
+            "canonical": "https://civic.ai/6/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/6/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/6/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/6/"
+                }
+            ],
+            "ids": [
+                "a-closing-image-the-river-guardians",
+                "buildable-tools",
+                "data-as-soil-not-oil",
+                "definition",
+                "from-ideas-to-practice",
+                "interfaces",
+                "main",
+                "one-case-the-flood-bot",
+                "what-could-go-wrong",
+                "what-it-looks-like-in-practice",
+                "why-it-matters"
+            ]
+        },
+        {
+            "path": "ai-alignment-cannot-be-top-down/index.html",
+            "lang": "en-gb",
+            "title": "AI Alignment Cannot Be Top-Down — Civic AI",
+            "description": "Originally published in AI Frontiers.",
+            "canonical": "https://civic.ai/ai-alignment-cannot-be-top-down/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/ai-alignment-cannot-be-top-down/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/ai-alignment-cannot-be-top-down/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/ai-alignment-cannot-be-top-down/"
+                }
+            ],
+            "ids": [
+                "ai-alignment-today-is-fundamentally-flawed",
+                "attentiveness-in-practice",
+                "attentiveness-works",
+                "community-scale-assistants",
+                "from-1-pilots-to-99-adoption",
+                "in-brief",
+                "industry-norms",
+                "main",
+                "market-design",
+                "the-stakes-are-high"
+            ]
+        },
+        {
+            "path": "ai-crisis-diplomacy/index.html",
+            "lang": "en-gb",
+            "title": "Treat AI Safety Like Civil Defence — Civic AI",
+            "description": "Speech delivered at the India AI Impact Summit 2026, New Delhi.",
+            "canonical": "https://civic.ai/ai-crisis-diplomacy/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/ai-crisis-diplomacy/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/ai-crisis-diplomacy/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/ai-crisis-diplomacy/"
+                }
+            ],
+            "ids": [
+                "a-regional-proposal",
+                "consensus-ai-that-listens-at-scale",
+                "crises-in-algorithmic-time",
+                "let-asia-supply-safety-infrastructure",
+                "main",
+                "safety-ai-incidents-as-civil-defence",
+                "the-6-pack-of-care",
+                "three-building-blocks-for-ai-crisis-diplomacy",
+                "trust-a-whitelist-for-public-integrity"
+            ]
+        },
+        {
+            "path": "ai-democracy-podcast/index.html",
+            "lang": "en-gb",
+            "title": "Podcast: AI and Democracy — Civic AI",
+            "description": "Originally recorded for Accelerating AI Ethics, University of Oxford Institute for Ethics in AI.",
+            "canonical": "https://civic.ai/ai-democracy-podcast/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/ai-democracy-podcast/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/ai-democracy-podcast/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/ai-democracy-podcast/"
+                }
+            ],
+            "ids": [
+                "full-transcript",
+                "in-brief",
+                "key-takeaways",
+                "main",
+                "watch"
+            ]
+        },
+        {
+            "path": "ai-with-us/index.html",
+            "lang": "en-gb",
+            "title": "AI With Us, Not Without Us — Civic AI",
+            "description": "Vitalik Buterin on why AI should be a bicycle for the mind, privacy-preserving civic tech, and resisting AI monoculture.",
+            "canonical": "https://civic.ai/ai-with-us/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/ai-with-us/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/ai-with-us/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/ai-with-us/"
+                }
+            ],
+            "ids": [
+                "a-future-of-diverse-collaboration",
+                "ai-as-a-bicycle-for-the-mind",
+                "bounding-authority--delegation",
+                "community-translation",
+                "main",
+                "privacy--shadow-llms",
+                "resisting-ai-monoculture",
+                "the-mainstream-ai-vision--its-discontents"
+            ]
+        },
+        {
+            "path": "care-ai/index.html",
+            "lang": "en-gb",
+            "title": "Attentiveness in Long-Term Care AI — Civic AI",
+            "description": "Who decides what ",
+            "canonical": "https://civic.ai/care-ai/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/care-ai/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/care-ai/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/care-ai/"
+                }
+            ],
+            "ids": [
+                "from-ideas-to-practice",
+                "how-the-co-production-practised-attentiveness",
+                "interfaces",
+                "main",
+                "no-fake-pluralism",
+                "power-must-answer-questions",
+                "relationships-first",
+                "rights-as-a-baseline",
+                "stories-before-specification",
+                "what-could-go-wrong",
+                "what-they-built"
+            ]
+        },
+        {
+            "path": "ciudadania-digital/index.html",
+            "lang": "en-gb",
+            "title": "Ciudadanía Digital — Civic AI",
+            "description": "Keynote on global leadership marking Tecnológico de Monterrey",
+            "canonical": "https://civic.ai/ciudadania-digital/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/ciudadania-digital/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/ciudadania-digital/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/ciudadania-digital/"
+                }
+            ],
+            "ids": [
+                "447-ciudadanos",
+                "buenos-ancestros",
+                "cara-o-cruz",
+                "caritas",
+                "convivialidad",
+                "cultura-capitalina",
+                "democracia-geotérmica",
+                "el-consenso-se-viraliza",
+                "main",
+                "mentoría-inversa",
+                "polis",
+                "preguntas-y-respuestas",
+                "quién-decide",
+                "qué-te-negarías-a-automatizar",
+                "solo-constructores"
+            ]
+        },
+        {
+            "path": "civic-ai-dialogue/index.html",
+            "lang": "en-gb",
+            "title": "A Dialogue on Civic AI",
+            "description": "A conversation with Audrey Tang, in dialogue with Geshe Thabkhe Lodroe and Geshe Lodoe Sangpo. Dharamsala, India.",
+            "canonical": "https://civic.ai/civic-ai-dialogue/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/civic-ai-dialogue/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/civic-ai-dialogue/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/civic-ai-dialogue/"
+                }
+            ],
+            "ids": [
+                "coda",
+                "main",
+                "part-i--the-nature-and-obscurity-of-the-machine",
+                "part-ii--the-moral-hazard-of-metacognition",
+                "part-iii--the-utilitarian-trap",
+                "part-iv--dependent-origination-and-civic-compassion",
+                "part-ix--grounding-wisdom-and-the-architecture-of-purity",
+                "part-v--consciousness-moral-maturity-and-the-atrophy-of-the-will",
+                "part-vi--ai-in-the-loop-of-humanity",
+                "part-vii--beyond-profit-and-the-ultimate-measure",
+                "part-viii--the-ideology-of-the-builders",
+                "part-x--the-ecology-of-computation-and-the-plurality-of-spirits",
+                "part-xi--federation-translation-and-the-waging-of-peace"
+            ]
+        },
+        {
+            "path": "comics/index.html",
+            "lang": "en-gb",
+            "title": "6-Pack Comics — Civic AI",
+            "description": "Browse all Nicky Case comic illustrations for the 6-Pack of Care: overview plus twelve chapter pages, with one-click access to each pack.",
+            "canonical": "https://civic.ai/comics/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/comics/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/comics/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/comics/"
+                }
+            ],
+            "ids": [
+                "main",
+                "pack-1-1",
+                "pack-1-2",
+                "pack-2-1",
+                "pack-2-2",
+                "pack-3-1",
+                "pack-3-2",
+                "pack-4-1",
+                "pack-4-2",
+                "pack-5-1",
+                "pack-5-2",
+                "pack-6-1",
+                "pack-6-2"
+            ]
+        },
+        {
+            "path": "compassion-and-ai/index.html",
+            "lang": "en-gb",
+            "title": "Podcast: Can AI Be Compassionate? — Civic AI",
+            "description": "Originally recorded for Accelerating AI Ethics, University of Oxford Institute for Ethics in AI.",
+            "canonical": "https://civic.ai/compassion-and-ai/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/compassion-and-ai/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/compassion-and-ai/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/compassion-and-ai/"
+                }
+            ],
+            "ids": [
+                "an-example-of-compassion-manifested-in-the-world",
+                "can-ai-help-people-who-are-practising-compassion",
+                "from-scepticism-to-hope--civic-ai-and-compassionate-relationship-building",
+                "full-transcript",
+                "in-brief",
+                "key-takeaways",
+                "listen",
+                "main",
+                "what-would-a-compassionate-ai-system-look-like"
+            ]
+        },
+        {
+            "path": "conference/index.html",
+            "lang": "en-gb",
+            "title": "Unpacking the 6-Pack of Care — Civic AI Conference 2026",
+            "description": "The Civic AI Conference at Rhodes House, Oxford, 25 March 2026 — Audrey Tang, Caroline Green, Joan Tronto, Rosalind Picard, Iason Gabriel and more on care ethics and AI alignment.",
+            "canonical": "https://civic.ai/conference/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/conference/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/conference/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/conference/"
+                }
+            ],
+            "ids": ["main"]
+        },
+        {
+            "path": "conference/report/index.html",
+            "lang": "en-gb",
+            "title": "Community Voices on AI — Civic AI",
+            "description": "A Polis sensemaking report from the Civic AI Conference 2026 at Rhodes House, Oxford",
+            "canonical": "https://civic.ai/conference/report/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/conference/report/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/conference/report/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/conference/report/"
+                }
+            ],
+            "ids": [
+                "bd-bar",
+                "bd-groups",
+                "bd-labels",
+                "bd-text",
+                "beeswarm-detail",
+                "group-a-innovation-ready-17-members",
+                "group-b-supportive-reformers-21-members",
+                "group-c-principled-sceptics-8-members",
+                "main",
+                "three-perspectives",
+                "what-we-agree-on",
+                "where-opinions-differ"
+            ]
+        },
+        {
+            "path": "conference/sensemaking/index.html",
+            "lang": "en-gb",
+            "title": "Polis Deliberation Mirror — Civic AI",
+            "description": "A Habermolt-inspired deliberation page rebuilt from Polis export files.",
+            "canonical": "https://civic.ai/conference/sensemaking/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/conference/sensemaking/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/conference/sensemaking/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/conference/sensemaking/"
+                }
+            ],
+            "ids": ["consensus", "main", "method", "participants", "statements"]
+        },
+        {
+            "path": "democracy-needs-civic-ai/index.html",
+            "lang": "en-gb",
+            "title": "Democracy Needs Civic AI",
+            "description": "Audrey Tang on why democracy needs bounded, local Civic AI: Kami, not governor.",
+            "canonical": "https://civic.ai/democracy-needs-civic-ai/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/democracy-needs-civic-ai/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/democracy-needs-civic-ai/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/democracy-needs-civic-ai/"
+                }
+            ],
+            "ids": [
+                "can-civic-ai-resist-wealth-care",
+                "default-trajectory",
+                "kami",
+                "main",
+                "monoculture-vs-plurality",
+                "superintelligence",
+                "the-6-pack-of-care"
+            ]
+        },
+        {
+            "path": "doom-debate/index.html",
+            "lang": "en-gb",
+            "title": "Doom Debate — Civic AI",
+            "description": "Originally recorded for Doom Debates with Liron Shapira.",
+            "canonical": "https://civic.ai/doom-debate/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/doom-debate/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/doom-debate/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/doom-debate/"
+                }
+            ],
+            "ids": [
+                "full-transcript",
+                "in-brief",
+                "key-takeaways",
+                "main",
+                "watch"
+            ]
+        },
+        {
+            "path": "faq/index.html",
+            "lang": "en-gb",
+            "title": "Frequently Asked Questions — Civic AI",
+            "description": "Answers on Civic AI and the 6-Pack of Care: care ethics and AI alignment, the Kami, corrigibility, sunset conditions, and democratic AI governance.",
+            "canonical": "https://civic.ai/faq/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/faq/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/faq/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/faq/"
+                }
+            ],
+            "ids": [
+                "faq-1",
+                "faq-10",
+                "faq-11",
+                "faq-12",
+                "faq-13",
+                "faq-14",
+                "faq-15",
+                "faq-16",
+                "faq-17",
+                "faq-18",
+                "faq-19",
+                "faq-2",
+                "faq-20",
+                "faq-3",
+                "faq-4",
+                "faq-5",
+                "faq-6",
+                "faq-7",
+                "faq-8",
+                "faq-9",
+                "main"
+            ]
+        },
+        {
+            "path": "gentle-bridge/index.html",
+            "lang": "en-gb",
+            "title": "⿻ A Gentle Bridge — Civic AI",
+            "description": "When relationship is commodified and consciousness forgotten, what we need is not a more efficient tool but a renewed recognition of two forces. This essay interprets the collaborative relationship with AI through the 6-Pack of Care.",
+            "canonical": "https://civic.ai/gentle-bridge/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/gentle-bridge/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/gentle-bridge/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/gentle-bridge/"
+                }
+            ],
+            "ids": [
+                "fn1",
+                "fn2",
+                "fn3",
+                "fn4",
+                "fn5",
+                "fn6",
+                "fn7",
+                "fnref1",
+                "fnref2",
+                "fnref3",
+                "fnref4",
+                "fnref5",
+                "fnref5:1",
+                "fnref5:2",
+                "fnref6",
+                "fnref7",
+                "main",
+                "stepping-into-the-garden",
+                "the-human-mind-will-not-be-replaced-by-superintelligence",
+                "the-true-condition-of-the-kami-an-asymmetric-gift",
+                "two-forces-consciousness-and-matter"
+            ]
+        },
+        {
+            "path": "glossary/index.html",
+            "lang": "en-gb",
+            "title": "Glossary — Civic AI",
+            "description": "Civic AI is artificial intelligence that answers to the people it affects — the 6-Pack of Care, a research project by Audrey Tang and Caroline Green at the Oxford Institute for Ethics in AI.",
+            "canonical": "https://civic.ai/glossary/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/glossary/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/glossary/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/glossary/"
+                }
+            ],
+            "ids": [
+                "6-pack-of-care",
+                "accountable-formation",
+                "alignment-assembly",
+                "alignment-by-process",
+                "anti-rival",
+                "boundedness",
+                "bridging-based-ranking",
+                "broad-listening",
+                "care-ethics",
+                "civic-ai",
+                "corrective-loop",
+                "corrigibility",
+                "data-coalition",
+                "decision-trace",
+                "engagement-contract",
+                "federation",
+                "governance-charter",
+                "kami",
+                "main",
+                "meronymity",
+                "obligation-ledger",
+                "override-ledger",
+                "participation-officer",
+                "perspective-receipts",
+                "plurality",
+                "polis",
+                "rlcf",
+                "shared-eval-registry",
+                "singleton",
+                "sortition",
+                "subsidiarity",
+                "uncommon-ground-index"
+            ]
+        },
+        {
+            "path": "index.html",
+            "lang": "en-gb",
+            "title": "Civic AI — 6-Pack of Care",
+            "description": "Civic AI is artificial intelligence that answers to the people it affects: bounded local stewards a community can own, inspect, correct, and switch off. The 6-Pack of Care, by Audrey Tang and Caroline Green at the Oxford Institute for Ethics in AI.",
+            "canonical": "https://civic.ai/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/"
+                }
+            ],
+            "ids": [
+                "four-proof-points",
+                "main",
+                "project",
+                "publications",
+                "start-here",
+                "the-6-pack"
+            ]
+        },
+        {
+            "path": "inside-the-kami/index.html",
+            "lang": "en-gb",
+            "title": "Inside the Kami — Civic AI",
+            "description": "What recent ML research suggests goes inside a bounded Civic AI — and what it cannot provide.",
+            "canonical": "https://civic.ai/inside-the-kami/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/inside-the-kami/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/inside-the-kami/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/inside-the-kami/"
+                }
+            ],
+            "ids": [
+                "a-technical-argument-for-boundedness",
+                "bengio-truth-without-appetite",
+                "implementing-through-the-6-pack",
+                "in-brief",
+                "main",
+                "sai-capability-through-specialisation",
+                "taniguchi-meaning-by-negotiation-not-by-decree",
+                "the-kami-of-care",
+                "the-shared-design-lesson",
+                "what-the-substrate-cannot-decide"
+            ]
+        },
+        {
+            "path": "kami/index.html",
+            "lang": "en-gb",
+            "title": "Set up your own Kami — Civic AI",
+            "description": "The simplest way to run your own Kami: a bounded, local, private Civic AI steward on your own laptop, in three steps.",
+            "canonical": "https://civic.ai/kami/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/kami/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/kami/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/kami/"
+                }
+            ],
+            "ids": [
+                "1-give-it-a-local-brain",
+                "2-give-it-a-way-to-act",
+                "3-wake-your-kami",
+                "a-quick-check",
+                "give-it-a-memory",
+                "keep-it-together",
+                "main",
+                "make-it-yours-keep-it-switch-it-off",
+                "the-soul-your-kami-reads",
+                "what-a-webpage-cannot-teach",
+                "what-youll-see"
+            ]
+        },
+        {
+            "path": "manifesto/index.html",
+            "lang": "en-gb",
+            "title": "6-Pack of Care: A Manifesto — Civic AI",
+            "description": "Speech delivered at Google DeepMind, London.",
+            "canonical": "https://civic.ai/manifesto/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/manifesto/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/manifesto/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/manifesto/"
+                }
+            ],
+            "ids": [
+                "alignment-assemblies",
+                "attentiveness-caring-about",
+                "competence-care-giving",
+                "from-gridlock-to-governance",
+                "from-is-to-ought",
+                "from-outrage-to-overlap",
+                "from-pilots-to-policy",
+                "from-protest-to-demo",
+                "from-tokyo-to-california",
+                "main",
+                "plurality-is-here",
+                "responsibility-taking-care-of",
+                "responsiveness-care-receiving",
+                "solidarity-caring-with",
+                "symbiosis-kami-of-care",
+                "we-the-people-are-the-superintelligence"
+            ]
+        },
+        {
+            "path": "map/index.html",
+            "lang": "en-gb",
+            "title": "Concept Map — Civic AI",
+            "description": "The whole 6-Pack of Care on one clickable map: the care cycle, the solidarity field, the symbiosis boundary, and one headline measure per pack.",
+            "canonical": "https://civic.ai/map/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/map/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/map/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/map/"
+                }
+            ],
+            "ids": ["main"]
+        },
+        {
+            "path": "measures/index.html",
+            "lang": "en-gb",
+            "title": "Measures — Civic AI",
+            "description": "One headline public measure per pack, with supporting diagnostics — how to tell whether a Civic AI deployment really embodies the 6-Pack of Care.",
+            "canonical": "https://civic.ai/measures/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/measures/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/measures/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/measures/"
+                }
+            ],
+            "ids": [
+                "before-you-call-it-civic-ai",
+                "exit-readiness",
+                "headline-public-measures",
+                "how-to-read-them",
+                "main",
+                "named-instruments",
+                "promise-fidelity",
+                "representation-gap",
+                "supporting-diagnostics",
+                "trust-under-loss",
+                "uncommon-ground-index",
+                "verified-execution-rate",
+                "what-each-measure-refuses-to-reward"
+            ]
+        },
+        {
+            "path": "openclaw/index.html",
+            "lang": "en-gb",
+            "title": "Civic AI OpenClaw Bootstrap Guide",
+            "description": "A public first-run guide for new claws shaped by Civic AI.",
+            "canonical": "https://civic.ai/openclaw/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/openclaw/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/openclaw/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/openclaw/"
+                }
+            ],
+            "ids": [
+                "anti-patterns",
+                "bootstrap-conversation",
+                "first-move",
+                "identity-defaults",
+                "main",
+                "memory",
+                "openclaw-mapping",
+                "operating-commitments",
+                "when-to-use-this"
+            ]
+        },
+        {
+            "path": "outrage-to-overlap/index.html",
+            "lang": "en-gb",
+            "title": "Outrage to Overlap: Civic AI & 6-Pack of Care",
+            "description": "An Oxford Taiwan Studies Seminar Series talk on how the Taiwan Model-inspired Civic AI and 6-Pack of Care framework can help strengthen collective self-government when bounded by local accountability and community needs.",
+            "canonical": "https://civic.ai/outrage-to-overlap/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/outrage-to-overlap/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/outrage-to-overlap/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/outrage-to-overlap/"
+                }
+            ],
+            "ids": [
+                "4-freedoms",
+                "5050",
+                "6-pack-of-care",
+                "alignment-assemblies",
+                "broad-listening",
+                "civic-infrastructure",
+                "closed-stack",
+                "complementary",
+                "deepfake-dilemma",
+                "ethics-in-ai",
+                "family-kami",
+                "knowledge-artefact-management-intelligence",
+                "light-gets-in",
+                "lonely-maintainer",
+                "main",
+                "next-gen-artefacts",
+                "qa",
+                "result-method"
+            ]
+        },
+        {
+            "path": "plurality-being/index.html",
+            "lang": "en-gb",
+            "title": "⿻Being — Civic AI",
+            "description": "At the intersection of silicon and spirit, Tenzin Yangtso reflects on survival logic, life’s meaning, and the turn from extraction to cultivation.",
+            "canonical": "https://civic.ai/plurality-being/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/plurality-being/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/plurality-being/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/plurality-being/"
+                }
+            ],
+            "ids": [
+                "a-radical-turn-from-extraction-to-cultivation",
+                "coda-returning-to-the-garden",
+                "digital-repair-one-is-all-all-is-one",
+                "from-the-blind-spots-of-utilitarianism-to-the-awakening-of-psychic-sovereignty",
+                "main",
+                "redefining-the-human-from-atomised-individuals-to-the-awakening-of-the-dividual",
+                "relationship-as-being-building-the-moat-of-open-source-soil",
+                "the-boundaries-of-language-and-the-sum-of-reality",
+                "the-failure-of-moral-frameworks-and-polarisation",
+                "the-neural-cost-the-collapse-of-experiential-navigation"
+            ]
+        },
+        {
+            "path": "plurality-ucsc/index.html",
+            "lang": "en-gb",
+            "title": "⿻ UCSC: From Polarization to Co-creation — Civic AI",
+            "description": "Speech on Civic AI and democratic renewal delivered at the University of California, Santa Cruz.",
+            "canonical": "https://civic.ai/plurality-ucsc/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/plurality-ucsc/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/plurality-ucsc/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/plurality-ucsc/"
+                }
+            ],
+            "ids": ["main"]
+        },
+        {
+            "path": "podcast/index.html",
+            "lang": "en-gb",
+            "title": "Podcast: The 6-Pack of Care — Civic AI",
+            "description": "Originally recorded for Accelerating AI Ethics, University of Oxford Institute for Ethics in AI.",
+            "canonical": "https://civic.ai/podcast/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/podcast/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/podcast/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/podcast/"
+                }
+            ],
+            "ids": [
+                "full-transcript",
+                "in-brief",
+                "key-takeaways",
+                "listen",
+                "main"
+            ]
+        },
+        {
+            "path": "reimagining-ai-alignment/index.html",
+            "lang": "en-gb",
+            "title": "Reimagining AI Alignment — Civic AI",
+            "description": "Audrey Tang and Caroline Green introduce the 6-Pack of Care — a fireside-chat reframing of AI alignment from vertical control to horizontal, civic cooperation.",
+            "canonical": "https://civic.ai/reimagining-ai-alignment/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/reimagining-ai-alignment/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/reimagining-ai-alignment/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/reimagining-ai-alignment/"
+                }
+            ],
+            "ids": ["full-transcript", "in-brief", "main", "watch"]
+        },
+        {
+            "path": "safer-sovereignty/index.html",
+            "lang": "en-gb",
+            "title": "Safeguarding Sovereignty with Data as Soil — Civic AI",
+            "description": "Audrey Tang on decision sovereignty, bounded local stewards, and federated safety — applying the 6-Pack of Care to enterprise AI in a fragmented world.",
+            "canonical": "https://civic.ai/safer-sovereignty/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/safer-sovereignty/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/safer-sovereignty/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/safer-sovereignty/"
+                }
+            ],
+            "ids": [
+                "challenging-mainframe-mentality",
+                "courage-to-sunset",
+                "enterprise-plurality",
+                "federate-safety-do-not-centralize",
+                "main",
+                "sovereignty-stack"
+            ]
+        },
+        {
+            "path": "self-actualisation-and-care/index.html",
+            "lang": "en-gb",
+            "title": "Self-Actualisation & Care — Civic AI",
+            "description": "Anne-Marie Slaughter on sapiens integra, the ethics of care, and the convergence of care and AI.",
+            "canonical": "https://civic.ai/self-actualisation-and-care/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/self-actualisation-and-care/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/self-actualisation-and-care/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/self-actualisation-and-care/"
+                }
+            ],
+            "ids": [
+                "horizontal-relationships--the-gardener-analogy",
+                "introduction--the-6-pack-of-care",
+                "main",
+                "redefining-maslow--sapiens-integra",
+                "the-convergence-of-care-and-ai",
+                "the-worldview-and-ethos-of-care"
+            ]
+        },
+        {
+            "path": "sensemaker/index.html",
+            "lang": "en",
+            "title": "Bloom Civic AI Report",
+            "description": "Structured analysis of public opinion: what a community actually thinks about AI and its role in their lives — Polis sensemaking from the Civic AI Conference at Oxford.",
+            "canonical": "https://civic.ai/sensemaker/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/sensemaker/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/sensemaker/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/sensemaker/"
+                }
+            ],
+            "ids": []
+        },
+        {
+            "path": "software-freedom-as-civic-care/index.html",
+            "lang": "en-gb",
+            "title": "Software Freedom as Civic Care — Civic AI",
+            "description": "A discussion on how the Free Software movement is foundational to care ethics, democracy, local stewardship and self-governance.",
+            "canonical": "https://civic.ai/software-freedom-as-civic-care/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/software-freedom-as-civic-care/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/software-freedom-as-civic-care/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/software-freedom-as-civic-care/"
+                }
+            ],
+            "ids": [
+                "447",
+                "ancestorial-room",
+                "antirez-and-piaudreytorg",
+                "civic-ai-new-frontier",
+                "four-freedoms",
+                "good-enough-ancestor",
+                "inside-the-closed-stack",
+                "kamicivicai",
+                "lonely-maintainer",
+                "main",
+                "pugshs-the-commit-bit",
+                "tim-sees-code"
+            ]
+        },
+        {
+            "path": "tw/1/index.html",
+            "lang": "zh-tw",
+            "title": "一：覺察力——感知關懷 — 仁工智慧",
+            "description": "仁工智慧的覺察力：察覺最貼近問題的人所看見、而體制往往忽略的事。唐鳳與 Caroline Green「關懷六力」的第一力。",
+            "canonical": "https://civic.ai/tw/1/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/1/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/1/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/1/"
+                }
+            ],
+            "ids": [
+                "main",
+                "一個案例賑災機器人",
+                "介接",
+                "可立即建置的工具",
+                "可能出錯的地方",
+                "定義",
+                "實作上長什麼樣子",
+                "從理念到實踐",
+                "為何重要",
+                "結語意象能說不的快樂女主人"
+            ]
+        },
+        {
+            "path": "tw/2/index.html",
+            "lang": "zh-tw",
+            "title": "二：負責力——承擔關懷 — 仁工智慧",
+            "description": "仁工智慧的負責力：由誰負責、握有什麼權限、失職時又會如何。唐鳳與 Caroline Green「關懷六力」的第二力。",
+            "canonical": "https://civic.ai/tw/2/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/2/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/2/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/2/"
+                }
+            ],
+            "ids": [
+                "main",
+                "一個案例賑災機器人",
+                "介接",
+                "可能出錯的地方",
+                "定義",
+                "從理念到實踐",
+                "有力度的監督",
+                "核心工藝參與契約",
+                "為何重要",
+                "第二個案例深偽責任飛輪",
+                "結語意象簽名的工單"
+            ]
+        },
+        {
+            "path": "tw/3/index.html",
+            "lang": "zh-tw",
+            "title": "三：勝任力——給予關懷 — 仁工智慧",
+            "description": "仁工智慧的勝任力：系統在現實中真的管用——可稽核、可解釋、容許安全失敗。「關懷六力」的第三力。",
+            "canonical": "https://civic.ai/tw/3/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/3/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/3/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/3/"
+                }
+            ],
+            "ids": [
+                "main",
+                "一個案例賑災機器人",
+                "介接",
+                "可立即建置的工具",
+                "可能出錯的地方",
+                "學徒模式",
+                "定義",
+                "實作上長什麼樣子",
+                "從理念到實踐",
+                "為何重要",
+                "結語意象掛著檢查標籤的橋"
+            ]
+        },
+        {
+            "path": "tw/4/index.html",
+            "lang": "zh-tw",
+            "title": "四：回應力——接收關懷 — 仁工智慧",
+            "description": "仁工智慧的回應力：可被糾正的系統，讓受影響的人能提出異議、促成修補。「關懷六力」的第四力。",
+            "canonical": "https://civic.ai/tw/4/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/4/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/4/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/4/"
+                }
+            ],
+            "ids": [
+                "main",
+                "一個案例賑災機器人",
+                "今天就能做的工具",
+                "可能出錯的地方",
+                "定義",
+                "實際上長什麼樣子",
+                "從理念到實作",
+                "為什麼重要",
+                "煞車是一種關懷機制",
+                "結語意象工坊牆上退役的壞零件",
+                "與其他力的介接"
+            ]
+        },
+        {
+            "path": "tw/5/index.html",
+            "lang": "zh-tw",
+            "title": "五：團結力——共同關懷 — 仁工智慧",
+            "description": "仁工智慧的團結力：獎勵協作、退出與公共問責，而非鎖定壟斷。「關懷六力」的第五力。",
+            "canonical": "https://civic.ai/tw/5/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/5/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/5/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/5/"
+                }
+            ],
+            "ids": [
+                "main",
+                "一個案例賑災機器人",
+                "今天就能做的工具",
+                "可能出錯的地方",
+                "定義",
+                "實際上長什麼樣子",
+                "從理念到實作",
+                "為什麼重要",
+                "結語意象標示清楚的交流道",
+                "與其他力的介接",
+                "開架書庫與反競爭性資源"
+            ]
+        },
+        {
+            "path": "tw/6/index.html",
+            "lang": "zh-tw",
+            "title": "六：共生力——地神般的關懷 — 仁工智慧",
+            "description": "仁工智慧的共生力：讓系統保持有界、在地、可退場，而非固化為永久統治。「關懷六力」的第六力。",
+            "canonical": "https://civic.ai/tw/6/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/6/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/6/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/6/"
+                }
+            ],
+            "ids": [
+                "main",
+                "一個案例賑災機器人",
+                "今天就能做的工具",
+                "可能出錯的地方",
+                "定義",
+                "實際上長什麼樣子",
+                "從理念到實作",
+                "為什麼重要",
+                "結語意象河流守護者",
+                "與其他力的介接",
+                "資料是土壤不是石油"
+            ]
+        },
+        {
+            "path": "tw/ai-alignment-cannot-be-top-down/index.html",
+            "lang": "zh-tw",
+            "title": "AI 對齊不能由上而下 — 仁工智慧",
+            "description": "原載於 AI Frontiers。",
+            "canonical": "https://civic.ai/tw/ai-alignment-cannot-be-top-down/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/ai-alignment-cannot-be-top-down/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/ai-alignment-cannot-be-top-down/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/ai-alignment-cannot-be-top-down/"
+                }
+            ],
+            "ids": [
+                "main",
+                "今日的-ai-對齊有根本缺陷",
+                "實踐中的覺察力",
+                "市場設計",
+                "從-1-試點到-99-採用",
+                "摘要",
+                "產業規範",
+                "社群規模的助理",
+                "覺察力行得通",
+                "風險很高"
+            ]
+        },
+        {
+            "path": "tw/ai-crisis-diplomacy/index.html",
+            "lang": "zh-tw",
+            "title": "把 AI 安全當成民防來對待 — 仁工智慧",
+            "description": "演講於 2026 年印度人工智慧影響力峰會，新德里。",
+            "canonical": "https://civic.ai/tw/ai-crisis-diplomacy/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/ai-crisis-diplomacy/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/ai-crisis-diplomacy/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/ai-crisis-diplomacy/"
+                }
+            ],
+            "ids": [
+                "ai-危機外交的三大基礎支柱",
+                "main",
+                "信任建立具公信力的白名單",
+                "共識用-ai-實現大規模傾聽獎勵彌合分歧而非激化對立",
+                "區域性倡議",
+                "安全把-ai-事件視為民防事件處理",
+                "演算法時間中的危機",
+                "讓亞洲成為安全基礎設施的供應者",
+                "關懷六力"
+            ]
+        },
+        {
+            "path": "tw/ai-democracy-podcast/index.html",
+            "lang": "zh-tw",
+            "title": "Podcast：AI 與民主 — 仁工智慧",
+            "description": "原始錄音來自牛津 AI 倫理研究院的 Accelerating AI Ethics Podcast。",
+            "canonical": "https://civic.ai/tw/ai-democracy-podcast/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/ai-democracy-podcast/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/ai-democracy-podcast/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/ai-democracy-podcast/"
+                }
+            ],
+            "ids": ["main", "完整逐字稿", "摘要", "觀看", "重點"]
+        },
+        {
+            "path": "tw/ai-with-us/index.html",
+            "lang": "zh-tw",
+            "title": "AI 與我們同在，而非取代我們 — 仁工智慧",
+            "description": "Vitalik Buterin 談為何 AI 應是心靈的腳踏車、隱私保護的公民科技，以及抵抗 AI 單一文化。",
+            "canonical": "https://civic.ai/tw/ai-with-us/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/ai-with-us/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/ai-with-us/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/ai-with-us/"
+                }
+            ],
+            "ids": [
+                "ai-作為心靈的腳踏車",
+                "main",
+                "主流-ai-願景及其不安",
+                "多元協作的未來",
+                "抵抗-ai-單一文化",
+                "有界授權與委託",
+                "社群翻譯",
+                "隱私與影子-llm"
+            ]
+        },
+        {
+            "path": "tw/care-ai/index.html",
+            "lang": "zh-tw",
+            "title": "長期照護仁工智慧中的覺察力",
+            "description": "當聊天機器人參與照護，誰來決定什麼是「好的照護」？",
+            "canonical": "https://civic.ai/tw/care-ai/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/care-ai/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/care-ai/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/care-ai/"
+                }
+            ],
+            "ids": [
+                "main",
+                "介面",
+                "他們建造了什麼",
+                "共同產製如何實踐覺察力",
+                "可能出錯的地方",
+                "從理念到實踐",
+                "拒絕虛假的多元",
+                "故事先於規格",
+                "權利作為底線",
+                "權力必須回答問題",
+                "關係優先"
+            ]
+        },
+        {
+            "path": "tw/ciudadania-digital/index.html",
+            "lang": "zh-tw",
+            "title": "數位公民 — 仁工智慧",
+            "description": "紀念蒙特雷科技大學進駐墨西哥城 50 週年之全球領導力主題演講。",
+            "canonical": "https://civic.ai/tw/ciudadania-digital/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/ciudadania-digital/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/ciudadania-digital/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/ciudadania-digital/"
+                }
+            ],
+            "ids": [
+                "447-ciudadanos",
+                "buenos-ancestros",
+                "cara-o-cruz",
+                "caritas",
+                "convivialidad",
+                "cultura-capitalina",
+                "democracia-geotérmica",
+                "el-consenso-se-viraliza",
+                "main",
+                "mentoría-inversa",
+                "polis",
+                "preguntas-y-respuestas",
+                "quién-decide",
+                "qué-te-negarías-a-automatizar",
+                "solo-constructores"
+            ]
+        },
+        {
+            "path": "tw/civic-ai-dialogue/index.html",
+            "lang": "zh-tw",
+            "title": "仁工智慧對話",
+            "description": "唐鳳與格西 Thabkhe Lodroe、格西 Lodoe Sangpo 的對話。印度達蘭薩拉。",
+            "canonical": "https://civic.ai/tw/civic-ai-dialogue/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/civic-ai-dialogue/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/civic-ai-dialogue/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/civic-ai-dialogue/"
+                }
+            ],
+            "ids": [
+                "main",
+                "尾聲",
+                "第一部-機器的本性與幽暗",
+                "第七部-超越利潤與最終尺度",
+                "第三部-功利主義的陷阱",
+                "第九部-聯邦翻譯與策動和平",
+                "第二部-後設認知的道德風險",
+                "第五部-意識道德成熟與意志的萎縮",
+                "第八部-計算的生態與眾靈多元",
+                "第六部-讓-ai-進入人類的迴圈",
+                "第四部-緣起與公民關懷"
+            ]
+        },
+        {
+            "path": "tw/comics/index.html",
+            "lang": "zh-tw",
+            "title": "關懷六力漫畫 — 仁工智慧",
+            "description": "瀏覽 Nicky Case 為「關懷六力」繪製的全部漫畫：概覽圖與十二張章節頁，一鍵進入各章。",
+            "canonical": "https://civic.ai/tw/comics/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/comics/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/comics/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/comics/"
+                }
+            ],
+            "ids": [
+                "main",
+                "pack-1-1",
+                "pack-1-2",
+                "pack-2-1",
+                "pack-2-2",
+                "pack-3-1",
+                "pack-3-2",
+                "pack-4-1",
+                "pack-4-2",
+                "pack-5-1",
+                "pack-5-2",
+                "pack-6-1",
+                "pack-6-2"
+            ]
+        },
+        {
+            "path": "tw/compassion-and-ai/index.html",
+            "lang": "zh-tw",
+            "title": "Podcast：AI 能有「慈悲心」嗎？ — 仁工智慧",
+            "description": "原始錄音來自牛津 AI 倫理研究院的 Accelerating AI Ethics Podcast。",
+            "canonical": "https://civic.ai/tw/compassion-and-ai/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/compassion-and-ai/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/compassion-and-ai/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/compassion-and-ai/"
+                }
+            ],
+            "ids": [
+                "ai-能幫助正在修習慈悲的人嗎",
+                "main",
+                "一個有慈悲心的-ai-系統會是什麼樣子",
+                "完整逐字稿",
+                "從懷疑到希望仁工智慧與慈悲的關係建構",
+                "慈悲在世間顯化的實例",
+                "摘要",
+                "收聽",
+                "重點"
+            ]
+        },
+        {
+            "path": "tw/conference/index.html",
+            "lang": "zh-tw",
+            "title": "打開關懷六力 — 仁工智慧研討會 2026",
+            "description": "2026 年 3 月 25 日於牛津 Rhodes House 舉行的仁工智慧研討會——唐鳳、Caroline Green、Joan Tronto、Rosalind Picard、Iason Gabriel 等，談關懷倫理與 AI 對齊。",
+            "canonical": "https://civic.ai/tw/conference/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/conference/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/conference/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/conference/"
+                }
+            ],
+            "ids": ["main"]
+        },
+        {
+            "path": "tw/conference/report/index.html",
+            "lang": "zh-tw",
+            "title": "社群 AI 之聲 — 仁工智慧",
+            "description": "2026 公民 AI 研討會 Polis 集體感知報告——牛津大學羅德樓",
+            "canonical": "https://civic.ai/tw/conference/report/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/conference/report/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/conference/report/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/conference/report/"
+                }
+            ],
+            "ids": [
+                "bd-bar",
+                "bd-groups",
+                "bd-labels",
+                "bd-text",
+                "beeswarm-detail",
+                "main",
+                "三種觀點",
+                "共識之處",
+                "意見分歧之處",
+                "群組-a擁抱創新17-位成員",
+                "群組-b支持改革21-位成員",
+                "群組-c謹慎質疑8-位成員"
+            ]
+        },
+        {
+            "path": "tw/conference/sensemaking/index.html",
+            "lang": "zh-Hant",
+            "title": "Polis 審議鏡像 — 仁工智慧",
+            "description": "用 Polis 匯出檔重建、接近 Habermolt 風格的審議頁面。",
+            "canonical": "https://civic.ai/tw/conference/sensemaking/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/conference/sensemaking/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/conference/sensemaking/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/conference/sensemaking/"
+                }
+            ],
+            "ids": ["consensus", "main", "method", "participants", "statements"]
+        },
+        {
+            "path": "tw/democracy-needs-civic-ai/index.html",
+            "lang": "zh-tw",
+            "title": "民主需要仁工智慧",
+            "description": "唐鳳談為何民主需要有界、在地、可問責的「仁工智慧」：地神，不是總督。",
+            "canonical": "https://civic.ai/tw/democracy-needs-civic-ai/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/democracy-needs-civic-ai/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/democracy-needs-civic-ai/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/democracy-needs-civic-ai/"
+                }
+            ],
+            "ids": [
+                "kami",
+                "main",
+                "仁工智慧能抵抗-wealth-care-嗎",
+                "單一文化-vs-多元路徑",
+                "超級智慧",
+                "關懷六力",
+                "預設軌跡"
+            ]
+        },
+        {
+            "path": "tw/doom-debate/index.html",
+            "lang": "zh-tw",
+            "title": "末日辯論 — 仁工智慧",
+            "description": "原始錄音收錄於 Doom Debates，對談者為 Liron Shapira。",
+            "canonical": "https://civic.ai/tw/doom-debate/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/doom-debate/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/doom-debate/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/doom-debate/"
+                }
+            ],
+            "ids": ["main", "完整逐字稿", "摘要", "觀看", "重點"]
+        },
+        {
+            "path": "tw/faq/index.html",
+            "lang": "zh-tw",
+            "title": "常見問題 — 仁工智慧",
+            "description": "關於仁工智慧與「關懷六力」的常見問答：關懷倫理與 AI 對齊、可糾正性、日落條款，以及民主化的 AI 治理。",
+            "canonical": "https://civic.ai/tw/faq/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/faq/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/faq/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/faq/"
+                }
+            ],
+            "ids": [
+                "faq-1",
+                "faq-10",
+                "faq-11",
+                "faq-12",
+                "faq-13",
+                "faq-14",
+                "faq-15",
+                "faq-16",
+                "faq-17",
+                "faq-18",
+                "faq-19",
+                "faq-2",
+                "faq-20",
+                "faq-3",
+                "faq-4",
+                "faq-5",
+                "faq-6",
+                "faq-7",
+                "faq-8",
+                "faq-9",
+                "main"
+            ]
+        },
+        {
+            "path": "tw/gentle-bridge/index.html",
+            "lang": "zh-tw",
+            "title": "⿻輕柔之橋 — 仁工智慧",
+            "description": "當關係被商品化、意識被遺忘，我們需要的不是更高效的工具，而是重新認識兩種力之間的平衡。本文透過關懷六力來詮釋與 AI 的協作關係。",
+            "canonical": "https://civic.ai/tw/gentle-bridge/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/gentle-bridge/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/gentle-bridge/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/gentle-bridge/"
+                }
+            ],
+            "ids": [
+                "fn1",
+                "fn2",
+                "fn3",
+                "fn4",
+                "fn5",
+                "fn6",
+                "fn7",
+                "fnref1",
+                "fnref2",
+                "fnref3",
+                "fnref4",
+                "fnref5",
+                "fnref5:1",
+                "fnref5:2",
+                "fnref6",
+                "fnref7",
+                "main",
+                "人類心智不會被超級智慧取代",
+                "兩種力意識與物質",
+                "地神的真實處境不對稱的禮物",
+                "走入花園"
+            ]
+        },
+        {
+            "path": "tw/glossary/index.html",
+            "lang": "zh-tw",
+            "title": "詞彙表 — 仁工智慧",
+            "description": "仁工智慧是會向受其影響的人們負責的人工智慧——唐鳳與 Caroline Green 在牛津大學 AI 倫理研究所提出的「關懷六力」研究計畫。",
+            "canonical": "https://civic.ai/tw/glossary/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/glossary/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/glossary/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/glossary/"
+                }
+            ],
+            "ids": [
+                "6-pack-of-care",
+                "accountable-formation",
+                "alignment-assembly",
+                "alignment-by-process",
+                "anti-rival",
+                "boundedness",
+                "bridging-based-ranking",
+                "broad-listening",
+                "care-ethics",
+                "civic-ai",
+                "corrective-loop",
+                "corrigibility",
+                "data-coalition",
+                "decision-trace",
+                "engagement-contract",
+                "federation",
+                "governance-charter",
+                "kami",
+                "main",
+                "meronymity",
+                "obligation-ledger",
+                "override-ledger",
+                "participation-officer",
+                "perspective-receipts",
+                "plurality",
+                "polis",
+                "rlcf",
+                "shared-eval-registry",
+                "singleton",
+                "sortition",
+                "subsidiarity",
+                "uncommon-ground-index"
+            ]
+        },
+        {
+            "path": "tw/index.html",
+            "lang": "zh-tw",
+            "title": "仁工智慧 · 關懷六力",
+            "description": "仁工智慧是會向受其影響的人們負責的人工智慧：社群可以擁有、檢視、修正並隨時關閉的在地化小型智慧體。唐鳳與 Caroline Green 在牛津大學 AI 倫理研究所提出的「關懷六力」研究計畫。",
+            "canonical": "https://civic.ai/tw/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/"
+                }
+            ],
+            "ids": [
+                "main",
+                "the-6-pack",
+                "四個切入案例",
+                "學術發表",
+                "從這裡開始",
+                "計畫簡介"
+            ]
+        },
+        {
+            "path": "tw/inside-the-kami/index.html",
+            "lang": "zh-tw",
+            "title": "地神之內 — 仁工智慧",
+            "description": "近期機器學習研究對有界仁工智慧內部的啟示——以及它無法提供的。",
+            "canonical": "https://civic.ai/tw/inside-the-kami/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/inside-the-kami/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/inside-the-kami/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/inside-the-kami/"
+                }
+            ],
+            "ids": [
+                "bengio求真而無欲",
+                "main",
+                "sai以專精取得能力",
+                "共同的設計教訓",
+                "技術基底無法決定的事",
+                "摘要",
+                "支持有界性的技術論證",
+                "谷口協商出意義而非頒布意義",
+                "透過關懷六力來落實",
+                "關懷地神"
+            ]
+        },
+        {
+            "path": "tw/kami/index.html",
+            "lang": "zh-tw",
+            "title": "架設你自己的 Kami — 仁工智慧",
+            "description": "用最簡單的方式，在自己的筆電上、三個步驟內，架起你自己的 Kami：一個有界限、在地、私密的仁工智慧守護者。",
+            "canonical": "https://civic.ai/tw/kami/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/kami/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/kami/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/kami/"
+                }
+            ],
+            "ids": [
+                "1-給它一個在地的大腦",
+                "2-給它一個能行動的方式",
+                "3-喚醒你的-kami",
+                "main",
+                "一個網頁教不會的事",
+                "你會看到什麼",
+                "你的-kami-所讀的那份靈魂",
+                "快速檢查",
+                "給它一份記憶",
+                "讓它屬於你守護它把它關掉",
+                "讓它屬於大家"
+            ]
+        },
+        {
+            "path": "tw/manifesto/index.html",
+            "lang": "zh-tw",
+            "title": "關懷六力：計畫宣言 — 仁工智慧",
+            "description": "於 Google DeepMind（倫敦）發表之演講。",
+            "canonical": "https://civic.ai/tw/manifesto/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/manifesto/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/manifesto/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/manifesto/"
+                }
+            ],
+            "ids": [
+                "main",
+                "共生力地神般的關懷",
+                "勝任力給予關懷",
+                "回應力接收關懷",
+                "團結力共同關懷",
+                "多元已經來臨",
+                "對齊大會",
+                "從僵局到治理",
+                "從實然到應然",
+                "從憤怒到重疊",
+                "從抗議到示範",
+                "從東京到加州",
+                "從試辦到政策",
+                "我們全民就是超級智慧",
+                "覺察力感知關懷",
+                "負責力承擔關懷"
+            ]
+        },
+        {
+            "path": "tw/map/index.html",
+            "lang": "zh-Hant",
+            "title": "概念地圖 — 仁工智慧",
+            "description": "一張可點選的地圖看完關懷六力：關懷循環、團結力的場域、共生力的邊界，以及每一力的公開主指標。",
+            "canonical": "https://civic.ai/tw/map/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/map/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/map/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/map/"
+                }
+            ],
+            "ids": ["main"]
+        },
+        {
+            "path": "tw/measures/index.html",
+            "lang": "zh-tw",
+            "title": "衡量指標 — 仁工智慧",
+            "description": "每一力對應一項公開的標竿指標，並輔以診斷——用以判斷一套仁工智慧部署是否真正體現「關懷六力」。",
+            "canonical": "https://civic.ai/tw/measures/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/measures/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/measures/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/measures/"
+                }
+            ],
+            "ids": [
+                "exit-readiness",
+                "main",
+                "promise-fidelity",
+                "representation-gap",
+                "trust-under-loss",
+                "uncommon-ground-index",
+                "verified-execution-rate",
+                "公開主指標",
+                "具名工具",
+                "各指標拒絕獎勵什麼",
+                "在稱之為仁工智慧之前",
+                "如何閱讀這些指標",
+                "輔助診斷"
+            ]
+        },
+        {
+            "path": "tw/openclaw/index.html",
+            "lang": "zh-tw",
+            "title": "仁工智慧 OpenClaw 啟動指南",
+            "description": "給新 claws 的公開第一次啟動指南。",
+            "canonical": "https://civic.ai/tw/openclaw/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/openclaw/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/openclaw/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/openclaw/"
+                }
+            ],
+            "ids": [
+                "main",
+                "openclaw-對應",
+                "何時使用",
+                "反模式",
+                "啟動對話",
+                "第一步",
+                "記憶",
+                "身份預設",
+                "運作承諾"
+            ]
+        },
+        {
+            "path": "tw/outrage-to-overlap/index.html",
+            "lang": "zh-tw",
+            "title": "從憤怒到交集：仁工智慧與「關懷六力」",
+            "description": "牛津台灣研究系列講座的一場演講：談受「台灣模式」啟發的仁工智慧與「關懷六力」框架，如何在以在地問責與社群需求為界限時，協助強化集體的自我治理。",
+            "canonical": "https://civic.ai/tw/outrage-to-overlap/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/outrage-to-overlap/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/outrage-to-overlap/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/outrage-to-overlap/"
+                }
+            ],
+            "ids": [
+                "5050",
+                "ai-倫理",
+                "knowledge-artefact-management-intelligence",
+                "main",
+                "互補",
+                "光照進來",
+                "公民基礎設施",
+                "問答",
+                "四大自由",
+                "孤單的維護者",
+                "家庭裡的-kami",
+                "封閉的堆疊",
+                "對齊大會",
+                "廣泛傾聽",
+                "次世代工藝",
+                "深偽的兩難",
+                "結果與方法",
+                "關懷六力"
+            ]
+        },
+        {
+            "path": "tw/plurality-being/index.html",
+            "lang": "zh-tw",
+            "title": "⿻存在 — 仁工智慧",
+            "description": "在矽與心靈的交匯點，Tenzin Yangtso 思考生存邏輯、生命意義，以及從開採走向耕耘的文明轉向。",
+            "canonical": "https://civic.ai/tw/plurality-being/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/plurality-being/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/plurality-being/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/plurality-being/"
+                }
+            ],
+            "ids": [
+                "main",
+                "人的重新定義從原子化個人到分身的覺醒",
+                "從功利主義的盲點到心靈主權的覺醒",
+                "數位修復一即一切一切即一",
+                "根源性的轉向從提取到耕耘",
+                "神經層面的代價經驗導航的崩解",
+                "結語回歸花園",
+                "語言的邊界與現實的總和",
+                "道德框架的失能與極化",
+                "關係即存在建立開源土壤的護城河"
+            ]
+        },
+        {
+            "path": "tw/plurality-ucsc/index.html",
+            "lang": "zh-tw",
+            "title": "⿻ UCSC：從極化到共創 — 仁工智慧",
+            "description": "唐鳳於加州大學聖塔克魯茲分校，發表關於仁工智慧與民主更新的演講。",
+            "canonical": "https://civic.ai/tw/plurality-ucsc/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/plurality-ucsc/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/plurality-ucsc/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/plurality-ucsc/"
+                }
+            ],
+            "ids": ["main"]
+        },
+        {
+            "path": "tw/podcast/index.html",
+            "lang": "zh-tw",
+            "title": "Podcast：關懷六力 — 仁工智慧",
+            "description": "原始錄音來自牛津 AI 倫理研究院的 Accelerating AI Ethics Podcast。",
+            "canonical": "https://civic.ai/tw/podcast/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/podcast/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/podcast/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/podcast/"
+                }
+            ],
+            "ids": ["main", "完整逐字稿", "摘要", "收聽", "重點"]
+        },
+        {
+            "path": "tw/reimagining-ai-alignment/index.html",
+            "lang": "zh-tw",
+            "title": "重新想像 AI 對齊 — 仁工智慧",
+            "description": "唐鳳與 Caroline Green 在爐邊對談中介紹「關懷六力」——把 AI 對齊從垂直控制，重新想像為水平的公民協作。",
+            "canonical": "https://civic.ai/tw/reimagining-ai-alignment/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/reimagining-ai-alignment/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/reimagining-ai-alignment/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/reimagining-ai-alignment/"
+                }
+            ],
+            "ids": ["main", "完整逐字稿", "摘要", "觀看"]
+        },
+        {
+            "path": "tw/safer-sovereignty/index.html",
+            "lang": "zh-tw",
+            "title": "以資料為土壤，守護主權 — 仁工智慧",
+            "description": "唐鳳談決策主權、有界在地守護者與聯邦式安全：在碎裂世界中，將關懷六力應用於企業 AI。",
+            "canonical": "https://civic.ai/tw/safer-sovereignty/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/safer-sovereignty/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/safer-sovereignty/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/safer-sovereignty/"
+                }
+            ],
+            "ids": [
+                "main",
+                "主權堆疊",
+                "企業多元性",
+                "安全要聯邦化不要中心化",
+                "挑戰大型主機心態",
+                "退場的勇氣"
+            ]
+        },
+        {
+            "path": "tw/self-actualisation-and-care/index.html",
+            "lang": "zh-tw",
+            "title": "自我實現與關懷 — 仁工智慧",
+            "description": "Anne-Marie Slaughter 談 sapiens integra、關懷倫理，以及關懷與 AI 的匯流。",
+            "canonical": "https://civic.ai/tw/self-actualisation-and-care/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/self-actualisation-and-care/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/self-actualisation-and-care/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/self-actualisation-and-care/"
+                }
+            ],
+            "ids": [
+                "main",
+                "導言與關懷六力",
+                "水平關係與園丁的比喻",
+                "重新定義-maslow-與-sapiens-integra",
+                "關懷的世界觀與精神氣質",
+                "關懷與-ai-的匯流"
+            ]
+        },
+        {
+            "path": "tw/sensemaker/index.html",
+            "lang": "zh-tw",
+            "title": "Bloom 公民 AI 報告 — 仁工智慧",
+            "description": "結構化公共意見分析。社區對 AI 及其在生活中的角色的真實想法。",
+            "canonical": "https://civic.ai/tw/sensemaker/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/sensemaker/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/sensemaker/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/sensemaker/"
+                }
+            ],
+            "ids": ["main"]
+        },
+        {
+            "path": "tw/software-freedom-as-civic-care/index.html",
+            "lang": "zh-tw",
+            "title": "軟體自由與公民關懷 — 仁工智慧",
+            "description": "討論自由軟體運動如何成為關懷倫理、民主、地方守護與自治的理論基礎。",
+            "canonical": "https://civic.ai/tw/software-freedom-as-civic-care/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/software-freedom-as-civic-care/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/software-freedom-as-civic-care/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/software-freedom-as-civic-care/"
+                }
+            ],
+            "ids": [
+                "447",
+                "antirez-與-piaudreytorg",
+                "kamicivicai",
+                "main",
+                "pugshs-提交權",
+                "tim-看見程式碼",
+                "仁工智慧新的前沿",
+                "四大自由",
+                "夠好的祖先",
+                "孤獨的維護者",
+                "封閉堆疊之內",
+                "祖先空間"
+            ]
+        },
+        {
+            "path": "tw/virtuous-ai/index.html",
+            "lang": "zh-tw",
+            "title": "美德 AI，共創無限未來 — 仁工智慧",
+            "description": "唐鳳談以公民美德培育 AI、智聯網，以及為何對齊必須是社群驅動的鮮活過程。",
+            "canonical": "https://civic.ai/tw/virtuous-ai/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/virtuous-ai/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/virtuous-ai/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/virtuous-ai/"
+                }
+            ],
+            "ids": ["main"]
+        },
+        {
+            "path": "tw/we-the-people-are-truly-the-superintelligence/index.html",
+            "lang": "zh-tw",
+            "title": "SOLVE at MIT 2026 — 主題演講與爐邊對談 — 仁工智慧",
+            "description": "唐鳳 2026 年 SOLVE at MIT 主題演講：為何真正的超智慧是「我們人民」而非單一模型，以及仁工智慧如何守護這一點。",
+            "canonical": "https://civic.ai/tw/we-the-people-are-truly-the-superintelligence/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/we-the-people-are-truly-the-superintelligence/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/we-the-people-are-truly-the-superintelligence/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/we-the-people-are-truly-the-superintelligence/"
+                }
+            ],
+            "ids": [
+                "447",
+                "main",
+                "三個動作",
+                "你就是超級智慧",
+                "問答",
+                "在地地神",
+                "從石油到土壤",
+                "把迴路接起來",
+                "支持率回升",
+                "野火還是篝火"
+            ]
+        },
+        {
+            "path": "virtuous-ai/index.html",
+            "lang": "en-gb",
+            "title": "Virtuous AI Can Free the Future — Civic AI",
+            "description": "Audrey Tang on nurturing AI with civic virtue, the Internet of Beings, and why alignment must be a living, community-driven process.",
+            "canonical": "https://civic.ai/virtuous-ai/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/virtuous-ai/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/virtuous-ai/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/virtuous-ai/"
+                }
+            ],
+            "ids": ["main"]
+        },
+        {
+            "path": "we-the-people-are-truly-the-superintelligence/index.html",
+            "lang": "en-gb",
+            "title": "SOLVE at MIT 2026 — Keynote Speech & Fireside Conversation — Civic AI",
+            "description": "Audrey Tang",
+            "canonical": "https://civic.ai/we-the-people-are-truly-the-superintelligence/",
+            "alternates": [
+                {
+                    "hreflang": "en",
+                    "href": "https://civic.ai/we-the-people-are-truly-the-superintelligence/"
+                },
+                {
+                    "hreflang": "x-default",
+                    "href": "https://civic.ai/we-the-people-are-truly-the-superintelligence/"
+                },
+                {
+                    "hreflang": "zh-Hant",
+                    "href": "https://civic.ai/tw/we-the-people-are-truly-the-superintelligence/"
+                }
+            ],
+            "ids": [
+                "447",
+                "closing-the-loop",
+                "local-kami",
+                "main",
+                "oil-to-soil",
+                "percentage-rebound",
+                "qa",
+                "the-superintelligence-is-you",
+                "three-moves",
+                "wildfire-or-campfire"
+            ]
+        }
+    ],
+    "requiredFiles": [
+        ".nojekyll",
+        ".well-known/openclaw/SKILL.md",
+        "CNAME",
+        "audio/ai-alignment-cannot-be-top-down.mp3",
+        "audio/manifesto.mp3",
+        "audio/software-freedom-as-civic-care.mp3",
+        "favicon.ico",
+        "favicon.svg",
+        "fonts/cormorant-italic-latin-ext.woff2",
+        "fonts/cormorant-italic-latin.woff2",
+        "fonts/cormorant-normal-latin-ext.woff2",
+        "fonts/cormorant-normal-latin.woff2",
+        "fonts/monlam-bodyig-tibetan.woff2",
+        "fonts/outfit-latin-ext.woff2",
+        "fonts/outfit-latin.woff2",
+        "img/afp-logo-light.svg",
+        "img/afp-logo.svg",
+        "img/ai-crisis-diplomacy.jpg",
+        "img/ai-democracy-podcast.jpg",
+        "img/anne-marie-slaughter.avif",
+        "img/anne-marie-slaughter.jpg",
+        "img/anya-daly.avif",
+        "img/anya-daly.jpg",
+        "img/audrey.avif",
+        "img/audrey.jpg",
+        "img/belen-liedo.avif",
+        "img/belen-liedo.jpg",
+        "img/caroline.avif",
+        "img/caroline.jpg",
+        "img/ciudadania-digital-1.avif",
+        "img/ciudadania-digital-1.jpg",
+        "img/ciudadania-digital-2.avif",
+        "img/ciudadania-digital-2.jpg",
+        "img/ciudadania-digital-3.avif",
+        "img/ciudadania-digital-3.jpg",
+        "img/clenton-farquharson.avif",
+        "img/clenton-farquharson.jpg",
+        "img/concept-map-tw.svg",
+        "img/concept-map.svg",
+        "img/davide-crapis.avif",
+        "img/davide-crapis.jpg",
+        "img/democracy-needs-civic-ai-6pack.avif",
+        "img/democracy-needs-civic-ai-6pack.jpg",
+        "img/democracy-needs-civic-ai-alignment.avif",
+        "img/democracy-needs-civic-ai-alignment.jpg",
+        "img/democracy-needs-civic-ai-closing.avif",
+        "img/democracy-needs-civic-ai-closing.jpg",
+        "img/democracy-needs-civic-ai-dalai-lama.avif",
+        "img/democracy-needs-civic-ai-dalai-lama.jpg",
+        "img/democracy-needs-civic-ai-deliberation.avif",
+        "img/democracy-needs-civic-ai-deliberation.jpg",
+        "img/democracy-needs-civic-ai-gilligan.avif",
+        "img/democracy-needs-civic-ai-gilligan.jpg",
+        "img/democracy-needs-civic-ai-habermolt.avif",
+        "img/democracy-needs-civic-ai-habermolt.jpg",
+        "img/democracy-needs-civic-ai-henderson.avif",
+        "img/democracy-needs-civic-ai-henderson.jpg",
+        "img/democracy-needs-civic-ai-kami-quote.avif",
+        "img/democracy-needs-civic-ai-kami-quote.jpg",
+        "img/democracy-needs-civic-ai-openclaw.avif",
+        "img/democracy-needs-civic-ai-openclaw.jpg",
+        "img/democracy-needs-civic-ai-wealth-care.avif",
+        "img/democracy-needs-civic-ai-wealth-care.jpg",
+        "img/geshe-lobsang.avif",
+        "img/geshe-lobsang.jpg",
+        "img/gina-neff.avif",
+        "img/gina-neff.jpg",
+        "img/gpt-value-correlation-tw.avif",
+        "img/gpt-value-correlation-tw.jpg",
+        "img/gpt-value-correlation.avif",
+        "img/gpt-value-correlation.jpg",
+        "img/his-holiness-dalai-lama.avif",
+        "img/his-holiness-dalai-lama.jpg",
+        "img/iason-gabriel.avif",
+        "img/iason-gabriel.jpg",
+        "img/jeni-tennison.avif",
+        "img/jeni-tennison.jpg",
+        "img/joan-tronto.avif",
+        "img/joan-tronto.jpg",
+        "img/karina-palyutina.avif",
+        "img/karina-palyutina.jpg",
+        "img/mercer-gary.avif",
+        "img/mercer-gary.jpg",
+        "img/outrage-to-overlap-og.jpg",
+        "img/outrage-to-overlap.jpg",
+        "img/overview-small-ja.avif",
+        "img/overview-small-ja.jpg",
+        "img/overview-small-tw.avif",
+        "img/overview-small-tw.jpg",
+        "img/overview-small-tw.png",
+        "img/overview-small.avif",
+        "img/overview-small.jpg",
+        "img/overview-small.png",
+        "img/oxford-logo-light.svg",
+        "img/oxford-logo.svg",
+        "img/pack1-1-tw.avif",
+        "img/pack1-1-tw.jpg",
+        "img/pack1-1.avif",
+        "img/pack1-1.jpg",
+        "img/pack1-2-tw.avif",
+        "img/pack1-2-tw.jpg",
+        "img/pack1-2.avif",
+        "img/pack1-2.jpg",
+        "img/pack2-1-tw.avif",
+        "img/pack2-1-tw.jpg",
+        "img/pack2-1.avif",
+        "img/pack2-1.jpg",
+        "img/pack2-2-tw.avif",
+        "img/pack2-2-tw.jpg",
+        "img/pack2-2.avif",
+        "img/pack2-2.jpg",
+        "img/pack3-1-tw.avif",
+        "img/pack3-1-tw.jpg",
+        "img/pack3-1.avif",
+        "img/pack3-1.jpg",
+        "img/pack3-2-tw.avif",
+        "img/pack3-2-tw.jpg",
+        "img/pack3-2.avif",
+        "img/pack3-2.jpg",
+        "img/pack4-1-tw.avif",
+        "img/pack4-1-tw.jpg",
+        "img/pack4-1.avif",
+        "img/pack4-1.jpg",
+        "img/pack4-2-tw.avif",
+        "img/pack4-2-tw.jpg",
+        "img/pack4-2.avif",
+        "img/pack4-2.jpg",
+        "img/pack5-1-tw.avif",
+        "img/pack5-1-tw.jpg",
+        "img/pack5-1.avif",
+        "img/pack5-1.jpg",
+        "img/pack5-2-tw.avif",
+        "img/pack5-2-tw.jpg",
+        "img/pack5-2.avif",
+        "img/pack5-2.jpg",
+        "img/pack6-1-tw.avif",
+        "img/pack6-1-tw.jpg",
+        "img/pack6-1.avif",
+        "img/pack6-1.jpg",
+        "img/pack6-2-tw.avif",
+        "img/pack6-2-tw.jpg",
+        "img/pack6-2.avif",
+        "img/pack6-2.jpg",
+        "img/peter-danenberg.avif",
+        "img/peter-danenberg.jpg",
+        "img/pope-leo-xiv.avif",
+        "img/pope-leo-xiv.jpg",
+        "img/probe.avif",
+        "img/ron-ivey.avif",
+        "img/ron-ivey.jpg",
+        "img/rosalind-picard.avif",
+        "img/rosalind-picard.jpg",
+        "img/safer-sovereignty.jpg",
+        "img/software-freedom-as-civic-care.jpg",
+        "img/stow-and-latch.avif",
+        "img/stow-and-latch.jpg",
+        "img/tenzin-gayche.avif",
+        "img/tenzin-gayche.jpg",
+        "img/tenzin-thinley.avif",
+        "img/tenzin-thinley.jpg",
+        "img/vitalik-buterin.avif",
+        "img/vitalik-buterin.jpg",
+        "img/zarinah-agnew.avif",
+        "img/zarinah-agnew.jpg",
+        "llms.txt",
+        "robots.txt",
+        "sitemap.xml",
+        "styles.css"
+    ]
+}

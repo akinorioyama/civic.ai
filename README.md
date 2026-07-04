@@ -18,19 +18,21 @@ Requires [Bun](https://bun.sh/).
 
 ```bash
 bun install     # install dependencies
-bun run dev     # dev server with live reload → http://127.0.0.1:8080
-bun run build   # production build → docs/
+bun run dev     # Astro dev server → http://127.0.0.1:4321
+bun run build   # production build → dist/
 ```
 
 ## Scripts
 
 | Command                   | What it does                                                                                             |
 | ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `bun run dev`             | Eleventy dev server with live reload at `http://127.0.0.1:8080`.                                         |
-| `bun run build`           | Production build of the static site → `docs/`.                                                           |
+| `bun run dev`             | Astro dev server with live reload at `http://127.0.0.1:4321`.                                            |
+| `bun run build`           | Production build of the static site → `dist/`.                                                           |
+| `bun run check`           | Astro + TypeScript checks: `astro check && tsgo --noEmit`.                                               |
+| `bun test`                | Focused Bun tests for the custom Markdown renderer and root-content loader.                              |
 | `bun run lint`            | Check formatting: `prettier --check` + `pangu-format --check` (CJK spacing).                             |
 | `bun run format`          | Auto-fix formatting: `prettier --write` + `pangu-format`.                                                |
-| `bun run check-links`     | After a build, validate internal links and anchors across `docs/`.                                       |
+| `bun run check-links`     | After a build, validate internal links and anchors across `dist/`.                                       |
 | `bun run en`/`bun run tw` | Copy the canonical English/Mandarin page set to the clipboard for translation review (macOS `pbcopy`).   |
 | `bun run import-comics`   | Re-import and optimise Nicky Case's comic pages into `img/` (maintenance helper, not part of the build). |
 
@@ -38,20 +40,20 @@ A husky **pre-commit hook** runs `prettier` + `pangu-format` on staged Markdown,
 
 ## Repository layout
 
-| Path                                       | What it is                                                                                                         |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `*.md` (root)                              | One Markdown file per page, British English. Front-matter `permalink` sets the URL.                                |
-| `tw-*.md`                                  | Traditional Mandarin twin of each English page (served under `/tw/…`); kept in parity.                             |
-| `_layouts/`                                | Page templates (`default`, `chapter`, `conference`) — see [AGENTS.md](AGENTS.md).                                  |
-| `_includes/`                               | Shared template partials.                                                                                          |
-| `_data/`                                   | Global data: `site.json`, `paths.json` (reading paths), `comics.json`, glossary, Polis report, OpenClaw bootstrap. |
-| `img/`, `fonts/`, `audio/`                 | Static assets, passthrough-copied into the build.                                                                  |
-| `styles.css`                               | All site styles (mobile-first; CSS custom properties).                                                             |
-| `eleventy.config.js`                       | Eleventy build config: passthrough rules, Markdown tweaks, filters.                                                |
-| `.well-known/openclaw/`, `openclaw.md.njk` | Machine-readable bootstrap for AI agents ("claws") — see [civic.ai/openclaw](https://civic.ai/openclaw/).          |
-| `*.mjs`, `*.py`, `scripts/`                | Content and build helper scripts (see [Scripts](#scripts)).                                                        |
-| `specs/`                                   | Internal design & implementation notes (unpublished; in `.eleventyignore`).                                        |
-| `docs/`                                    | **Generated** build output — never edit by hand (gitignored).                                                      |
+| Path                            | What it is                                                                                                         |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `src/`                          | Astro source: typed root-content loader, custom Markdown renderer, layouts, components, routes, endpoints.         |
+| `_data/`                        | Global data: `site.json`, `paths.json` (reading paths), `comics.json`, glossary, Polis report, OpenClaw bootstrap. |
+| `*.md` (root)                   | Canonical Markdown content, British English. Front-matter `permalink` sets the URL.                                |
+| `tw-*.md`                       | Traditional Mandarin twin of each English page (served under `/tw/…`); kept in parity.                             |
+| `img/`, `fonts/`, `audio/`      | Source static assets copied through generated `public/` into the build.                                            |
+| `styles.css`                    | All site styles (mobile-first; CSS custom properties).                                                             |
+| `astro.config.mjs`              | Astro static build config: custom-domain root, directory URLs, `dist/` output.                                     |
+| `openclaw.md`, `tw-openclaw.md` | Human OpenClaw bootstrap guides; machine-readable endpoint is generated from `_data/openclaw_bootstrap.js`.        |
+| `*.mjs`, `*.py`, `scripts/`     | Content, validation, build, and migration helper scripts (see [Scripts](#scripts)).                                |
+| `specs/`                        | Internal design & implementation notes (unpublished).                                                              |
+| `public/`                       | **Generated** Astro public directory from `scripts/sync-public.mjs` — never edit by hand (gitignored).             |
+| `dist/`                         | **Generated** build output — never edit by hand (gitignored).                                                      |
 
 ## Authoring content
 
