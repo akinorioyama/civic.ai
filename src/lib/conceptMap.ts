@@ -65,7 +65,7 @@ export const DIAL = {
     day: 236,
     chip: 196,
     /** math-convention degrees: 0 = east, 90 = north (screen top) */
-    anchors: { 1: 180, 2: 90, 3: 0, 4: 270 } as Record<number, number>,
+    anchors: { 1: 90, 2: 0, 3: 270, 4: 180 } as Record<number, number>,
     /** half-width of each pack's arc segment, degrees */
     halfSeg: 38,
 };
