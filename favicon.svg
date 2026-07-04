@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Civic AI six-dot ring">
-  <rect width="64" height="64" rx="14" fill="#111820"/>
-  <g fill="#F2F1E8">
+  <rect width="64" height="64" rx="14" fill="#131720"/>
+  <g fill="#6BBACA">
     <circle cx="32" cy="10" r="5.8"/>
     <circle cx="51.1" cy="21" r="5.8"/>
     <circle cx="51.1" cy="43" r="5.8"/>
