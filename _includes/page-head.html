@@ -28,6 +28,26 @@
                 }
             })();
         </script>
+        <script>
+            // iOS Lockdown Mode (and any environment that blocks @font-face)
+            // strips our web fonts, leaving the system fallback rendering too
+            // thin to read comfortably. Detect that case and let CSS thicken it.
+            (function () {
+                try {
+                    if (!document.fonts || !document.fonts.ready) return;
+                    document.fonts.ready.then(function () {
+                        var ok =
+                            document.fonts.check('1em "Outfit"') ||
+                            document.fonts.check('1em "Cormorant Garamond"');
+                        if (!ok) {
+                            document.documentElement.classList.add(
+                                "fonts-unavailable"
+                            );
+                        }
+                    });
+                } catch (e) {}
+            })();
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="theme-color"

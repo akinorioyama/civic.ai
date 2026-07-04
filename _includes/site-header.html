@@ -53,7 +53,33 @@ display_subtitle = header_subtitle | default: subtitle %}
             data-theme-toggle
             aria-label="{% if lang2 == 'en' %}Toggle colour theme{% else %}切換明暗主題{% endif %}"
         >
-            <span data-theme-toggle-label>🌙</span>
+            <svg
+                class="theme-toggle__icon theme-toggle__moon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+            >
+                <path d="M20 14.4A8 8 0 0 1 9.6 4 7 7 0 1 0 20 14.4Z" />
+            </svg>
+            <svg
+                class="theme-toggle__icon theme-toggle__sun"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+            >
+                <circle cx="12" cy="12" r="4.2" />
+                <path
+                    d="M12 2.6v2.1M12 19.3v2.1M4.6 4.6 6.1 6.1M17.9 17.9l1.5 1.5M2.6 12h2.1M19.3 12h2.1M4.6 19.4 6.1 17.9M17.9 6.1l1.5-1.5"
+                />
+            </svg>
         </button>
     </div>
     {% else %}
@@ -95,7 +121,33 @@ display_subtitle = header_subtitle | default: subtitle %}
                 data-theme-toggle
                 aria-label="{% if lang2 == 'en' %}Toggle colour theme{% else %}切換明暗主題{% endif %}"
             >
-                <span data-theme-toggle-label>🌙</span>
+                <svg
+                    class="theme-toggle__icon theme-toggle__moon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+                    <path d="M20 14.4A8 8 0 0 1 9.6 4 7 7 0 1 0 20 14.4Z" />
+                </svg>
+                <svg
+                    class="theme-toggle__icon theme-toggle__sun"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+                    <circle cx="12" cy="12" r="4.2" />
+                    <path
+                        d="M12 2.6v2.1M12 19.3v2.1M4.6 4.6 6.1 6.1M17.9 17.9l1.5 1.5M2.6 12h2.1M19.3 12h2.1M4.6 19.4 6.1 17.9M17.9 6.1l1.5-1.5"
+                    />
+                </svg>
             </button>
         </div>
     </div>

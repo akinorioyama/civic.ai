@@ -23,9 +23,6 @@
                     } catch (e) {}
                     return document.documentElement.dataset.theme || systemTheme();
                 }
-                function labelFor(theme) {
-                    return theme === "dark" ? "☀️" : "🌙";
-                }
                 function applyTheme(theme) {
                     if (theme !== "light" && theme !== "dark") {
                         theme = systemTheme();
@@ -45,8 +42,6 @@
                                   ? "Dark theme; switch to light"
                                   : "Light theme; switch to dark"
                         );
-                        var text = button.querySelector("[data-theme-toggle-label]");
-                        if (text) text.textContent = labelFor(theme);
                     });
                 }
                 function nextTheme(theme) {

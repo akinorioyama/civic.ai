@@ -116,6 +116,22 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Web fonts blocked (e.g. iOS Lockdown Mode): the system fallback is much
+   thinner than Outfit at the same weight, so lift the body copy to a more
+   readable weight and drop the antialiasing that renders SF lighter still. */
+html.fonts-unavailable body {
+    font-weight: 450;
+    -webkit-font-smoothing: auto;
+}
+
+html.fonts-unavailable {
+    --muted: #4c576a;
+}
+
+html[data-theme="dark"].fonts-unavailable {
+    --muted: #9aa6b8;
+}
+
 ::selection {
     background: color-mix(in srgb, var(--teal) 20%, transparent);
 }
@@ -410,9 +426,7 @@ header .chapter-date {
     min-width: 2.35rem;
     min-height: 2.1rem;
     color: currentColor;
-    font-family: var(--sans);
-    font-size: 1rem;
-    line-height: 1;
+    line-height: 0;
     background: color-mix(in srgb, currentColor 8%, transparent);
     border: 1px solid color-mix(in srgb, currentColor 28%, transparent);
     border-radius: 999px;
@@ -422,6 +436,26 @@ header .chapter-date {
         color 0.2s,
         border-color 0.2s,
         background 0.2s;
+}
+
+.theme-toggle__icon {
+    grid-area: 1 / 1;
+    width: 1.15rem;
+    height: 1.15rem;
+    display: block;
+}
+
+/* Show the icon of the theme the button switches *to*: moon offers dark,
+   sun offers light. Keyed off html[data-theme] (set before first paint in
+   <head>) so there is no icon flash. */
+.theme-toggle__sun {
+    display: none;
+}
+html[data-theme="dark"] .theme-toggle__moon {
+    display: none;
+}
+html[data-theme="dark"] .theme-toggle__sun {
+    display: block;
 }
 
 .theme-toggle:hover,
