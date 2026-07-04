@@ -303,7 +303,7 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                 if (target) target.scrollIntoView();
             }
             window.addEventListener("load", jumpToHash);
-            window.__avif.then(function (ok) {
+            (window.__avif || Promise.resolve(false)).then(function (ok) {
                 document.querySelectorAll("noscript").forEach(function (ns) {
                     var html = ns.textContent;
                     if (html.indexOf("<img ") === -1) return;

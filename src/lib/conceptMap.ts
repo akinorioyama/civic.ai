@@ -1,5 +1,5 @@
-// conceptMap.ts — the Day Wheel: renders /map/ and /tw/map/ from one data
-// file (_data/concept_map.json). Emits a build-time sundial (SVG strokes,
+// conceptMap.ts — the Day Wheel: renders the framework map section from one
+// data file (_data/concept_map.json). Emits a build-time sundial (SVG strokes,
 // HTML labels) plus the station manifest. Zero client JS; every string is
 // real HTML text. Geometry is computed here so it can be unit-tested.
 

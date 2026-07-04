@@ -1,12 +1,14 @@
 ---
 import type { PageRecord } from "../lib/pages";
-import { site } from "../lib/site";
+import { lang2, site } from "../lib/site";
+import ClientScripts from "../components/ClientScripts.astro";
 import PageHead from "../components/PageHead.astro";
 import PartnerColophon from "../components/PartnerColophon.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 
 interface Props { page: PageRecord; }
 const { page } = Astro.props;
+const zh = lang2(page.data.lang) === "zh";
 const data = page.data as any;
 const eventLd = {"@context":"https://schema.org","@type":"Event",name:`${data.title} — ${data.subtitle}`,url:`${site.url}${page.url}`,description:data.meta_description||data.description,startDate:"2026-03-25",eventStatus:"https://schema.org/EventScheduled",eventAttendanceMode:"https://schema.org/OfflineEventAttendanceMode",image:data.og_image?`${site.url}${data.og_image}`:`${site.url}/img/overview-small.jpg`,location:{"@type":"Place",name:"Rhodes House",address:{"@type":"PostalAddress",streetAddress:"South Park Road",addressLocality:"Oxford",addressCountry:"GB"}},organizer:{"@type":"Organization",name:"Oxford Institute for Ethics in AI",url:"https://www.oxford-aiethics.ox.ac.uk/"}};
 ---
@@ -14,23 +16,64 @@ const eventLd = {"@context":"https://schema.org","@type":"Event",name:`${data.ti
 <html lang={page.data.lang || "en"}>
 <head><PageHead page={page} ogType="website" preloadFont="/fonts/outfit-latin.woff2" /></head>
 <body>
-<a class="skip-link" href="#main">{(page.data.lang || "").startsWith("zh") ? "跳至內容" : "Skip to content"}</a>
+<a class="skip-link" href="#main">{zh ? "跳至內容" : "Skip to content"}</a>
 <SiteHeader page={page} headerTitle={data.subtitle} headerSubtitle={data.title} headerDate={data.date_line} />
 <main id="main">
-  <div class="conf-hosts">{(data.hosts || []).map((host: any) => <a href={host.url} class="conf-host"><noscript><img src={host.photo.src} alt={host.name} width={host.photo.w} height={host.photo.h} loading="lazy" decoding="async" /></noscript><strong>{host.name}</strong><span>{host.role}</span></a>)}</div>
+  <div class="conf-hosts">
+    {(data.hosts || []).map((host: any) => (
+      <a href={host.url} class="conf-host">
+        <noscript><img src={host.photo.src} alt={host.name} width={host.photo.w} height={host.photo.h} loading="lazy" decoding="async" /></noscript>
+        <strong>{host.name}</strong>
+        <span>{host.role}</span>
+      </a>
+    ))}
+  </div>
   <div class="conf-goals">{(data.goals || []).map((goal: any, i: number) => <div class="conf-goal"><span class="conf-goal-num">{String(i + 1).padStart(2, "0")}</span><h3>{goal.title}</h3><p>{goal.text}</p></div>)}</div>
   {data.agenda_title && <h2>{data.agenda_title}</h2>}
-  <div class="conf-agenda">{(data.agenda || []).map((slot: any) => <div class:list={["conf-slot", slot.break && "conf-break"]}><div class="conf-time">{slot.time}</div><div class="conf-detail">{slot.photos && <div class="conf-panel-photos">{slot.photos.map((p: any) => <noscript><img src={p.src} alt={p.alt} width={p.w} height={p.h} /></noscript>)}</div>}{slot.photo && <div class="conf-detail-with-photo"><noscript><img src={slot.photo.src} alt={slot.photo.alt} width={slot.photo.w} height={slot.photo.h} /></noscript></div>}<div class="conf-title">{slot.url ? <a href={slot.url}>{slot.title}</a> : slot.title}</div>{slot.speaker && <div class="conf-speaker">{slot.speaker}</div>}{slot.description && <div class="conf-desc">{slot.description}</div>}</div></div>)}</div>
+  <div class="conf-agenda">
+    {(data.agenda || []).map((slot: any) => (
+      <div class:list={["conf-slot", slot.break && "conf-break"]}>
+        <div class="conf-time">{slot.time}</div>
+        <div class="conf-detail">
+          {slot.photos && (
+            <div class="conf-panel-photos">
+              {slot.photos.map((p: any) => (
+                <noscript><img src={p.src} alt={p.alt} width={p.w} height={p.h} /></noscript>
+              ))}
+            </div>
+          )}
+          {slot.photo ? (
+            <div class="conf-detail-with-photo">
+              <noscript><img src={slot.photo.src} alt={slot.photo.alt} width={slot.photo.w} height={slot.photo.h} /></noscript>
+              <div class="conf-detail-text">
+                <div class="conf-title">{slot.url ? <a href={slot.url}>{slot.title}</a> : slot.title}</div>
+                {slot.speaker && <div class="conf-speaker">{slot.speaker}</div>}
+                {slot.description && <div class="conf-desc">{slot.description}</div>}
+              </div>
+            </div>
+          ) : (
+            <>
+              <div class="conf-title">{slot.url ? <a href={slot.url}>{slot.title}</a> : slot.title}</div>
+              {slot.speaker && <div class="conf-speaker">{slot.speaker}</div>}
+              {slot.description && <div class="conf-desc">{slot.description}</div>}
+            </>
+          )}
+        </div>
+      </div>
+    ))}
+  </div>
   <Fragment set:html={page.html} />
   {data.packs_title && <h2>{data.packs_title}</h2>}
   {data.packs_intro && <p style="font-size: 0.95rem">{data.packs_intro} <a href={data.packs_link_url}>{data.packs_link_text}</a>{data.packs_period}</p>}
   <div class="conf-packs-condensed">{(data.packs || []).map((pack: any) => <a href={pack.url}><strong>{pack.num}</strong> {pack.name}</a>)}</div>
-  {data.overview_image && <div class="conf-diagram"><noscript><img src={data.overview_image.src} alt={data.overview_image.alt} width={data.overview_image.w} height={data.overview_image.h} loading="lazy" decoding="async" /></noscript></div>}
+  {data.overview_image && (
+    <div class="conf-diagram">
+      <noscript><img src={data.overview_image.src} alt={data.overview_image.alt} width={data.overview_image.w} height={data.overview_image.h} loading="lazy" decoding="async" /></noscript>
+    </div>
+  )}
 </main>
 <PartnerColophon lang={page.data.lang} />
 <script is:inline type="application/ld+json" set:html={JSON.stringify(eventLd)}></script>
-<script is:inline>
-function jumpToHash(){if(window.__userMoved||location.hash.length<2)return;var id;try{id=decodeURIComponent(location.hash.slice(1))}catch(e){id=location.hash.slice(1)}var target=document.getElementById(id);if(target)target.scrollIntoView()}window.addEventListener('load',jumpToHash);(window.__avif||Promise.resolve(false)).then(function(ok){document.querySelectorAll('noscript').forEach(function(ns){var html=ns.textContent;if(!html||html.indexOf('<img ')===-1)return;if(ok)html=html.replace(/\.(jpg|png)(?=["'\s])/g,'.avif').replace(/\sloading=["']lazy["']/gi,'').replace(/\sdecoding=["']async["']/gi,'');var tmp=document.createElement('div');tmp.innerHTML=html;var img=tmp.querySelector('img');if(img)ns.parentNode.insertBefore(img,ns)});jumpToHash()});
-</script>
+<ClientScripts page={page} />
 </body>
 </html>

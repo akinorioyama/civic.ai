@@ -9,8 +9,8 @@ nav_prev:
     url: "/tw/faq/"
     text: "常見問題"
 nav_next:
-    url: "/tw/map/"
-    text: "概念地圖"
+    url: "/tw/measures/#map"
+    text: "地圖與衡量指標"
 ---
 
 <!-- astro:glossary-list -->

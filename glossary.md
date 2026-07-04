@@ -9,8 +9,8 @@ nav_prev:
     url: "/faq/"
     text: "FAQ"
 nav_next:
-    url: "/map/"
-    text: "Concept Map"
+    url: "/measures/#map"
+    text: "Map & Measures"
 ---
 
 <!-- astro:glossary-list -->

@@ -69,8 +69,7 @@ Six design principles translate care ethics into something institutions can buil
 - **[Pack 4: Responsiveness](/4/)** — whether affected people can contest outcomes and force repair.
 - **[Pack 5: Solidarity](/5/)** — whether the ecosystem rewards cooperation, exit, and public accountability over lock-in.
 - **[Pack 6: Symbiosis](/6/)** — whether the system stays bounded, local, and sunset-ready instead of hardening into permanent rule.
-- **[Measures](/measures/)** — one headline public measure per pack, with supporting diagnostics.
-- **[Concept map](/map/)** — the whole system on one clickable page: packs, measures, and handoffs.
+- **[Map & Measures](/measures/#map)** — the whole framework on one clickable map, followed by one headline public measure per pack and supporting diagnostics.
 
 ## Four proof points
 

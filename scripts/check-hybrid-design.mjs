@@ -26,11 +26,19 @@ function expectExcludes(name, html, needle) {
         throw new Error(`${name} unexpectedly contains ${needle}`);
 }
 
+function expectMissingBuilt(name, path) {
+    checks.push(`${name}: missing ${path}`);
+    if (existsSync(builtPath(path)))
+        throw new Error(`${name} unexpectedly exists at ${path}`);
+}
+
 const home = readBuilt("index.html");
 const zhHome = readBuilt("tw/index.html");
 const manifesto = readBuilt("manifesto/index.html");
 const pack = readBuilt("1/index.html");
 const conference = readBuilt("conference/index.html");
+const measures = readBuilt("measures/index.html");
+const zhMeasures = readBuilt("tw/measures/index.html");
 const config = readFileSync("astro.config.mjs", "utf8");
 const styles = readFileSync("styles.css", "utf8");
 
@@ -63,6 +71,27 @@ for (const [name, html] of [
     expectIncludes(name, html, "favicon.ico");
     expectIncludes(name, html, "nav-label-short");
 }
+
+expectIncludes("home nav map link", home, 'href="/measures/#map"');
+expectIncludes("zh home nav map link", zhHome, 'href="/tw/measures/#map"');
+expectIncludes("measures title", measures, "Map &amp; Measures");
+expectIncludes("measures map anchor", measures, 'id="map"');
+expectIncludes("measures concept map", measures, 'class="cmap"');
+expectIncludes("measures map frames packs", measures, 'href="/1/"');
+expectIncludes(
+    "measures map links metrics",
+    measures,
+    'href="/measures/#representation-gap"'
+);
+expectIncludes("zh measures map anchor", zhMeasures, 'id="map"');
+expectIncludes("zh measures concept map", zhMeasures, 'class="cmap"');
+expectIncludes(
+    "zh measures map links metrics",
+    zhMeasures,
+    'href="/tw/measures/#representation-gap"'
+);
+expectMissingBuilt("standalone map route", "map/index.html");
+expectMissingBuilt("standalone zh map route", "tw/map/index.html");
 
 expectIncludes("theme preflight", home, "dataset.theme");
 expectIncludes("theme script", home, "data-theme-toggle");

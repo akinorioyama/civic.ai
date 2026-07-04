@@ -1,8 +1,8 @@
 ---
 layout: chapter
-title: "Measures"
-meta_description: "One headline public measure per pack, with supporting diagnostics — how to tell whether a Civic AI deployment really embodies the 6-Pack of Care."
-summary: "One headline public measure per pack, plus supporting diagnostics — a practical way to tell whether a Civic AI deployment really lives the 6-Pack of Care. The metrics aim at sufficiency, not maximisation: cross the community's 'good enough' threshold rather than chase a totalising score."
+title: "Map & Measures"
+meta_description: "A visual map of the whole 6-Pack of Care, followed by one headline public measure per pack and supporting diagnostics for Civic AI deployments."
+summary: "A visual map of the 6-Pack of Care, plus one headline public measure per pack and supporting diagnostics. The map shows the framework: pack chapters, handoffs, the solidarity field, and the symbiosis boundary. The measures then turn that framework into public tests designed for sufficiency, not maximisation."
 lang: en-gb
 alt_lang_url: "/tw/measures"
 permalink: "/measures/"
@@ -14,9 +14,19 @@ nav_next:
     text: "FAQ"
 ---
 
-Each pack answers a distinct question. Packs 1-4 form a feedback loop — the care cycle (Attentiveness → Responsibility → Competence → Responsiveness). Pack 5 scales that loop across organisations. Pack 6 is the boundary condition that keeps every deployment local, plural, and sunset-ready. To preserve the public promise of one headline public measure per pack, each pack has one headline public measure plus supporting diagnostics.
+Start with the map: Packs 1-4 form the care cycle, Pack 5 scales that cycle across organisations, and Pack 6 is the boundary condition that keeps every deployment local, plural, and sunset-ready. The map is the framework index — pack stations open their chapters, measure links land on the audit rows below, and handoffs show what each phase gives the next.
+
+Each pack then answers a distinct public audit question. To preserve the public promise of one headline public measure per pack, each pack has one headline public measure plus supporting diagnostics.
 
 **These metrics are designed for sufficiency, not maximisation.** Each deployment context defines a threshold — "good enough" for that community. Crossing the threshold is the goal; score-chasing beyond it risks the same metric gaming the 6-Pack warns against. A headline measure is a public test, not a totalising score.
+
+<span id="map"></span>
+
+### Framework map
+
+<!-- astro:concept-map -->
+
+Prefer it as one picture? The [poster version (SVG)](/img/concept-map.svg) is still there. The map is generated from [concept_map.json](https://github.com/audreyt/6pack.care/blob/main/_data/concept_map.json); corrections welcome by pull request.
 
 ### Headline public measures
 
