@@ -12,10 +12,11 @@ nav_prev:
 nav_next:
     url: "/"
     text: "Home"
+page_class: "map-page"
 ---
 
 Every pack, measure, and handoff on one page. Every box is a link: packs open their chapters, measures land on their rows in the [measures table](/measures/), and the outer boundary is [Pack 6](/6/) itself — the membrane that keeps the whole system bounded, plural, and sunset-ready.
 
-<div class="concept-map"><object type="image/svg+xml" data="/img/concept-map.svg?v=2" style="aspect-ratio:2282/2530" aria-label="Concept map of the 6-Pack of Care" title="The 6-Pack of Care, mapped">The concept map requires SVG support. See the [measures page](/measures/) for the same system as a table.</object></div>
+<!-- astro:concept-map -->
 
-The map is generated from [concept-map.d2](https://github.com/audreyt/civic.ai/blob/main/concept-map.d2); corrections welcome by pull request.
+Prefer it as one picture? The [poster version (SVG)](/img/concept-map.svg) is still there. This page is generated from [concept_map.json](https://github.com/audreyt/civic.ai/blob/main/_data/concept_map.json); corrections welcome by pull request.

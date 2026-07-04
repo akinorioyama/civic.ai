@@ -1,0 +1,320 @@
+{
+    "aria": {
+        "en": "Concept map of the 6-Pack of Care",
+        "tw": "關懷六力概念地圖"
+    },
+    "cycleLabel": {
+        "en": "The care cycle — Packs 1–4",
+        "tw": "關懷循環——第一至四力"
+    },
+    "fieldLabel": {
+        "en": "The field between deployments",
+        "tw": "組織之間的場域"
+    },
+    "measureLabel": {
+        "en": "headline measure",
+        "tw": "公開主指標"
+    },
+    "handsLabel": {
+        "en": "hands to",
+        "tw": "交給"
+    },
+    "loopLabel": {
+        "en": "back to Pack 1",
+        "tw": "回到覺察力"
+    },
+    "membrane": {
+        "num": 6,
+        "slug": "6",
+        "hue": "#77465f",
+        "phase": {
+            "en": "Sunset",
+            "tw": "落"
+        },
+        "title": {
+            "en": "Pack 6 · Symbiosis — the boundary in time",
+            "tw": "六 · 共生力——時間的邊界"
+        },
+        "chip": {
+            "en": "6 · Symbiosis",
+            "tw": "六 · 共生力"
+        },
+        "measure": {
+            "anchor": "exit-readiness",
+            "name": {
+                "en": "Exit readiness",
+                "tw": "退出就緒度"
+            }
+        }
+    },
+    "packs": [
+        {
+            "num": 1,
+            "slug": "1",
+            "hue": "#b0803c",
+            "inkLight": "#976d33",
+            "inkDark": "#b38442",
+            "phase": {
+                "en": "First light",
+                "tw": "曉"
+            },
+            "chip": {
+                "en": "1 · Attentiveness",
+                "tw": "一 · 覺察力"
+            },
+            "title": {
+                "en": "Pack 1 · Attentiveness",
+                "tw": "一 · 覺察力"
+            },
+            "measure": {
+                "anchor": "representation-gap",
+                "name": {
+                    "en": "Representation gap",
+                    "tw": "代表性落差"
+                }
+            }
+        },
+        {
+            "num": 2,
+            "slug": "2",
+            "hue": "#96482b",
+            "inkLight": "#96482b",
+            "inkDark": "#b6806b",
+            "phase": {
+                "en": "Morning",
+                "tw": "朝"
+            },
+            "chip": {
+                "en": "2 · Responsibility",
+                "tw": "二 · 負責力"
+            },
+            "title": {
+                "en": "Pack 2 · Responsibility",
+                "tw": "二 · 負責力"
+            },
+            "measure": {
+                "anchor": "promise-fidelity",
+                "name": {
+                    "en": "Promise fidelity",
+                    "tw": "承諾保真度"
+                }
+            }
+        },
+        {
+            "num": 3,
+            "slug": "3",
+            "hue": "#4f6b33",
+            "inkLight": "#4f6b33",
+            "inkDark": "#7f936a",
+            "phase": {
+                "en": "Noon",
+                "tw": "午"
+            },
+            "chip": {
+                "en": "3 · Competence",
+                "tw": "三 · 勝任力"
+            },
+            "title": {
+                "en": "Pack 3 · Competence",
+                "tw": "三 · 勝任力"
+            },
+            "measure": {
+                "anchor": "verified-execution-rate",
+                "name": {
+                    "en": "Verified execution rate",
+                    "tw": "經驗證的執行率"
+                }
+            }
+        },
+        {
+            "num": 4,
+            "slug": "4",
+            "hue": "#2e6763",
+            "inkLight": "#2e6763",
+            "inkDark": "#6c9491",
+            "phase": {
+                "en": "Afternoon rain",
+                "tw": "霖"
+            },
+            "chip": {
+                "en": "4 · Responsiveness",
+                "tw": "四 · 回應力"
+            },
+            "title": {
+                "en": "Pack 4 · Responsiveness",
+                "tw": "四 · 回應力"
+            },
+            "measure": {
+                "anchor": "trust-under-loss",
+                "name": {
+                    "en": "Trust-under-loss",
+                    "tw": "失利下的信任"
+                }
+            }
+        },
+        {
+            "num": 5,
+            "slug": "5",
+            "hue": "#3f4e82",
+            "inkLight": "#3f4e82",
+            "inkDark": "#828cad",
+            "phase": {
+                "en": "Dusk",
+                "tw": "暮"
+            },
+            "chip": {
+                "en": "5 · Solidarity",
+                "tw": "五 · 團結力"
+            },
+            "title": {
+                "en": "Pack 5 · Solidarity",
+                "tw": "五 · 團結力"
+            },
+            "measure": {
+                "anchor": "uncommon-ground-index",
+                "name": {
+                    "en": "Uncommon-ground index",
+                    "tw": "罕見共識指數"
+                }
+            }
+        }
+    ],
+    "handoffs": [
+        {
+            "from": 1,
+            "to": 2,
+            "kind": "cycle",
+            "cargo": {
+                "en": "who, what, why + rights flags",
+                "tw": "誰、什麼、為什麼＋權利旗標"
+            }
+        },
+        {
+            "from": 2,
+            "to": 3,
+            "kind": "cycle",
+            "cargo": {
+                "en": "specs, SLAs, brakes",
+                "tw": "規格、SLA、煞車"
+            }
+        },
+        {
+            "from": 3,
+            "to": 4,
+            "kind": "cycle",
+            "cargo": {
+                "en": "traces, incidents",
+                "tw": "軌跡與事件"
+            }
+        },
+        {
+            "from": 4,
+            "to": 1,
+            "kind": "cycle",
+            "night": true,
+            "cargo": {
+                "en": "new needs restart the cycle",
+                "tw": "新需求重啟循環"
+            }
+        },
+        {
+            "from": 2,
+            "to": 4,
+            "kind": "chord",
+            "cargo": {
+                "en": "remedies wired before launch",
+                "tw": "補救在上線前接妥"
+            }
+        },
+        {
+            "from": 1,
+            "to": 3,
+            "kind": "chord",
+            "dashed": true,
+            "cargo": {
+                "en": "caution areas become safe-to-fail trials",
+                "tw": "高風險區成為安全試錯的試驗"
+            }
+        },
+        {
+            "from": 1,
+            "to": 5,
+            "kind": "field",
+            "cargo": {
+                "en": "bridging map hands over the terrain",
+                "tw": "搭橋地圖交出地形"
+            }
+        },
+        {
+            "from": 2,
+            "to": 5,
+            "kind": "field",
+            "cargo": {
+                "en": "portability + exit clauses in every contract",
+                "tw": "每份契約都寫入可攜與退出條款"
+            }
+        },
+        {
+            "from": 4,
+            "to": 5,
+            "kind": "field",
+            "cargo": {
+                "en": "repair culture builds cross-org trust",
+                "tw": "修復文化促進跨組織信任"
+            }
+        },
+        {
+            "from": 5,
+            "to": 6,
+            "kind": "membrane",
+            "edge": "bottom",
+            "cargo": {
+                "en": "treaties, IDs, portability make symbiosis feasible",
+                "tw": "條約、身分與可攜性使共生可行"
+            }
+        },
+        {
+            "from": 3,
+            "to": 6,
+            "kind": "membrane",
+            "edge": "bottom",
+            "cargo": {
+                "en": "competent, responsive systems earn stewardship",
+                "tw": "勝任且有回應的系統才能贏得管理權"
+            }
+        },
+        {
+            "from": 6,
+            "to": 1,
+            "kind": "membrane",
+            "edge": "top",
+            "cargo": {
+                "en": "retired systems gift maps, evals, records",
+                "tw": "退役的系統將地圖、評測與紀錄贈予公地"
+            }
+        },
+        {
+            "from": 6,
+            "to": 2,
+            "kind": "membrane",
+            "edge": "top",
+            "both": true,
+            "cargo": {
+                "en": "bounds and sunsets are contractual",
+                "tw": "界限與退場期限是契約性的"
+            }
+        }
+    ],
+    "guard": {
+        "en": "Pack 6 keeps each pack from its negation — surveillance · contractual trap · indispensability · dependency-as-care · uncontrolled infrastructure — and guards itself: symbiosis without service continuity becomes abandonment.",
+        "tw": "共生力防止各力走向自身的反面：監控 · 契約陷阱 · 不可或缺 · 假扮關懷的依賴 · 無人控制的基礎設施——也守著自己：少了服務延續的共生，會成為以純粹為名的遺棄。"
+    },
+    "legend": {
+        "en": "Each pack descends in layers: closing image → pattern → buildable tools → named instruments → diagnostics → one headline measure.",
+        "tw": "每一力逐層而下：結語意象 → 模式 → 可建置工具 → 具名工具 → 診斷 → 一項公開主指標。"
+    },
+    "legendUrl": {
+        "en": "/measures/#named-instruments",
+        "tw": "/tw/measures/#具名工具"
+    }
+}

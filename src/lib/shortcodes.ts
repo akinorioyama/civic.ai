@@ -1,4 +1,5 @@
 import type { PageRecord } from "./pages";
+import { renderConceptMap } from "./conceptMap";
 import { comics, glossary, lang2, openclawBootstrap, paths } from "./site";
 
 function escapeHtml(value: unknown): string {
@@ -29,6 +30,10 @@ export function expandShortcodes(
         .replaceAll(
             "<!-- astro:glossary-list -->",
             renderGlossaryList(page.data.lang)
+        )
+        .replaceAll(
+            "<!-- astro:concept-map -->",
+            renderConceptMap(page.data.lang)
         )
         .replaceAll(
             "<!-- astro:openclaw-raw-skill-note en -->",

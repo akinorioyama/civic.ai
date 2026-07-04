@@ -46,6 +46,32 @@ function scanGlossary(path) {
     }
 }
 
+function scanTwValues(path, label) {
+    const walk = (node, trail) => {
+        if (typeof node === "string") {
+            if (trail.endsWith(".tw") || trail === "tw") {
+                for (const m of node.matchAll(PATTERN)) {
+                    const from = Math.max(0, m.index - 12);
+                    offenders.push(
+                        `${label}#${trail} …${node.slice(from, m.index + m[0].length + 12)}…`
+                    );
+                }
+            }
+            return;
+        }
+        if (Array.isArray(node)) {
+            node.forEach((item, i) => walk(item, `${trail}[${i}]`));
+            return;
+        }
+        if (node && typeof node === "object") {
+            for (const [key, value] of Object.entries(node)) {
+                walk(value, trail ? `${trail}.${key}` : key);
+            }
+        }
+    };
+    walk(JSON.parse(readFileSync(path, "utf8")), "");
+}
+
 const fileArgs = process.argv.slice(2).filter((a) => !a.startsWith("--"));
 const targets =
     fileArgs.length > 0
@@ -55,6 +81,7 @@ const targets =
               .map((f) => join(ROOT, f))
               .concat(
                   join(ROOT, "_data/glossary.json"),
+                  join(ROOT, "_data/concept_map.json"),
                   join(ROOT, "concept-map-tw.d2")
               );
 
@@ -62,6 +89,8 @@ for (const file of targets) {
     const name = basename(file);
     if (name === "glossary.json") {
         scanGlossary(file);
+    } else if (name === "concept_map.json") {
+        scanTwValues(file, "_data/concept_map.json");
     } else if (
         (name.startsWith("tw-") && name.endsWith(".md")) ||
         name.endsWith("-tw.d2")
