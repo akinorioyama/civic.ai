@@ -65,16 +65,43 @@ jobs:
         if: github.event_name != 'pull_request'
         environment:
             name: github-pages
-            url: ${{ steps.deployment.outputs.page_url || steps.deployment-retry.outputs.page_url }}
+            url: ${{ steps.deployment.outputs.page_url || steps.deployment-retry-1.outputs.page_url || steps.deployment-retry-2.outputs.page_url || steps.deployment-retry-3.outputs.page_url }}
         runs-on: ubuntu-latest
         needs: build
         steps:
+            # GitHub Pages deployments intermittently return
+            # "Deployment failed, try again later." Wait between attempts so
+            # transient Pages-side state can settle before retrying.
             - name: Deploy to GitHub Pages
               id: deployment
               uses: actions/deploy-pages@v4
               continue-on-error: true
 
-            - name: Deploy to GitHub Pages (retry)
-              id: deployment-retry
+            - name: Wait before deploy retry 1
               if: steps.deployment.outcome == 'failure'
+              run: sleep 30
+
+            - name: Deploy to GitHub Pages (retry 1)
+              id: deployment-retry-1
+              if: steps.deployment.outcome == 'failure'
+              uses: actions/deploy-pages@v4
+              continue-on-error: true
+
+            - name: Wait before deploy retry 2
+              if: steps.deployment-retry-1.outcome == 'failure'
+              run: sleep 60
+
+            - name: Deploy to GitHub Pages (retry 2)
+              id: deployment-retry-2
+              if: steps.deployment-retry-1.outcome == 'failure'
+              uses: actions/deploy-pages@v4
+              continue-on-error: true
+
+            - name: Wait before deploy retry 3
+              if: steps.deployment-retry-2.outcome == 'failure'
+              run: sleep 120
+
+            - name: Deploy to GitHub Pages (retry 3)
+              id: deployment-retry-3
+              if: steps.deployment-retry-2.outcome == 'failure'
               uses: actions/deploy-pages@v4
