@@ -3992,22 +3992,35 @@ h4[id] {
    progressive enhancement over plain readable HTML. */
 
 .cmap {
-    --cmap-p6: #77465f;
+    --cmap-p6: #a753f6;
     margin-block: 1.5rem;
 }
 
-.cmap :is(.cmap-station, .cmap-chip, .cmap-badge, .cmap-frame-title) {
+.cmap
+    :is(
+        .cmap-station,
+        .cmap-chip,
+        .cmap-field-chip,
+        .cmap-badge,
+        .cmap-frame-title
+    ) {
     --ink: var(--ink-l);
 }
 
 html[data-theme="dark"]
     .cmap
-    :is(.cmap-station, .cmap-chip, .cmap-badge, .cmap-frame-title) {
+    :is(
+        .cmap-station,
+        .cmap-chip,
+        .cmap-field-chip,
+        .cmap-badge,
+        .cmap-frame-title
+    ) {
     --ink: var(--ink-d);
 }
 
 html[data-theme="dark"] .cmap {
-    --cmap-p6: #83576d;
+    --cmap-p6: #a753f6;
 }
 
 /* ── the membrane frame: Pack 6 drawn as what it is ── */
@@ -4144,37 +4157,44 @@ html[data-theme="dark"] .cmap {
     white-space: nowrap;
 }
 
-.cmap-chip:hover {
-    background: color-mix(in srgb, var(--hue) 12%, var(--surface));
+.cmap-field-dock {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
 }
 
-.cmap-chip-num {
-    display: none;
-}
-
-.cmap-nightlabel {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    font-size: 0.68rem;
-    letter-spacing: 0.08em;
-    color: var(--muted);
+.cmap-field-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1.5px solid var(--hue);
+    border-radius: 999px;
+    padding: 0.28em 0.7em;
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    text-decoration: none;
     white-space: nowrap;
 }
 
-.cmap-caption {
-    margin-top: 0.5rem;
-    text-align: center;
-    font-size: 0.78rem;
+.cmap-field-note {
+    margin: 0;
+    max-width: 13rem;
     color: var(--muted);
-    min-height: 1.4em;
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
 }
 
-.cmap-cap {
-    display: none;
-}
-
-.cmap-cap-idle {
-    display: inline;
+.cmap-chip:hover,
+.cmap-field-chip:hover {
+    background: color-mix(in srgb, var(--hue) 12%, var(--surface));
 }
 
 /* ── stations: the readable manifest ── */
@@ -4274,17 +4294,17 @@ html[data-theme="dark"] .cmap {
 
 .cmap-badge {
     flex: none;
-    display: inline-grid;
-    place-items: center;
-    min-width: 1.6em;
-    height: 1.6em;
-    border: 1.5px solid var(--hue);
-    border-radius: 999px;
-    font-size: 0.75rem;
-    font-weight: 700;
+    display: inline-block;
     color: var(--ink);
+    font-size: 1.35em;
+    font-weight: 700;
+    line-height: 1;
     text-decoration: none;
-    padding-inline: 0.2em;
+}
+
+.cmap-badge-glyph {
+    display: inline-block;
+    color: var(--ink);
 }
 
 .cmap-badge:hover {
@@ -4292,7 +4312,9 @@ html[data-theme="dark"] .cmap {
 }
 
 .cmap-send--dashed .cmap-badge {
-    border-style: dashed;
+    border: 1.5px dashed var(--ink);
+    border-radius: 999px;
+    padding: 0.06em;
 }
 
 .cmap-hand {
@@ -4364,12 +4386,12 @@ html[data-theme="dark"] .cmap {
         border-radius: 2px;
         background: linear-gradient(
             180deg,
-            #b0803c 0%,
-            #96482b 24%,
-            #4f6b33 46%,
-            #2e6763 64%,
-            #3f4e82 84%,
-            #77465f 100%
+            #eb573a 0%,
+            #f09344 24%,
+            #f9dd55 46%,
+            #7cc967 64%,
+            #6197f8 84%,
+            #a753f6 100%
         );
     }
 
@@ -4379,16 +4401,17 @@ html[data-theme="dark"] .cmap {
 }
 
 @media (max-width: 479px) {
-    .cmap-chip-name {
-        display: none;
-    }
-
-    .cmap-chip {
+    .cmap-chip--cycle {
         padding: 0.3em 0.55em;
     }
 
-    .cmap-chip-num {
-        display: inline;
+    .cmap-chip--cycle .cmap-chip-name {
+        font-size: 0;
+    }
+
+    .cmap-chip--cycle .cmap-chip-name::before {
+        content: attr(data-short);
+        font-size: 0.72rem;
     }
 }
 
@@ -4473,32 +4496,6 @@ html[data-theme="dark"] .cmap {
 
 /* ── hover/focus illumination: ask a pack what it sends ── */
 
-.cmap:has(.cmap-chip-1:is(:hover, :focus-visible)) .cmap-cap-1,
-.cmap:has(.cmap-chip-2:is(:hover, :focus-visible)) .cmap-cap-2,
-.cmap:has(.cmap-chip-3:is(:hover, :focus-visible)) .cmap-cap-3,
-.cmap:has(.cmap-chip-4:is(:hover, :focus-visible)) .cmap-cap-4,
-.cmap:has(.cmap-chip-5:is(:hover, :focus-visible)) .cmap-cap-5,
-.cmap:has(#st-p1:is(:hover, :focus-within)) .cmap-cap-1,
-.cmap:has(#st-p2:is(:hover, :focus-within)) .cmap-cap-2,
-.cmap:has(#st-p3:is(:hover, :focus-within)) .cmap-cap-3,
-.cmap:has(#st-p4:is(:hover, :focus-within)) .cmap-cap-4,
-.cmap:has(#st-p5:is(:hover, :focus-within)) .cmap-cap-5 {
-    display: inline;
-}
-
-.cmap:has(.cmap-chip-1:is(:hover, :focus-visible)) .cmap-cap-idle,
-.cmap:has(.cmap-chip-2:is(:hover, :focus-visible)) .cmap-cap-idle,
-.cmap:has(.cmap-chip-3:is(:hover, :focus-visible)) .cmap-cap-idle,
-.cmap:has(.cmap-chip-4:is(:hover, :focus-visible)) .cmap-cap-idle,
-.cmap:has(.cmap-chip-5:is(:hover, :focus-visible)) .cmap-cap-idle,
-.cmap:has(#st-p1:is(:hover, :focus-within)) .cmap-cap-idle,
-.cmap:has(#st-p2:is(:hover, :focus-within)) .cmap-cap-idle,
-.cmap:has(#st-p3:is(:hover, :focus-within)) .cmap-cap-idle,
-.cmap:has(#st-p4:is(:hover, :focus-within)) .cmap-cap-idle,
-.cmap:has(#st-p5:is(:hover, :focus-within)) .cmap-cap-idle {
-    display: none;
-}
-
 .cmap:has(#st-p1:is(:hover, :focus-within)) .cmap-arc-1,
 .cmap:has(.cmap-chip-1:is(:hover, :focus-visible)) .cmap-arc-1,
 .cmap:has(#st-p2:is(:hover, :focus-within)) .cmap-arc-2,
@@ -4546,23 +4543,23 @@ html[data-theme="dark"] .cmap {
 /* ── dark scheme: lantern-tuned strokes ── */
 
 html[data-theme="dark"] .cmap-arc-1 {
-    stroke: #b38442;
+    stroke: #eb573a;
 }
 
 html[data-theme="dark"] .cmap-arc-2 {
-    stroke: #b6806b;
+    stroke: #f09344;
 }
 
 html[data-theme="dark"] .cmap-arc-3 {
-    stroke: #7f936a;
+    stroke: #f9dd55;
 }
 
 html[data-theme="dark"] .cmap-arc-4 {
-    stroke: #6c9491;
+    stroke: #7cc967;
 }
 
 html[data-theme="dark"] .cmap-arc-5 {
-    stroke: #828cad;
+    stroke: #6197f8;
 }
 
 /* ── motion: only ever confirms something the reader did ── */

@@ -26,7 +26,7 @@
     "membrane": {
         "num": 6,
         "slug": "6",
-        "hue": "#77465f",
+        "hue": "#a753f6",
         "phase": {
             "en": "Sunset",
             "tw": "落"
@@ -45,15 +45,17 @@
                 "en": "Exit readiness",
                 "tw": "退出就緒度"
             }
-        }
+        },
+        "inkLight": "#7d35bc",
+        "inkDark": "#a753f6"
     },
     "packs": [
         {
             "num": 1,
             "slug": "1",
-            "hue": "#b0803c",
-            "inkLight": "#976d33",
-            "inkDark": "#b38442",
+            "hue": "#eb573a",
+            "inkLight": "#b6422d",
+            "inkDark": "#eb573a",
             "phase": {
                 "en": "First light",
                 "tw": "曉"
@@ -77,9 +79,9 @@
         {
             "num": 2,
             "slug": "2",
-            "hue": "#96482b",
-            "inkLight": "#96482b",
-            "inkDark": "#b6806b",
+            "hue": "#f09344",
+            "inkLight": "#9a5a22",
+            "inkDark": "#f09344",
             "phase": {
                 "en": "Morning",
                 "tw": "朝"
@@ -103,9 +105,9 @@
         {
             "num": 3,
             "slug": "3",
-            "hue": "#4f6b33",
-            "inkLight": "#4f6b33",
-            "inkDark": "#7f936a",
+            "hue": "#f9dd55",
+            "inkLight": "#7a6918",
+            "inkDark": "#f9dd55",
             "phase": {
                 "en": "Noon",
                 "tw": "午"
@@ -129,9 +131,9 @@
         {
             "num": 4,
             "slug": "4",
-            "hue": "#2e6763",
-            "inkLight": "#2e6763",
-            "inkDark": "#6c9491",
+            "hue": "#7cc967",
+            "inkLight": "#4f7f42",
+            "inkDark": "#7cc967",
             "phase": {
                 "en": "Afternoon rain",
                 "tw": "霖"
@@ -155,9 +157,9 @@
         {
             "num": 5,
             "slug": "5",
-            "hue": "#3f4e82",
-            "inkLight": "#3f4e82",
-            "inkDark": "#828cad",
+            "hue": "#6197f8",
+            "inkLight": "#3f6fbf",
+            "inkDark": "#6197f8",
             "phase": {
                 "en": "Dusk",
                 "tw": "暮"

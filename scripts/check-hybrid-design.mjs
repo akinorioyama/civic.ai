@@ -90,6 +90,16 @@ expectIncludes(
     zhMeasures,
     'href="/tw/measures/#representation-gap"'
 );
+expectIncludes(
+    "badge glyph ink",
+    styles,
+    ".cmap-badge-glyph {\n    display: inline-block;\n    color: var(--ink);"
+);
+expectIncludes(
+    "dashed badge ink border",
+    styles,
+    ".cmap-send--dashed .cmap-badge {\n    border: 1.5px dashed var(--ink);"
+);
 expectMissingBuilt("standalone map route", "map/index.html");
 expectMissingBuilt("standalone zh map route", "tw/map/index.html");
 

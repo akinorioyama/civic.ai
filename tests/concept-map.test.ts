@@ -71,18 +71,40 @@ describe("renderConceptMap", () => {
 
     test("every pack links to its chapter and measure", () => {
         for (const pack of conceptMap.packs) {
-            expect(en).toContain(`href="/${pack.slug}/"`);
-            expect(tw).toContain(`href="/tw/${pack.slug}/"`);
+            expect(en).toContain(
+                `href="/${pack.slug}/" target="_blank" rel="noopener"`
+            );
+            expect(tw).toContain(
+                `href="/tw/${pack.slug}/" target="_blank" rel="noopener"`
+            );
             expect(en).toContain(`href="/measures/#${pack.measure.anchor}"`);
             expect(tw).toContain(`href="/tw/measures/#${pack.measure.anchor}"`);
+            expect(en).not.toContain(
+                `href="/measures/#${pack.measure.anchor}" target="_blank"`
+            );
+            expect(tw).not.toContain(
+                `href="/tw/measures/#${pack.measure.anchor}" target="_blank"`
+            );
         }
-        expect(en).toContain('href="/6/"');
-        expect(tw).toContain('href="/tw/6/"');
+        expect(en).toContain('href="/6/" target="_blank" rel="noopener"');
+        expect(tw).toContain('href="/tw/6/" target="_blank" rel="noopener"');
         expect(en).toContain('href="/measures/#exit-readiness"');
         expect(en).toContain(`href="${conceptMap.legendUrl.en}"`);
         expect(tw).toContain(`href="${conceptMap.legendUrl.tw}"`);
+        expect(en).toContain('href="#st-p1"');
+        expect(en).not.toContain('href="#st-p1" target="_blank"');
     });
 
+    test("uses the comic-derived pack palette", () => {
+        expect(conceptMap.packs.map((pack) => pack.hue)).toEqual([
+            "#eb573a",
+            "#f09344",
+            "#f9dd55",
+            "#7cc967",
+            "#6197f8",
+        ]);
+        expect(conceptMap.membrane.hue).toBe("#a753f6");
+    });
     test("languages never leak across", () => {
         expect(en).not.toContain("/tw/");
         expect(tw).not.toContain("Pack 1");
@@ -96,10 +118,36 @@ describe("renderConceptMap", () => {
         expect(tw.split(marker).length).toBe(2);
     });
 
-    test("dial and walk structure is complete", () => {
-        for (const html of [en, tw]) {
+    test("dial separates the four-part care loop from the Pack 5 field", () => {
+        for (const [html, fieldLabel] of [
+            [en, conceptMap.fieldLabel.en],
+            [tw, conceptMap.fieldLabel.tw],
+        ] as const) {
             expect(html.match(/class="cmap-station"/g)?.length).toBe(5);
-            expect(html.match(/class="cmap-chip /g)?.length).toBe(5);
+            expect(html.match(/class="cmap-arc cmap-arc-/g)?.length).toBe(4);
+            expect(html).not.toContain("cmap-arc-5");
+            expect(
+                html.match(/class="cmap-chip cmap-chip--cycle/g)?.length
+            ).toBe(4);
+            expect(html).toContain('class="cmap-field-chip cmap-chip-5"');
+            expect(html).not.toContain('class="cmap-field-label" style=');
+            const fieldChip = html.match(
+                /<a class="cmap-field-chip cmap-chip-5"[\s\S]*?<\/a>/
+            )?.[0];
+            expect(fieldChip).not.toContain("cmap-field-label");
+            expect(fieldChip).not.toContain(fieldLabel);
+            expect(fieldChip).not.toContain("cmap-chip-num");
+            expect(html).toContain('<figcaption class="cmap-field-dock">');
+            expect(html).not.toContain("cmap-caption");
+            expect(html).not.toContain("cmap-cap");
+            expect(html).not.toContain('class="cmap-phase"');
+            expect(html).toMatch(/class="cmap-field-note">[^<]+<\/p>/);
+            expect(html).toContain(fieldLabel);
+            expect(html).toContain('class="cmap-badge-glyph"');
+            expect(html).toContain("①");
+            expect(html).not.toContain(
+                'aria-label="Pack 1 · Attentiveness">1</a>'
+            );
             expect(html.match(/cmap-chord /g)?.length).toBe(2);
             expect(html.match(/cmap-frame-chip"/g)?.length).toBe(4);
             expect(html).toContain("cmap-hand--night");

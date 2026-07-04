@@ -65,9 +65,9 @@ export const DIAL = {
     day: 236,
     chip: 196,
     /** math-convention degrees: 0 = east, 90 = north (screen top) */
-    anchors: { 1: 180, 2: 135, 3: 90, 4: 45, 5: 0 } as Record<number, number>,
+    anchors: { 1: 180, 2: 90, 3: 0, 4: 270 } as Record<number, number>,
     /** half-width of each pack's arc segment, degrees */
-    halfSeg: 19,
+    halfSeg: 38,
 };
 
 export function anchorOf(num: number): number {
@@ -167,6 +167,13 @@ function measureUrl(measure: MeasureRef, zh: boolean): string {
         : `/measures/#${measure.anchor}`;
 }
 
+function mapHrefAttrs(href: string): string {
+    const escaped = escapeHtml(href);
+    return href.includes("#")
+        ? `href="${escaped}"`
+        : `href="${escaped}" target="_blank" rel="noopener"`;
+}
+
 function packVars(pack: PackNode): string {
     const ink = pack.inkLight || pack.hue;
     const inkDark = pack.inkDark || pack.hue;
@@ -189,10 +196,11 @@ function badge(
     const aria = label
         ? ` aria-label="${escapeHtml(`${label}${zh ? "" : " "}${target.title[key]}`)}"`
         : ` aria-label="${escapeHtml(target.title[key])}"`;
-    return `<a class="cmap-badge" href="${packUrl(target, zh)}" style="${packVars(target)}"${aria}>${numeral(target.num, zh)}</a>`;
+    return `<a class="cmap-badge" ${mapHrefAttrs(packUrl(target, zh))} style="${packVars(target)}"${aria}><span class="cmap-badge-glyph" aria-hidden="true">${ENCLOSED_NUMERALS[target.num - 1] ?? numeral(target.num, zh)}</span></a>`;
 }
 
 const TW_NUMERALS = ["一", "二", "三", "四", "五", "六"];
+const ENCLOSED_NUMERALS = ["①", "②", "③", "④", "⑤", "⑥"];
 
 function numeral(num: number, zh: boolean): string {
     return zh ? TW_NUMERALS[num - 1] || String(num) : String(num);
@@ -214,26 +222,16 @@ function renderDial(key: Key, zh: boolean): string {
     parts.push(
         `<line class="cmap-horizon" x1="${fmt(h0.x)}" y1="${fmt(h0.y)}" x2="${fmt(h1.x)}" y2="${fmt(h1.y)}"/>`
     );
-    // Night return: from dusk's end (-19°), clockwise under the bottom, to
-    // dawn's edge (199°). arcPath sweeps clockwise for a0 > a1, but
-    // 341→199 numerically prefers the short way over the top, so join two
-    // sub-arcs through the true bottom (270°) instead.
-    const nightA = arcPath(c, c, day, -halfSeg, -90);
-    const nightB = arcPath(c, c, day, 270, anchorOf(1) + halfSeg);
-    parts.push(
-        `<path class="cmap-night" d="${nightA} ${nightB.replace(/^M [\d.]+ [\d.]+ /, "")}" pathLength="100"/>`
-    );
-    parts.push(
-        `<polygon class="cmap-night-arrow" points="${arrowAt(c, c, day, anchorOf(1) + halfSeg + 3)}"/>`
-    );
-    // day arcs, one per pack, plus cycle arrowheads in the gaps
-    for (const pack of conceptMap.packs) {
+    // The visible ring is the care cycle only: Packs 1–4, closing back to
+    // Pack 1. Pack 5 lives inside the ring as the solidarity field.
+    const cyclePacks = conceptMap.packs.filter((pack) => pack.num <= 4);
+    for (const pack of cyclePacks) {
         const a = anchorOf(pack.num);
         parts.push(
             `<path class="cmap-arc cmap-arc-${pack.num}" d="${arcPath(c, c, day, a + halfSeg, a - halfSeg)}" stroke="${pack.hue}" pathLength="100"/>`
         );
     }
-    for (const gap of [157.5, 112.5, 67.5, 22.5]) {
+    for (const gap of [135, 45, 315, 225]) {
         parts.push(
             `<polygon class="cmap-cycle-arrow" points="${arrowAt(c, c, day, gap)}"/>`
         );
@@ -247,25 +245,17 @@ function renderDial(key: Key, zh: boolean): string {
         );
     }
     parts.push(`</svg>`);
-    // label chips: real links, always-horizontal HTML
-    for (const pack of conceptMap.packs) {
+    // label chips: the four cycle packs sit on the ring; Pack 5 sits inside
+    // the ring as the field between deployments.
+    for (const pack of cyclePacks) {
         const pos = chipPos(anchorOf(pack.num));
         parts.push(
-            `<a class="cmap-chip cmap-chip-${pack.num}" href="${packUrl(pack, zh)}" style="left:${pos.left};top:${pos.top};${packVars(pack)}"><span class="cmap-chip-num">${numeral(pack.num, zh)}</span><span class="cmap-chip-name">${escapeHtml(pack.chip[key])}</span></a>`
+            `<a class="cmap-chip cmap-chip--cycle cmap-chip-${pack.num}" ${mapHrefAttrs(packUrl(pack, zh))} style="left:${pos.left};top:${pos.top};${packVars(pack)}"><span class="cmap-chip-name" data-short="${escapeHtml(numeral(pack.num, zh))}">${escapeHtml(pack.chip[key])}</span></a>`
         );
     }
-    // the field lives under the horizon — the space between deployments
-    const nightPos = chipPos(270, 128);
-    parts.push(
-        `<span class="cmap-nightlabel" style="left:${nightPos.left};top:${nightPos.top}">${escapeHtml(conceptMap.fieldLabel[key])}</span>`
-    );
-    const caps = conceptMap.packs
-        .map(
-            (p) =>
-                `<span class="cmap-cap cmap-cap-${p.num}">${escapeHtml(p.phase[key])} · ${escapeHtml(p.title[key])}</span>`
-        )
-        .join("");
-    return `<figure class="cmap-dial"><div class="cmap-dial-frame">${parts.join("")}</div><figcaption class="cmap-caption"><span class="cmap-cap cmap-cap-idle">${escapeHtml(conceptMap.membrane.title[key])}</span>${caps}</figcaption></figure>`;
+    const field = byNum(5);
+    const fieldChip = `<a class="cmap-field-chip cmap-chip-5" ${mapHrefAttrs(packUrl(field, zh))} style="${packVars(field)}"><span class="cmap-chip-name">${escapeHtml(field.chip[key])}</span></a>`;
+    return `<figure class="cmap-dial"><div class="cmap-dial-frame">${parts.join("")}</div><figcaption class="cmap-field-dock">${fieldChip}<p class="cmap-field-note">${escapeHtml(conceptMap.fieldLabel[key])}</p></figcaption></figure>`;
 }
 
 // ─── stations ───
@@ -289,7 +279,7 @@ function renderSends(pack: PackNode, key: Key, zh: boolean): string {
 }
 
 function renderStation(pack: PackNode, key: Key, zh: boolean): string {
-    return `<article class="cmap-station" id="st-p${pack.num}" style="${packVars(pack)}" data-pack="${pack.num}"><p class="cmap-phase">${escapeHtml(pack.phase[key])}</p><h3 class="cmap-station-title"><a href="${packUrl(pack, zh)}">${escapeHtml(pack.title[key])}</a></h3><p class="cmap-measure"><a href="${measureUrl(pack.measure, zh)}"><span class="cmap-measure-tag">${escapeHtml(conceptMap.measureLabel[key])}</span>${escapeHtml(pack.measure.name[key])}</a></p>${renderSends(pack, key, zh)}</article>`;
+    return `<article class="cmap-station" id="st-p${pack.num}" style="${packVars(pack)}" data-pack="${pack.num}"><h3 class="cmap-station-title"><a ${mapHrefAttrs(packUrl(pack, zh))}>${escapeHtml(pack.title[key])}</a></h3><p class="cmap-measure"><a ${mapHrefAttrs(measureUrl(pack.measure, zh))}><span class="cmap-measure-tag">${escapeHtml(conceptMap.measureLabel[key])}</span>${escapeHtml(pack.measure.name[key])}</a></p>${renderSends(pack, key, zh)}</article>`;
 }
 
 function cycleHand(from: number): Handoff {
@@ -349,18 +339,18 @@ export function renderConceptMap(lang: string | undefined): string {
     );
     const topChips = top.map((h) => renderFrameChip(h, key, zh)).join("");
     const bottomChips = bottom.map((h) => renderFrameChip(h, key, zh)).join("");
-    const exit = `<li class="cmap-frame-chip cmap-frame-chip--measure"><a href="${measureUrl(membrane.measure, zh)}"><span class="cmap-measure-tag">${escapeHtml(conceptMap.measureLabel[key])}</span>${escapeHtml(membrane.measure.name[key])}</a></li>`;
+    const exit = `<li class="cmap-frame-chip cmap-frame-chip--measure"><a ${mapHrefAttrs(measureUrl(membrane.measure, zh))}><span class="cmap-measure-tag">${escapeHtml(conceptMap.measureLabel[key])}</span>${escapeHtml(membrane.measure.name[key])}</a></li>`;
     return (
         `<div class="cmap" role="group" aria-label="${escapeHtml(conceptMap.aria[key])}">` +
         `<style>@view-transition{navigation:auto}</style>` +
         `<section class="cmap-frame" aria-labelledby="cmap-frame-title">` +
-        `<a class="cmap-frame-title" id="cmap-frame-title" href="${packUrl(membrane, zh)}" style="${packVars(membrane)}">${escapeHtml(membrane.title[key])}</a>` +
+        `<a class="cmap-frame-title" id="cmap-frame-title" ${mapHrefAttrs(packUrl(membrane, zh))} style="${packVars(membrane)}">${escapeHtml(membrane.title[key])}</a>` +
         `<ul class="cmap-frame-chips cmap-frame-chips--top">${topChips}</ul>` +
         `<div class="cmap-body">${renderDial(key, zh)}<div class="cmap-walk">${renderWalk(key, zh)}</div></div>` +
         `<p class="cmap-guard">${escapeHtml(conceptMap.guard[key])}</p>` +
         `<ul class="cmap-frame-chips cmap-frame-chips--bottom">${bottomChips}${exit}</ul>` +
         `</section>` +
-        `<p class="cmap-legend"><a href="${escapeHtml(conceptMap.legendUrl[key])}">${escapeHtml(conceptMap.legend[key])}</a></p>` +
+        `<p class="cmap-legend"><a ${mapHrefAttrs(conceptMap.legendUrl[key])}>${escapeHtml(conceptMap.legend[key])}</a></p>` +
         `</div>`
     );
 }

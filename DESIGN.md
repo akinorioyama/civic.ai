@@ -93,18 +93,18 @@ The palette comes from the project's own materials: field soil, rice paper, moss
 
 All text/ground pairs must clear WCAG 2.2 AA; the exact values above are starting points, tuned under the automated contrast eval (§3, Pack 3) rather than by eye alone.
 
-### 5.3 The six pack hues — a day cycle
+### 5.3 The six pack hues — inherited from the comics
 
-"Governance as a daily capability" becomes literal: packs 1–4 (the care cycle) run dawn → afternoon; pack 5 is dusk, when lights come on together; pack 6 is sunset — the pack that is _about_ being sunset-ready. Then the cycle returns to dawn.
+The canonical pack colours come from the 6-Pack comics. They outrank the earlier day-cycle draft colours because readers already learn the packs through this code. It is acceptable for map and pack UI to keep light chip/card backgrounds even in Lantern mode so these hues remain legible and recognisable.
 
-| Pack | Hue name          | Hex       | Sense                              |
-| ---- | ----------------- | --------- | ---------------------------------- |
-| 1    | 曉 First light    | `#B0803C` | Noticing begins the day            |
-| 2    | 朝 Morning brick  | `#96482B` | Taking up the work; who answers    |
-| 3    | 午 Noon field     | `#4F6B33` | The work itself, done well         |
-| 4    | 霖 Afternoon rain | `#2E6763` | Repair after weather               |
-| 5    | 暮 Dusk market    | `#3F4E82` | Lights coming on together          |
-| 6    | 落 Sunset         | `#77465F` | Bounded, plural, ready to end well |
+| Pack | Comic colour          | Hex       | Use                      |
+| ---- | --------------------- | --------- | ------------------------ |
+| 1    | Red/Attentiveness     | `#EB573A` | Noticing and contest     |
+| 2    | Orange/Responsibility | `#F09344` | Ownership and promises   |
+| 3    | Yellow/Competence     | `#F9DD55` | Execution and capability |
+| 4    | Green/Responsiveness  | `#7CC967` | Repair and response      |
+| 5    | Blue/Solidarity       | `#6197F8` | Cross-group cooperation  |
+| 6    | Purple/Symbiosis      | `#A753F6` | Boundary and handoff     |
 
 Usage is strict duotone: a pack hue may tint its page's eyebrow label, its compass segment, and pull-quote rules — never body text, never backgrounds behind prose, never the page frame. **Oxford blue is not retired; it is constrained.** It appears when the site is explicitly speaking from its institutional home: the index masthead, matching interior masthead/colophon frame rules, formal provenance links, and at most one primary institutional CTA. Pages stay one family; hue is wayfinding, Oxford blue is provenance, neither becomes a theme.
 
@@ -393,13 +393,13 @@ Each phase ships whole (`bun run build` + `check-links` green; parity warnings c
     --harvest: #96762f;
     --rule: #ddd9cb;
 
-    /* Day-cycle pack hues */
-    --pack-1: #b0803c; /* 曉 first light   — attentiveness */
-    --pack-2: #96482b; /* 朝 morning brick — responsibility */
-    --pack-3: #4f6b33; /* 午 noon field    — competence */
-    --pack-4: #2e6763; /* 霖 afternoon rain — responsiveness */
-    --pack-5: #3f4e82; /* 暮 dusk market   — solidarity */
-    --pack-6: #77465f; /* 落 sunset        — symbiosis */
+    /* Comic-derived pack hues */
+    --pack-1: #eb573a; /* red — attentiveness */
+    --pack-2: #f09344; /* orange — responsibility */
+    --pack-3: #f9dd55; /* yellow — competence */
+    --pack-4: #7cc967; /* green — responsiveness */
+    --pack-5: #6197f8; /* blue — solidarity */
+    --pack-6: #a753f6; /* purple — symbiosis */
 
     /* Two voices */
     --prose: "Literata", "Noto Serif TC", "Monlam Bodyig", georgia, serif;
