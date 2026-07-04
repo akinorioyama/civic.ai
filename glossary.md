@@ -9,8 +9,8 @@ nav_prev:
     url: "/faq/"
     text: "FAQ"
 nav_next:
-    url: "/"
-    text: "Home"
+    url: "/map/"
+    text: "Concept Map"
 ---
 
 <dl class="glossary-list">

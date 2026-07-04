@@ -9,8 +9,8 @@ nav_prev:
     url: "/tw/faq/"
     text: "常見問題"
 nav_next:
-    url: "/tw/"
-    text: "首頁"
+    url: "/tw/map/"
+    text: "概念地圖"
 ---
 
 <dl class="glossary-list">

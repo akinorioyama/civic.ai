@@ -1,0 +1,171 @@
+direction: down
+
+vars: {
+  d2-config: {
+    layout-engine: elk
+    theme-id: 0
+  }
+}
+
+classes: {
+  pack: {
+    style: {
+      font-color: "#FFFFFF"
+      stroke: "#211D16"
+      stroke-width: 1
+      border-radius: 4
+      font-size: 18
+      bold: true
+      shadow: false
+    }
+  }
+  measure: {
+    style: {
+      fill: "#FAF9F2"
+      font-color: "#211D16"
+      stroke: "#5A5142"
+      border-radius: 12
+      font-size: 16
+    }
+  }
+  note: {
+    style: {
+      fill: "#FAF9F2"
+      font-color: "#5A5142"
+      stroke: "#8A8272"
+      stroke-dash: 4
+      font-size: 16
+    }
+  }
+  cargo: {
+    style: {
+      stroke: "#5A5142"
+      font-size: 16
+      font-color: "#5A5142"
+    }
+  }
+  seed: {
+    style: {
+      stroke: "#5A5142"
+      stroke-dash: 4
+      font-size: 16
+      font-color: "#5A5142"
+    }
+  }
+}
+
+membrane: "Pack 6 · Symbiosis · 共生力 — the boundary in time · 時間的邊界" {
+  style: {
+    fill: "#F4EEF1"
+    stroke: "#77465F"
+    stroke-width: 2
+    font-color: "#77465F"
+    font-size: 20
+    bold: true
+    border-radius: 8
+  }
+  link: "/6/"
+
+  cycle: "The care cycle · 關懷循環 — Packs 1–4" {
+    style: {
+      fill: "#FAF9F2"
+      stroke: "#8A8272"
+      font-color: "#5A5142"
+      font-size: 17
+      border-radius: 6
+    }
+
+    p1: "Pack 1 · Attentiveness · 覺察力" {
+      class: pack
+      style.fill: "#B0803C"
+      link: "/1/"
+    }
+    p2: "Pack 2 · Responsibility · 負責力" {
+      class: pack
+      style.fill: "#96482B"
+      link: "/2/"
+    }
+    p3: "Pack 3 · Competence · 勝任力" {
+      class: pack
+      style.fill: "#4F6B33"
+      link: "/3/"
+    }
+    p4: "Pack 4 · Responsiveness · 回應力" {
+      class: pack
+      style.fill: "#2E6763"
+      link: "/4/"
+    }
+    m1: "Representation gap\n代表性落差" {
+      class: measure
+      link: "/measures/#representation-gap"
+    }
+    m2: "Promise fidelity\n承諾保真度" {
+      class: measure
+      link: "/measures/#promise-fidelity"
+    }
+    m3: "Verified execution rate\n經驗證的執行率" {
+      class: measure
+      link: "/measures/#verified-execution-rate"
+    }
+    m4: "Trust-under-loss\n失利下的信任" {
+      class: measure
+      link: "/measures/#trust-under-loss"
+    }
+
+    p1 -> p2: "who, what, why + rights flags" { class: cargo }
+    p2 -> p3: "specs, SLAs, brakes" { class: cargo }
+    p3 -> p4: "traces, incidents" { class: cargo }
+    p4 -> p1: "new needs restart the cycle" { class: cargo }
+    p2 -> p4: "remedies wired before launch" { class: cargo }
+    p1 -> p3: "caution areas become safe-to-fail trials" { class: seed }
+    p1 -- m1: { class: seed }
+    p2 -- m2: { class: seed }
+    p3 -- m3: { class: seed }
+    p4 -- m4: { class: seed }
+  }
+
+  field: "The field between deployments · 組織之間" {
+    style: {
+      fill: "#FAF9F2"
+      stroke: "#8A8272"
+      font-color: "#5A5142"
+      font-size: 17
+      border-radius: 6
+    }
+    p5: "Pack 5 · Solidarity · 團結力" {
+      class: pack
+      style.fill: "#3F4E82"
+      link: "/5/"
+    }
+    m5: "Uncommon-ground index\n罕見共識指數" {
+      class: measure
+      link: "/measures/#uncommon-ground-index"
+    }
+    p5 -- m5: { class: seed }
+  }
+
+  m6: "Exit readiness · 退出就緒度" {
+    class: measure
+    link: "/measures/#exit-readiness"
+  }
+
+  guard: "Pack 6 keeps each pack from its negation —\nsurveillance · contractual trap · indispensability ·\ndependency-as-care · uncontrolled infrastructure —\nand guards itself: symbiosis without service\ncontinuity becomes abandonment" {
+    class: note
+  }
+
+  cycle.p1 -> field.p5: "bridging map hands over the terrain" { class: cargo }
+  cycle.p2 -> field.p5: "portability + exit clauses in every contract" { class: cargo }
+  cycle.p4 -> field.p5: "repair culture builds cross-org trust" { class: cargo }
+}
+
+legend: "Each pack descends in layers: closing image → pattern → buildable tools → named instruments → diagnostics → one headline measure" {
+  class: note
+  link: "/measures/#named-instruments"
+  near: bottom-center
+}
+
+membrane.field.p5 -> membrane: "treaties, IDs, portability make symbiosis feasible" { class: cargo }
+membrane.cycle.p3 -> membrane: "competent, responsive systems earn stewardship" { class: cargo }
+membrane -> membrane.cycle.p1: "retired systems gift maps, evals, records" { class: cargo }
+membrane <-> membrane.cycle.p2: "bounds and sunsets are contractual" { class: cargo }
+membrane -- membrane.guard: { class: seed }
