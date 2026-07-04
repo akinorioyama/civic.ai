@@ -61,8 +61,8 @@
         "id": "bridging-based-ranking",
         "term_en": "bridging / bridging-based ranking",
         "term_tw": "搭橋 / 搭橋式排序",
-        "def_en": "An algorithmic approach that rewards content earning cross-group endorsement rather than raw engagement, measured by a bridge index. Platforms using bridging-based ranking — such as X's Community Notes — surface ideas that appeal to otherwise opposed clusters, making overlap rather than outrage the path to algorithmic reach.",
-        "def_tw": "一種演算法方法，以搭橋指數衡量，獎勵獲得跨群體認可的內容，而非單純的互動量。採用搭橋式排序的平台——如 X 平台的社群備註——浮現能同時打動對立群體的想法，使重疊而非憤怒成為演算法觸及的路徑。"
+        "def_en": "An algorithmic approach that rewards content earning cross-group endorsement rather than raw engagement. Platforms using bridging-based ranking — such as X's Community Notes — surface ideas that appeal to otherwise opposed clusters, making overlap rather than outrage the path to algorithmic reach. The 6-Pack's uncommon-ground index (Pack 5) descends from this literature: the same cross-group co-endorsement signal, audited at the level of shared decisions rather than used to rank a feed.",
+        "def_tw": "一種演算法方法，獎勵獲得跨群體認可的內容，而非單純的互動量。採用搭橋式排序的平台——如 X 平台的社群備註——浮現能同時打動對立群體的想法，使重疊而非憤怒成為演算法觸及的路徑。關懷六力的罕見共識指數（Pack 5）正是承接這支文獻：同樣的跨群體共同背書訊號，不用於排序資訊流，而是在共同決策的層級接受稽核。"
     },
     {
         "id": "alignment-assembly",

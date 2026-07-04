@@ -26,7 +26,7 @@ Each pack answers a distinct phase question in the care cycle. Packs 1-5 measure
 | 2 — Responsibility | Did we make the right promises in an enforceable form?   | Promise fidelity        | What share of material obligations are explicitly owned, properly authorised, and kept on their published terms?              |
 | 3 — Competence     | Did we execute correctly?                                | Verified execution rate | What share of audited decisions or releases pass guardrails, include a usable trace, and stay inside release bounds?          |
 | 4 — Responsiveness | Did the care land well, and did repair restore standing? | Trust-under-loss        | After a bad outcome and attempted repair, do affected people report that the system became more trustworthy rather than less? |
-| 5 — Solidarity     | Is the ecosystem structurally fair?                      | Bridge index            | Are shared decisions showing real cross-group participation and co-endorsement, rather than separate silos?                   |
+| 5 — Solidarity     | Are groups acting together across lines?                 | Uncommon-ground index   | Are shared decisions showing real cross-group participation and co-endorsement, rather than separate silos?                   |
 | 6 — Symbiosis      | Can the system stay bounded and still hand off or stop?  | Exit readiness          | Could this system hand over or shut down on schedule without rights loss, continuity failure, or recentralisation?            |
 
 ### Supporting diagnostics
@@ -35,7 +35,7 @@ Each pack answers a distinct phase question in the care cycle. Packs 1-5 measure
 - **Pack 2 — Responsibility.** Named-owner coverage; authority-match rate; adopt-or-explain rate.
 - **Pack 3 — Competence.** Guardrail integrity; trace completeness; canary health; audit overturn rate.
 - **Pack 4 — Responsiveness.** Appeal closure time; repair completion rate; harm recurrence within 90 days.
-- **Pack 5 — Solidarity.** Portability success rate; accountable-identity coverage; federation participation.
+- **Pack 5 — Solidarity.** Portability success rate; accountable-identity coverage; federation participation — the structural conditions that keep co-action freely given rather than captive.
 - **Pack 6 — Symbiosis.** Scope compliance; sunset compliance; ecology diversity; handover rehearsal pass rate.
 
 ### Named instruments
@@ -60,14 +60,15 @@ Each headline measure names not only what it rewards but what it must refuse, so
 - **Promise fidelity (Pack 2).** Rewards promises that are owned and honoured, never promises that are merely well-worded, so a high score requires authority and funding that match the duty rather than language that gestures at it.
 - **Verified execution rate (Pack 3).** Rises only when traces are reconstructable by an independent auditor and canaries are genuinely representative, never when the system passes on easy cases and calls the ceremony proof.
 - **Trust-under-loss (Pack 4).** Counts only when tied to accountable identity and corroborated by an independent signal — a return to the service, a withdrawn appeal, a third party who can attest — never a sentiment a campaign can manufacture, since self-reported trust after a repair can be astroturfed by the very actor who caused the harm.
-- **Bridge index (Pack 5).** Rewards groups that listen across lines, never groups that fall silent, and must be read alongside a floor that protects standing opposition, so it does not pathologise legitimate, sustained disagreement by treating a persistent minority as a failure to engineer away.
+- **Uncommon-ground index (Pack 5).** Rewards groups that listen across lines, never groups that fall silent, and never a room curated into agreement — the index is read against Pack 1's representation gap, because the cheapest way to raise co-endorsement is to exclude whoever would withhold it. A floor protects standing opposition, so the measure does not pathologise legitimate, sustained disagreement by treating a persistent minority as a failure to engineer away.
 - **Exit readiness (Pack 6).** Counts only when a system can hand off or shut down on schedule without rights loss, continuity failure, or recentralisation, never when exit exists only on paper.
 
 ### How to read them
 
 - **Trust is decomposed, not collapsed.** Pack 1 asks whether people were heard. Pack 2 asks whether promises were real. Pack 3 asks whether delivery held up under inspection. Pack 4 asks whether repair worked after harm. Pack 5 asks whether groups can act together fairly. Pack 6 asks whether stewardship can remain bounded over time.
 - **Artefacts are not metrics.** Bridging maps, engagement contracts, repair logs, and exit drills are governance evidence. They matter because they support the headline measures; they are not scores by themselves.
-- **Training signals are not the public audit.** Cross-group endorsement may inform model tuning or routing, but its public, conference-facing role in this framework is the Pack 5 bridge index. Pack 4 owns whether affected people could correct the system and whether repair restored trust.
+- **The map is not the index.** Pack 1's bridging map charts where crossings are possible — who agrees, who clashes, and why, among those present in the record. Pack 5's uncommon-ground index counts the crossings actually made: shared decisions co-endorsed across group lines. Terrain first, then traffic. Composition precedes co-action, so a high index over a wide representation gap measures selection, not solidarity.
+- **Training signals are not the public audit.** Cross-group endorsement may inform model tuning or routing, but its public, conference-facing role in this framework is the Pack 5 uncommon-ground index. Pack 4 owns whether affected people could correct the system and whether repair restored trust.
 - **The record is small and named.** Most strong cases come from places with unusually strong civic infrastructure — thresholds are earned room by room, not inherited from Taiwan or California.
 
 ### Before you call it Civic AI
