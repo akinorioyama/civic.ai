@@ -103,15 +103,15 @@
         "id": "perspective-receipts",
         "term_en": "perspective receipts",
         "term_tw": "觀點收據",
-        "def_en": "The Attentiveness pack's acknowledgement artefact: a receipt that lets each contributor find and correct how their words were represented in the record. Distinct from the civic receipt a decision trace carries for settlement; the buildable instrument is specified on the Measures page.",
-        "def_tw": "覺察力的回條工具：讓每位參與者都能找到並修正自己的話語在紀錄中被代表的方式。有別於決策軌跡為結算而兼作的公民收據；可建置的工具規格見〈衡量指標〉頁。"
+        "def_en": "The Attentiveness pack's acknowledgement artefact: a receipt that lets each contributor find and correct how their words were represented in the record. Distinct from the civic receipt a decision trace carries for settlement; the buildable instrument is specified on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
+        "def_tw": "覺察力的回條工具：讓每位參與者都能找到並修正自己的話語在紀錄中被代表的方式。有別於決策軌跡為結算而兼作的公民收據；可建置的工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。"
     },
     {
         "id": "obligation-ledger",
         "term_en": "obligation ledger",
         "term_tw": "義務帳本",
-        "def_en": "A public, weekly, digitally signed record of what a deployment has committed to deliver and whether it is meeting those commitments — the Responsibility pack's running proof that promises are live, kept by a named participation officer. The instrument specification lives on the Measures page.",
-        "def_tw": "公開、每週、數位簽署的紀錄，寫明部署承諾交付什麼、是否兌現——負責力用來證明承諾仍然有效的動態憑證，由具名的參與官維護。工具規格見〈衡量指標〉頁。"
+        "def_en": "A public, weekly, digitally signed record of what a deployment has committed to deliver and whether it is meeting those commitments — the Responsibility pack's running proof that promises are live, kept by a named participation officer. The instrument specification lives on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
+        "def_tw": "公開、每週、數位簽署的紀錄，寫明部署承諾交付什麼、是否兌現——負責力用來證明承諾仍然有效的動態憑證，由具名的參與官維護。工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。"
     },
     {
         "id": "participation-officer",
@@ -124,22 +124,22 @@
         "id": "shared-eval-registry",
         "term_en": "shared eval registry",
         "term_tw": "共享評測登錄庫",
-        "def_en": "A public, Wikipedia-like registry of versioned, community-authored evaluations: affected people write the tests for harm and repair, and passing them becomes a release gate. Weval.org is the working example; the instrument specification lives on the Measures page.",
-        "def_tw": "公開、類似維基百科的登錄庫，收錄版本化、由社群撰寫的評測：受影響者撰寫損害與修復的測試，通過即成為發布關卡。Weval.org 是可運行的範例；工具規格見〈衡量指標〉頁。"
+        "def_en": "A public, Wikipedia-like registry of versioned, community-authored evaluations: affected people write the tests for harm and repair, and passing them becomes a release gate. Weval.org is the working example; the instrument specification lives on the <a href=\"/measures/#named-instruments\">Measures</a> page.",
+        "def_tw": "公開、類似維基百科的登錄庫，收錄版本化、由社群撰寫的評測：受影響者撰寫損害與修復的測試，通過即成為發布關卡。Weval.org 是可運行的範例；工具規格見〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁。"
     },
     {
         "id": "override-ledger",
         "term_en": "override ledger",
         "term_tw": "否決帳本",
-        "def_en": "A room's plain-text working memory of every time a human said \"no\" to the Kami — evidence that its governance charter is live and the room still holds standing to correct it. Catalogued with the Measures page's named instruments.",
-        "def_tw": "屬於整個房間的純文字工作記憶，記下每一次有人對地神說「不」——證明治理章程仍然有效、房間仍保有糾正它的地位。收錄於〈衡量指標〉頁的具名工具。"
+        "def_en": "A room's plain-text working memory of every time a human said \"no\" to the Kami — evidence that its governance charter is live and the room still holds standing to correct it. Catalogued with the <a href=\"/measures/#named-instruments\">Measures</a> page's named instruments.",
+        "def_tw": "屬於整個房間的純文字工作記憶，記下每一次有人對地神說「不」——證明治理章程仍然有效、房間仍保有糾正它的地位。收錄於〈<a href=\"/tw/measures/#具名工具\">衡量指標</a>〉頁的具名工具。"
     },
     {
         "id": "governance-charter",
         "term_en": "governance charter",
         "term_tw": "治理章程",
-        "def_en": "The first written agreement of a Kami's keepers — a plain-text note answering who holds the machine, how often the SOUL files are reviewed, how changes are agreed, and when the Kami should retire. The first rung of the ladder that matures into the engagement contract; the practice lives on the Set up your own Kami page.",
-        "def_tw": "地神守護者們的第一份書面約定：一張純文字便條，回答誰持有機器、SOUL 檔案多久審查一次、修改如何議定，以及地神何時退役。它是階梯的第一階，成熟之後就是參與契約；實作步驟見〈架設你自己的 Kami〉頁。"
+        "def_en": "The first written agreement of a Kami's keepers — a plain-text note answering who holds the machine, how often the SOUL files are reviewed, how changes are agreed, and when the Kami should retire. The first rung of the ladder that matures into the engagement contract; the practice lives on the <a href=\"/kami/\">Set up your own Kami</a> page.",
+        "def_tw": "地神守護者們的第一份書面約定：一張純文字便條，回答誰持有機器、SOUL 檔案多久審查一次、修改如何議定，以及地神何時退役。它是階梯的第一階，成熟之後就是參與契約；實作步驟見〈<a href=\"/tw/kami/\">架設你自己的 Kami</a>〉頁。"
     },
     {
         "id": "corrigibility",
