@@ -1,17 +1,11 @@
 ---
 import { lang2 } from "../lib/site";
+import CivicBug from "./CivicBug.astro";
 const zh = lang2(Astro.props.lang) === "zh";
 const href = zh ? "/tw/" : "/";
 ---
 <a href={href} class="site-wordmark" title={zh ? "仁工智慧首頁" : "Civic AI home"}>
-  <svg class="site-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-    <circle cx="32" cy="10" r="5.8" />
-    <circle cx="51.1" cy="21" r="5.8" />
-    <circle cx="51.1" cy="43" r="5.8" />
-    <circle cx="32" cy="54" r="5.8" />
-    <circle cx="12.9" cy="43" r="5.8" />
-    <circle cx="12.9" cy="21" r="5.8" />
-  </svg>
+  <CivicBug class="site-mark" />
   {zh ? (
     <>
       <span>仁工智慧</span>

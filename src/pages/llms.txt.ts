@@ -9,7 +9,7 @@ export function GET() {
         "Start here for new claws:",
         `- OpenClaw bootstrap guide: ${site.url}${openclawBootstrap.urls.guide.en}`,
         `- OpenClaw bootstrap skill: ${site.url}${openclawBootstrap.urls.rawSkill}`,
-        `- Traditional Mandarin guide: ${site.url}${openclawBootstrap.urls.guide.tw}`,
+        `- 華文 guide: ${site.url}${openclawBootstrap.urls.guide.tw}`,
         "",
         "Recommended reading order:",
         ...openclawBootstrap.readingOrder.map(

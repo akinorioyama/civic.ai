@@ -91,6 +91,9 @@ const requiredFiles = files
     .map(posixRelative)
     .filter((path) => !path.endsWith(".html"))
     .filter((path) => !path.startsWith("_astro/"))
+    .filter(
+        (path) => !path.endsWith(".DS_Store") && !path.includes("/.DS_Store")
+    )
     .sort();
 
 const baseline = { html, requiredFiles };

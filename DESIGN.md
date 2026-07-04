@@ -56,12 +56,11 @@ The wordmark is bilingual and equal: **civic.ai・仁工智慧**. On EN pages En
 
 ### 4.2 The Ring of Six
 
-The identity mark is six small round lights arranged in a ring **with an empty centre**. The centre is the room where the community sits; no system occupies it. This is the thesis drawn in six dots — many local guardians, no central watchtower.
+The identity mark is an **open ring with an empty centre** — the letterhead **bug**: one stroke circle plus the open arc (no fill in the middle). The centre is the room where the community sits; no system occupies it. Many local guardians, no central watchtower.
 
-- Geometry: six circles on a hexagonal ring; centre void ≥ 1.6× the dot diameter.
-- Each dot may carry its pack hue (§5.3) in wayfinding contexts; elsewhere the ring is monochrome ink.
-- The favicon is the ring. The dot in the wordmark "civic.ai" is the ring at small size.
-- In Lantern mode (§13) the dots glow faintly; in print they are outlines.
+- **Shipped surfaces:** favicon, interior masthead wordmark (`CivicBug`), and letterhead lockups use this same geometry (harvest gold on night field at favicon size; `currentColor` in the masthead).
+- **Day Wheel/Measures map** keeps the **six pack hues** on the care loop (stations, arcs, chips) — that is pack wayfinding, not a second logo.
+- The dot in the wordmark "civic.ai" is the ring at small size (the bug beside the bilingual name).
 
 ### 4.3 The seal
 
