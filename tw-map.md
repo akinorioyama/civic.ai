@@ -16,6 +16,6 @@ nav_next:
 
 所有的力、指標與交接，都在同一頁上。每個方塊都是連結：各力打開章節，指標落在[衡量指標](/tw/measures/)的表格列上，而整張圖的外框就是[共生力](/tw/6/)本身——讓整套系統保持有界、多元、可退場的那層膜。
 
-<object type="image/svg+xml" data="/img/concept-map-tw.svg" style="width:100%;aspect-ratio:2285/2560;height:auto" aria-label="關懷六力概念地圖" title="關懷六力全圖">這張概念地圖需要 SVG 支援。同一套系統的表格版，請見[衡量指標](/tw/measures/)。</object>
+<div class="concept-map"><object type="image/svg+xml" data="/img/concept-map-tw.svg" style="aspect-ratio:2190/2630" aria-label="關懷六力概念地圖" title="關懷六力全圖">這張概念地圖需要 SVG 支援。同一套系統的表格版，請見[衡量指標](/tw/measures/)。</object></div>
 
 地圖由 [concept-map.d2](https://github.com/audreyt/civic.ai/blob/main/concept-map.d2) 生成；歡迎以 pull request 指正。

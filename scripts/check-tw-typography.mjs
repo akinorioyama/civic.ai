@@ -53,13 +53,19 @@ const targets =
         : readdirSync(ROOT)
               .filter((f) => f.startsWith("tw-") && f.endsWith(".md"))
               .map((f) => join(ROOT, f))
-              .concat(join(ROOT, "_data/glossary.json"));
+              .concat(
+                  join(ROOT, "_data/glossary.json"),
+                  join(ROOT, "concept-map-tw.d2")
+              );
 
 for (const file of targets) {
     const name = basename(file);
     if (name === "glossary.json") {
         scanGlossary(file);
-    } else if (name.startsWith("tw-") && name.endsWith(".md")) {
+    } else if (
+        (name.startsWith("tw-") && name.endsWith(".md")) ||
+        name.endsWith("-tw.d2")
+    ) {
         scanText(name, readFileSync(file, "utf8"));
     }
     // other files (from lint-staged fan-out) are not zh targets — skip

@@ -1,0 +1,171 @@
+direction: down
+
+vars: {
+  d2-config: {
+    layout-engine: elk
+    theme-id: 0
+  }
+}
+
+classes: {
+  pack: {
+    style: {
+      font-color: "#FFFFFF"
+      stroke: "#211D16"
+      stroke-width: 1
+      border-radius: 4
+      font-size: 18
+      bold: true
+      shadow: false
+    }
+  }
+  measure: {
+    style: {
+      fill: "#FAF9F2"
+      font-color: "#211D16"
+      stroke: "#5A5142"
+      border-radius: 12
+      font-size: 16
+    }
+  }
+  note: {
+    style: {
+      fill: "#FAF9F2"
+      font-color: "#5A5142"
+      stroke: "#8A8272"
+      stroke-dash: 4
+      font-size: 16
+    }
+  }
+  cargo: {
+    style: {
+      stroke: "#5A5142"
+      font-size: 16
+      font-color: "#5A5142"
+    }
+  }
+  seed: {
+    style: {
+      stroke: "#5A5142"
+      stroke-dash: 4
+      font-size: 16
+      font-color: "#5A5142"
+    }
+  }
+}
+
+membrane: "六 · 共生力——時間的邊界" {
+  style: {
+    fill: "#F4EEF1"
+    stroke: "#77465F"
+    stroke-width: 2
+    font-color: "#77465F"
+    font-size: 20
+    bold: true
+    border-radius: 8
+  }
+  link: "/tw/6/"
+
+  cycle: "關懷循環——第一至四力" {
+    style: {
+      fill: "#FAF9F2"
+      stroke: "#8A8272"
+      font-color: "#5A5142"
+      font-size: 17
+      border-radius: 6
+    }
+
+    p1: "一 · 覺察力" {
+      class: pack
+      style.fill: "#B0803C"
+      link: "/tw/1/"
+    }
+    p2: "二 · 負責力" {
+      class: pack
+      style.fill: "#96482B"
+      link: "/tw/2/"
+    }
+    p3: "三 · 勝任力" {
+      class: pack
+      style.fill: "#4F6B33"
+      link: "/tw/3/"
+    }
+    p4: "四 · 回應力" {
+      class: pack
+      style.fill: "#2E6763"
+      link: "/tw/4/"
+    }
+    m1: "代表性落差" {
+      class: measure
+      link: "/tw/measures/#representation-gap"
+    }
+    m2: "承諾保真度" {
+      class: measure
+      link: "/tw/measures/#promise-fidelity"
+    }
+    m3: "經驗證的執行率" {
+      class: measure
+      link: "/tw/measures/#verified-execution-rate"
+    }
+    m4: "失利下的信任" {
+      class: measure
+      link: "/tw/measures/#trust-under-loss"
+    }
+
+    p1 -> p2: "誰、什麼、為什麼＋權利旗標" { class: cargo }
+    p2 -> p3: "規格、SLA、煞車" { class: cargo }
+    p3 -> p4: "軌跡與事件" { class: cargo }
+    p4 -> p1: "新需求重啟循環" { class: cargo }
+    p2 -> p4: "補救在上線前接妥" { class: cargo }
+    p1 -> p3: "高風險區成為安全試錯的試驗" { class: seed }
+    p1 -- m1: { class: seed }
+    p2 -- m2: { class: seed }
+    p3 -- m3: { class: seed }
+    p4 -- m4: { class: seed }
+  }
+
+  field: "組織之間的場域" {
+    style: {
+      fill: "#FAF9F2"
+      stroke: "#8A8272"
+      font-color: "#5A5142"
+      font-size: 17
+      border-radius: 6
+    }
+    p5: "五 · 團結力" {
+      class: pack
+      style.fill: "#3F4E82"
+      link: "/tw/5/"
+    }
+    m5: "罕見共識指數" {
+      class: measure
+      link: "/tw/measures/#uncommon-ground-index"
+    }
+    p5 -- m5: { class: seed }
+  }
+
+  m6: "退出就緒度" {
+    class: measure
+    link: "/tw/measures/#exit-readiness"
+  }
+
+  guard: "共生力防止各力走向自身的反面：\n監控 · 契約陷阱 · 不可或缺 ·\n假扮關懷的依賴 · 無人控制的基礎設施——\n也守著自己：少了服務延續的共生，\n會成為以純粹為名的遺棄" {
+    class: note
+  }
+
+  cycle.p1 -> field.p5: "搭橋地圖交出地形" { class: cargo }
+  cycle.p2 -> field.p5: "每份契約都寫入可攜與退出條款" { class: cargo }
+  cycle.p4 -> field.p5: "修復文化促進跨組織信任" { class: cargo }
+}
+
+legend: "每一力逐層而下：結語意象 → 模式 → 可建置工具 → 具名工具 → 診斷 → 一項公開主指標" {
+  class: note
+  link: "/tw/measures/#具名工具"
+  near: bottom-center
+}
+
+membrane.field.p5 -> membrane: "條約、身分與可攜性使共生可行" { class: cargo }
+membrane.cycle.p3 -> membrane: "勝任且有回應的系統才能贏得管理權" { class: cargo }
+membrane -> membrane.cycle.p1: "退役的系統將地圖、評測與紀錄贈予公地" { class: cargo }
+membrane <-> membrane.cycle.p2: "界限與退場期限是契約性的" { class: cargo }
+membrane -- membrane.guard: { class: seed }

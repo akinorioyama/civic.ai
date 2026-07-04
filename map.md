@@ -16,6 +16,6 @@ nav_next:
 
 Every pack, measure, and handoff on one page. Every box is a link: packs open their chapters, measures land on their rows in the [measures table](/measures/), and the outer boundary is [Pack 6](/6/) itself — the membrane that keeps the whole system bounded, plural, and sunset-ready.
 
-<object type="image/svg+xml" data="/img/concept-map.svg" style="width:100%;aspect-ratio:2285/2560;height:auto" aria-label="Concept map of the 6-Pack of Care" title="The 6-Pack of Care, mapped">The concept map requires SVG support. See the [measures page](/measures/) for the same system as a table.</object>
+<div class="concept-map"><object type="image/svg+xml" data="/img/concept-map.svg" style="aspect-ratio:2282/2530" aria-label="Concept map of the 6-Pack of Care" title="The 6-Pack of Care, mapped">The concept map requires SVG support. See the [measures page](/measures/) for the same system as a table.</object></div>
 
 The map is generated from [concept-map.d2](https://github.com/audreyt/civic.ai/blob/main/concept-map.d2); corrections welcome by pull request.

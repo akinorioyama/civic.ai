@@ -3848,3 +3848,22 @@ h4[id] {
     padding-left: 0;
     line-height: 1.6;
 }
+
+/* ─── CONCEPT MAP ─── */
+.concept-map object {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 720px) {
+    .concept-map {
+        margin-inline: calc(50% - 50vw);
+        display: flex;
+        justify-content: center;
+        padding-inline: 24px;
+    }
+
+    .concept-map object {
+        width: min(100%, 1480px);
+    }
+}
