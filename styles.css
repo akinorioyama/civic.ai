@@ -443,28 +443,19 @@ header .chapter-date {
     width: 1.2rem;
     height: 1.2rem;
     display: block;
-}
-
-/* Solid crescent — a hairline outline reads too thin at this size.
-   Fill in currentColor keeps it monochrome (not the old coloured emoji). */
-.theme-toggle__moon {
-    fill: currentColor;
-    stroke: none;
-}
-
-/* Sun: filled core with bolder rays so it weighs the same as the moon. */
-.theme-toggle__sun {
-    display: none;
+    fill: none;
+    stroke: currentColor;
+    /* Bolder than the SVG's own 1.6 so the outline crescent reads clearly,
+       matching the stroked moon on plurality.net. */
     stroke-width: 2;
-}
-.theme-toggle__sun circle {
-    fill: currentColor;
-    stroke: none;
 }
 
 /* Show the icon of the theme the button switches *to*: moon offers dark,
    sun offers light. Keyed off html[data-theme] (set before first paint in
    <head>) so there is no icon flash. */
+.theme-toggle__sun {
+    display: none;
+}
 html[data-theme="dark"] .theme-toggle__moon {
     display: none;
 }
