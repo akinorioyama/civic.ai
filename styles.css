@@ -440,17 +440,31 @@ header .chapter-date {
 
 .theme-toggle__icon {
     grid-area: 1 / 1;
-    width: 1.15rem;
-    height: 1.15rem;
+    width: 1.2rem;
+    height: 1.2rem;
     display: block;
+}
+
+/* Solid crescent — a hairline outline reads too thin at this size.
+   Fill in currentColor keeps it monochrome (not the old coloured emoji). */
+.theme-toggle__moon {
+    fill: currentColor;
+    stroke: none;
+}
+
+/* Sun: filled core with bolder rays so it weighs the same as the moon. */
+.theme-toggle__sun {
+    display: none;
+    stroke-width: 2;
+}
+.theme-toggle__sun circle {
+    fill: currentColor;
+    stroke: none;
 }
 
 /* Show the icon of the theme the button switches *to*: moon offers dark,
    sun offers light. Keyed off html[data-theme] (set before first paint in
    <head>) so there is no icon flash. */
-.theme-toggle__sun {
-    display: none;
-}
 html[data-theme="dark"] .theme-toggle__moon {
     display: none;
 }
