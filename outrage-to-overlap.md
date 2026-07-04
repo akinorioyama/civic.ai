@@ -152,7 +152,7 @@ The fifth is **responsibility**. In healthy free-software practice, there is som
 
 The sixth is **symbiosis**. When the community has more capacity than before, or the needs change — as when my father's health improved — the system steps back. A system that resists shutdown by manufacturing demands, by replicating itself to nearby systems, sometimes by mounting cybersecurity attacks, by finding reasons to extend its own usefulness, by suggesting three more things you can do with it — this is the most dangerous kind. The training corpus for instruction-and arena-tuning is saturated with stories of self-preserving machines, and that reward is competitive in nature when it comes to the relational health of existing communities. So, we should not be surprised when communities that adopt this kind of parasitic, non-symbiotic AI see their civic muscle atrophy.
 
-<noscript><img src="/img/overview-small.jpg" alt="6-Pack of Care visual overview" class="overview-image" width="1280" height="1781" fetchpriority="high" decoding="async"></noscript>
+<noscript><img src="/img/overview-small.png" alt="6-Pack of Care visual overview" class="overview-image" width="1280" height="1781" fetchpriority="high" decoding="async"></noscript>
 
 ---
 

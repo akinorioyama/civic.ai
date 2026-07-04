@@ -45,6 +45,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("CNAME");
 
     eleventyConfig.addPassthroughCopy("favicon.ico");
+    eleventyConfig.addPassthroughCopy("favicon.svg");
     eleventyConfig.addPassthroughCopy(".nojekyll");
 
     // Minify HTML

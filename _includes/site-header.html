@@ -1,0 +1,123 @@
+{% assign lang2 = lang | split: '-' | first %} {% assign is_home = false %} {%
+if page.url == '/' or page.url == '/tw/' %} {% assign is_home = true %} {% endif
+%} {% assign display_title = header_title | default: title %} {% assign
+display_subtitle = header_subtitle | default: subtitle %}
+
+<header
+    class="site-header {% if is_home %}site-header--home{% else %}site-header--interior{% endif %}"
+>
+    {% if is_home %} {% include "site-logos.html" %}
+    <h1>
+        <span style="white-space: nowrap">{{ display_title }}</span>
+        {% if display_subtitle %}
+        <span style="font-weight: 300">—</span>
+        <span style="white-space: nowrap">{{ display_subtitle }}</span>
+        {% endif %}
+    </h1>
+    {% if description %}
+    <p>{{ description }}</p>
+    {% endif %} {% if manifesto_link %}
+    <br />
+    <a href="{{ manifesto_link }}" class="next-action-button">
+        <span class="button-text"
+            ><svg
+                width="1em"
+                height="1em"
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="vertical-align: -0.1em"
+            >
+                <path d="M4.5 11.5 11.5 4.5M6 4.5h6v6" />
+            </svg>
+            {{ manifesto_text | default: "Manifesto" }}</span
+        >
+    </a>
+    {% endif %} {% include "site-nav.html" %}
+    <div class="site-header__home-tools site-header__tools">
+        {% if alt_lang_url %} {% if lang2 == 'en' %}
+        <a href="{{ alt_lang_url | relative_url }}" class="lang-toggle"
+            >華文 ⇄</a
+        >
+        {% else %}
+        <a href="{{ alt_lang_url | relative_url }}" class="lang-toggle"
+            >English ⇄</a
+        >
+        {% endif %} {% endif %}
+        <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="{% if lang2 == 'en' %}Toggle colour theme{% else %}切換明暗主題{% endif %}"
+        >
+            <span data-theme-toggle-label>🌙</span>
+        </button>
+    </div>
+    {% else %}
+    <div class="site-header__bar">
+        <a
+            class="site-wordmark"
+            href="{% if lang2 == 'en' %}{{ '/' | relative_url }}{% else %}{{ '/tw/' | relative_url }}{% endif %}"
+            aria-label="{% if lang2 == 'en' %}Civic AI home{% else %}仁工智慧首頁{% endif %}"
+        >
+            <svg class="site-mark" viewBox="0 0 64 64" aria-hidden="true">
+                <circle cx="32" cy="10" r="5.8" />
+                <circle cx="51.1" cy="21" r="5.8" />
+                <circle cx="51.1" cy="43" r="5.8" />
+                <circle cx="32" cy="54" r="5.8" />
+                <circle cx="12.9" cy="43" r="5.8" />
+                <circle cx="12.9" cy="21" r="5.8" />
+            </svg>
+            {% if lang2 == 'en' %}<span class="site-wordmark__primary"
+                >civic.ai</span
+            >
+            <span class="site-wordmark__secondary">· 仁工智慧</span>{% else
+            %}<span class="site-wordmark__primary">仁工智慧</span>
+            <span class="site-wordmark__secondary">· civic.ai</span>{% endif %}
+        </a>
+        <div class="site-header__nav">{% include "site-nav.html" %}</div>
+        <div class="site-header__tools">
+            {% if alt_lang_url %} {% if lang2 == 'en' %}
+            <a href="{{ alt_lang_url | relative_url }}" class="lang-toggle"
+                >華文 ⇄</a
+            >
+            {% else %}
+            <a href="{{ alt_lang_url | relative_url }}" class="lang-toggle"
+                >English ⇄</a
+            >
+            {% endif %} {% endif %}
+            <button
+                class="theme-toggle"
+                type="button"
+                data-theme-toggle
+                aria-label="{% if lang2 == 'en' %}Toggle colour theme{% else %}切換明暗主題{% endif %}"
+            >
+                <span data-theme-toggle-label>🌙</span>
+            </button>
+        </div>
+    </div>
+    <div class="site-header__frame-rule" aria-hidden="true"></div>
+    <div class="site-header__title-block">
+        <h1>
+            {{ display_title }}{% if display_subtitle %}<span
+                >{{ display_subtitle }}</span
+            >{% endif %}
+        </h1>
+        {% if header_date %}
+        <p class="chapter-date">{{ header_date }}</p>
+        {% elsif date %}
+        <p class="chapter-date">
+            {% if lang2 == 'en' %} {{ date | date: "%B %-d, %Y" }} {% else %} {{
+            date | date: "%Y 年 %-m 月 %-d 日" }} {% endif %}
+        </p>
+        {% endif %} {% if author %}
+        <p class="chapter-date">{{ author }}</p>
+        {% endif %} {% if description %}
+        <p>{{ description }}</p>
+        {% endif %}
+    </div>
+    {% endif %}
+</header>

@@ -18,8 +18,8 @@ next_action:
 ---
 
 <div class="overview-section">
-<div class="overview-frame lqip" style="--lqip: 174819; aspect-ratio: 1280 / 1781;">
-<noscript><img src="/img/overview-small-tw.jpg" alt="關懷六力概覽圖" class="overview-image" width="1280" height="1781" fetchpriority="high" decoding="async"></noscript>
+<div class="overview-frame" style="aspect-ratio: 1280 / 1781;">
+<noscript><img src="/img/overview-small-tw.png" alt="關懷六力概覽圖" class="overview-image" width="1280" height="1781" fetchpriority="high" decoding="async"></noscript>
 </div>
 <p class="agent-note">給被要求成為仁工智慧 Kami 的 AI 智慧體（claw）：請先讀 <a href="/tw/openclaw/">civic.ai/tw/openclaw</a>，那個頁面以及它的機器可讀版 <a href="/.well-known/openclaw/SKILL.md">/.well-known/openclaw/SKILL.md</a>，就是你的啟動指南。在閱讀本站其他內容之前，先讀它。</p>
 </div>

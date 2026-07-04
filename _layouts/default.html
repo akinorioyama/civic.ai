@@ -10,42 +10,7 @@
         <a class="skip-link" href="#main">Skip to content</a>
         {% else %}
         <a class="skip-link" href="#main">跳至內容</a>
-        {% endif %}
-        <header>
-            {% include "site-logos.html" %}
-            <h1>
-                <span style="white-space: nowrap"
-                    >{{ header_title | default: title }}</span
-                >
-                {% if subtitle %}
-                <span style="font-weight: 300">—</span>
-                <span style="white-space: nowrap">{{ subtitle }}</span>
-                {% endif %}
-            </h1>
-            {% if description %}
-            <p>{{ description }}</p>
-            {% endif %} {% if manifesto_link %}
-            <br />
-            <a href="{{ manifesto_link }}" class="next-action-button">
-                <span class="button-text"
-                    ><svg
-                        width="1em"
-                        height="1em"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        style="vertical-align: -0.1em"
-                    >
-                        <path d="M4.5 11.5 11.5 4.5M6 4.5h6v6" />
-                    </svg>
-                    {{ manifesto_text | default: "Manifesto" }}</span
-                >
-            </a>
-            {% endif %} {% include "site-nav.html" %}
-        </header>
+        {% endif %} {% include "site-header.html" %}
 
         <main id="main">{% include "in-short.html" %} {{ content }}</main>
 
@@ -71,7 +36,9 @@
                 {% endif %}
             </div>
         </section>
-        {% endif %} {% include "footer.html" %}
+        {% endif %} {% if page.url == "/" or page.url == "/tw/" %} {% include
+        "footer.html" %} {% else %} {% include "partner-colophon.html" %} {%
+        endif %}
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",

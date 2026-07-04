@@ -12,6 +12,26 @@
                         location.hash
                 );
         </script>
+        <script>
+            (function () {
+                try {
+                    var stored = localStorage.getItem("civic-ai-theme");
+                    var systemDark =
+                        window.matchMedia &&
+                        window.matchMedia("(prefers-color-scheme: dark)")
+                            .matches;
+                    var theme =
+                        stored === "light" || stored === "dark"
+                            ? stored
+                            : systemDark
+                              ? "dark"
+                              : "light";
+                    document.documentElement.dataset.theme = theme;
+                } catch (e) {
+                    document.documentElement.dataset.theme = "light";
+                }
+            })();
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="theme-color"
@@ -39,6 +59,16 @@
         %}{% else %}{% assign og_img = site.url | append: '/' | append: og_img
         %}{% endif %}{% endunless %} {% assign og_type = 'website' %} {% include
         "seo-head.html" %}
+        <link
+            rel="icon"
+            href="{{ '/favicon.ico' | relative_url }}"
+            sizes="any"
+        />
+        <link
+            rel="icon"
+            href="{{ '/favicon.svg' | relative_url }}"
+            type="image/svg+xml"
+        />
         <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}" />
         <link
             rel="preload"
@@ -212,89 +242,9 @@
         <a class="skip-link" href="#main">Skip to content</a>
         {% else %}
         <a class="skip-link" href="#main">跳至內容</a>
-        {% endif %}
-
-        <header>
-            {% if lang2 == 'en' %}
-            <a href="{{ '/' | relative_url }}" title="Home">
-                <img
-                    class="oxford-logo"
-                    width="100"
-                    height="100"
-                    src="{{ '/img/oxford-logo.svg' | relative_url }}"
-                    alt="University of Oxford Logo"
-                />
-            </a>
-            <a href="{{ '/' | relative_url }}" title="Civic AI Home">
-                <img
-                    class="oxford-logo"
-                    width="246"
-                    height="100"
-                    src="{{ '/img/afp-logo.svg' | relative_url }}"
-                    alt="Accelerator Fellowship Programme Logo"
-                />
-            </a>
-            {% else %}
-            <a href="{{ '/tw' | relative_url }}" title="首頁">
-                <img
-                    class="oxford-logo"
-                    width="100"
-                    height="100"
-                    src="{{ '/img/oxford-logo.svg' | relative_url }}"
-                    alt="牛津大學校徽"
-                />
-            </a>
-            <a href="{{ '/tw' | relative_url }}" title="關懷六力首頁">
-                <img
-                    class="oxford-logo"
-                    width="246"
-                    height="100"
-                    src="{{ '/img/afp-logo.svg' | relative_url }}"
-                    alt="加速哲人徽章"
-                />
-            </a>
-            {% endif %}
-
-            <div style="position: absolute; top: 20px; right: 20px">
-                <a href="{{ alt_lang_url | relative_url }}" class="lang-toggle"
-                    >{{ alt_lang_label }}</a
-                >
-            </div>
-
-            <h1>{{ subtitle }}</h1>
-            <p
-                style="
-                    color: rgba(255, 255, 255, 0.7);
-                    font-family: var(--sans);
-                    font-size: 1.1rem;
-                    font-weight: 400;
-                    letter-spacing: 0.06em;
-                    margin: 8px auto 0;
-                "
-            >
-                {{ title }}
-            </p>
-            <p class="chapter-date">{{ date_line }}</p>
-
-            <nav
-                class="site-nav"
-                aria-label="{% if lang2 == 'en' %}Site sections{% else %}網站導覽{% endif %}"
-            >
-                {% if lang2 == 'en' %}
-                <a href="{{ '/' | relative_url }}">Home</a>
-                <a href="{{ '/manifesto/' | relative_url }}">Manifesto</a>
-                <a href="{{ '/#the-6-pack' | relative_url }}">The 6-Pack</a>
-                <a href="{{ '/faq/' | relative_url }}">FAQ</a>
-                <a href="{{ '/conference/' | relative_url }}">Conference</a>
-                {% else %}
-                <a href="{{ '/tw/' | relative_url }}">首頁</a>
-                <a href="{{ '/tw/manifesto/' | relative_url }}">計畫宣言</a>
-                <a href="{{ '/tw/#the-6-pack' | relative_url }}">關懷六力</a>
-                <a href="{{ '/tw/faq/' | relative_url }}">常見問題</a>
-                <a href="{{ '/tw/conference/' | relative_url }}">研討會</a>
-                {% endif %}
-            </nav>
-        </header>
+        {% endif %} {% assign header_title = subtitle %} {% assign
+        header_subtitle = title %} {% assign header_date = date_line %} {%
+        include "site-header.html" %}
 
         <main id="main">
             <!-- Hosts -->
@@ -447,7 +397,7 @@
             </div>
         </main>
 
-        {% include "footer.html" %}
+        {% include "partner-colophon.html" %}
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",

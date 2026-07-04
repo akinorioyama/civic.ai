@@ -1,5 +1,37 @@
-<footer>
-    {% assign lang2 = lang | split: '-' | first %} {% if lang2 == 'en' %}
+{% assign lang2 = lang | split: '-' | first %}
+<section
+    class="partner-colophon"
+    aria-label="{% if lang2 == 'en' %}Institutional partners{% else %}合作機構{% endif %}"
+>
+    <div class="partner-colophon__marks">
+        <a href="https://www.oxford-aiethics.ox.ac.uk/">
+            <img
+                class="partner-logo partner-logo--oxford"
+                width="100"
+                height="100"
+                src="{{ '/img/oxford-logo-light.svg' | relative_url }}"
+                alt="{% if lang2 == 'en' %}Oxford Institute for Ethics in AI{% else %}牛津 AI 倫理研究院{% endif %}"
+                loading="lazy"
+                decoding="async"
+            />
+        </a>
+        <a href="https://afp.oxford-aiethics.ox.ac.uk/">
+            <img
+                class="partner-logo partner-logo--afp"
+                width="246"
+                height="100"
+                src="{{ '/img/afp-logo-light.svg' | relative_url }}"
+                alt="{% if lang2 == 'en' %}Accelerator Fellowship Programme{% else %}加速哲人計畫{% endif %}"
+                loading="lazy"
+                decoding="async"
+            />
+        </a>
+    </div>
+    {% if lang2 == 'en' %}
+    <p class="partner-colophon__caption">
+        A research output of the Oxford Institute for Ethics in AI, Accelerator
+        Fellowship Programme.
+    </p>
     <p>
         ⓪
         <a href="https://cyberambassador.tw/">Audrey Tang</a>
@@ -11,7 +43,6 @@
         <a href="https://ncase.me">Nicky Case</a>.
         <a href="/comics/">All comics</a>. <a href="/glossary/">Glossary</a>.
     </p>
-
     <p>
         Co-written with
         <a href="https://github.com/jdd-kami">jdd-kami</a>, cultivated by
@@ -21,16 +52,10 @@
         >
         has full authorship details.
     </p>
-    <p>
-        A research output of the
-        <a href="https://afp.oxford-aiethics.ox.ac.uk/"
-            >Accelerator Fellowship Programme</a
-        >,
-        <a href="https://www.oxford-aiethics.ox.ac.uk/"
-            >Oxford Institute for Ethics in AI</a
-        >.
-    </p>
     {% else %}
+    <p class="partner-colophon__caption">
+        牛津 AI 倫理研究院「加速哲人計畫」研究成果。
+    </p>
     <p>
         ⓪
         <a href="https://audreyt.org/">唐鳳</a>與
@@ -49,11 +74,5 @@
             >GitHub 提交日誌</a
         >。
     </p>
-    <p>
-        <a href="https://afp.oxford-aiethics.ox.ac.uk/">加速哲人計畫</a>、<a
-            href="https://www.oxford-aiethics.ox.ac.uk/"
-            >牛津 AI 倫理研究院</a
-        >研究成果。
-    </p>
     {% endif %}
-</footer>
+</section>

@@ -152,7 +152,7 @@ nav_next:
 
 第六塊是**共生**。當社群比先前擁有更多能力、或需求改變了——就像我父親的健康狀況好轉時——這個系統就退場。一個系統若靠製造需求、靠把自己複製到鄰近的系統、有時靠發動網路安全攻擊、靠找理由延長自己的有用性、靠「再建議你三件可以用它來做的事」來抗拒被關機——那是最危險的一種。用於指令微調（instruction-tuning）與競技場微調（arena-tuning）的訓練語料，飽含著自我保存的機器的故事，而那種獎勵，在涉及既有社群的關係健康時，本質上就是競爭型的。所以，當採行了這種寄生的、非共生的 AI 的社群，眼見自己的公民肌力萎縮時，我們不該感到意外。
 
-<noscript><img src="/img/overview-small-tw.jpg" alt="關懷六力概覽圖" class="overview-image" width="1280" height="1781" fetchpriority="high" decoding="async"></noscript>
+<noscript><img src="/img/overview-small-tw.png" alt="關懷六力概覽圖" class="overview-image" width="1280" height="1781" fetchpriority="high" decoding="async"></noscript>
 
 ---
 

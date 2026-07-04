@@ -1,5 +1,7 @@
 README.md
+DESIGN.md
 node_modules
 docs
 specs
 scripts
+tmp

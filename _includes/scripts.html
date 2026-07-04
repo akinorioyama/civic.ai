@@ -3,6 +3,73 @@
             window.__GLOSSARY_BASE__ = "{% if lang2 == 'zh' %}/tw/glossary/{% else %}/glossary/{% endif %}";
         </script>
         <script>
+            (function () {
+                var storageKey = "civic-ai-theme";
+                function getLang() {
+                    return document.documentElement.lang.indexOf("zh") === 0
+                        ? "zh"
+                        : "en";
+                }
+                function systemTheme() {
+                    return window.matchMedia &&
+                        window.matchMedia("(prefers-color-scheme: dark)").matches
+                        ? "dark"
+                        : "light";
+                }
+                function getTheme() {
+                    try {
+                        var stored = localStorage.getItem(storageKey);
+                        if (stored === "light" || stored === "dark") return stored;
+                    } catch (e) {}
+                    return document.documentElement.dataset.theme || systemTheme();
+                }
+                function labelFor(theme) {
+                    return theme === "dark" ? "☀️" : "🌙";
+                }
+                function applyTheme(theme) {
+                    if (theme !== "light" && theme !== "dark") {
+                        theme = systemTheme();
+                    }
+                    document.documentElement.dataset.theme = theme;
+                    var lang = getLang();
+                    var buttons = document.querySelectorAll("[data-theme-toggle]");
+                    buttons.forEach(function (button) {
+                        button.dataset.themeState = theme;
+                        button.setAttribute(
+                            "aria-label",
+                            lang === "zh"
+                                ? theme === "dark"
+                                    ? "目前為深色；切換為明亮"
+                                    : "目前為明亮；切換為深色"
+                                : theme === "dark"
+                                  ? "Dark theme; switch to light"
+                                  : "Light theme; switch to dark"
+                        );
+                        var text = button.querySelector("[data-theme-toggle-label]");
+                        if (text) text.textContent = labelFor(theme);
+                    });
+                }
+                function nextTheme(theme) {
+                    return theme === "dark" ? "light" : "dark";
+                }
+                function persistTheme(theme) {
+                    try {
+                        localStorage.setItem(storageKey, theme);
+                    } catch (e) {}
+                }
+                document.addEventListener("DOMContentLoaded", function () {
+                    applyTheme(getTheme());
+                    document.addEventListener("click", function (event) {
+                        var button = event.target.closest("[data-theme-toggle]");
+                        if (!button) return;
+                        var theme = nextTheme(getTheme());
+                        persistTheme(theme);
+                        applyTheme(theme);
+                    });
+                });
+            })();
+        </script>
+        <script>
             // Inline first-use glossary glossing — runtime only, source MD untouched.
             (function () {
                 try {

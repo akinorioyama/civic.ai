@@ -197,8 +197,9 @@ packs:
     - { num: 4, name: "回應力", url: "/tw/4/" }
     - { num: 5, name: "團結力", url: "/tw/5/" }
     - { num: 6, name: "共生力", url: "/tw/6/" }
+thumbnail: "/img/overview-small-tw.jpg"
 overview_image:
-    src: "/img/overview-small-tw.jpg"
+    src: "/img/overview-small-tw.png"
     alt: "關懷六力概覽圖"
     w: 1280
     h: 1781

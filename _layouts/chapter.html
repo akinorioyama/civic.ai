@@ -10,31 +10,7 @@
         <a class="skip-link" href="#main">Skip to content</a>
         {% else %}
         <a class="skip-link" href="#main">跳至內容</a>
-        {% endif %}
-        <header>
-            {% include "site-logos.html" %}
-            <h1>
-                {{ title }}{% if subtitle %}<span
-                    style="
-                        display: block;
-                        font-size: 0.85em;
-                        font-weight: 400;
-                        margin-top: 0.6em;
-                    "
-                    >{{ subtitle }}</span
-                >{% endif %}
-            </h1>
-            {% if date %}
-            <p class="chapter-date">
-                {% if lang2 == 'en' %} {{ date | date: "%B %-d, %Y" }} {% else
-                %} {{ date | date: "%Y 年 %-m 月 %-d 日" }} {% endif %}
-            </p>
-            {% endif %} {% if author %}
-            <p class="chapter-date">{{ author }}</p>
-            {% endif %} {% if description %}
-            <p>{{ description }}</p>
-            {% endif %} {% include "site-nav.html" %}
-        </header>
+        {% endif %} {% include "site-header.html" %}
 
         <main id="main">
             {% include "in-short.html" %} {% if audio %}
@@ -146,7 +122,7 @@
             </div>
         </section>
 
-        {% include "footer.html" %}
+        {% include "partner-colophon.html" %}
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
