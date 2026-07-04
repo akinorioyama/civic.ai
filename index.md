@@ -58,7 +58,7 @@ Prefer visuals? Browse [all comics](/comics/) — Nicky Case's illustrated overv
 
 <h2 id="the-6-pack">The 6-Pack</h2>
 
-The 6-Pack is an application of [⿻ Plurality](https://plurality.net) to AI governance. Packs 1–4 form a feedback loop — the care cycle (Attentiveness → Responsibility → Competence → Responsiveness → back to Attentiveness). Pack 5 scales that loop across organisations. Pack 6 is the boundary condition that keeps every deployment local, plural, and sunset-ready. The unit of deployment is the **Kami** — a bounded local steward, not a universal governor.
+The 6-Pack is an application of [⿻ Plurality](https://plurality.net) to AI governance. Packs 1–4 form a feedback loop — the care cycle (Attentiveness → Responsibility → Competence → Responsiveness → back to Attentiveness). Pack 5 scales that loop across organisations. Pack 6 is the boundary condition that keeps every deployment local, plural, and sunset-ready. The unit of deployment is the **Kami** — a bounded local steward, not a universal governor. Each pack descends in layers: its closing image teaches a pattern, patterns become buildable tools, tools become named instruments, and instruments feed the diagnostics behind one headline measure.
 The framework draws openly from Joan Tronto's care ethics, deliberative democracy, and Plurality. Its value is not six new virtues but care translated into institutional machinery — and if a pack name does not change who can object, who must answer, what gets logged, or what happens after failure, it is decoration.
 
 Six design principles translate care ethics into something institutions can build and inspect:

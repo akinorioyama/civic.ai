@@ -16,7 +16,7 @@
     "scripts": {
         "dev": "eleventy --serve",
         "build": "eleventy",
-        "lint": "prettier --check . && bun run pangu-format.mjs --check",
+        "lint": "prettier --check . && bun run pangu-format.mjs --check && node scripts/check-tw-typography.mjs",
         "format": "prettier --write . && bun run pangu-format.mjs",
         "prepare": "husky",
         "check-links": "bun run check-links.mjs",
@@ -26,7 +26,11 @@
     },
     "lint-staged": {
         "**/*": "prettier --write --ignore-unknown",
-        "**/*.md": "bun run pangu-format.mjs"
+        "**/*.md": [
+            "bun run pangu-format.mjs",
+            "node scripts/check-tw-typography.mjs"
+        ],
+        "_data/glossary.json": "node scripts/check-tw-typography.mjs"
     },
     "dependencies": {
         "markdown-it-anchor": "^9.2.0",

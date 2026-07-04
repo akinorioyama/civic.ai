@@ -42,6 +42,7 @@ Each pack answers a distinct question. Packs 1-4 form a feedback loop — the ca
 
 The book's Parts List catalogues every instrument a practitioner is asked to build or run. The ones the measures above depend on:
 
+- **Perspective receipts** (Pack 1) — the acknowledgement each contributor can hold: a receipt that lets every person find and correct how their words were represented in the record — distinct from the civic receipt a decision trace carries for settlement.
 - **Engagement contract** (Pack 2) — a short, legible public document for every significant Kami deployment, recording what the system is supposed to do, who is answerable for it doing that, what happens when it goes wrong, and how the deployment will eventually end; Pack 6 renders the same contract machine-readable, so its purpose bounds, consent rules, data-retention limits, portability guarantees, and shutdown procedures are enforced by infrastructure.
 - **Adopt-or-explain** (Pack 2) — the rule that when an Alignment Assembly produces a recommendation, the team either integrates it into the system's behaviour or publishes a reasoned explanation of why not, with the remedy offered instead.
 - **Obligation ledger** (Pack 2) — a public, weekly, digitally signed record of what the deployment has committed to deliver and whether it is meeting those commitments, kept by a named Participation Officer.

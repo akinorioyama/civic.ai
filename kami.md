@@ -139,7 +139,7 @@ Be honest about the limits. There is no built-in way today to log a standing obj
 
 Letting many hands contest the same Kami is the doorway to Keeping — slow communal work that no setup page can finish for you.
 
-At the first meeting where the Kami is actually running, write a short governance charter — a plain-text file, a shared note, even a handwritten sheet. It only needs to answer four questions: who holds the machine; how often the SOUL files are reviewed; how a change is proposed and agreed; and when the Kami should be retired. That is not a finished governance system. It is a written record of what you have agreed so far, and you will revise it. This is an agreement between people, not a technical enforcement — the Kami itself has no way to check it.
+At the first meeting where the Kami is actually running, write a short governance charter — a plain-text file, a shared note, even a handwritten sheet. It only needs to answer four questions: who holds the machine; how often the SOUL files are reviewed; how a change is proposed and agreed; and when the Kami should be retired. That is not a finished governance system. It is a written record of what you have agreed so far, and you will revise it. It is also the first rung of a ladder: the same four answers, matured, become the [engagement contract](/glossary/#engagement-contract) of Pack 2, and for significant deployments Pack 6 renders that contract as code. This is an agreement between people, not a technical enforcement — the Kami itself has no way to check it.
 
 ## What a webpage cannot teach
 
