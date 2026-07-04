@@ -1,6 +1,8 @@
 import htmlmin from "html-minifier";
 import footnote from "markdown-it-footnote";
 import anchor from "markdown-it-anchor";
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
 
 export default function (eleventyConfig) {
     // Fix markdown-it CJK emphasis: CommonMark's flanking rules break when
@@ -121,6 +123,20 @@ export default function (eleventyConfig) {
         }
         const words = (text.trim().match(/\S+/g) || []).length;
         return Math.max(1, Math.ceil(words / 220));
+    });
+
+    // Cache-busting token for styles.css — a short content hash so the URL
+    // only changes when the CSS actually changes, forcing clients past any
+    // stale cached copy after a deploy.
+    eleventyConfig.addGlobalData("cssVersion", () => {
+        try {
+            return createHash("sha1")
+                .update(readFileSync("styles.css"))
+                .digest("hex")
+                .slice(0, 8);
+        } catch (e) {
+            return "";
+        }
     });
 
     eleventyConfig.ignores.add("AGENTS.md");
