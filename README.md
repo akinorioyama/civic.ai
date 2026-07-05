@@ -24,33 +24,41 @@ bun run build   # production build → dist/
 
 ## Scripts
 
-| Command                   | What it does                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `bun run dev`             | Astro dev server with live reload at `http://127.0.0.1:4321`.                                            |
-| `bun run build`           | Production build of the static site → `dist/`.                                                           |
-| `bun run check`           | Astro + TypeScript checks: `astro check && tsgo --noEmit`.                                               |
-| `bun test`                | Focused Bun tests for the custom Markdown renderer and root-content loader.                              |
-| `bun run lint`            | Check formatting: `prettier --check` + `pangu-format --check` (CJK spacing).                             |
-| `bun run format`          | Auto-fix formatting: `prettier --write` + `pangu-format`.                                                |
-| `bun run check-links`     | After a build, validate internal links and anchors across `dist/`.                                       |
-| `bun run en`/`bun run tw` | Copy the canonical English/Mandarin page set to the clipboard for translation review (macOS `pbcopy`).   |
-| `bun run import-comics`   | Re-import and optimise Nicky Case's comic pages into `img/` (maintenance helper, not part of the build). |
+| Command                       | What it does                                                                                             |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `bun run dev`                 | Sync generated public assets, then start Astro with live reload at `http://127.0.0.1:4321`.              |
+| `bun run build`               | Production build of the static site, minified HTML, and Pagefind index → `dist/`.                        |
+| `bun run check`               | Astro + TypeScript checks: `astro check && tsgo --noEmit`.                                               |
+| `bun test`                    | Focused Bun tests for the renderer, root-content loader, search corpus, and static client contracts.     |
+| `bun run lint`                | Check formatting: `prettier --check` + `pangu-format --check` (CJK spacing).                             |
+| `bun run format`              | Auto-fix formatting: `prettier --write` + `pangu-format`.                                                |
+| `bun run check-links`         | After a build, validate internal links and anchors across `dist/`.                                       |
+| `bun run check:search`        | After a build, validate the search overlay, Pagefind markup, and `/tw/search-index.json`.                |
+| `bun run vectorize:sync-site` | Upsert the Civic AI search corpus into the `civic-ai-site` Cloudflare Vectorize index.                   |
+| `bun run worker:typecheck`    | Type-check the isolated `worker/` Cloudflare `/au` package.                                              |
+| `bun run worker:test`         | Run the isolated `worker/` route, RAG, and citation tests.                                               |
+| `bun run en`/`bun run tw`     | Copy the canonical English/Mandarin page set to the clipboard for translation review (macOS `pbcopy`).   |
+| `bun run import-comics`       | Re-import and optimise Nicky Case's comic pages into `img/` (maintenance helper, not part of the build). |
 
 A husky **pre-commit hook** runs `prettier` + `pangu-format` on staged Markdown, and regenerates `package-lock.json` whenever `package.json` changes.
+
+Search uses Pagefind for English pages, a Fuse-backed Traditional Mandarin sidebar from `/tw/search-index.json`, and the `worker/` `/au/:question` API for streamed answers. The Worker retrieves from Cloudflare Vectorize binding `SITE_VECTORIZE` (`civic-ai-site`) and uses `AUDREY_MODEL=nemotron-ultra` with `BASETEN_API_KEY` plus optional `CF_AIG_TOKEN` to stream Nemotron Ultra through the Cloudflare AI Gateway; without those secrets it returns a deterministic excerpt/stub response for tests and local development.
 
 ## Repository layout
 
 | Path                            | What it is                                                                                                         |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `src/`                          | Astro source: typed root-content loader, custom Markdown renderer, layouts, components, routes, endpoints.         |
+| `src/`                          | Astro source: typed root-content loader, custom Markdown renderer, layouts, components, routes, search endpoints.  |
 | `_data/`                        | Global data: `site.json`, `paths.json` (reading paths), `comics.json`, glossary, Polis report, OpenClaw bootstrap. |
 | `*.md` (root)                   | Canonical Markdown content, British English. Front-matter `permalink` sets the URL.                                |
 | `tw-*.md`                       | Traditional Mandarin twin of each English page (served under `/tw/…`); kept in parity.                             |
-| `img/`, `fonts/`, `audio/`      | Source static assets copied through generated `public/` into the build.                                            |
+| `assets/js/`                    | Source client scripts for the search overlay and `/au` answer stream, copied into generated `public/`.             |
+| `img/`, `fonts/`, `audio`       | Source static assets copied through generated `public/` into the build.                                            |
+| `worker/`                       | Isolated Cloudflare Worker for the `/capacity` and streaming `/au/:question` answer API.                           |
+| `scripts/`                      | Content, validation, search, Vectorize, build, and migration helper scripts (see [Scripts](#scripts)).             |
 | `styles.css`                    | All site styles (mobile-first; CSS custom properties).                                                             |
 | `astro.config.mjs`              | Astro static build config: custom-domain root, directory URLs, `dist/` output.                                     |
 | `openclaw.md`, `tw-openclaw.md` | Human OpenClaw bootstrap guides; machine-readable endpoint is generated from `_data/openclaw_bootstrap.js`.        |
-| `*.mjs`, `*.py`, `scripts/`     | Content, validation, build, and migration helper scripts (see [Scripts](#scripts)).                                |
 | `specs/`                        | Internal design & implementation notes (unpublished).                                                              |
 | `public/`                       | **Generated** Astro public directory from `scripts/sync-public.mjs` — never edit by hand (gitignored).             |
 | `dist/`                         | **Generated** build output — never edit by hand (gitignored).                                                      |

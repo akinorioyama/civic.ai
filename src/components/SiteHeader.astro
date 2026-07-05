@@ -1,6 +1,6 @@
 ---
 import type { PageRecord } from "../lib/pages";
-import { formatDateDisplay, lang2, normalizeAltUrl } from "../lib/site";
+import { formatDateDisplay } from "../lib/site";
 import HeaderTools from "./HeaderTools.astro";
 import SiteLogos from "./SiteLogos.astro";
 import SiteNav from "./SiteNav.astro";
@@ -8,7 +8,6 @@ import SiteWordmark from "./SiteWordmark.astro";
 
 interface Props { page: PageRecord; headerTitle?: string; headerSubtitle?: string; headerDate?: string; }
 const { page, headerTitle, headerSubtitle, headerDate } = Astro.props;
-const zh = lang2(page.data.lang) === "zh";
 const isHome = page.url === "/" || page.url === "/tw/";
 const displayTitle = headerTitle || page.data.header_title || page.data.title;
 const displaySubtitle = headerSubtitle || page.data.subtitle;

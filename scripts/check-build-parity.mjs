@@ -25,6 +25,15 @@ function posixRelative(file) {
     return relative(buildDir, file).split(sep).join("/");
 }
 
+function shouldIgnoreBuildFile(path) {
+    return (
+        path.startsWith("_astro/") ||
+        path.startsWith("pagefind/") ||
+        path.endsWith(".DS_Store") ||
+        path.includes("/.DS_Store")
+    );
+}
+
 function decodeHtml(value) {
     return String(value)
         .replace(/&quot;/g, '"')
@@ -79,18 +88,14 @@ const files = walk(buildDir);
 const htmlByPath = new Map(
     files
         .filter((file) => file.endsWith(".html"))
-        .filter((file) => !posixRelative(file).startsWith("_astro/"))
+        .filter((file) => !shouldIgnoreBuildFile(posixRelative(file)))
         .map((file) => [posixRelative(file), snapshotHtml(file)])
 );
 const required = new Set(
     files
         .map(posixRelative)
         .filter((path) => !path.endsWith(".html"))
-        .filter((path) => !path.startsWith("_astro/"))
-        .filter(
-            (path) =>
-                !path.endsWith(".DS_Store") && !path.includes("/.DS_Store")
-        )
+        .filter((path) => !shouldIgnoreBuildFile(path))
 );
 
 const errors = [];

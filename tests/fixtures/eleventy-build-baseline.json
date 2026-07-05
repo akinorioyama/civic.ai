@@ -23,11 +23,15 @@
             "ids": [
                 "a-closing-image-the-jolly-hostess-who-can-still-say-no",
                 "buildable-tools",
+                "civic-ask-answer",
                 "definition",
                 "from-ideas-to-practice",
                 "interfaces",
                 "main",
                 "one-case-the-flood-bot",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "what-could-go-wrong",
                 "what-it-looks-like-in-practice",
                 "why-it-matters"
@@ -56,6 +60,7 @@
             "ids": [
                 "a-closing-image-the-signed-work-order",
                 "a-second-case-the-deepfake-liability-flywheel",
+                "civic-ask-answer",
                 "core-artefact-the-engagement-contract",
                 "definition",
                 "from-ideas-to-practice",
@@ -63,6 +68,9 @@
                 "main",
                 "one-case-the-flood-bot",
                 "oversight-with-teeth",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "what-could-go-wrong",
                 "why-it-matters"
             ]
@@ -90,11 +98,15 @@
             "ids": [
                 "a-closing-image-the-bridge-with-inspection-tags",
                 "buildable-tools",
+                "civic-ask-answer",
                 "definition",
                 "from-ideas-to-practice",
                 "interfaces",
                 "main",
                 "one-case-the-flood-bot",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "the-apprentice-model",
                 "what-could-go-wrong",
                 "what-it-looks-like-in-practice",
@@ -124,11 +136,15 @@
             "ids": [
                 "a-closing-image-the-workshop-wall-of-retired-broken-parts",
                 "buildable-tools",
+                "civic-ask-answer",
                 "definition",
                 "from-ideas-to-practice",
                 "interfaces",
                 "main",
                 "one-case-the-flood-bot",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "the-brake-as-a-care-mechanism",
                 "what-could-go-wrong",
                 "what-it-looks-like-in-practice",
@@ -158,12 +174,16 @@
             "ids": [
                 "a-closing-image-the-well-marked-interchange",
                 "buildable-tools",
+                "civic-ask-answer",
                 "definition",
                 "from-ideas-to-practice",
                 "interfaces",
                 "main",
                 "one-case-the-flood-bot",
                 "open-stacks-and-anti-rival-resources",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "what-could-go-wrong",
                 "what-it-looks-like-in-practice",
                 "why-it-matters"
@@ -192,12 +212,16 @@
             "ids": [
                 "a-closing-image-the-river-guardians",
                 "buildable-tools",
+                "civic-ask-answer",
                 "data-as-soil-not-oil",
                 "definition",
                 "from-ideas-to-practice",
                 "interfaces",
                 "main",
                 "one-case-the-flood-bot",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "what-could-go-wrong",
                 "what-it-looks-like-in-practice",
                 "why-it-matters"
@@ -227,12 +251,16 @@
                 "ai-alignment-today-is-fundamentally-flawed",
                 "attentiveness-in-practice",
                 "attentiveness-works",
+                "civic-ask-answer",
                 "community-scale-assistants",
                 "from-1-pilots-to-99-adoption",
                 "in-brief",
                 "industry-norms",
                 "main",
                 "market-design",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "the-stakes-are-high"
             ]
         },
@@ -258,11 +286,15 @@
             ],
             "ids": [
                 "a-regional-proposal",
+                "civic-ask-answer",
                 "consensus-ai-that-listens-at-scale",
                 "crises-in-algorithmic-time",
                 "let-asia-supply-safety-infrastructure",
                 "main",
                 "safety-ai-incidents-as-civil-defence",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "the-6-pack-of-care",
                 "three-building-blocks-for-ai-crisis-diplomacy",
                 "trust-a-whitelist-for-public-integrity"
@@ -289,10 +321,14 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "full-transcript",
                 "in-brief",
                 "key-takeaways",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "watch"
             ]
         },
@@ -320,10 +356,14 @@
                 "a-future-of-diverse-collaboration",
                 "ai-as-a-bicycle-for-the-mind",
                 "bounding-authority--delegation",
+                "civic-ask-answer",
                 "community-translation",
                 "main",
                 "privacy--shadow-llms",
                 "resisting-ai-monoculture",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "the-mainstream-ai-vision--its-discontents"
             ]
         },
@@ -348,6 +388,7 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "from-ideas-to-practice",
                 "how-the-co-production-practised-attentiveness",
                 "interfaces",
@@ -356,6 +397,9 @@
                 "power-must-answer-questions",
                 "relationships-first",
                 "rights-as-a-baseline",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "stories-before-specification",
                 "what-could-go-wrong",
                 "what-they-built"
@@ -386,6 +430,7 @@
                 "buenos-ancestros",
                 "cara-o-cruz",
                 "caritas",
+                "civic-ask-answer",
                 "convivialidad",
                 "cultura-capitalina",
                 "democracia-geotérmica",
@@ -396,6 +441,9 @@
                 "preguntas-y-respuestas",
                 "quién-decide",
                 "qué-te-negarías-a-automatizar",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "solo-constructores"
             ]
         },
@@ -420,6 +468,7 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "coda",
                 "main",
                 "part-i--the-nature-and-obscurity-of-the-machine",
@@ -432,7 +481,10 @@
                 "part-vii--beyond-profit-and-the-ultimate-measure",
                 "part-viii--the-ideology-of-the-builders",
                 "part-x--the-ecology-of-computation-and-the-plurality-of-spirits",
-                "part-xi--federation-translation-and-the-waging-of-peace"
+                "part-xi--federation-translation-and-the-waging-of-peace",
+                "search-container",
+                "search-overlay",
+                "search-suggestions"
             ]
         },
         {
@@ -456,6 +508,7 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "main",
                 "pack-1-1",
                 "pack-1-2",
@@ -468,7 +521,10 @@
                 "pack-5-1",
                 "pack-5-2",
                 "pack-6-1",
-                "pack-6-2"
+                "pack-6-2",
+                "search-container",
+                "search-overlay",
+                "search-suggestions"
             ]
         },
         {
@@ -494,12 +550,16 @@
             "ids": [
                 "an-example-of-compassion-manifested-in-the-world",
                 "can-ai-help-people-who-are-practising-compassion",
+                "civic-ask-answer",
                 "from-scepticism-to-hope--civic-ai-and-compassionate-relationship-building",
                 "full-transcript",
                 "in-brief",
                 "key-takeaways",
                 "listen",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "what-would-a-compassionate-ai-system-look-like"
             ]
         },
@@ -523,7 +583,13 @@
                     "href": "https://civic.ai/tw/conference/"
                 }
             ],
-            "ids": ["main"]
+            "ids": [
+                "civic-ask-answer",
+                "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions"
+            ]
         },
         {
             "path": "conference/report/index.html",
@@ -551,10 +617,14 @@
                 "bd-labels",
                 "bd-text",
                 "beeswarm-detail",
+                "civic-ask-answer",
                 "group-a-innovation-ready-17-members",
                 "group-b-supportive-reformers-21-members",
                 "group-c-principled-sceptics-8-members",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "three-perspectives",
                 "what-we-agree-on",
                 "where-opinions-differ"
@@ -580,7 +650,17 @@
                     "href": "https://civic.ai/tw/conference/sensemaking/"
                 }
             ],
-            "ids": ["consensus", "main", "method", "participants", "statements"]
+            "ids": [
+                "civic-ask-answer",
+                "consensus",
+                "main",
+                "method",
+                "participants",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
+                "statements"
+            ]
         },
         {
             "path": "democracy-needs-civic-ai/index.html",
@@ -604,10 +684,14 @@
             ],
             "ids": [
                 "can-civic-ai-resist-wealth-care",
+                "civic-ask-answer",
                 "default-trajectory",
                 "kami",
                 "main",
                 "monoculture-vs-plurality",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "superintelligence",
                 "the-6-pack-of-care"
             ]
@@ -633,10 +717,14 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "full-transcript",
                 "in-brief",
                 "key-takeaways",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "watch"
             ]
         },
@@ -661,6 +749,7 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "faq-1",
                 "faq-10",
                 "faq-11",
@@ -681,7 +770,10 @@
                 "faq-7",
                 "faq-8",
                 "faq-9",
-                "main"
+                "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions"
             ]
         },
         {
@@ -705,6 +797,7 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "fn1",
                 "fn2",
                 "fn3",
@@ -722,6 +815,9 @@
                 "fnref6",
                 "fnref7",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "stepping-into-the-garden",
                 "the-human-mind-will-not-be-replaced-by-superintelligence",
                 "the-true-condition-of-the-kami-an-asymmetric-gift",
@@ -759,6 +855,7 @@
                 "broad-listening",
                 "care-ethics",
                 "civic-ai",
+                "civic-ask-answer",
                 "corrective-loop",
                 "corrigibility",
                 "data-coalition",
@@ -776,6 +873,9 @@
                 "plurality",
                 "polis",
                 "rlcf",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "shared-eval-registry",
                 "singleton",
                 "sortition",
@@ -804,10 +904,14 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "four-proof-points",
                 "main",
                 "project",
                 "publications",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "start-here",
                 "the-6-pack"
             ]
@@ -835,10 +939,14 @@
             "ids": [
                 "a-technical-argument-for-boundedness",
                 "bengio-truth-without-appetite",
+                "civic-ask-answer",
                 "implementing-through-the-6-pack",
                 "in-brief",
                 "main",
                 "sai-capability-through-specialisation",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "taniguchi-meaning-by-negotiation-not-by-decree",
                 "the-kami-of-care",
                 "the-shared-design-lesson",
@@ -870,10 +978,14 @@
                 "2-give-it-a-way-to-act",
                 "3-wake-your-kami",
                 "a-quick-check",
+                "civic-ask-answer",
                 "give-it-a-memory",
                 "keep-it-together",
                 "main",
                 "make-it-yours-keep-it-switch-it-off",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "the-soul-your-kami-reads",
                 "what-a-webpage-cannot-teach",
                 "what-youll-see"
@@ -902,6 +1014,7 @@
             "ids": [
                 "alignment-assemblies",
                 "attentiveness-caring-about",
+                "civic-ask-answer",
                 "competence-care-giving",
                 "from-gridlock-to-governance",
                 "from-is-to-ought",
@@ -913,6 +1026,9 @@
                 "plurality-is-here",
                 "responsibility-taking-care-of",
                 "responsiveness-care-receiving",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "solidarity-caring-with",
                 "symbiosis-kami-of-care",
                 "we-the-people-are-the-superintelligence"
@@ -940,6 +1056,7 @@
             ],
             "ids": [
                 "before-you-call-it-civic-ai",
+                "civic-ask-answer",
                 "cmap-frame-title",
                 "exit-readiness",
                 "framework-map",
@@ -950,6 +1067,9 @@
                 "named-instruments",
                 "promise-fidelity",
                 "representation-gap",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "st-p1",
                 "st-p2",
                 "st-p3",
@@ -985,12 +1105,16 @@
             "ids": [
                 "anti-patterns",
                 "bootstrap-conversation",
+                "civic-ask-answer",
                 "first-move",
                 "identity-defaults",
                 "main",
                 "memory",
                 "openclaw-mapping",
                 "operating-commitments",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "when-to-use-this"
             ]
         },
@@ -1020,6 +1144,7 @@
                 "6-pack-of-care",
                 "alignment-assemblies",
                 "broad-listening",
+                "civic-ask-answer",
                 "civic-infrastructure",
                 "closed-stack",
                 "complementary",
@@ -1032,7 +1157,10 @@
                 "main",
                 "next-gen-artefacts",
                 "qa",
-                "result-method"
+                "result-method",
+                "search-container",
+                "search-overlay",
+                "search-suggestions"
             ]
         },
         {
@@ -1057,12 +1185,16 @@
             ],
             "ids": [
                 "a-radical-turn-from-extraction-to-cultivation",
+                "civic-ask-answer",
                 "coda-returning-to-the-garden",
                 "digital-repair-one-is-all-all-is-one",
                 "from-the-blind-spots-of-utilitarianism-to-the-awakening-of-psychic-sovereignty",
                 "main",
                 "redefining-the-human-from-atomised-individuals-to-the-awakening-of-the-dividual",
                 "relationship-as-being-building-the-moat-of-open-source-soil",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "the-boundaries-of-language-and-the-sum-of-reality",
                 "the-failure-of-moral-frameworks-and-polarisation",
                 "the-neural-cost-the-collapse-of-experiential-navigation"
@@ -1088,7 +1220,13 @@
                     "href": "https://civic.ai/tw/plurality-ucsc/"
                 }
             ],
-            "ids": ["main"]
+            "ids": [
+                "civic-ask-answer",
+                "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions"
+            ]
         },
         {
             "path": "podcast/index.html",
@@ -1111,11 +1249,15 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "full-transcript",
                 "in-brief",
                 "key-takeaways",
                 "listen",
-                "main"
+                "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions"
             ]
         },
         {
@@ -1138,7 +1280,16 @@
                     "href": "https://civic.ai/tw/reimagining-ai-alignment/"
                 }
             ],
-            "ids": ["full-transcript", "in-brief", "main", "watch"]
+            "ids": [
+                "civic-ask-answer",
+                "full-transcript",
+                "in-brief",
+                "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
+                "watch"
+            ]
         },
         {
             "path": "safer-sovereignty/index.html",
@@ -1162,10 +1313,14 @@
             ],
             "ids": [
                 "challenging-mainframe-mentality",
+                "civic-ask-answer",
                 "courage-to-sunset",
                 "enterprise-plurality",
                 "federate-safety-do-not-centralize",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "sovereignty-stack"
             ]
         },
@@ -1190,10 +1345,14 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "horizontal-relationships--the-gardener-analogy",
                 "introduction--the-6-pack-of-care",
                 "main",
                 "redefining-maslow--sapiens-integra",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "the-convergence-of-care-and-ai",
                 "the-worldview-and-ethos-of-care"
             ]
@@ -1245,6 +1404,7 @@
                 "ancestorial-room",
                 "antirez-and-piaudreytorg",
                 "civic-ai-new-frontier",
+                "civic-ask-answer",
                 "four-freedoms",
                 "good-enough-ancestor",
                 "inside-the-closed-stack",
@@ -1252,6 +1412,9 @@
                 "lonely-maintainer",
                 "main",
                 "pugshs-the-commit-bit",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "tim-sees-code"
             ]
         },
@@ -1276,7 +1439,11 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "一個案例賑災機器人",
                 "介接",
                 "可立即建置的工具",
@@ -1309,7 +1476,11 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "一個案例賑災機器人",
                 "介接",
                 "可能出錯的地方",
@@ -1343,7 +1514,11 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "一個案例賑災機器人",
                 "介接",
                 "可立即建置的工具",
@@ -1377,7 +1552,11 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "一個案例賑災機器人",
                 "今天就能做的工具",
                 "可能出錯的地方",
@@ -1411,7 +1590,11 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "一個案例賑災機器人",
                 "今天就能做的工具",
                 "可能出錯的地方",
@@ -1445,7 +1628,11 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "一個案例賑災機器人",
                 "今天就能做的工具",
                 "可能出錯的地方",
@@ -1479,7 +1666,11 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "今日的-ai-對齊有根本缺陷",
                 "實踐中的覺察力",
                 "市場設計",
@@ -1513,7 +1704,11 @@
             ],
             "ids": [
                 "ai-危機外交的三大基礎支柱",
+                "civic-ask-answer",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "信任建立具公信力的白名單",
                 "共識用-ai-實現大規模傾聽獎勵彌合分歧而非激化對立",
                 "區域性倡議",
@@ -1543,7 +1738,17 @@
                     "href": "https://civic.ai/tw/ai-democracy-podcast/"
                 }
             ],
-            "ids": ["main", "完整逐字稿", "摘要", "觀看", "重點"]
+            "ids": [
+                "civic-ask-answer",
+                "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
+                "完整逐字稿",
+                "摘要",
+                "觀看",
+                "重點"
+            ]
         },
         {
             "path": "tw/ai-with-us/index.html",
@@ -1567,7 +1772,11 @@
             ],
             "ids": [
                 "ai-作為心靈的腳踏車",
+                "civic-ask-answer",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "主流-ai-願景及其不安",
                 "多元協作的未來",
                 "抵抗-ai-單一文化",
@@ -1597,7 +1806,11 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "介面",
                 "他們建造了什麼",
                 "共同產製如何實踐覺察力",
@@ -1635,6 +1848,7 @@
                 "buenos-ancestros",
                 "cara-o-cruz",
                 "caritas",
+                "civic-ask-answer",
                 "convivialidad",
                 "cultura-capitalina",
                 "democracia-geotérmica",
@@ -1645,6 +1859,9 @@
                 "preguntas-y-respuestas",
                 "quién-decide",
                 "qué-te-negarías-a-automatizar",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "solo-constructores"
             ]
         },
@@ -1669,7 +1886,11 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "尾聲",
                 "第一部-機器的本性與幽暗",
                 "第七部-超越利潤與最終尺度",
@@ -1703,6 +1924,7 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "main",
                 "pack-1-1",
                 "pack-1-2",
@@ -1715,7 +1937,10 @@
                 "pack-5-1",
                 "pack-5-2",
                 "pack-6-1",
-                "pack-6-2"
+                "pack-6-2",
+                "search-container",
+                "search-overlay",
+                "search-suggestions"
             ]
         },
         {
@@ -1740,7 +1965,11 @@
             ],
             "ids": [
                 "ai-能幫助正在修習慈悲的人嗎",
+                "civic-ask-answer",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "一個有慈悲心的-ai-系統會是什麼樣子",
                 "完整逐字稿",
                 "從懷疑到希望仁工智慧與慈悲的關係建構",
@@ -1770,7 +1999,13 @@
                     "href": "https://civic.ai/tw/conference/"
                 }
             ],
-            "ids": ["main"]
+            "ids": [
+                "civic-ask-answer",
+                "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions"
+            ]
         },
         {
             "path": "tw/conference/report/index.html",
@@ -1798,7 +2033,11 @@
                 "bd-labels",
                 "bd-text",
                 "beeswarm-detail",
+                "civic-ask-answer",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "三種觀點",
                 "共識之處",
                 "意見分歧之處",
@@ -1827,7 +2066,17 @@
                     "href": "https://civic.ai/tw/conference/sensemaking/"
                 }
             ],
-            "ids": ["consensus", "main", "method", "participants", "statements"]
+            "ids": [
+                "civic-ask-answer",
+                "consensus",
+                "main",
+                "method",
+                "participants",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
+                "statements"
+            ]
         },
         {
             "path": "tw/democracy-needs-civic-ai/index.html",
@@ -1850,8 +2099,12 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "kami",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "仁工智慧能抵抗-wealth-care-嗎",
                 "單一文化-vs-多元路徑",
                 "超級智慧",
@@ -1879,7 +2132,17 @@
                     "href": "https://civic.ai/tw/doom-debate/"
                 }
             ],
-            "ids": ["main", "完整逐字稿", "摘要", "觀看", "重點"]
+            "ids": [
+                "civic-ask-answer",
+                "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
+                "完整逐字稿",
+                "摘要",
+                "觀看",
+                "重點"
+            ]
         },
         {
             "path": "tw/faq/index.html",
@@ -1902,6 +2165,7 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "faq-1",
                 "faq-10",
                 "faq-11",
@@ -1922,7 +2186,10 @@
                 "faq-7",
                 "faq-8",
                 "faq-9",
-                "main"
+                "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions"
             ]
         },
         {
@@ -1946,6 +2213,7 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "fn1",
                 "fn2",
                 "fn3",
@@ -1963,6 +2231,9 @@
                 "fnref6",
                 "fnref7",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "人類心智不會被超級智慧取代",
                 "兩種力意識與物質",
                 "地神的真實處境不對稱的禮物",
@@ -2000,6 +2271,7 @@
                 "broad-listening",
                 "care-ethics",
                 "civic-ai",
+                "civic-ask-answer",
                 "corrective-loop",
                 "corrigibility",
                 "data-coalition",
@@ -2017,6 +2289,9 @@
                 "plurality",
                 "polis",
                 "rlcf",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "shared-eval-registry",
                 "singleton",
                 "sortition",
@@ -2045,7 +2320,11 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "the-6-pack",
                 "四個切入案例",
                 "學術發表",
@@ -2075,8 +2354,12 @@
             ],
             "ids": [
                 "bengio求真而無欲",
+                "civic-ask-answer",
                 "main",
                 "sai以專精取得能力",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "共同的設計教訓",
                 "技術基底無法決定的事",
                 "摘要",
@@ -2110,7 +2393,11 @@
                 "1-給它一個在地的大腦",
                 "2-給它一個能行動的方式",
                 "3-喚醒你的-kami",
+                "civic-ask-answer",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "一個網頁教不會的事",
                 "你會看到什麼",
                 "你的-kami-所讀的那份靈魂",
@@ -2141,7 +2428,11 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "共生力地神般的關懷",
                 "勝任力給予關懷",
                 "回應力接收關懷",
@@ -2180,12 +2471,16 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "cmap-frame-title",
                 "exit-readiness",
                 "main",
                 "map",
                 "promise-fidelity",
                 "representation-gap",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "st-p1",
                 "st-p2",
                 "st-p3",
@@ -2224,8 +2519,12 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "main",
                 "openclaw-對應",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "何時使用",
                 "反模式",
                 "啟動對話",
@@ -2258,8 +2557,12 @@
             "ids": [
                 "5050",
                 "ai-倫理",
+                "civic-ask-answer",
                 "knowledge-artefact-management-intelligence",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "互補",
                 "光照進來",
                 "公民基礎設施",
@@ -2297,7 +2600,11 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "人的重新定義從原子化個人到分身的覺醒",
                 "從功利主義的盲點到心靈主權的覺醒",
                 "數位修復一即一切一切即一",
@@ -2329,7 +2636,13 @@
                     "href": "https://civic.ai/tw/plurality-ucsc/"
                 }
             ],
-            "ids": ["main"]
+            "ids": [
+                "civic-ask-answer",
+                "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions"
+            ]
         },
         {
             "path": "tw/podcast/index.html",
@@ -2351,7 +2664,17 @@
                     "href": "https://civic.ai/tw/podcast/"
                 }
             ],
-            "ids": ["main", "完整逐字稿", "摘要", "收聽", "重點"]
+            "ids": [
+                "civic-ask-answer",
+                "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
+                "完整逐字稿",
+                "摘要",
+                "收聽",
+                "重點"
+            ]
         },
         {
             "path": "tw/reimagining-ai-alignment/index.html",
@@ -2373,7 +2696,16 @@
                     "href": "https://civic.ai/tw/reimagining-ai-alignment/"
                 }
             ],
-            "ids": ["main", "完整逐字稿", "摘要", "觀看"]
+            "ids": [
+                "civic-ask-answer",
+                "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
+                "完整逐字稿",
+                "摘要",
+                "觀看"
+            ]
         },
         {
             "path": "tw/safer-sovereignty/index.html",
@@ -2396,7 +2728,11 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "主權堆疊",
                 "企業多元性",
                 "安全要聯邦化不要中心化",
@@ -2425,7 +2761,11 @@
                 }
             ],
             "ids": [
+                "civic-ask-answer",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "導言與關懷六力",
                 "水平關係與園丁的比喻",
                 "重新定義-maslow-與-sapiens-integra",
@@ -2453,7 +2793,13 @@
                     "href": "https://civic.ai/tw/sensemaker/"
                 }
             ],
-            "ids": ["main"]
+            "ids": [
+                "civic-ask-answer",
+                "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions"
+            ]
         },
         {
             "path": "tw/software-freedom-as-civic-care/index.html",
@@ -2478,9 +2824,13 @@
             "ids": [
                 "447",
                 "antirez-與-piaudreytorg",
+                "civic-ask-answer",
                 "kamicivicai",
                 "main",
                 "pugshs-提交權",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "tim-看見程式碼",
                 "仁工智慧新的前沿",
                 "四大自由",
@@ -2510,7 +2860,13 @@
                     "href": "https://civic.ai/tw/virtuous-ai/"
                 }
             ],
-            "ids": ["main"]
+            "ids": [
+                "civic-ask-answer",
+                "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions"
+            ]
         },
         {
             "path": "tw/we-the-people-are-truly-the-superintelligence/index.html",
@@ -2534,7 +2890,11 @@
             ],
             "ids": [
                 "447",
+                "civic-ask-answer",
                 "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "三個動作",
                 "你就是超級智慧",
                 "問答",
@@ -2565,7 +2925,13 @@
                     "href": "https://civic.ai/tw/virtuous-ai/"
                 }
             ],
-            "ids": ["main"]
+            "ids": [
+                "civic-ask-answer",
+                "main",
+                "search-container",
+                "search-overlay",
+                "search-suggestions"
+            ]
         },
         {
             "path": "we-the-people-are-truly-the-superintelligence/index.html",
@@ -2589,12 +2955,16 @@
             ],
             "ids": [
                 "447",
+                "civic-ask-answer",
                 "closing-the-loop",
                 "local-kami",
                 "main",
                 "oil-to-soil",
                 "percentage-rebound",
                 "qa",
+                "search-container",
+                "search-overlay",
+                "search-suggestions",
                 "the-superintelligence-is-you",
                 "three-moves",
                 "wildfire-or-campfire"
@@ -2605,6 +2975,9 @@
         ".nojekyll",
         ".well-known/openclaw/SKILL.md",
         "CNAME",
+        "assets/js/civic-ask.js",
+        "assets/js/civic-search.js",
+        "assets/vendor/fuse.min.js",
         "audio/ai-alignment-cannot-be-top-down.mp3",
         "audio/manifesto.mp3",
         "audio/software-freedom-as-civic-care.mp3",
@@ -2769,6 +3142,7 @@
         "llms.txt",
         "robots.txt",
         "sitemap.xml",
-        "styles.css"
+        "styles.css",
+        "tw/search-index.json"
     ]
 }

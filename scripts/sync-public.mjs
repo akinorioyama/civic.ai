@@ -6,6 +6,7 @@ const PASSTHROUGH = [
     "img",
     "fonts",
     "audio",
+    "assets",
     "styles.css",
     "CNAME",
     ".nojekyll",
@@ -25,5 +26,14 @@ for (const source of PASSTHROUGH) {
         throw new Error(`Missing passthrough asset: ${source}`);
     cpSync(from, join(outDir, basename(source)), { recursive: true });
 }
+
+const fuseFrom = join(root, "node_modules/fuse.js/dist/fuse.min.js");
+if (!existsSync(fuseFrom))
+    throw new Error(
+        "Missing Fuse vendor: node_modules/fuse.js/dist/fuse.min.js"
+    );
+const vendorDir = join(outDir, "assets", "vendor");
+mkdirSync(vendorDir, { recursive: true });
+cpSync(fuseFrom, join(vendorDir, "fuse.min.js"));
 
 console.log(`Synced ${PASSTHROUGH.length} passthrough assets to public/`);

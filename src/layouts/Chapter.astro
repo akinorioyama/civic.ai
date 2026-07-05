@@ -1,15 +1,19 @@
 ---
 import type { ActionLink, PageRecord } from "../lib/pages";
 import { lang2, site } from "../lib/site";
+import { normalizeSearchLang } from "../lib/search";
 import ClientScripts from "../components/ClientScripts.astro";
 import InShort from "../components/InShort.astro";
 import PageHead from "../components/PageHead.astro";
 import PartnerColophon from "../components/PartnerColophon.astro";
 import SiteHeader from "../components/SiteHeader.astro";
+import SearchOverlay from "../components/SearchOverlay.astro";
 
 interface Props { page: PageRecord; }
 const { page } = Astro.props;
 const zh = lang2(page.data.lang) === "zh";
+const pagefindIndexed =
+    page.includeInSitemap === true && page.data.search_exclude !== true;
 const chapterOrder = site.chapters;
 const key = page.url.replace(/^\/tw\//, "").replace(/^\//, "").replace(/\/$/, "");
 const index = chapterOrder.indexOf(key);
@@ -50,7 +54,17 @@ if (page.data.og_image || page.data.thumbnail) articleLd.image = `${site.url}${p
   <body class={page.data.page_class}>
     <a class="skip-link" href="#main">{zh ? "跳至內容" : "Skip to content"}</a>
     <SiteHeader page={page} />
-    <main id="main"><InShort page={page} />{page.data.audio && <div class="audio-section"><audio controls preload="metadata" title="Narrated in Audrey's own AI voice"><source src={page.data.audio} type="audio/mpeg" /></audio></div>}<Fragment set:html={page.html} /></main>
+    <SearchOverlay page={page} />
+    <main
+      id="main"
+      {...(pagefindIndexed
+        ? {
+              "data-pagefind-body": true,
+              "data-pagefind-filter": `lang:${normalizeSearchLang(page.data.lang)}`,
+              "data-pagefind-meta": `section:${page.data.title || page.url}`,
+          }
+        : {})}
+    ><InShort page={page} />{page.data.audio && <div class="audio-section"><audio controls preload="metadata" title="Narrated in Audrey's own AI voice"><source src={page.data.audio} type="audio/mpeg" /></audio></div>}<Fragment set:html={page.html} /></main>
     <section class="next-action"><div class="next-action-content">
       {prev && <a href={prev.url} class="next-action-button">{!hasExplicitNav && <span class="button-arrow">←</span>}<span class="button-text">{prev.text}</span></a>}
       {next && <a href={next.url} class="next-action-button"><span class="button-text">{next.text}</span>{!hasExplicitNav && <span class="button-arrow">→</span>}</a>}

@@ -1,0 +1,34 @@
+---
+import type { PageRecord } from "../lib/pages";
+import { getSearchSuggestions, normalizeSearchLang } from "../lib/search";
+import { assetVersion } from "../lib/site";
+
+interface Props {
+    page: PageRecord;
+}
+
+const { page } = Astro.props;
+const searchLang = normalizeSearchLang(page.data.lang);
+const zh = searchLang === "zh";
+const suggestions = getSearchSuggestions(searchLang);
+const fuseVendor = assetVersion("node_modules/fuse.js/dist/fuse.min.js");
+const askJs = assetVersion("assets/js/civic-ask.js");
+const searchJs = assetVersion("assets/js/civic-search.js");
+---
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label={zh ? "搜尋仁工智慧" : "Search Civic AI"} aria-hidden="true">
+  <div class="search-overlay__inner">
+    <div id="civic-ask-answer" class="civic-ask-answer" aria-live="polite" hidden></div>
+    <div id="search-container"></div>
+  </div>
+</div>
+{suggestions.length > 0 && (
+  <datalist id="search-suggestions">
+    {suggestions.map((term) => (
+      <option value={term} />
+    ))}
+  </datalist>
+)}
+<script is:inline src="/pagefind/pagefind-ui.js"></script>
+{searchLang === "zh" && <script is:inline src={`/assets/vendor/fuse.min.js?v=${fuseVendor}`} />}
+<script is:inline src={`/assets/js/civic-ask.js?v=${askJs}`} />
+<script is:inline src={`/assets/js/civic-search.js?v=${searchJs}`} />

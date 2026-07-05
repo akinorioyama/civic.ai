@@ -89,6 +89,7 @@ const files =
               glob("**/*.md", {
                   exclude: (p) =>
                       p.startsWith("node_modules/") ||
+                      p.includes("/node_modules/") ||
                       p.startsWith("docs/") ||
                       p.startsWith("dist/") ||
                       p.startsWith("public/") ||

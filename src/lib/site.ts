@@ -45,15 +45,19 @@ export function readingTime(html: string, lang: string | undefined): number {
     return Math.max(1, Math.ceil(words / 220));
 }
 
-export function cssVersion(): string {
+export function assetVersion(path: string): string {
     try {
         return createHash("sha1")
-            .update(readFileSync("styles.css"))
+            .update(readFileSync(path))
             .digest("hex")
             .slice(0, 8);
     } catch {
         return "";
     }
+}
+
+export function cssVersion(): string {
+    return assetVersion("styles.css");
 }
 
 export function formatDateDisplay(

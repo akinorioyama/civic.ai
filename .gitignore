@@ -30,3 +30,5 @@ tmp/
 z-*
 
 .worktrees/
+.vectorize-sync-*
+worker/.dev.vars

@@ -30,6 +30,15 @@ function posixRelative(file) {
     return relative(buildDir, file).split(sep).join("/");
 }
 
+function shouldIgnoreBuildFile(path) {
+    return (
+        path.startsWith("_astro/") ||
+        path.startsWith("pagefind/") ||
+        path.endsWith(".DS_Store") ||
+        path.includes("/.DS_Store")
+    );
+}
+
 function attr(html, regex) {
     const match = html.match(regex);
     return match ? decodeHtml(match[1]) : "";
@@ -83,22 +92,19 @@ function snapshotHtml(file) {
 const files = walk(buildDir);
 const html = files
     .filter((file) => file.endsWith(".html"))
-    .filter((file) => !posixRelative(file).startsWith("_astro/"))
+    .filter((file) => !shouldIgnoreBuildFile(posixRelative(file)))
     .map(snapshotHtml)
     .sort((a, b) => a.path.localeCompare(b.path));
 
 const requiredFiles = files
     .map(posixRelative)
     .filter((path) => !path.endsWith(".html"))
-    .filter((path) => !path.startsWith("_astro/"))
-    .filter(
-        (path) => !path.endsWith(".DS_Store") && !path.includes("/.DS_Store")
-    )
+    .filter((path) => !shouldIgnoreBuildFile(path))
     .sort();
 
 const baseline = { html, requiredFiles };
 mkdirSync(dirname(outFile), { recursive: true });
-writeFileSync(outFile, `${JSON.stringify(baseline, null, 2)}\n`);
+writeFileSync(outFile, `${JSON.stringify(baseline, null, 4)}\n`);
 console.log(
     `Captured ${html.length} HTML snapshots and ${requiredFiles.length} required files to ${outFile}`
 );

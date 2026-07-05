@@ -1,16 +1,22 @@
 ---
 import type { PageRecord } from "../lib/pages";
 import { lang2, site } from "../lib/site";
+import { normalizeSearchLang } from "../lib/search";
 import ClientScripts from "../components/ClientScripts.astro";
 import Footer from "../components/Footer.astro";
 import InShort from "../components/InShort.astro";
 import PageHead from "../components/PageHead.astro";
 import PartnerColophon from "../components/PartnerColophon.astro";
 import SiteHeader from "../components/SiteHeader.astro";
+import SearchOverlay from "../components/SearchOverlay.astro";
 
 interface Props { page: PageRecord; }
 const { page } = Astro.props;
 const zh = lang2(page.data.lang) === "zh";
+const pagefindIndexed =
+    page.includeInSitemap === true &&
+    page.data.search_exclude !== true &&
+    !page.sourceName.endsWith(".html");
 const websiteLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -33,7 +39,17 @@ const websiteLd = {
   <body>
     <a class="skip-link" href="#main">{zh ? "跳至內容" : "Skip to content"}</a>
     <SiteHeader page={page} />
-    <main id="main"><InShort page={page} /><slot /></main>
+    <SearchOverlay page={page} />
+    <main
+      id="main"
+      {...(pagefindIndexed
+        ? {
+              "data-pagefind-body": true,
+              "data-pagefind-filter": `lang:${normalizeSearchLang(page.data.lang)}`,
+              "data-pagefind-meta": `section:${page.data.title || page.url}`,
+          }
+        : {})}
+    ><InShort page={page} /><slot /></main>
     {(page.data.next_action || page.data.prev_action) && <section class="next-action"><div class="next-action-content">
       {page.data.prev_action && <a href={page.data.prev_action.url} class="next-action-button"><span class="button-arrow">←</span><span class="button-text">{page.data.prev_action.text}</span></a>}
       {page.data.next_action && <a href={page.data.next_action.url} class="next-action-button"><span class="button-text">{page.data.next_action.text}</span><span class="button-arrow">→</span></a>}

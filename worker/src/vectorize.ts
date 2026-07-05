@@ -1,0 +1,165 @@
+export const SITE_EMBEDDING_MODEL = "@cf/baai/bge-m3";
+export const SITE_EMBEDDING_DIM = 1024;
+export const VECTORIZE_INDEX_NAME = "civic-ai-site";
+export const DEFAULT_TOP_K = 8;
+export const DEFAULT_MIN_SCORE = 0.35;
+const METADATA_CONTENT_MAX = 1200;
+
+export type SiteChunkMetadata = {
+    lang: string;
+    url: string;
+    heading: string;
+    pageTitle: string;
+    content: string;
+};
+
+export type SiteChunk = {
+    id: string;
+    metadata: SiteChunkMetadata;
+};
+
+export type VectorizeBinding = {
+    query: (
+        vector: number[],
+        options?: {
+            topK?: number;
+            returnMetadata?: "none" | "indexed" | "all";
+            filter?: Record<string, unknown>;
+        }
+    ) => Promise<{
+        matches?: Array<{ score: number; metadata?: Record<string, unknown> }>;
+    }>;
+};
+
+type AiBinding = {
+    run: (model: string, input: Record<string, unknown>) => Promise<unknown>;
+};
+
+function extractEmbedding(result: unknown): number[] | null {
+    if (!result || typeof result !== "object") return null;
+    const obj = result as Record<string, unknown>;
+    const data =
+        obj.data ?? (obj.result as Record<string, unknown> | undefined)?.data;
+    if (!Array.isArray(data) || data.length === 0) return null;
+    const first = data[0];
+    if (Array.isArray(first)) return first as number[];
+    if (typeof first === "number") return data as number[];
+    return null;
+}
+
+function metadataToChunk(
+    meta: Record<string, unknown> | undefined
+): SiteChunk | null {
+    if (!meta) return null;
+    const lang = typeof meta.lang === "string" ? meta.lang : "";
+    const url = typeof meta.url === "string" ? meta.url : "";
+    const content = typeof meta.content === "string" ? meta.content : "";
+    const heading = typeof meta.heading === "string" ? meta.heading : "";
+    const pageTitle = typeof meta.pageTitle === "string" ? meta.pageTitle : "";
+    if (!lang || !url || !content.trim()) return null;
+    const id =
+        typeof meta.id === "string"
+            ? meta.id
+            : typeof meta.logicalId === "string"
+              ? meta.logicalId
+              : `${lang}:${url}:${heading || "intro"}:${content.slice(0, 64)}`;
+    return {
+        id,
+        metadata: { lang, url, heading, pageTitle, content },
+    };
+}
+
+function exactQueryTerms(question: string): string[] {
+    const normalized = question.trim().toLocaleLowerCase();
+    if (!normalized) return [];
+    const terms = new Set([normalized]);
+    for (const part of normalized.split(
+        /[\s、。・,.;:!?！？()（）「」『』[\]【】]+/
+    )) {
+        if (part.length >= 2) terms.add(part);
+    }
+    return [...terms];
+}
+
+function chunkHasExactQueryTerm(chunk: SiteChunk, terms: string[]): boolean {
+    if (terms.length === 0) return false;
+    const haystack = [
+        chunk.metadata.heading,
+        chunk.metadata.pageTitle,
+        chunk.metadata.content,
+    ]
+        .join("\n")
+        .toLocaleLowerCase();
+    return terms.some((term) => haystack.includes(term));
+}
+
+export async function embedQuery(
+    ai: AiBinding,
+    question: string,
+    model = SITE_EMBEDDING_MODEL
+): Promise<number[] | null> {
+    const text = question.trim();
+    if (!text) return null;
+    try {
+        const result = await ai.run(model, { text: [text] });
+        return extractEmbedding(result);
+    } catch (e) {
+        console.error("site embed query failed", e);
+        return null;
+    }
+}
+
+export async function retrieveSiteChunks(
+    ai: AiBinding,
+    vectorize: VectorizeBinding,
+    question: string,
+    lang: string,
+    options?: { topK?: number; minScore?: number; embeddingModel?: string }
+): Promise<SiteChunk[]> {
+    const topK = Math.min(32, Math.max(1, options?.topK ?? DEFAULT_TOP_K));
+    const minScore = options?.minScore ?? DEFAULT_MIN_SCORE;
+    const exactTerms = exactQueryTerms(question);
+    const embedding = await embedQuery(
+        ai,
+        question,
+        options?.embeddingModel?.trim() || SITE_EMBEDDING_MODEL
+    );
+    if (!embedding?.length) return [];
+
+    let matches: Array<{ score: number; metadata?: Record<string, unknown> }> =
+        [];
+    try {
+        const result = await vectorize.query(embedding, {
+            topK,
+            returnMetadata: "all",
+            filter: { lang: { $eq: lang } },
+        });
+        matches = result.matches ?? [];
+    } catch (e) {
+        console.error("vectorize query failed", e);
+        return [];
+    }
+
+    const out: Array<{ chunk: SiteChunk; score: number; exact: boolean }> = [];
+    const seen = new Set<string>();
+    for (const m of matches) {
+        if (!Number.isFinite(m.score)) continue;
+        const chunk = metadataToChunk(m.metadata);
+        if (!chunk || seen.has(chunk.id)) continue;
+        const exact = chunkHasExactQueryTerm(chunk, exactTerms);
+        if (!exact && m.score < minScore) continue;
+        seen.add(chunk.id);
+        out.push({ chunk, score: m.score, exact });
+    }
+    out.sort((a, b) => Number(b.exact) - Number(a.exact) || b.score - a.score);
+    return out.slice(0, topK).map((item) => item.chunk);
+}
+
+export function truncateForMetadata(
+    content: string,
+    max = METADATA_CONTENT_MAX
+): string {
+    const t = content.trim();
+    if (t.length <= max) return t;
+    return t.slice(0, max);
+}

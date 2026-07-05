@@ -1,0 +1,26 @@
+name = "civic-ai-ask"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+workers_dev = true
+
+# Uncomment when ask.civic.ai is a proxied DNS name in this CF account:
+# [[routes]]
+# pattern = "ask.civic.ai"
+# custom_domain = true
+
+[vars]
+AUDREY_MODEL = "nemotron-ultra"
+
+[ai]
+binding = "AI"
+
+[[vectorize]]
+binding = "SITE_VECTORIZE"
+index_name = "civic-ai-site"
+
+# Create index (once): wrangler vectorize create civic-ai-site --dimensions=1024 --metric=cosine
+# Metadata index (once, BEFORE bulk upsert): wrangler vectorize create-metadata-index civic-ai-site --propertyName=lang --type=string
+# Secrets: BASETEN_API_KEY, CF_AIG_TOKEN (wrangler secret put)
+
+[dev]
+port = 8788

@@ -24,6 +24,7 @@ export interface PageFrontmatter {
     permalink?: string;
     alt_lang_url?: string;
     exclude_from_sitemap?: boolean;
+    search_exclude?: boolean;
     page_class?: string;
     author?: string;
     date?: string | Date;

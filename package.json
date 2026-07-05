@@ -6,7 +6,7 @@
     },
     "scripts": {
         "dev": "bun run sync:public && astro dev --host 127.0.0.1",
-        "build": "bun run sync:public && astro build && bun run minify-html",
+        "build": "bun run sync:public && astro build && bun run minify-html && bunx pagefind --site dist",
         "lint": "prettier --check . && bun run pangu-format.mjs --check && node scripts/check-tw-typography.mjs",
         "format": "prettier --write . && bun run pangu-format.mjs",
         "prepare": "husky",
@@ -18,6 +18,10 @@
         "check:hybrid": "BUILD_DIR=dist bun run scripts/check-hybrid-design.mjs",
         "check:astro-output": "BUILD_DIR=dist bun run scripts/check-astro-output.mjs",
         "check:parity": "BUILD_DIR=dist BASELINE_IN=tests/fixtures/eleventy-build-baseline.json bun run scripts/check-build-parity.mjs",
+        "check:search": "BUILD_DIR=dist bun run scripts/check-search-output.mjs",
+        "vectorize:sync-site": "bun scripts/vectorize-sync-site.mjs",
+        "worker:typecheck": "cd worker && bun run typecheck",
+        "worker:test": "cd worker && bun run test",
         "import-comics": "node import-comics.mjs",
         "en": "node scripts/review-set.mjs en",
         "tw": "node scripts/review-set.mjs tw"
@@ -37,7 +41,9 @@
     },
     "devDependencies": {
         "@types/bun": "latest",
+        "fuse.js": "^6.6.2",
         "html-minifier": "^4.0.0",
+        "pagefind": "1.5.0-beta.1",
         "husky": "^9.1.7",
         "lint-staged": "^16.4.0",
         "prettier": "^3.8.4",

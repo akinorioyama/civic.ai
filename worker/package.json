@@ -1,0 +1,23 @@
+{
+    "name": "civic-ai-ask",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "wrangler dev",
+        "deploy": "wrangler deploy",
+        "typecheck": "tsc --noEmit",
+        "test": "node --import tsx --test test/*.node.ts"
+    },
+    "dependencies": {
+        "@au/cf-ai-gateway": "file:vendor/au-cf-ai-gateway-0.1.2.tgz",
+        "hono": "^4.6.14"
+    },
+    "devDependencies": {
+        "@cloudflare/workers-types": "^4.20250109.0",
+        "@types/node": "^26.1.0",
+        "tsx": "^4.21.0",
+        "typescript": "^5.7.2",
+        "wrangler": "^4.87.0"
+    }
+}
