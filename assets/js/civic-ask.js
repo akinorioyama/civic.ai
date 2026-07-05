@@ -298,13 +298,14 @@
         if (!window.fetch) return;
         var host = window.location.hostname;
         var override = explicitAskBaseOverride();
+        var localDev = isLocalDevAskHost();
         var shouldProbe =
             host === "civic.ai" ||
             host === "www.civic.ai" ||
             host === "civic-ai-ask.audreyt.workers.dev" ||
+            localDev ||
             !!override;
         if (!shouldProbe) return;
-        var localDev = isLocalDevAskHost();
         fetch(ASK_BASE + "/capacity", {
             headers: { Accept: "application/json" },
         })

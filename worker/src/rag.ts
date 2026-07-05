@@ -51,11 +51,14 @@ function buildMessages(
         })
         .join("\n\n");
     const instruction = LANG_INSTRUCTION[lang] ?? LANG_INSTRUCTION.en;
+    const systemContent =
+        chunks.length > 0
+            ? "You are a helpful assistant for the Civic AI 6-Pack of Care site. Answer only from the excerpts. Be concise. If excerpts are insufficient, say so briefly."
+            : "You are a helpful assistant for the Civic AI 6-Pack of Care site. No matching site excerpts were retrieved for this question. Answer briefly if you can, and state that no site excerpts were available for citation.";
     return [
         {
             role: "system",
-            content:
-                "You are a helpful assistant for the Civic AI 6-Pack of Care site. Answer only from the excerpts. Be concise. If excerpts are insufficient, say so briefly.",
+            content: systemContent,
         },
         {
             role: "user",
@@ -121,28 +124,6 @@ export async function streamSiteAnswer(
             chunks.length > 0
                 ? retrievalStubMarkdown(question, lang, chunks)
                 : stubSiteAnswer(question, lang);
-        return new Response(textStream(body), {
-            status: 200,
-            headers: {
-                "Content-Type": "text/plain; charset=utf-8",
-                "Cache-Control": "no-store",
-            },
-        });
-    }
-
-    if (chunks.length === 0) {
-        const body = stubSiteAnswer(question, lang);
-        return new Response(textStream(body), {
-            status: 200,
-            headers: {
-                "Content-Type": "text/plain; charset=utf-8",
-                "Cache-Control": "no-store",
-            },
-        });
-    }
-
-    if (!ai) {
-        const body = retrievalStubMarkdown(question, lang, chunks);
         return new Response(textStream(body), {
             status: 200,
             headers: {

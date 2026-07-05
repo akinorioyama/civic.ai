@@ -413,11 +413,10 @@ header .chapter-date {
     top: 20px;
     right: 20px;
     z-index: 2;
-    display: grid;
-    grid-template-columns: max-content max-content;
+    display: flex;
     align-items: center;
-    justify-content: end;
-    column-gap: 14px;
+    justify-content: flex-end;
+    gap: 12px;
     margin: 0;
 }
 
@@ -4751,32 +4750,45 @@ html[data-theme="dark"] .cmap-arc-5 {
     color: var(--heading);
 }
 
-.civic-search__row {
+.search-overlay .pagefind-ui {
+    --pagefind-ui-primary: var(--teal);
+    --pagefind-ui-text: var(--text);
+    --pagefind-ui-background: var(--surface);
+    --pagefind-ui-border: var(--border);
+    --pagefind-ui-tag: var(--warm);
+    color: var(--text);
+}
+
+.search-overlay .pagefind-ui .civic-search__row {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     gap: 8px;
 }
 
-.civic-search__input-wrap {
-    flex: 1;
+.search-overlay .pagefind-ui .civic-search__input-wrap {
+    flex: 1 1 auto;
     min-width: 0;
 }
 
-.civic-search__submit {
-    flex-shrink: 0;
-    align-self: center;
+.search-overlay .pagefind-ui .civic-search__submit {
+    display: inline-grid;
+    place-items: center;
+    flex: 0 0 auto;
+    width: 2.9rem;
+    min-width: 2.9rem;
+    height: 51px;
     border: 1px solid var(--border);
     border-radius: 6px;
     background: var(--warm);
     color: var(--heading);
     font-size: 1rem;
     line-height: 1;
-    padding: 8px 12px;
+    padding: 0;
     cursor: pointer;
 }
 
-.civic-search__submit:hover,
-.civic-search__submit:focus-visible {
+.search-overlay .pagefind-ui .civic-search__submit:hover,
+.search-overlay .pagefind-ui .civic-search__submit:focus-visible {
     border-color: var(--teal);
     color: var(--teal);
 }

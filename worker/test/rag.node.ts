@@ -29,6 +29,38 @@ test("rag keeps the Nemotron Ultra gateway path wired", () => {
     assert.match(wrangler, /AUDREY_MODEL = "nemotron-ultra"/);
 });
 
+test("configured Nemotron streams even when Vectorize has no chunks", async () => {
+    const originalFetch = globalThis.fetch;
+    const calls: Array<{ url: string; body: string }> = [];
+    globalThis.fetch = (async (url, init) => {
+        calls.push({ url: String(url), body: String(init?.body ?? "") });
+        return new Response(
+            'data: {"choices":[{"delta":{"content":"nemotron ok"}}]}\n\n',
+            {
+                status: 200,
+                headers: { "Content-Type": "text/event-stream" },
+            }
+        );
+    }) as typeof fetch;
+    try {
+        const res = await streamSiteAnswer(
+            {
+                AUDREY_MODEL: "nemotron-ultra",
+                BASETEN_API_KEY: "test-baseten-key",
+            },
+            "hello",
+            "en"
+        );
+        const text = await res.text();
+        assert.equal(text, "nemotron ok");
+        assert.equal(calls.length, 1);
+        assert.match(calls[0].url, /baseten/);
+        assert.match(calls[0].body, /NVIDIA-Nemotron-3-Ultra/);
+    } finally {
+        globalThis.fetch = originalFetch;
+    }
+});
+
 test("retrieveSiteChunks keeps sibling chunks with distinct metadata ids", async () => {
     const ai = {
         run: async () => ({ data: [[0.1, 0.2, 0.3]] }),

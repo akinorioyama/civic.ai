@@ -19,10 +19,11 @@ describe("civic-ask.js static contract", () => {
         expect(source).toContain("ask_base");
     });
 
-    test("allows local ask only through explicit ask_base handling", () => {
+    test("allows known local preview origins to probe capacity", () => {
         expect(source).toContain("4321");
         expect(source).toContain("8080");
-        expect(source).toMatch(/explicitAskBaseOverride\(\)/);
+        expect(source).toMatch(/var localDev = isLocalDevAskHost\(\)/);
+        expect(source).toMatch(/localDev \|\|/);
         expect(source).toMatch(/askAvailable\s*=\s*false/);
     });
 

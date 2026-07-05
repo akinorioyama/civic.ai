@@ -118,11 +118,11 @@
 
     var uiTranslations = {
         en: {
-            placeholder: "Search the book\u2026",
+            placeholder: "Search Civic AI…",
             zero_results: "No results for [SEARCH_TERM]",
         },
         zh: {
-            placeholder: "\u641c\u5c0b\u672c\u66f8\u2026",
+            placeholder: "搜尋仁工智慧…",
             zero_results:
                 "\u627e\u4e0d\u5230 [SEARCH_TERM] \u7684\u76f8\u95dc\u7d50\u679c",
             many_results:
