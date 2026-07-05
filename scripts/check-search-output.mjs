@@ -53,20 +53,85 @@ expectIncludes("index.html", 'data-pagefind-filter="lang:en"');
 expectIncludes("index.html", "/pagefind/pagefind-ui.js");
 expectIncludes("index.html", "/assets/js/civic-search.js");
 expectIncludes("index.html", "/assets/js/civic-ask.js");
+expectNotIncludes(
+    "index.html",
+    "/assets/vendor/fuse.min.js",
+    "Fuse vendor on English home"
+);
 
 expectIncludes("tw/index.html", 'id="search-overlay"');
-expectIncludes("tw/index.html", 'data-pagefind-filter="lang:zh"');
 expectIncludes("tw/index.html", "/assets/vendor/fuse.min.js");
+expectNotIncludes(
+    "tw/index.html",
+    "data-pagefind-filter",
+    "Pagefind lang filter on Traditional Mandarin home"
+);
+
+expectNotIncludes(
+    "tw/index.html",
+    "data-pagefind-body",
+    "Pagefind body on Traditional Mandarin home"
+);
+expectNotIncludes(
+    "tw/index.html",
+    "/pagefind/pagefind-ui.js",
+    "Pagefind UI script on Traditional Mandarin home"
+);
+
 expectNotIncludes(
     "tw/conference/sensemaking/index.html",
     "data-pagefind-body",
     "Pagefind body on excluded synthetic Polis page"
+);
+expectIncludes(
+    "tw/conference/sensemaking/index.html",
+    "/assets/vendor/fuse.min.js",
+    "Fuse vendor on zh-Hant sensemaking page"
+);
+expectNotIncludes(
+    "tw/conference/sensemaking/index.html",
+    "/pagefind/pagefind-ui.js",
+    "Pagefind UI script on zh-Hant sensemaking page"
 );
 expectNotIncludes(
     "tw/sensemaker/index.html",
     "data-pagefind-body",
     "Pagefind body on raw HTML report page"
 );
+
+expectBuiltFile("pagefind/pagefind-entry.json");
+let pagefindEntry;
+try {
+    pagefindEntry = JSON.parse(readBuilt("pagefind/pagefind-entry.json"));
+} catch (error) {
+    fail(
+        `pagefind/pagefind-entry.json is invalid JSON: ${error instanceof Error ? error.message : String(error)}`
+    );
+}
+const pagefindLanguages = pagefindEntry?.languages;
+if (!pagefindLanguages || typeof pagefindLanguages !== "object") {
+    fail("pagefind/pagefind-entry.json lacks a languages object");
+} else {
+    const languageKeys = Object.keys(pagefindLanguages);
+    if (!languageKeys.some((key) => key.startsWith("en"))) {
+        fail(
+            `pagefind/pagefind-entry.json languages missing English (en*); keys: ${languageKeys.join(", ")}`
+        );
+    }
+    if (languageKeys.includes("zh-tw")) {
+        fail(
+            "pagefind/pagefind-entry.json must not index zh-tw in Pagefind languages"
+        );
+    }
+    for (const key of languageKeys) {
+        if (key.startsWith("zh")) {
+            fail(
+                `pagefind/pagefind-entry.json must not report zh language key: ${key}`
+            );
+            break;
+        }
+    }
+}
 
 const indexPath = "tw/search-index.json";
 const indexJson = readBuilt(indexPath);

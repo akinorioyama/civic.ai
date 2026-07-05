@@ -13,7 +13,9 @@ interface Props { page: PageRecord; }
 const { page } = Astro.props;
 const zh = lang2(page.data.lang) === "zh";
 const pagefindIndexed =
-    page.includeInSitemap === true && page.data.search_exclude !== true;
+    page.includeInSitemap === true &&
+    page.data.search_exclude !== true &&
+    normalizeSearchLang(page.data.lang) === "en";
 const chapterOrder = site.chapters;
 const key = page.url.replace(/^\/tw\//, "").replace(/^\//, "").replace(/\/$/, "");
 const index = chapterOrder.indexOf(key);

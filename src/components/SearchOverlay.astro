@@ -10,6 +10,8 @@ interface Props {
 const { page } = Astro.props;
 const searchLang = normalizeSearchLang(page.data.lang);
 const zh = searchLang === "zh";
+const usePagefind = searchLang === "en";
+const useFuse = zh;
 const suggestions = getSearchSuggestions(searchLang);
 const fuseVendor = assetVersion("node_modules/fuse.js/dist/fuse.min.js");
 const askJs = assetVersion("assets/js/civic-ask.js");
@@ -28,7 +30,7 @@ const searchJs = assetVersion("assets/js/civic-search.js");
     ))}
   </datalist>
 )}
-<script is:inline src="/pagefind/pagefind-ui.js"></script>
-{searchLang === "zh" && <script is:inline src={`/assets/vendor/fuse.min.js?v=${fuseVendor}`} />}
+{usePagefind && <script is:inline src="/pagefind/pagefind-ui.js"></script>}
+{useFuse && <script is:inline src={`/assets/vendor/fuse.min.js?v=${fuseVendor}`} />}
 <script is:inline src={`/assets/js/civic-ask.js?v=${askJs}`} />
 <script is:inline src={`/assets/js/civic-search.js?v=${searchJs}`} />

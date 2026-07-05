@@ -32,6 +32,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "what-could-go-wrong",
                 "what-it-looks-like-in-practice",
                 "why-it-matters"
@@ -71,6 +72,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "what-could-go-wrong",
                 "why-it-matters"
             ]
@@ -107,6 +109,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "the-apprentice-model",
                 "what-could-go-wrong",
                 "what-it-looks-like-in-practice",
@@ -145,6 +148,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "the-brake-as-a-care-mechanism",
                 "what-could-go-wrong",
                 "what-it-looks-like-in-practice",
@@ -184,6 +188,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "what-could-go-wrong",
                 "what-it-looks-like-in-practice",
                 "why-it-matters"
@@ -222,6 +227,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "what-could-go-wrong",
                 "what-it-looks-like-in-practice",
                 "why-it-matters"
@@ -261,6 +267,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "the-stakes-are-high"
             ]
         },
@@ -295,6 +302,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "the-6-pack-of-care",
                 "three-building-blocks-for-ai-crisis-diplomacy",
                 "trust-a-whitelist-for-public-integrity"
@@ -329,6 +337,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "watch"
             ]
         },
@@ -364,6 +373,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "the-mainstream-ai-vision--its-discontents"
             ]
         },
@@ -400,6 +410,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "stories-before-specification",
                 "what-could-go-wrong",
                 "what-they-built"
@@ -444,6 +455,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "solo-constructores"
             ]
         },
@@ -484,7 +496,8 @@
                 "part-xi--federation-translation-and-the-waging-of-peace",
                 "search-container",
                 "search-overlay",
-                "search-suggestions"
+                "search-suggestions",
+                "search-toggle"
             ]
         },
         {
@@ -524,7 +537,8 @@
                 "pack-6-2",
                 "search-container",
                 "search-overlay",
-                "search-suggestions"
+                "search-suggestions",
+                "search-toggle"
             ]
         },
         {
@@ -560,6 +574,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "what-would-a-compassionate-ai-system-look-like"
             ]
         },
@@ -588,7 +603,8 @@
                 "main",
                 "search-container",
                 "search-overlay",
-                "search-suggestions"
+                "search-suggestions",
+                "search-toggle"
             ]
         },
         {
@@ -625,6 +641,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "three-perspectives",
                 "what-we-agree-on",
                 "where-opinions-differ"
@@ -659,6 +676,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "statements"
             ]
         },
@@ -692,6 +710,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "superintelligence",
                 "the-6-pack-of-care"
             ]
@@ -725,6 +744,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "watch"
             ]
         },
@@ -773,7 +793,8 @@
                 "main",
                 "search-container",
                 "search-overlay",
-                "search-suggestions"
+                "search-suggestions",
+                "search-toggle"
             ]
         },
         {
@@ -818,6 +839,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "stepping-into-the-garden",
                 "the-human-mind-will-not-be-replaced-by-superintelligence",
                 "the-true-condition-of-the-kami-an-asymmetric-gift",
@@ -876,6 +898,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "shared-eval-registry",
                 "singleton",
                 "sortition",
@@ -912,6 +935,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "start-here",
                 "the-6-pack"
             ]
@@ -947,6 +971,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "taniguchi-meaning-by-negotiation-not-by-decree",
                 "the-kami-of-care",
                 "the-shared-design-lesson",
@@ -986,6 +1011,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "the-soul-your-kami-reads",
                 "what-a-webpage-cannot-teach",
                 "what-youll-see"
@@ -1029,6 +1055,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "solidarity-caring-with",
                 "symbiosis-kami-of-care",
                 "we-the-people-are-the-superintelligence"
@@ -1070,6 +1097,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "st-p1",
                 "st-p2",
                 "st-p3",
@@ -1115,6 +1143,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "when-to-use-this"
             ]
         },
@@ -1160,7 +1189,8 @@
                 "result-method",
                 "search-container",
                 "search-overlay",
-                "search-suggestions"
+                "search-suggestions",
+                "search-toggle"
             ]
         },
         {
@@ -1195,6 +1225,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "the-boundaries-of-language-and-the-sum-of-reality",
                 "the-failure-of-moral-frameworks-and-polarisation",
                 "the-neural-cost-the-collapse-of-experiential-navigation"
@@ -1225,7 +1256,8 @@
                 "main",
                 "search-container",
                 "search-overlay",
-                "search-suggestions"
+                "search-suggestions",
+                "search-toggle"
             ]
         },
         {
@@ -1257,7 +1289,8 @@
                 "main",
                 "search-container",
                 "search-overlay",
-                "search-suggestions"
+                "search-suggestions",
+                "search-toggle"
             ]
         },
         {
@@ -1288,6 +1321,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "watch"
             ]
         },
@@ -1321,6 +1355,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "sovereignty-stack"
             ]
         },
@@ -1353,6 +1388,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "the-convergence-of-care-and-ai",
                 "the-worldview-and-ethos-of-care"
             ]
@@ -1415,6 +1451,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "tim-sees-code"
             ]
         },
@@ -1444,6 +1481,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "一個案例賑災機器人",
                 "介接",
                 "可立即建置的工具",
@@ -1481,6 +1519,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "一個案例賑災機器人",
                 "介接",
                 "可能出錯的地方",
@@ -1519,6 +1558,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "一個案例賑災機器人",
                 "介接",
                 "可立即建置的工具",
@@ -1557,6 +1597,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "一個案例賑災機器人",
                 "今天就能做的工具",
                 "可能出錯的地方",
@@ -1595,6 +1636,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "一個案例賑災機器人",
                 "今天就能做的工具",
                 "可能出錯的地方",
@@ -1633,6 +1675,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "一個案例賑災機器人",
                 "今天就能做的工具",
                 "可能出錯的地方",
@@ -1671,6 +1714,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "今日的-ai-對齊有根本缺陷",
                 "實踐中的覺察力",
                 "市場設計",
@@ -1709,6 +1753,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "信任建立具公信力的白名單",
                 "共識用-ai-實現大規模傾聽獎勵彌合分歧而非激化對立",
                 "區域性倡議",
@@ -1744,6 +1789,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "完整逐字稿",
                 "摘要",
                 "觀看",
@@ -1777,6 +1823,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "主流-ai-願景及其不安",
                 "多元協作的未來",
                 "抵抗-ai-單一文化",
@@ -1811,6 +1858,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "介面",
                 "他們建造了什麼",
                 "共同產製如何實踐覺察力",
@@ -1862,6 +1910,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "solo-constructores"
             ]
         },
@@ -1891,6 +1940,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "尾聲",
                 "第一部-機器的本性與幽暗",
                 "第七部-超越利潤與最終尺度",
@@ -1940,7 +1990,8 @@
                 "pack-6-2",
                 "search-container",
                 "search-overlay",
-                "search-suggestions"
+                "search-suggestions",
+                "search-toggle"
             ]
         },
         {
@@ -1970,6 +2021,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "一個有慈悲心的-ai-系統會是什麼樣子",
                 "完整逐字稿",
                 "從懷疑到希望仁工智慧與慈悲的關係建構",
@@ -2004,7 +2056,8 @@
                 "main",
                 "search-container",
                 "search-overlay",
-                "search-suggestions"
+                "search-suggestions",
+                "search-toggle"
             ]
         },
         {
@@ -2038,6 +2091,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "三種觀點",
                 "共識之處",
                 "意見分歧之處",
@@ -2075,6 +2129,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "statements"
             ]
         },
@@ -2105,6 +2160,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "仁工智慧能抵抗-wealth-care-嗎",
                 "單一文化-vs-多元路徑",
                 "超級智慧",
@@ -2138,6 +2194,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "完整逐字稿",
                 "摘要",
                 "觀看",
@@ -2189,7 +2246,8 @@
                 "main",
                 "search-container",
                 "search-overlay",
-                "search-suggestions"
+                "search-suggestions",
+                "search-toggle"
             ]
         },
         {
@@ -2234,6 +2292,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "人類心智不會被超級智慧取代",
                 "兩種力意識與物質",
                 "地神的真實處境不對稱的禮物",
@@ -2292,6 +2351,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "shared-eval-registry",
                 "singleton",
                 "sortition",
@@ -2325,6 +2385,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "the-6-pack",
                 "四個切入案例",
                 "學術發表",
@@ -2360,6 +2421,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "共同的設計教訓",
                 "技術基底無法決定的事",
                 "摘要",
@@ -2398,6 +2460,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "一個網頁教不會的事",
                 "你會看到什麼",
                 "你的-kami-所讀的那份靈魂",
@@ -2433,6 +2496,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "共生力地神般的關懷",
                 "勝任力給予關懷",
                 "回應力接收關懷",
@@ -2481,6 +2545,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "st-p1",
                 "st-p2",
                 "st-p3",
@@ -2525,6 +2590,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "何時使用",
                 "反模式",
                 "啟動對話",
@@ -2563,6 +2629,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "互補",
                 "光照進來",
                 "公民基礎設施",
@@ -2605,6 +2672,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "人的重新定義從原子化個人到分身的覺醒",
                 "從功利主義的盲點到心靈主權的覺醒",
                 "數位修復一即一切一切即一",
@@ -2641,7 +2709,8 @@
                 "main",
                 "search-container",
                 "search-overlay",
-                "search-suggestions"
+                "search-suggestions",
+                "search-toggle"
             ]
         },
         {
@@ -2670,6 +2739,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "完整逐字稿",
                 "摘要",
                 "收聽",
@@ -2702,6 +2772,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "完整逐字稿",
                 "摘要",
                 "觀看"
@@ -2733,6 +2804,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "主權堆疊",
                 "企業多元性",
                 "安全要聯邦化不要中心化",
@@ -2766,6 +2838,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "導言與關懷六力",
                 "水平關係與園丁的比喻",
                 "重新定義-maslow-與-sapiens-integra",
@@ -2798,7 +2871,8 @@
                 "main",
                 "search-container",
                 "search-overlay",
-                "search-suggestions"
+                "search-suggestions",
+                "search-toggle"
             ]
         },
         {
@@ -2831,6 +2905,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "tim-看見程式碼",
                 "仁工智慧新的前沿",
                 "四大自由",
@@ -2865,7 +2940,8 @@
                 "main",
                 "search-container",
                 "search-overlay",
-                "search-suggestions"
+                "search-suggestions",
+                "search-toggle"
             ]
         },
         {
@@ -2895,6 +2971,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "三個動作",
                 "你就是超級智慧",
                 "問答",
@@ -2930,7 +3007,8 @@
                 "main",
                 "search-container",
                 "search-overlay",
-                "search-suggestions"
+                "search-suggestions",
+                "search-toggle"
             ]
         },
         {
@@ -2965,6 +3043,7 @@
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
+                "search-toggle",
                 "the-superintelligence-is-you",
                 "three-moves",
                 "wildfire-or-campfire"

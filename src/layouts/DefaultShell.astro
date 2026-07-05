@@ -16,7 +16,8 @@ const zh = lang2(page.data.lang) === "zh";
 const pagefindIndexed =
     page.includeInSitemap === true &&
     page.data.search_exclude !== true &&
-    !page.sourceName.endsWith(".html");
+    !page.sourceName.endsWith(".html") &&
+    normalizeSearchLang(page.data.lang) === "en";
 const websiteLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
