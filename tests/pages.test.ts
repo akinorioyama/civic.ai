@@ -15,6 +15,26 @@ test("renders CJK-sensitive markdown through root loader", () => {
     );
 });
 
+test("renders table-shaped source material as tables", () => {
+    const insideTheKami = getPageByUrl("/inside-the-kami/").html;
+    expect(insideTheKami).toContain('class="compare-table"');
+    expect(insideTheKami).toContain("<th>Research result</th>");
+    expect(insideTheKami).toContain(
+        "<td>Each Kami should have a narrow mandate</td>"
+    );
+
+    const kamiSetup = getPageByUrl("/kami/").html;
+    expect(kamiSetup).toContain("<th>RAM</th>");
+    expect(kamiSetup).toContain("<td><code>gemma4:12b-it-qat</code></td>");
+
+    const measures = getPageByUrl("/measures/").html;
+    expect(measures).toContain("<th>Pack</th>");
+    expect(measures).toContain("<th>Headline public measure</th>");
+    expect(measures).toContain(
+        'id="uncommon-ground-index">Uncommon-ground index</span>'
+    );
+});
+
 test("expands generated glossary pages", () => {
     expect(getPageByUrl("/glossary/").html).toContain('id="civic-ai"');
     expect(getPageByUrl("/glossary/").html).toContain("Civic AI");

@@ -332,11 +332,8 @@
         function (e) {
             if (!overlay.classList.contains("active")) return;
             // keyCode 229 covers IME candidate confirmation where isComposing is false.
-            if (
-                e.key !== "Enter" ||
-                e.isComposing ||
-                /** @type {any} */ (e).keyCode === 229
-            )
+            var imeKeyCode = /** @type {any} */ (e).keyCode;
+            if (e.key !== "Enter" || e.isComposing || imeKeyCode === 229)
                 return;
             var inp = overlay.querySelector(
                 ".pagefind-ui__search-input, #search-container input"
