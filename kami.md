@@ -28,8 +28,10 @@ There are two honest ways to do this. Either way you end with a Kami that can co
 
 Pick the model that fits your machine.
 
-- **For machines with 16 GB RAM or more:** We recommend `gemma4:12b-it-qat` (about a 7 GB download), which is the model used in these steps.
-- **For machines with less than 16 GB RAM:** Take the hosted path described above.
+| RAM             | Model to pull       | Download | Note                                        |
+| --------------- | ------------------- | -------- | ------------------------------------------- |
+| 16 GB           | `gemma4:12b-it-qat` | ~7 GB    | Recommended — the model used in these steps |
+| Less than 16 GB | —                   | —        | Take the hosted path described above        |
 
 ## 1. Give it a local brain
 

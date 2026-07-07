@@ -335,6 +335,7 @@
             var imeKeyCode = /** @type {any} */ (e).keyCode;
             if (e.key !== "Enter" || e.isComposing || imeKeyCode === 229)
                 return;
+            if (e.metaKey || e.ctrlKey || e.altKey) return;
             var inp = overlay.querySelector(
                 ".pagefind-ui__search-input, #search-container input"
             );
