@@ -122,19 +122,13 @@ to make prediction trustworthy. Another is asking how to make capability
 efficient. The third is asking how shared meaning can be negotiated. Still,
 they point toward the same Civic AI shape.
 
-<div class="compare-table">
-
-| Research result                                                            | Civic AI implication                                                                                                              |
-| -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| _Separate truth-tracking from speech imitation_ (Bengio)                   | Decision traces can distinguish verified claims from reported claims                                                              |
-| _Specialisation beats generality_ (LeCun)                                  | Each Kami should have a narrow mandate                                                                                            |
-| _Modular systems beat monoliths_ (Bengio + LeCun)                          | Civic AI should be composable, replaceable and federated                                                                          |
-| _Action is the danger point_ (Bengio)                                      | Authorise tools and interventions in governance, not inside opaque weights                                                        |
-| _Non-decomposable collective regularisation_ (CPC; Taniguchi et al., 2026) | Solidarity becomes a machine-enforceable primitive: a term in the loss that no agent can minimise alone                           |
-| _Decentralised Bayesian inference via MHNG_ (CPC)                          | Bounded local Kamis can co-construct shared meaning through peer-to-peer dialogue, without ceding sovereignty to a central server |
-| _Multimodal collective posterior distribution_ (CPC)                       | Plurality becomes a maths problem: diverse worldviews can be mapped, bridged and preserved without flattening                     |
-
-</div>
+- **Separate truth-tracking from speech imitation** (Bengio) — Decision traces can distinguish verified claims from reported claims.
+- **Specialisation beats generality** (LeCun) — Each Kami should have a narrow mandate.
+- **Modular systems beat monoliths** (Bengio + LeCun) — Civic AI should be composable, replaceable, and federated.
+- **Action is the danger point** (Bengio) — Authorise tools and interventions in governance, not inside opaque weights.
+- **Non-decomposable collective regularisation** (CPC; Taniguchi et al., 2026) — Solidarity becomes a machine-enforceable primitive: a term in the loss that no agent can minimise alone.
+- **Decentralised Bayesian inference via MHNG** (CPC) — Bounded local Kamis can co-construct shared meaning through peer-to-peer dialogue, without ceding sovereignty to a central server.
+- **Multimodal collective posterior distribution** (CPC) — Plurality becomes a maths problem: diverse worldviews can be mapped, bridged, and preserved without flattening.
 
 The strongest reading is modest but important: these programmes do not prove
 the 6-Pack, but they make the 6-Pack easier to implement. They reduce the
