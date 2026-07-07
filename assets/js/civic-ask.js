@@ -246,52 +246,48 @@
             askAnswer.innerHTML = "";
         }
     }
-    function runAsk(question) {
+    async function runAsk(question) {
         var q = (question || "").trim();
-        if (!askAvailable || !q || askLoading) return Promise.resolve();
+        if (!askAvailable || !q || askLoading) return;
         if (Array.from(q).length > 100) {
             renderAsk("", false, "Question too long (max 100 characters).");
-            return Promise.resolve();
+            return;
         }
         if (askAbort) askAbort.abort();
         askAbort = new AbortController();
         askLoading = true;
         renderAsk("", true, "");
-        return fetch(askEndpoint(q), { signal: askAbort.signal })
-            .then(function (res) {
-                if (!res.ok)
-                    return res.text().then(function (t) {
-                        throw new Error(t || "Request failed");
-                    });
-                if (!res.body || !res.body.getReader)
-                    return res.text().then(function (t) {
-                        renderAsk(t, false, "");
-                    });
-                var reader = res.body.getReader();
-                var dec = new TextDecoder();
-                var raw = "";
-                function next() {
-                    return reader.read().then(function (chunk) {
-                        if (chunk.done) {
-                            raw += dec.decode();
-                            renderAsk(raw, false, "");
-                            return;
-                        }
-                        raw += dec.decode(chunk.value, { stream: true });
-                        renderAsk(raw, true, "");
-                        return next();
-                    });
+        try {
+            var res = await fetch(askEndpoint(q), { signal: askAbort.signal });
+            if (!res.ok) {
+                var t = await res.text();
+                throw new Error(t || "Request failed");
+            }
+            if (!res.body || !res.body.getReader) {
+                var text = await res.text();
+                renderAsk(text, false, "");
+                return;
+            }
+            var reader = res.body.getReader();
+            var dec = new TextDecoder();
+            var raw = "";
+            while (true) {
+                var { done, value } = await reader.read();
+                if (done) {
+                    raw += dec.decode();
+                    renderAsk(raw, false, "");
+                    break;
                 }
-                return next();
-            })
-            .catch(function (e) {
-                if (e && e.name === "AbortError") return;
-                renderAsk("", false, (e && e.message) || "Network error");
-            })
-            .finally(function () {
-                askLoading = false;
-                askAbort = null;
-            });
+                raw += dec.decode(value, { stream: true });
+                renderAsk(raw, true, "");
+            }
+        } catch (e) {
+            if (e && e.name === "AbortError") return;
+            renderAsk("", false, (e && e.message) || "Network error");
+        } finally {
+            askLoading = false;
+            askAbort = null;
+        }
     }
 
     function initCapacity() {
@@ -336,8 +332,12 @@
         function (e) {
             if (!overlay.classList.contains("active")) return;
             // keyCode 229 covers IME candidate confirmation where isComposing is false.
-            if (e.key !== "Enter" || e.isComposing || e.keyCode === 229) return;
-            if (e.metaKey || e.ctrlKey || e.altKey) return;
+            if (
+                e.key !== "Enter" ||
+                e.isComposing ||
+                /** @type {any} */ (e).keyCode === 229
+            )
+                return;
             var inp = overlay.querySelector(
                 ".pagefind-ui__search-input, #search-container input"
             );
