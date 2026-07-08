@@ -33,6 +33,6 @@ describe("civic-ask.js static contract", () => {
     });
 
     test("preserves IME Enter guard for CJK composition", () => {
-        expect(source).toContain("keyCode === 229");
+        expect(source).toContain("imeKeyCode === 229");
     });
 });
