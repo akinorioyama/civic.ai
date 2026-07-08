@@ -20,7 +20,7 @@ export interface PageFrontmatter {
     description?: string;
     meta_description?: string;
     summary?: string;
-    lang?: "en-gb" | "zh-tw" | "zh-Hant";
+    lang?: "en-gb" | "zh-tw" | "zh-Hant" | "ja";
     permalink?: string;
     alt_lang_url?: string;
     exclude_from_sitemap?: boolean;
