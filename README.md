@@ -40,7 +40,7 @@ bun run build   # production build → dist/
 | `bun run en`/`bun run tw`     | Copy the canonical English/Mandarin page set to the clipboard for translation review (macOS `pbcopy`).   |
 | `bun run import-comics`       | Re-import and optimise Nicky Case's comic pages into `img/` (maintenance helper, not part of the build). |
 
-A husky **pre-commit hook** runs `prettier` + `pangu-format` on staged Markdown, and regenerates `package-lock.json` whenever `package.json` changes.
+A husky **pre-commit hook** runs `prettier` + `pangu-format` on staged Markdown.
 
 Search uses Pagefind for English pages, a Fuse-backed Traditional Mandarin sidebar from `/tw/search-index.json`, and the `worker/` `/au/:question` API for streamed answers. The Worker retrieves from Cloudflare Vectorize binding `SITE_VECTORIZE` (`civic-ai-site`) and uses `AUDREY_MODEL=nemotron-ultra` with `BASETEN_API_KEY` plus optional `CF_AIG_TOKEN` to stream Nemotron Ultra through the Cloudflare AI Gateway; without those secrets it returns a deterministic excerpt/stub response for tests and local development.
 

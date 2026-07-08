@@ -1,10 +1,2 @@
-# Keep package-lock.json in sync with package.json so Cloudflare's `npm ci` succeeds.
-# bun.lock is the local source of truth; whenever package.json is committed, the
-# npm lockfile is regenerated from it and staged into the same commit.
-if git diff --cached --name-only | grep -qxF 'package.json'; then
-	echo "package.json changed — regenerating package-lock.json…"
-	npm install --package-lock-only --ignore-scripts
-	git add package-lock.json
-fi
-
+# Husky pre-commit hook: run lint-staged on staged files.
 bunx lint-staged
