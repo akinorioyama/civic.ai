@@ -28,7 +28,7 @@ bun run build   # production build → dist/
 | ----------------------------- | -------------------------------------------------------------------------------------------------------- |
 | `bun run dev`                 | Sync generated public assets, then start Astro with live reload at `http://127.0.0.1:4321`.              |
 | `bun run build`               | Production build of the static site, minified HTML, and Pagefind index → `dist/`.                        |
-| `bun run check`               | Astro + TypeScript checks: `astro check && tsgo --noEmit`.                                               |
+| `bun run check`               | TypeScript check: `tsc --noEmit`.                                                                        |
 | `bun test`                    | Focused Bun tests for the renderer, root-content loader, search corpus, and static client contracts.     |
 | `bun run lint`                | Check formatting: `prettier --check` + `pangu-format --check` (CJK spacing).                             |
 | `bun run format`              | Auto-fix formatting: `prettier --write` + `pangu-format`.                                                |
