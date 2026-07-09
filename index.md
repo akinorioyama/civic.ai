@@ -5,6 +5,7 @@ description: "Research project by Audrey Tang and Caroline Emmer De Albuquerque 
 meta_description: "Civic AI is artificial intelligence that answers to the people it affects: bounded local stewards a community can own, inspect, correct, and switch off. The 6-Pack of Care, by Audrey Tang and Caroline Green at the Oxford Institute for Ethics in AI."
 lang: en-gb
 alt_lang_url: "/tw/"
+permalink: "/"
 openclaw_discovery: true
 manifesto_link: "/manifesto"
 manifesto_text: "Manifesto"
