@@ -2371,40 +2371,19 @@ body.comics-page main {
 .ja-ov-layer .ov {
     position: absolute;
     box-sizing: border-box;
-    /* Visible, not hidden: box/pad/fontSize come from the overlay editor's
-       preset JSON (_data/comics-ja-overlays.json) authored for exactly this
-       text, but there's no client-side auto-fit safety net anymore (--ov-
-       scale is fixed at 1). If a box still runs a little short, the text
-       should spill past its edges rather than silently lose a line to
-       clipping — a shaped frame's second line disappearing entirely was
-       worse than it overlapping the art a little. */
     overflow: visible;
-    /* --fs is the authored size; --ov-scale is fixed at 1 so every frame
-       renders at exactly its authored size. Line breaks are never touched
-       by this either way — see white-space: pre below. */
     font-size: calc(var(--fs, 1cqw) * var(--ov-scale, 1));
 }
 
 .ja-ov-layer .ov.rect {
     display: flex;
     align-items: center;
-    /* Explicit for parity with .ov.shaped below — matches the .ov fallback
-       already, but no script sets this dynamically for either type. */
     --ov-scale: 1;
 }
 
 .ja-ov-layer .ov.rect > span {
     display: block;
     width: 100%;
-    /* Most captions are one authored paragraph with no "\n" at all, sized
-       assuming the browser will soft-wrap them across several lines — those
-       need pre-wrap. The few captions that DO contain "\n" were authored
-       assuming that break is the only one; letting the box also soft-wrap
-       adds an unplanned extra line, so renderOverlayFrame() overrides this
-       to plain "pre" (no soft-wrap) on exactly those. Either way, box/tight
-       in comics-ja-overlays.json are pre-computed (compute-ja-overlay-
-       tight.mjs) to fit the authored text without ever changing where
-       lines fall. */
     white-space: pre-wrap;
     overflow-wrap: break-word;
 }
@@ -2414,8 +2393,6 @@ body.comics-page main {
 }
 
 .ja-ov-layer .ov.shaped {
-    /* padding comes from the frame's own pad% via inline style now
-       (renderOverlayFrame in shortcodes.ts) — varies per frame. */
     --ov-scale: 1;
 }
 

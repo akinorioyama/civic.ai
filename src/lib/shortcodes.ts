@@ -164,25 +164,6 @@ function renderOverlayFrame(frame: ComicsOverlayFrame): string {
         const { clip, left, right } = shapePolys(frame.sL, frame.sR, frame.sD);
         return `<div class="ov shaped" style="${base}background:${background};text-align:${frame.align};line-height:1.3;-webkit-clip-path:${clip};clip-path:${clip};"><span style="float:left;width:50%;height:100%;shape-outside:${left};"></span><span style="float:right;width:50%;height:100%;shape-outside:${right};"></span><span class="shaped-text">${text}</span></div>`;
     }
-    // A frame authored with a meaningful "\n" between short phrases (e.g.
-    // "数年に一度の\n一問だけの選択方式") was fit assuming that break is the
-    // only one; letting the box also soft-wrap on top of it adds an
-    // unplanned extra line (see the CSS rule this attribute switches on).
-    // Two cases don't count as "the segments must each be one line":
-    //  - trailing/leading blank lines from the overlay editor (e.g.
-    //    "...投票します。\n\n") — that's one paragraph meant to soft-wrap,
-    //    and treating a stray "\n\n" as "the only break" left it as one
-    //    giant unwrapped line;
-    //  - "\n" used as a paragraph separator between long sentences — each
-    //    side still needs to soft-wrap across several lines on its own,
-    //    same as a single long paragraph would.
-    // Distinguishing the two isn't just about character count: a segment's
-    // width scales with fontSize (cqw, % of image width) while its budget
-    // is the box's own width (%), so a "short" segment can still overflow a
-    // narrow column. char count * fontSize is a rough (CJK glyphs run
-    // close to 1em wide) but effective proxy for the segment's rendered
-    // width — verified against every current multi-segment frame, it
-    // correctly separates the two cases with no false positives/negatives.
     const meaningfulLines = frame.text
         .split("\n")
         .map((line) => line.trim())
