@@ -3699,7 +3699,56 @@ pre code {
     line-height: 1.6;
     color: var(--text);
 }
+/* Native heading resets for compact card labels */
+.in-short__label,
+.in-short__takeaways-label {
+    padding: 0;
+    border: 0;
+}
+.in-short__label {
+    margin: 0;
+}
+
 :lang(zh) .in-short__label {
+    letter-spacing: 0.04em;
+}
+
+.in-short :is(h2, h3)[id] {
+    scroll-margin-top: 24px;
+}
+.in-short__takeaways {
+    margin: 0.9rem 0 0;
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--border);
+}
+.in-short__takeaways-label {
+    margin: 0 0 0.45rem;
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.in-short__takeaways-list {
+    display: grid;
+    gap: 0.35rem;
+    margin: 0;
+    padding-left: 1.1em;
+    font-family: var(--sans);
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--text);
+}
+.in-short__takeaways-list li {
+    margin: 0;
+    padding-left: 0.1em;
+}
+.in-short__takeaways-list li::marker {
+    color: var(--gold);
+}
+:lang(zh) .in-short__takeaways-label {
     letter-spacing: 0.04em;
 }
 

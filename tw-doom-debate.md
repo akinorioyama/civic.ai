@@ -6,23 +6,22 @@ alt_lang_url: "/doom-debate/"
 permalink: "/tw/doom-debate/"
 date: 2026-01-20
 description: '原始錄音收錄於 <a href="https://www.youtube.com/watch?v=bvcmiirT8ME">Doom Debates</a>，對談者為 Liron Shapira。'
+summary: "這場辯論把關懷六力放進超級智慧風險的討論中。如果想看見由上而下安全敘事，與有界、民主治理主張之間最鮮明的對照，這一頁最有用。"
+summary_label: "摘要"
+summary_anchor: "摘要"
+key_takeaways_label: "重點"
+key_takeaways_anchor: "重點"
+key_takeaways:
+    - "唐鳳主張，當分母未知時，`P（末日）` 不能被當成一個穩定數值。"
+    - "治理必須隨著能力升級，而不是永遠落後於能力。"
+    - "一個永久中心的替代方案，是許多有界的在地守護者，也就是地神（Kami，**K**nowledge 知識、**A**rtefact 工藝、**M**anagement 管理、**I**ntelligence 智慧）。"
+    - "公民韌性不只仰賴實驗室端的安全技術，也取決於參與式制度。"
 nav_next:
     url: "/tw/"
     text: "首頁"
 ---
 
 <em>唐鳳與 Liron Shapira 在《末日辯論》節目中展開深度對談——這是一個以超級智慧風險為主題的訪談系列。九十分鐘，探討為何 P (末日) 是 NaN（非數值）、什麼是透明馬架構，以及關懷六力如何在文明尺度上為仁工智慧治理提供藍圖。</em>
-
-## 摘要
-
-這場辯論把關懷六力放進超級智慧風險的討論中。如果想看見由上而下安全敘事，與有界、民主治理主張之間最鮮明的對照，這一頁最有用。
-
-### 重點
-
-- 唐鳳主張，當分母未知時，`P（末日）` 不能被當成一個穩定數值。
-- 治理必須隨著能力升級，而不是永遠落後於能力。
-- 一個永久中心的替代方案，是許多有界的在地守護者，也就是地神（Kami，**K**nowledge 知識、**A**rtefact 工藝、**M**anagement 管理、**I**ntelligence 智慧）。
-- 公民韌性不只仰賴實驗室端的安全技術，也取決於參與式制度。
 
 ## 觀看
 

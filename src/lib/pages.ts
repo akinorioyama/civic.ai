@@ -20,6 +20,11 @@ export interface PageFrontmatter {
     description?: string;
     meta_description?: string;
     summary?: string;
+    summary_label?: string;
+    summary_anchor?: string;
+    key_takeaways?: string[];
+    key_takeaways_label?: string;
+    key_takeaways_anchor?: string;
     lang?: "en-gb" | "zh-tw" | "zh-Hant";
     permalink?: string;
     alt_lang_url?: string;

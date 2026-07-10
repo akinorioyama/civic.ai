@@ -1,11 +1,30 @@
 ---
 import type { PageRecord } from "../lib/pages";
 import { lang2, readingTime } from "../lib/site";
+import { createMarkdownRenderer } from "../lib/legacyMarkdown";
 interface Props { page: PageRecord; }
 const { page } = Astro.props;
 const zh = lang2(page.data.lang) === "zh";
+const summary = page.data.summary?.trim();
+const summaryLabel = page.data.summary_label?.trim() || (zh ? "簡單講" : "In short");
+const summaryAnchor = page.data.summary_anchor?.trim() || undefined;
+const keyTakeaways = Array.isArray(page.data.key_takeaways)
+  ? page.data.key_takeaways.filter((item): item is string => typeof item === "string" && item.trim() !== "")
+  : [];
+const takeawaysLabel = page.data.key_takeaways_label?.trim() || (zh ? "重點" : "Key takeaways");
+const takeawaysAnchor = page.data.key_takeaways_anchor?.trim() || undefined;
+const markdown = keyTakeaways.length ? createMarkdownRenderer() : undefined;
+const renderedTakeaways = markdown
+  ? keyTakeaways.map((item) => markdown.renderInline(item))
+  : [];
 ---
-{page.data.summary && <aside class="in-short" aria-label={zh ? "簡單講" : "In short"}>
-  <p class="in-short__meta"><span class="in-short__label">{zh ? "簡單講" : "In short"}</span><span class="in-short__time">{readingTime(page.html, page.data.lang)} {zh ? "分鐘閱讀" : "min read"}</span></p>
-  <p class="in-short__body">{page.data.summary}</p>
+{summary && <aside class="in-short" aria-label={summaryLabel}>
+  <div class="in-short__meta"><h2 class="in-short__label" id={summaryAnchor} data-toc-exclude tabindex="-1">{summaryLabel}</h2><span class="in-short__time">{readingTime(page.html, page.data.lang)} {zh ? "分鐘閱讀" : "min read"}</span></div>
+  <p class="in-short__body">{summary}</p>
+  {renderedTakeaways.length > 0 && <div class="in-short__takeaways">
+    <h3 class="in-short__takeaways-label" id={takeawaysAnchor} data-toc-exclude tabindex="-1">{takeawaysLabel}</h3>
+    <ul class="in-short__takeaways-list">
+      {renderedTakeaways.map((takeaway) => <li set:html={takeaway} />)}
+    </ul>
+  </div>}
 </aside>}
