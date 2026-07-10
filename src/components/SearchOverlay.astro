@@ -30,7 +30,7 @@ const searchJs = assetVersion("assets/js/civic-search.js");
     ))}
   </datalist>
 )}
-{usePagefind && <script is:inline src="/pagefind/pagefind-ui.js"></script>}
+{usePagefind && !import.meta.env.DEV && <script is:inline src="/pagefind/pagefind-ui.js"></script>}
 {useFuse && <script is:inline src={`/assets/vendor/fuse.min.js?v=${fuseVendor}`} />}
 <script is:inline src={`/assets/js/civic-ask.js?v=${askJs}`} />
 <script is:inline src={`/assets/js/civic-search.js?v=${searchJs}`} />

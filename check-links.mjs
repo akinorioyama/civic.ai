@@ -77,6 +77,17 @@ for (const file of htmlFiles) {
         }
 
         // Local path (absolute or relative)
+        const [pathPart] = ref.split(/[?#]/, 1);
+        if (pathPart && pathPart !== "/") {
+            const last = pathPart.split("/").pop() || "";
+            if (!last.includes(".") && !pathPart.endsWith("/")) {
+                errors.push(
+                    `${rel} → ${ref} (missing trailing slash; site requires trailingSlash: always)`
+                );
+                continue;
+            }
+        }
+
         const fragment = ref.includes("#") ? ref.split("#")[1] : null;
         const targetFile = resolveLocal(ref, file);
 
