@@ -20,6 +20,13 @@
     var askLoading = false;
     var askAbort = null;
 
+    var HISTORY_KEY = "civic-ask-history-v1";
+    var askHistoryEl = document.getElementById("civic-ask-history");
+    var askHints = {
+        en: "Press Enter \u23ce to ask the AI about the site",
+        zh: "\u6309 Enter \u23ce \u7531 AI \u4f9d\u7ad9\u4e2d\u5167\u5bb9\u56de\u7b54",
+    };
+
     function isLocalDevAskHost() {
         var host = window.location.hostname;
         if (host !== "localhost" && host !== "127.0.0.1") return false;
@@ -235,6 +242,79 @@
             "</div>" +
             sourcesHtml;
     }
+    function readHistory() {
+        try {
+            var data = JSON.parse(sessionStorage.getItem(HISTORY_KEY));
+            if (!Array.isArray(data)) return [];
+            return data.filter(function (e) {
+                return typeof e.q === "string" && typeof e.raw === "string";
+            });
+        } catch (_e) {
+            return [];
+        }
+    }
+
+    function saveToHistory(q, raw) {
+        if (!raw || !raw.trim()) return;
+        var entries = readHistory().filter(function (e) {
+            return e.q !== q;
+        });
+        entries.unshift({ q: q, raw: raw, lang: pageLang, ts: Date.now() });
+        if (entries.length > 10) entries = entries.slice(0, 10);
+        try {
+            sessionStorage.setItem(HISTORY_KEY, JSON.stringify(entries));
+        } catch (_e) {}
+        renderHistory();
+    }
+
+    function renderHistory() {
+        if (!askHistoryEl) return;
+        var entries = readHistory();
+        var html = "";
+        if (askAvailable) {
+            html +=
+                '<p class="civic-ask-history__hint">' +
+                escapeHtml(askHints[pageLang] || askHints.en) +
+                "</p>";
+        }
+        if (entries.length) {
+            html += '<div class="civic-ask-history__chips">';
+            for (var i = 0; i < entries.length; i++) {
+                var q = entries[i].q;
+                var label = q.length > 48 ? q.slice(0, 48) + "\u2026" : q;
+                html +=
+                    '<button type="button" class="civic-ask-history__chip" data-idx="' +
+                    i +
+                    '" title="' +
+                    escapeHtml(q).replace(/"/g, "&quot;") +
+                    '">' +
+                    escapeHtml(label) +
+                    "</button>";
+            }
+            html += "</div>";
+        }
+        askHistoryEl.innerHTML = html;
+        askHistoryEl.hidden = !askAvailable && entries.length === 0;
+    }
+
+    if (askHistoryEl) {
+        askHistoryEl.addEventListener("click", function (e) {
+            var btn =
+                e.target.closest &&
+                e.target.closest(".civic-ask-history__chip");
+            if (!btn) return;
+            var idx = Number(btn.getAttribute("data-idx"));
+            var entry = readHistory()[idx];
+            if (!entry) return;
+            renderAsk(entry.raw, false, "");
+            window.dispatchEvent(
+                new CustomEvent("civic-search-after-ask", {
+                    detail: { query: entry.q },
+                })
+            );
+        });
+    }
+
     function hideAsk() {
         if (askAbort) {
             askAbort.abort();
@@ -265,6 +345,7 @@
             }
             if (!res.body || !res.body.getReader) {
                 var text = await res.text();
+                saveToHistory(q, text);
                 renderAsk(text, false, "");
                 return;
             }
@@ -275,6 +356,7 @@
                 var { done, value } = await reader.read();
                 if (done) {
                     raw += dec.decode();
+                    saveToHistory(q, raw);
                     renderAsk(raw, false, "");
                     break;
                 }
@@ -328,6 +410,7 @@
                 function (base) {
                     ASK_BASE = base;
                     askAvailable = true;
+                    renderHistory();
                 },
                 function () {
                     probeBase(
@@ -335,11 +418,13 @@
                         function (base) {
                             ASK_BASE = base;
                             askAvailable = true;
+                            renderHistory();
                         },
                         function () {
                             ASK_BASE =
                                 "https://civic-ai-ask.audreyt.workers.dev";
                             askAvailable = false;
+                            renderHistory();
                         }
                     );
                 }
@@ -350,6 +435,7 @@
                 function (base) {
                     ASK_BASE = base;
                     askAvailable = true;
+                    renderHistory();
                 },
                 function () {
                     ASK_BASE = ASK_BASE;
@@ -357,6 +443,7 @@
                         askAvailable = true;
                     } else {
                         askAvailable = false;
+                        renderHistory();
                     }
                 }
             );
@@ -366,7 +453,11 @@
     initCapacity();
 
     var obs = new MutationObserver(function () {
-        if (!overlay.classList.contains("active")) hideAsk();
+        if (!overlay.classList.contains("active")) {
+            hideAsk();
+        } else {
+            renderHistory();
+        }
     });
     obs.observe(overlay, { attributes: true, attributeFilter: ["class"] });
 
@@ -405,6 +496,8 @@
         },
         true
     );
+
+    renderHistory();
 
     window.CivicAsk = { runAsk: runAsk, hideAsk: hideAsk, askBase: ASK_BASE };
 })();

@@ -41,6 +41,7 @@
 
     // Fuse.js state
     var fuseIndex = null; // Fuse instance for full-text (searches subsections)
+    var fuseFlat = null; // flattened subsection array (source of truth for exact scan)
     var fuseSuggestions = null; // Fuse instance for autocomplete terms
     var fuseLoading = false;
     var fuseLoaded = false;
@@ -48,6 +49,10 @@
     var fuseResultsEl = null;
     var fuseMessageEl = null;
     var fuseDebounceTimer = null;
+    var enFlat = null; // en edition flattened subsections (lazy-loaded)
+    var enFailed = false;
+    var enToken = 0; // stale-input guard for async en fallback
+    var enPromise = null; // cached in-flight en-index fetch promise
 
     var SEARCH_SUBMIT_SVG = "\u2728";
 
@@ -120,6 +125,11 @@
         en: {
             placeholder: "Search Civic AI…",
             zero_results: "No results for [SEARCH_TERM]",
+            exact_summary:
+                "[EXACT] exact · [NEAR] near matches for [SEARCH_TERM]",
+            exact_only: "[EXACT] exact matches for [SEARCH_TERM]",
+            exact_badge: "Exact",
+            en_fallback: "[COUNT] exact matches in the English edition",
         },
         zh: {
             placeholder: "搜尋仁工智慧…",
@@ -133,6 +143,11 @@
             clear_search: "\u6e05\u9664",
             load_more: "\u8f09\u5165\u66f4\u591a",
             searching: "\u641c\u5c0b [SEARCH_TERM] \u4e2d\u2026",
+            exact_summary:
+                "「[SEARCH_TERM]」完全符合 [EXACT] 筆・相近結果 [NEAR] 筆",
+            exact_only: "「[SEARCH_TERM]」完全符合 [EXACT] 筆",
+            exact_badge: "完全符合",
+            en_fallback: "英文版完全符合 [COUNT] 筆",
         },
         ja: {
             placeholder: "\u672c\u3092\u691c\u7d22\u2026",
@@ -383,6 +398,34 @@
         return { norm: norm, map: map };
     }
 
+    function normalizeForExact(s) {
+        var out = String(s || "")
+            .toLowerCase()
+            .replace(cjkPunct, "");
+        cjkPunct.lastIndex = 0;
+        return out;
+    }
+
+    function scanExact(flatArr, query) {
+        var nq = normalizeForExact(query);
+        if (!nq) return [];
+        var headingHits = [];
+        var contentHits = [];
+        for (var i = 0; i < flatArr.length; i++) {
+            var item = flatArr[i];
+            if (!item.heading) continue;
+            if (
+                normalizeForExact(item.heading).indexOf(nq) !== -1 ||
+                normalizeForExact(item.chapterTitle).indexOf(nq) !== -1
+            ) {
+                headingHits.push(i);
+            } else if (normalizeForExact(item.content).indexOf(nq) !== -1) {
+                contentHits.push(i);
+            }
+        }
+        return headingHits.concat(contentHits);
+    }
+
     function buildExcerpt(content, query) {
         if (!content) return "";
         var ctxChars = 40;
@@ -434,9 +477,14 @@
         return escapeHtml(slice) + (content.length > 100 ? "\u2026" : "");
     }
 
-    function formatMessage(template, count, term) {
+    function formatMessage(template, term, counts) {
+        var count = (counts && counts.count) || 0;
+        var exact = (counts && counts.exact) || 0;
+        var near = (counts && counts.near) || 0;
         return template
             .replace("[COUNT]", count)
+            .replace("[EXACT]", exact)
+            .replace("[NEAR]", near)
             .replace("[SEARCH_TERM]", term);
     }
 
@@ -474,9 +522,64 @@
         var q = ev.detail && ev.detail.query;
         runKeywordSearchAfterAsk(q);
     });
-    // Search the flat subsection index with Fuse, then group results by chapter
+    // Render one chapter group's HTML (reused by renderFuseResults and en fallback)
+    function renderGroupHtml(ch, query) {
+        var html = "";
+        html += '<li class="pagefind-ui__result">';
+        html += '<div class="pagefind-ui__result-inner">';
+
+        html += '<p class="pagefind-ui__result-title">';
+        html +=
+            '<a class="pagefind-ui__result-link" href="' +
+            escapeHtml(ch.url) +
+            '">';
+        html += escapeHtml(ch.title);
+        html += "</a>";
+        html += "</p>";
+
+        for (var s = 0; s < ch.subResults.length; s++) {
+            var sub = ch.subResults[s];
+            if (!sub.heading) continue;
+
+            var subUrl = ch.url + "#" + sub.anchor;
+            var subExcerpt = buildExcerpt(sub.content, query);
+
+            html += '<div class="pagefind-ui__result-nested">';
+            html += '<p class="pagefind-ui__result-title">';
+            html +=
+                '<a class="pagefind-ui__result-link" href="' +
+                escapeHtml(subUrl) +
+                '">';
+            html += escapeHtml(sub.heading);
+            html += "</a>";
+            if (sub.exact) {
+                html +=
+                    '<span class="civic-search__badge">' +
+                    escapeHtml(t.exact_badge) +
+                    "</span>";
+            }
+            html += "</p>";
+            html +=
+                '<p class="pagefind-ui__result-excerpt">' + subExcerpt + "</p>";
+            html += "</div>";
+        }
+
+        html += '<ul class="pagefind-ui__result-tags">';
+        html +=
+            '<li class="pagefind-ui__result-tag">Section: ' +
+            escapeHtml(ch.section) +
+            "</li>";
+        html += "</ul>";
+
+        html += "</div>";
+        html += "</li>";
+        return html;
+    }
+
+    // Search the flat subsection index: exact substring hits first, then Fuse fuzzy results
     function renderFuseResults(query) {
         if (!fuseIndex || !fuseResultsEl || !fuseMessageEl) return;
+        enToken++;
 
         if (!query || !query.trim()) {
             fuseMessageEl.textContent = "";
@@ -484,13 +587,29 @@
             return;
         }
 
-        var results = fuseIndex.search(query, { limit: 40 });
+        var exactIdx = scanExact(fuseFlat, query);
+        var exactSet = {};
+        for (var e = 0; e < exactIdx.length; e++) exactSet[exactIdx[e]] = true;
 
-        // Group results by chapter URL
+        var fuzzyResults = fuseIndex.search(query, { limit: 40 });
+        var fuzzy = [];
+        for (var f = 0; f < fuzzyResults.length; f++) {
+            if (exactSet[fuzzyResults[f].refIndex]) continue;
+            fuzzy.push(fuzzyResults[f]);
+        }
+
+        var ordered = [];
+        for (var ei = 0; ei < exactIdx.length; ei++) {
+            ordered.push({ item: fuseFlat[exactIdx[ei]], exact: true });
+        }
+        for (var fi = 0; fi < fuzzy.length; fi++) {
+            ordered.push({ item: fuzzy[fi].item, exact: false });
+        }
+
         var grouped = [];
         var chapterMap = {};
-        for (var i = 0; i < results.length; i++) {
-            var item = results[i].item;
+        for (var i = 0; i < ordered.length; i++) {
+            var item = ordered[i].item;
             var key = item.chapterUrl;
             if (!chapterMap[key]) {
                 chapterMap[key] = {
@@ -501,24 +620,28 @@
                 };
                 grouped.push(chapterMap[key]);
             }
-            // Max 3 sub-results per chapter (matches PageFind behavior)
             if (chapterMap[key].subResults.length < 3) {
                 chapterMap[key].subResults.push({
                     heading: item.heading,
                     anchor: item.anchor,
                     content: item.content,
-                    score: results[i].score,
+                    exact: ordered[i].exact,
                 });
             }
         }
 
-        // Limit to 10 chapter-level results
         grouped = grouped.slice(0, 10);
 
-        // Count
+        var EXACT = exactIdx.length;
+        var NEAR = fuzzy.length;
         var count = grouped.length;
+
         var msgTemplate;
-        if (count === 0) {
+        if (EXACT > 0 && NEAR > 0) {
+            msgTemplate = t.exact_summary || uiTranslations.en.exact_summary;
+        } else if (EXACT > 0 && NEAR === 0) {
+            msgTemplate = t.exact_only || uiTranslations.en.exact_only;
+        } else if (count === 0) {
             msgTemplate = t.zero_results || "No results for [SEARCH_TERM]";
         } else if (count === 1) {
             msgTemplate =
@@ -528,62 +651,109 @@
         } else {
             msgTemplate = t.many_results || "[COUNT] results for [SEARCH_TERM]";
         }
-        fuseMessageEl.textContent = formatMessage(msgTemplate, count, query);
+        fuseMessageEl.textContent = formatMessage(msgTemplate, query, {
+            count: count,
+            exact: EXACT,
+            near: NEAR,
+        });
 
-        // Render results
         var html = "";
         for (var g = 0; g < grouped.length; g++) {
-            var ch = grouped[g];
-
-            html += '<li class="pagefind-ui__result">';
-            html += '<div class="pagefind-ui__result-inner">';
-
-            // Main chapter title
-            html += '<p class="pagefind-ui__result-title">';
-            html +=
-                '<a class="pagefind-ui__result-link" href="' +
-                escapeHtml(ch.url) +
-                '">';
-            html += escapeHtml(ch.title);
-            html += "</a>";
-            html += "</p>";
-
-            // Sub-results (subsection anchors)
-            for (var s = 0; s < ch.subResults.length; s++) {
-                var sub = ch.subResults[s];
-                if (!sub.heading) continue; // skip intro sections without headings
-
-                var subUrl = ch.url + "#" + sub.anchor;
-                var subExcerpt = buildExcerpt(sub.content, query);
-
-                html += '<div class="pagefind-ui__result-nested">';
-                html += '<p class="pagefind-ui__result-title">';
-                html +=
-                    '<a class="pagefind-ui__result-link" href="' +
-                    escapeHtml(subUrl) +
-                    '">';
-                html += escapeHtml(sub.heading);
-                html += "</a>";
-                html += "</p>";
-                html +=
-                    '<p class="pagefind-ui__result-excerpt">' +
-                    subExcerpt +
-                    "</p>";
-                html += "</div>";
-            }
-
-            // Section tag (matches PageFind's metadata tags)
-            html += '<ul class="pagefind-ui__result-tags">';
-            html +=
-                '<li class="pagefind-ui__result-tag">Section: ' +
-                escapeHtml(ch.section) +
-                "</li>";
-            html += "</ul>";
-
-            html += "</div>";
-            html += "</li>";
+            html += renderGroupHtml(grouped[g], query);
         }
         fuseResultsEl.innerHTML = html;
+
+        // English exact-fallback tier: Latin queries with zero local exact hits
+        if (
+            exactIdx.length === 0 &&
+            isLatinQuery(query) &&
+            query.length >= 3 &&
+            pageLang !== "en"
+        ) {
+            var token = ++enToken;
+            ensureEnIndex().then(function (flatEn) {
+                if (token !== enToken || !flatEn) return;
+                var enHits = scanExact(flatEn, query);
+                if (!enHits.length) return;
+                var enGrouped = [];
+                var enChapterMap = {};
+                for (var ei2 = 0; ei2 < enHits.length; ei2++) {
+                    var enItem = flatEn[enHits[ei2]];
+                    var enKey = enItem.chapterUrl;
+                    if (!enChapterMap[enKey]) {
+                        enChapterMap[enKey] = {
+                            title: enItem.chapterTitle,
+                            section: enItem.chapterSection,
+                            url: enItem.chapterUrl,
+                            subResults: [],
+                        };
+                        enGrouped.push(enChapterMap[enKey]);
+                    }
+                    if (enChapterMap[enKey].subResults.length < 3) {
+                        enChapterMap[enKey].subResults.push({
+                            heading: enItem.heading,
+                            anchor: enItem.anchor,
+                            content: enItem.content,
+                            exact: true,
+                        });
+                    }
+                }
+                enGrouped = enGrouped.slice(0, 5);
+                var enHtml =
+                    '<li class="civic-search__en-note">' +
+                    escapeHtml(
+                        formatMessage(
+                            t.en_fallback || uiTranslations.en.en_fallback,
+                            query,
+                            { count: enHits.length }
+                        )
+                    ) +
+                    "</li>";
+                for (var eg = 0; eg < enGrouped.length; eg++) {
+                    enHtml += renderGroupHtml(enGrouped[eg], query);
+                }
+                fuseResultsEl.innerHTML = fuseResultsEl.innerHTML + enHtml;
+            });
+        }
+    }
+
+    function flattenChapters(data) {
+        var flat = [];
+        for (var c = 0; c < data.length; c++) {
+            var ch = data[c];
+            var subs = ch.subsections || [];
+            for (var s = 0; s < subs.length; s++) {
+                flat.push({
+                    chapterTitle: ch.title,
+                    chapterSection: ch.section,
+                    chapterUrl: ch.url,
+                    heading: subs[s].heading,
+                    anchor: subs[s].anchor,
+                    content: subs[s].content,
+                });
+            }
+        }
+        return flat;
+    }
+
+    function ensureEnIndex() {
+        if (enFlat) return Promise.resolve(enFlat);
+        if (enFailed) return Promise.resolve(null);
+        if (enPromise) return enPromise;
+        enPromise = fetch("/search-index.json")
+            .then(function (res) {
+                if (!res.ok) throw new Error("HTTP " + res.status);
+                return res.json();
+            })
+            .then(function (data) {
+                enFlat = flattenChapters(data);
+                return enFlat;
+            })
+            .catch(function () {
+                enFailed = true;
+                return null;
+            });
+        return enPromise;
     }
 
     function loadFuseIndex() {
@@ -593,7 +763,7 @@
             fuseMessageEl.textContent = formatMessage(
                 t.searching || "Loading\u2026",
                 "",
-                ""
+                null
             );
         }
         fetch("/tw/search-index.json")
@@ -602,24 +772,9 @@
                 return res.json();
             })
             .then(function (data) {
-                // Flatten chapters into subsections for Fuse indexing
-                var flat = [];
-                for (var c = 0; c < data.length; c++) {
-                    var ch = data[c];
-                    var subs = ch.subsections || [];
-                    for (var s = 0; s < subs.length; s++) {
-                        flat.push({
-                            chapterTitle: ch.title,
-                            chapterSection: ch.section,
-                            chapterUrl: ch.url,
-                            heading: subs[s].heading,
-                            anchor: subs[s].anchor,
-                            content: subs[s].content,
-                        });
-                    }
-                }
+                fuseFlat = flattenChapters(data);
 
-                fuseIndex = new Fuse(flat, {
+                fuseIndex = new Fuse(fuseFlat, {
                     keys: [
                         { name: "heading", weight: 2 },
                         { name: "content", weight: 1 },
