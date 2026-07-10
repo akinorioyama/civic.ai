@@ -3,33 +3,36 @@ name: CI
 on:
     push:
         branches: [main]
-    pull_request_target:
+    pull_request:
         branches: [main]
+
+permissions:
+    contents: write
 
 jobs:
     build:
         runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v7
               with:
-                  ref: ${{ github.event.pull_request.head.sha || github.ref }}
-                  repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+                  ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.head_ref || github.ref }}
+                  persist-credentials: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository }}
 
             - name: Setup Bun
               uses: oven-sh/setup-bun@v2
 
             - name: Install dependencies
-              run: bun install --frozen-lockfile
+              run: bun --bun install --frozen-lockfile
 
             - name: Install worker dependencies
               working-directory: worker
-              run: bun install --frozen-lockfile
+              run: bun --bun install --frozen-lockfile
 
             - name: Auto-format
-              if: github.event_name == 'pull_request_target' && github.event.pull_request.head.repo.full_name == github.repository
+              if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
               run: |
-                  bunx prettier --write .
+                  bun --bun x prettier --write .
                   git diff --quiet || {
                     git config user.name "github-actions[bot]"
                     git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -39,34 +42,34 @@ jobs:
                   }
 
             - name: Lint
-              run: bun run lint
+              run: bun --bun run lint
 
             - name: Typecheck
-              run: bun run check
+              run: bun --bun run check
 
             - name: Typecheck worker
-              run: bun run worker:typecheck
+              run: bun --bun run worker:typecheck
 
             - name: Test
-              run: bun test
+              run: bun --bun test
 
             - name: Test worker
-              run: bun run worker:test
+              run: bun --bun run worker:test
 
             - name: Build
-              run: bun run build
+              run: bun --bun run build
 
             - name: Check internal links
-              run: bun run check-links
+              run: bun --bun run check-links
 
             - name: Check hybrid design
-              run: bun run check:hybrid
+              run: bun --bun run check:hybrid
 
             - name: Check Astro output
-              run: bun run check:astro-output
+              run: bun --bun run check:astro-output
 
             - name: Check search output
-              run: bun run check:search
+              run: bun --bun run check:search
 
             - name: Check build parity
-              run: bun run check:parity
+              run: bun --bun run check:parity
