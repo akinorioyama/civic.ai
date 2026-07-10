@@ -7,6 +7,7 @@
     "scripts": {
         "dev": "bun run sync:public && astro dev --host 127.0.0.1",
         "build": "bun run sync:public && astro build && bun run minify-html && bunx pagefind --site dist",
+        "build:parity": "bun run sync:public && astro build",
         "lint": "prettier --check . && bun run pangu-format.mjs --check && bun scripts/check-tw-typography.mjs",
         "format": "prettier --write . && bun run pangu-format.mjs",
         "prepare": "husky",

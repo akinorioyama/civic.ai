@@ -1,2 +1,17 @@
 # Husky pre-commit hook: run lint-staged on staged files.
 bunx lint-staged
+
+if git diff --cached --quiet -- \
+    "*.md" "*.html" \
+    "_data/**" "src/**" \
+    "assets/**" "audio/**" "fonts/**" "img/**" \
+    "styles.css" "CNAME" ".nojekyll" "favicon.ico" "favicon.svg" \
+    "astro.config.mjs" "package.json" "bun.lock" \
+    "scripts/sync-public.mjs" "scripts/check-build-parity.mjs" \
+    "tests/fixtures/eleventy-build-baseline.json"
+then
+    exit 0
+fi
+
+bun run build:parity
+bun run check:parity
