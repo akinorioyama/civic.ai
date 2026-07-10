@@ -21,58 +21,59 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
-              uses: actions/checkout@v4
+              uses: actions/checkout@v7
 
             - name: Setup Bun
               uses: oven-sh/setup-bun@v2
 
             - name: Install dependencies
-              run: bun install --frozen-lockfile
+              run: bun --bun install --frozen-lockfile
 
             - name: Install worker dependencies
               working-directory: worker
-              run: bun install --frozen-lockfile
+              run: bun --bun install --frozen-lockfile
 
             - name: Lint
-              run: bun run lint
+              run: bun --bun run lint
 
             - name: Typecheck
-              run: bun run check
+              run: bun --bun run check
 
             - name: Typecheck worker
-              run: bun run worker:typecheck
+              run: bun --bun run worker:typecheck
 
             - name: Test
-              run: bun test
+              run: bun --bun test
 
             - name: Test worker
-              run: bun run worker:test
+              run: bun --bun run worker:test
 
             - name: Build site
-              run: bun run build
+              run: bun --bun run build
 
             - name: Check internal links
-              run: bun run check-links
+              run: bun --bun run check-links
 
             - name: Check hybrid design
-              run: bun run check:hybrid
+              run: bun --bun run check:hybrid
 
             - name: Check Astro output
-              run: bun run check:astro-output
+              run: bun --bun run check:astro-output
 
             - name: Check search output
-              run: bun run check:search
+              run: bun --bun run check:search
 
             - name: Check build parity
-              run: bun run check:parity
+              run: bun --bun run check:parity
 
             - name: Configure Pages
-              uses: actions/configure-pages@v5
+              uses: actions/configure-pages@v6
 
             - name: Upload artifact
-              uses: actions/upload-pages-artifact@v3
+              uses: actions/upload-pages-artifact@v5
               with:
                   path: dist
+                  include-hidden-files: true
 
     deploy:
         if: github.event_name != 'pull_request'
@@ -87,7 +88,7 @@ jobs:
             # transient Pages-side state can settle before retrying.
             - name: Deploy to GitHub Pages
               id: deployment
-              uses: actions/deploy-pages@v4
+              uses: actions/deploy-pages@v5
               continue-on-error: true
 
             - name: Wait before deploy retry 1
@@ -97,7 +98,7 @@ jobs:
             - name: Deploy to GitHub Pages (retry 1)
               id: deployment-retry-1
               if: steps.deployment.outcome == 'failure'
-              uses: actions/deploy-pages@v4
+              uses: actions/deploy-pages@v5
               continue-on-error: true
 
             - name: Wait before deploy retry 2
@@ -107,7 +108,7 @@ jobs:
             - name: Deploy to GitHub Pages (retry 2)
               id: deployment-retry-2
               if: steps.deployment-retry-1.outcome == 'failure'
-              uses: actions/deploy-pages@v4
+              uses: actions/deploy-pages@v5
               continue-on-error: true
 
             - name: Wait before deploy retry 3
@@ -117,4 +118,4 @@ jobs:
             - name: Deploy to GitHub Pages (retry 3)
               id: deployment-retry-3
               if: steps.deployment-retry-2.outcome == 'failure'
-              uses: actions/deploy-pages@v4
+              uses: actions/deploy-pages@v5
