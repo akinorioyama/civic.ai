@@ -4751,12 +4751,89 @@ html[data-theme="dark"] .cmap-arc-5 {
 }
 
 .search-overlay .pagefind-ui {
+    --pagefind-ui-scale: 0.8;
     --pagefind-ui-primary: var(--teal);
     --pagefind-ui-text: var(--text);
     --pagefind-ui-background: var(--surface);
     --pagefind-ui-border: var(--border);
     --pagefind-ui-tag: var(--warm);
+    --pagefind-ui-border-width: 2px;
+    --pagefind-ui-border-radius: 8px;
     color: var(--text);
+    font-family: var(--pagefind-ui-font);
+    width: 100%;
+}
+/* Pagefind's generated rules carry Svelte scope classes; Fuse needs its own stable shell. */
+.pagefind-ui--fuse,
+.pagefind-ui--fuse *,
+.pagefind-ui--fuse *::before,
+.pagefind-ui--fuse *::after {
+    box-sizing: border-box;
+}
+
+.pagefind-ui--fuse .pagefind-ui__form {
+    position: relative;
+}
+
+.pagefind-ui--fuse .pagefind-ui__form::before {
+    position: absolute;
+    z-index: 1;
+    top: calc(18px * var(--pagefind-ui-scale));
+    left: calc(20px * var(--pagefind-ui-scale));
+    width: calc(12px * var(--pagefind-ui-scale));
+    height: calc(12px * var(--pagefind-ui-scale));
+    border: calc(2px * var(--pagefind-ui-scale)) solid
+        color-mix(in srgb, var(--pagefind-ui-text) 70%, transparent);
+    border-radius: 50%;
+    content: "";
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.pagefind-ui--fuse .pagefind-ui__form::after {
+    position: absolute;
+    z-index: 1;
+    top: calc(31px * var(--pagefind-ui-scale));
+    left: calc(31px * var(--pagefind-ui-scale));
+    width: calc(8px * var(--pagefind-ui-scale));
+    height: calc(2px * var(--pagefind-ui-scale));
+    background: color-mix(in srgb, var(--pagefind-ui-text) 70%, transparent);
+    content: "";
+    opacity: 0.7;
+    pointer-events: none;
+    transform: rotate(45deg);
+    transform-origin: left center;
+}
+
+.pagefind-ui--fuse .pagefind-ui__search-input {
+    display: block;
+    width: 100%;
+    height: calc(64px * var(--pagefind-ui-scale));
+    min-width: 0;
+    padding: 0 calc(70px * var(--pagefind-ui-scale)) 0
+        calc(54px * var(--pagefind-ui-scale));
+    color: var(--pagefind-ui-text);
+    background: var(--pagefind-ui-background);
+    border: var(--pagefind-ui-border-width) solid var(--pagefind-ui-border);
+    border-radius: var(--pagefind-ui-border-radius);
+    font: inherit;
+    font-size: calc(21px * var(--pagefind-ui-scale));
+    font-weight: 700;
+    line-height: 1.2;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.pagefind-ui--fuse .pagefind-ui__search-input::placeholder {
+    color: currentColor;
+    opacity: 0.2;
+}
+
+.pagefind-ui--fuse .pagefind-ui__search-input:focus-visible {
+    border-color: var(--pagefind-ui-primary);
+    outline: calc(2px * var(--pagefind-ui-scale)) solid
+        color-mix(in srgb, var(--pagefind-ui-primary) 45%, transparent);
+    outline-offset: calc(2px * var(--pagefind-ui-scale));
 }
 
 .search-overlay .pagefind-ui .civic-search__row {
@@ -4793,25 +4870,145 @@ html[data-theme="dark"] .cmap-arc-5 {
     color: var(--teal);
 }
 
+.pagefind-ui--fuse .pagefind-ui__drawer {
+    display: block;
+    min-width: 0;
+}
+
+.pagefind-ui--fuse .pagefind-ui__message:not(:empty) {
+    display: flex;
+    align-items: center;
+    min-height: calc(24px * var(--pagefind-ui-scale));
+    margin: 0;
+    padding: calc(20px * var(--pagefind-ui-scale)) 0;
+    color: var(--pagefind-ui-text);
+    font-size: calc(16px * var(--pagefind-ui-scale));
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.pagefind-ui--fuse .pagefind-ui__results {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 .pagefind-ui--fuse .pagefind-ui__result {
-    border-bottom: 1px solid var(--border);
-    padding: 12px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: min(calc(40px * var(--pagefind-ui-scale)), 3%);
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: calc(30px * var(--pagefind-ui-scale)) 0
+        calc(40px * var(--pagefind-ui-scale));
+    border-top: solid var(--pagefind-ui-border-width) var(--pagefind-ui-border);
+    list-style: none;
+}
+
+.pagefind-ui--fuse .pagefind-ui__result:last-child {
+    border-bottom: solid var(--pagefind-ui-border-width)
+        var(--pagefind-ui-border);
+}
+
+.pagefind-ui--fuse .pagefind-ui__result-inner {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    margin-top: calc(10px * var(--pagefind-ui-scale));
+}
+
+.pagefind-ui--fuse .pagefind-ui__result-title {
+    display: inline-block;
+    max-width: 100%;
+    margin: 0;
+    color: var(--pagefind-ui-text);
+    font-size: calc(21px * var(--pagefind-ui-scale));
+    font-weight: 700;
+    line-height: 1.35;
 }
 
 .pagefind-ui--fuse .pagefind-ui__result-link {
-    color: var(--heading);
-    font-family: var(--serif);
+    color: inherit;
+    font-family: inherit;
     text-decoration: none;
 }
 
-.pagefind-ui--fuse .pagefind-ui__result-link:hover {
+.pagefind-ui--fuse .pagefind-ui__result-link:hover,
+.pagefind-ui--fuse .pagefind-ui__result-link:focus-visible {
     color: var(--teal);
+    text-decoration: underline;
+}
+
+.pagefind-ui--fuse .pagefind-ui__result-nested {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding-left: calc(20px * var(--pagefind-ui-scale));
+}
+
+.pagefind-ui--fuse .pagefind-ui__result-nested:first-of-type {
+    padding-top: calc(10px * var(--pagefind-ui-scale));
+}
+
+.pagefind-ui--fuse .pagefind-ui__result-nested .pagefind-ui__result-link {
+    position: relative;
+    font-size: 0.9em;
+}
+
+.pagefind-ui--fuse
+    .pagefind-ui__result-nested
+    .pagefind-ui__result-link::before {
+    position: absolute;
+    top: 0;
+    right: calc(100% + 0.1em);
+    content: "⤷";
 }
 
 .pagefind-ui--fuse .pagefind-ui__result-excerpt {
-    font-size: 0.88rem;
+    display: inline-block;
+    min-width: 0;
+    margin: calc(4px * var(--pagefind-ui-scale)) 0 0;
     color: var(--muted);
-    margin: 4px 0 0;
+    font-size: calc(16px * var(--pagefind-ui-scale));
+    font-weight: 400;
+    overflow-wrap: anywhere;
+}
+
+.pagefind-ui--fuse .pagefind-ui__result-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(20px * var(--pagefind-ui-scale));
+    margin: calc(20px * var(--pagefind-ui-scale)) 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pagefind-ui--fuse .pagefind-ui__result-tag {
+    margin: 0;
+    line-height: normal;
+    padding: calc(4px * var(--pagefind-ui-scale))
+        calc(8px * var(--pagefind-ui-scale));
+    border-radius: var(--pagefind-ui-border-radius);
+    background: var(--pagefind-ui-tag);
+    color: var(--pagefind-ui-text);
+    font-size: calc(14px * var(--pagefind-ui-scale));
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 420px) {
+    .pagefind-ui--fuse .pagefind-ui__result {
+        padding: calc(24px * var(--pagefind-ui-scale)) 0
+            calc(30px * var(--pagefind-ui-scale));
+    }
+
+    .pagefind-ui--fuse .pagefind-ui__result-nested {
+        padding-left: calc(16px * var(--pagefind-ui-scale));
+    }
 }
 
 .pagefind-ui--fuse mark {
