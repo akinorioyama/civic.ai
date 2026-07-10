@@ -13,6 +13,7 @@
             ? "zh"
             : "en";
     }
+    var pageLang = normalizePageLang(document.documentElement.lang);
     var askAnswer = document.getElementById("civic-ask-answer");
     if (!askAnswer) return;
 
