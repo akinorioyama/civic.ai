@@ -302,22 +302,65 @@
             localDev ||
             !!override;
         if (!shouldProbe) return;
-        fetch(ASK_BASE + "/capacity", {
-            headers: { Accept: "application/json" },
-        })
-            .then(function (r) {
-                return r.ok ? r.json() : Promise.reject();
+
+        function probeBase(base, cb, errCb) {
+            fetch(base + "/capacity", {
+                headers: { Accept: "application/json" },
             })
-            .then(function (d) {
-                askAvailable = !!(d && d.status === "available");
-            })
-            .catch(function () {
-                if (override && localDev) {
+                .then(function (r) {
+                    return r.ok ? r.json() : Promise.reject();
+                })
+                .then(function (d) {
+                    if (d && d.status === "available") {
+                        cb(base);
+                    } else {
+                        errCb();
+                    }
+                })
+                .catch(function () {
+                    errCb();
+                });
+        }
+
+        if (localDev && !override) {
+            probeBase(
+                "http://127.0.0.1:8788",
+                function (base) {
+                    ASK_BASE = base;
                     askAvailable = true;
-                } else {
-                    askAvailable = false;
+                },
+                function () {
+                    probeBase(
+                        "https://civic-ai-ask.audreyt.workers.dev",
+                        function (base) {
+                            ASK_BASE = base;
+                            askAvailable = true;
+                        },
+                        function () {
+                            ASK_BASE =
+                                "https://civic-ai-ask.audreyt.workers.dev";
+                            askAvailable = false;
+                        }
+                    );
                 }
-            });
+            );
+        } else {
+            probeBase(
+                ASK_BASE,
+                function (base) {
+                    ASK_BASE = base;
+                    askAvailable = true;
+                },
+                function () {
+                    ASK_BASE = ASK_BASE;
+                    if (override && localDev) {
+                        askAvailable = true;
+                    } else {
+                        askAvailable = false;
+                    }
+                }
+            );
+        }
     }
 
     initCapacity();
