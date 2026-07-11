@@ -295,7 +295,9 @@ function buildEdges(items, maxPerItem, threshold) {
             .slice(0, maxPerItem);
 
         for (const neighbor of neighbors) {
-            const key = [item.id, neighbor.id].sort().join(":");
+            const key = [item.id, neighbor.id]
+                .sort((a, b) => (a < b ? -1 : a > b ? 1 : 0))
+                .join(":");
             if (!seen.has(key)) {
                 seen.add(key);
                 edges.push({
@@ -344,7 +346,9 @@ function buildParticipantEdges(items) {
             .slice(0, 1);
 
         for (const candidate of [...sameCluster, ...bridge]) {
-            const key = [item.id, candidate.id].sort().join(":");
+            const key = [item.id, candidate.id]
+                .sort((a, b) => (a < b ? -1 : a > b ? 1 : 0))
+                .join(":");
             if (!seen.has(key)) {
                 seen.add(key);
                 edges.push({
@@ -417,7 +421,7 @@ function pickRepresentativeParticipant(participants, primaryGroupId) {
 }
 
 function buildLeaderHistory(votes, statementIds, participantGroups, scoreFor) {
-    const groupedIds = [...new Set([...participantGroups.values()])].filter(
+    const groupedIds = [...new Set(participantGroups.values())].filter(
         (groupId) => groupId !== "none"
     );
     const tracker = new Map(

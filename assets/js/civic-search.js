@@ -30,9 +30,11 @@
 
     var pageLang = normalizePageLang(document.documentElement.lang);
     var isLatinQuery = function (q) {
+        // oxlint-disable-next-line no-control-regex -- intentional 7-bit ASCII/Latin-script detection
         return /^[\x00-\x7F]+$/.test(q);
     };
     var isLatinTerm = function (t) {
+        // oxlint-disable-next-line no-control-regex -- intentional 7-bit ASCII/Latin-script detection
         return /^[\x00-\x7F]/.test(t);
     };
 
@@ -89,13 +91,15 @@
         if (window.CivicAsk && typeof window.CivicAsk.runAsk === "function") {
             askPromise = window.CivicAsk.runAsk(q);
         }
-        askPromise.then(function () {
-            window.dispatchEvent(
-                new CustomEvent("civic-search-after-ask", {
-                    detail: { query: q },
-                })
-            );
-        });
+        askPromise
+            .then(function () {
+                window.dispatchEvent(
+                    new CustomEvent("civic-search-after-ask", {
+                        detail: { query: q },
+                    })
+                );
+            })
+            .catch(function () {});
     }
 
     function wrapSearchFormRow(form) {
@@ -200,7 +204,7 @@
         if (!isLatinQuery(q)) {
             return tl.indexOf(q) !== -1;
         }
-        var words = tl.split(/[\s\-\/\(]+/);
+        var words = tl.split(/[\s\-/(]+/);
         for (var i = 0; i < words.length; i++) {
             if (words[i].indexOf(q) === 0) return true;
         }
@@ -285,13 +289,16 @@
         dropdown.hidden = false;
     }
 
-    function selectSuggestion(value) {
-        if (!input) return;
-        var nativeSetter = Object.getOwnPropertyDescriptor(
+    function setNativeInputValue(el, value) {
+        Object.getOwnPropertyDescriptor(
             HTMLInputElement.prototype,
             "value"
-        ).set;
-        nativeSetter.call(input, value);
+        ).set.call(el, value);
+    }
+
+    function selectSuggestion(value) {
+        if (!input) return;
+        setNativeInputValue(input, value);
         input.dispatchEvent(new Event("input", { bubbles: true }));
         dropdown.hidden = true;
         activeIdx = -1;
@@ -446,11 +453,7 @@
         if (!q) return;
         if (useFuse) {
             if (fuseSearchInput) {
-                var setter = Object.getOwnPropertyDescriptor(
-                    HTMLInputElement.prototype,
-                    "value"
-                ).set;
-                setter.call(fuseSearchInput, q);
+                setNativeInputValue(fuseSearchInput, q);
             }
             if (fuseIndex && fuseResultsEl) {
                 renderFuseResults(q);
@@ -461,11 +464,7 @@
         }
         var pfInput = container.querySelector("input");
         if (pfInput) {
-            var nativeSet = Object.getOwnPropertyDescriptor(
-                HTMLInputElement.prototype,
-                "value"
-            ).set;
-            nativeSet.call(pfInput, q);
+            setNativeInputValue(pfInput, q);
             pfInput.dispatchEvent(new Event("input", { bubbles: true }));
         }
     }
@@ -828,7 +827,11 @@
     document.addEventListener("keydown", function (e) {
         if ((e.metaKey || e.ctrlKey) && e.key === "k") {
             e.preventDefault();
-            overlay.classList.contains("active") ? close() : open();
+            if (overlay.classList.contains("active")) {
+                close();
+            } else {
+                open();
+            }
         }
         if (e.key === "Escape" && overlay.classList.contains("active")) {
             close();

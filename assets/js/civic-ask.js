@@ -32,7 +32,7 @@
             var o = new URLSearchParams(window.location.search).get("ask_base");
             if (!o) return "";
             return String(o).trim().replace(/\/$/, "");
-        } catch (_e) {
+        } catch {
             return "";
         }
     }
@@ -68,7 +68,7 @@
         try {
             var url = new URL(value);
             return url.protocol === "http:" || url.protocol === "https:";
-        } catch (_e) {
+        } catch {
             return false;
         }
     }
@@ -352,7 +352,6 @@
                     askAvailable = true;
                 },
                 function () {
-                    ASK_BASE = ASK_BASE;
                     if (override && localDev) {
                         askAvailable = true;
                     } else {
@@ -395,13 +394,15 @@
                 window.CivicSearch.submit();
                 return;
             }
-            runAsk(q).then(function () {
-                window.dispatchEvent(
-                    new CustomEvent("civic-search-after-ask", {
-                        detail: { query: q.trim() },
-                    })
-                );
-            });
+            runAsk(q)
+                .then(function () {
+                    window.dispatchEvent(
+                        new CustomEvent("civic-search-after-ask", {
+                            detail: { query: q.trim() },
+                        })
+                    );
+                })
+                .catch(function () {});
         },
         true
     );

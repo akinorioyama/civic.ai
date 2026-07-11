@@ -45,7 +45,7 @@ function parseExclusions() {
         const line = raw.trimEnd();
         // A new `## …` heading ends the previous heading's scope.
         if (/^##\s/.test(line)) inExclude = /^##\s+exclude\b/i.test(line);
-        if (inExclude && /^```/.test(line.trim())) {
+        if (inExclude && line.trim().startsWith("```")) {
             inFence = !inFence;
             continue;
         }
@@ -67,7 +67,7 @@ function base(name) {
     const m = name
         .replace(/^\/*/, "")
         .replace(/^tw-/, "")
-        .match(/^[A-Za-z0-9_.\-]+\.md\b/);
+        .match(/^[A-Za-z0-9_.-]+\.md\b/);
     return m ? m[0] : "";
 }
 

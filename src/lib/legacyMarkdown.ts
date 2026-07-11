@@ -18,6 +18,7 @@ export function cjkSlugify(value: unknown): string {
 function installCjkDelimiterPatch(md: MarkdownIt) {
     if (cjkPatchInstalled) return;
     const State = md.inline.State;
+    // oxlint-disable-next-line unbound-method -- always invoked via .call(this, ...) below
     const original = State.prototype.scanDelims;
     State.prototype.scanDelims = function (
         start: number,

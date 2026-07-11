@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import app from "../src/index";
 
-test("GET /au/:question streams text/plain stub", async () => {
+void test("GET /au/:question streams text/plain stub", async () => {
     const res = await app.request("http://localhost/au/hello%20world?lang=zh", {
         headers: { Origin: "http://localhost:8080" },
     });
@@ -16,7 +16,7 @@ test("GET /au/:question streams text/plain stub", async () => {
     assert.match(text, /仁工智慧|hello/i);
 });
 
-test("GET /au maps ?lang=zh-Hant to zh stub", async () => {
+void test("GET /au maps ?lang=zh-Hant to zh stub", async () => {
     const res = await app.request("http://localhost/au/test?lang=zh-Hant", {
         headers: { Origin: "https://civic.ai" },
     });
@@ -26,7 +26,7 @@ test("GET /au maps ?lang=zh-Hant to zh stub", async () => {
     assert.match(text, /仁工智慧網站索引/);
 });
 
-test("GET /au maps ?lang=zh-tw to zh stub", async () => {
+void test("GET /au maps ?lang=zh-tw to zh stub", async () => {
     const res = await app.request("http://localhost/au/test?lang=zh-tw", {
         headers: { Origin: "https://www.civic.ai" },
     });
@@ -36,7 +36,7 @@ test("GET /au maps ?lang=zh-tw to zh stub", async () => {
     assert.match(text, /仁工智慧網站索引/);
 });
 
-test("GET /capacity returns available status JSON", async () => {
+void test("GET /capacity returns available status JSON", async () => {
     const res = await app.request("http://localhost/capacity", {
         headers: { Origin: "https://civic.ai" },
     });
@@ -48,7 +48,7 @@ test("GET /capacity returns available status JSON", async () => {
     );
 });
 
-test("GET /au rejects question over 100 scalars", async () => {
+void test("GET /au rejects question over 100 scalars", async () => {
     const long = "a".repeat(101);
     const res = await app.request(
         `http://localhost/au/${encodeURIComponent(long)}`
@@ -58,7 +58,7 @@ test("GET /au rejects question over 100 scalars", async () => {
     assert.match(text, /Question too long \(max 100 characters\)/);
 });
 
-test("OPTIONS /au returns CORS preflight for civic.ai", async () => {
+void test("OPTIONS /au returns CORS preflight for civic.ai", async () => {
     const res = await app.request("http://localhost/au/x", {
         method: "OPTIONS",
         headers: {
@@ -73,7 +73,7 @@ test("OPTIONS /au returns CORS preflight for civic.ai", async () => {
     );
 });
 
-test("GET /capacity allows http://localhost:4321", async () => {
+void test("GET /capacity allows http://localhost:4321", async () => {
     const res = await app.request("http://localhost/capacity", {
         headers: { Origin: "http://localhost:4321" },
     });

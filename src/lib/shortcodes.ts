@@ -2,7 +2,7 @@ import type { PageRecord } from "./pages";
 import { renderConceptMap } from "./conceptMap";
 import { comics, glossary, lang2, openclawBootstrap, paths } from "./site";
 
-function escapeHtml(value: unknown): string {
+function escapeHtml(value: string | number | null | undefined): string {
     return String(value ?? "")
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
@@ -10,7 +10,7 @@ function escapeHtml(value: unknown): string {
         .replace(/"/g, "&quot;");
 }
 
-function escapeAttr(value: unknown): string {
+function escapeAttr(value: string | number | null | undefined): string {
     return escapeHtml(value);
 }
 
@@ -156,13 +156,16 @@ export function renderOpenClawGuideMarkdown(which: "en" | "tw"): string {
 }
 
 export function asciifySkill(content: string): string {
-    return content
-        .replace(/—/g, "--")
-        .replace(/[–‑]/g, "-")
-        .replace(/['‘’′]/g, "'")
-        .replace(/[“”″]/g, '"')
-        .replace(/…/g, "...")
-        .replace(/→/g, "->")
-        .replace(/[    ]/g, " ")
-        .replace(/[^\x00-\x7F]/g, "");
+    return (
+        content
+            .replace(/—/g, "--")
+            .replace(/[–‑]/g, "-")
+            .replace(/['‘’′]/g, "'")
+            .replace(/[“”″]/g, '"')
+            .replace(/…/g, "...")
+            .replace(/→/g, "->")
+            .replace(/[    ]/g, " ")
+            // oxlint-disable-next-line no-control-regex -- intentional full-ASCII strip (control chars deliberately included)
+            .replace(/[^\x00-\x7F]/g, "")
+    );
 }

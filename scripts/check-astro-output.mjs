@@ -31,6 +31,7 @@ expect("glossary/index.html", "Civic AI");
 expect("tw/glossary/index.html", 'id="civic-ai"');
 expect("tw/glossary/index.html", "仁工智慧");
 const skill = built(".well-known/openclaw/SKILL.md");
+// oxlint-disable-next-line no-control-regex -- intentional full-ASCII range check (control chars are valid ASCII)
 if (!/^[\x00-\x7F]*$/.test(skill))
     throw new Error("OpenClaw skill is not ASCII-only");
 if (!built("CNAME").includes("civic.ai"))

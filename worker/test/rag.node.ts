@@ -5,7 +5,7 @@ import test from "node:test";
 import { streamSiteAnswer } from "../src/rag";
 import { retrieveSiteChunks } from "../src/vectorize";
 
-test("streamSiteAnswer without bindings returns stub stream", async () => {
+void test("streamSiteAnswer without bindings returns stub stream", async () => {
     const res = await streamSiteAnswer({}, "hello", "en");
     assert.equal(res.status, 200);
     const text = await res.text();
@@ -13,7 +13,7 @@ test("streamSiteAnswer without bindings returns stub stream", async () => {
     assert.match(text, /Civic AI site index/);
 });
 
-test("rag keeps the Nemotron Ultra gateway path wired", () => {
+void test("rag keeps the Nemotron Ultra gateway path wired", () => {
     const source = readFileSync(
         new URL("../src/rag.ts", import.meta.url),
         "utf8"
@@ -29,11 +29,11 @@ test("rag keeps the Nemotron Ultra gateway path wired", () => {
     assert.match(wrangler, /AUDREY_MODEL = "nemotron-ultra"/);
 });
 
-test("configured Nemotron streams even when Vectorize has no chunks", async () => {
+void test("configured Nemotron streams even when Vectorize has no chunks", async () => {
     const originalFetch = globalThis.fetch;
     const calls: Array<{ url: string; body: string }> = [];
-    globalThis.fetch = (async (url, init) => {
-        calls.push({ url: String(url), body: String(init?.body ?? "") });
+    globalThis.fetch = (async (url: string, init?: { body?: string }) => {
+        calls.push({ url, body: init?.body ?? "" });
         return new Response(
             'data: {"choices":[{"delta":{"content":"nemotron ok"}}]}\n\n',
             {
@@ -61,7 +61,7 @@ test("configured Nemotron streams even when Vectorize has no chunks", async () =
     }
 });
 
-test("retrieveSiteChunks keeps sibling chunks with distinct metadata ids", async () => {
+void test("retrieveSiteChunks keeps sibling chunks with distinct metadata ids", async () => {
     const ai = {
         run: async () => ({ data: [[0.1, 0.2, 0.3]] }),
     };

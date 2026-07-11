@@ -147,7 +147,7 @@ export function chipPos(
 
 // ─── render helpers ───
 
-function escapeHtml(value: unknown): string {
+function escapeHtml(value: string | number | null | undefined): string {
     return String(value ?? "")
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
