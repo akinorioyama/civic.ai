@@ -11,7 +11,7 @@ const { page } = Astro.props;
 const searchLang = normalizeSearchLang(page.data.lang);
 const zh = searchLang === "zh";
 const usePagefind = searchLang === "en";
-const useFuse = zh;
+const useFuse = zh || (import.meta.env.DEV && usePagefind);
 const suggestions = getSearchSuggestions(searchLang);
 const fuseVendor = assetVersion("node_modules/fuse.js/dist/fuse.min.js");
 const askJs = assetVersion("assets/js/civic-ask.js");

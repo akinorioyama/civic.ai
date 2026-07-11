@@ -1,0 +1,122 @@
+import { execFileSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
+import { build as astroBuild, dev as astroDev } from "astro";
+import type { ConfigEnv, Plugin, ViteBuilder } from "vite";
+
+const PROJECT_ROOT = fileURLToPath(new URL("../..", import.meta.url));
+
+type CommandEnvironment = Pick<ConfigEnv, "command" | "mode"> & {
+    isPreview?: boolean;
+};
+
+type AstroDevServer = {
+    address: { port: number };
+    stop(): Promise<void>;
+};
+
+export type AstroBuildBridgeDependencies = {
+    buildAstro?: () => Promise<void>;
+    runPostBuild?: () => void | Promise<void>;
+    syncPublic?: () => void | Promise<void>;
+};
+
+export function isAstroDevCommand({
+    command,
+    mode,
+    isPreview = false,
+}: CommandEnvironment): boolean {
+    return command === "serve" && mode !== "test" && !isPreview;
+}
+
+export type AstroDevProxyDependencies = {
+    startAstro?: () => Promise<AstroDevServer>;
+    syncPublic?: () => void | Promise<void>;
+};
+
+export function createAstroDevProxy(
+    dependencies: AstroDevProxyDependencies = {}
+): Plugin {
+    let astroServer: AstroDevServer | undefined;
+    const startAstro =
+        dependencies.startAstro ??
+        (() => astroDev({ server: { host: "127.0.0.1", port: 0 } }));
+
+    const sync = dependencies.syncPublic ?? syncPublic;
+    return {
+        name: "civic-ai:astro-dev-proxy",
+        apply: "serve",
+        async config(_config, environment) {
+            if (!isAstroDevCommand(environment)) return;
+
+            await sync();
+            astroServer = await startAstro();
+            const target = `http://127.0.0.1:${astroServer.address.port}`;
+
+            return {
+                server: {
+                    hmr: false,
+                    proxy: {
+                        "/": {
+                            changeOrigin: true,
+                            target,
+                            ws: true,
+                        },
+                    },
+                },
+            };
+        },
+        configureServer(viteServer) {
+            viteServer.httpServer?.once("close", () => {
+                void astroServer?.stop();
+            });
+        },
+    };
+}
+
+function runBun(args: string[]): void {
+    execFileSync("bun", args, { cwd: PROJECT_ROOT, stdio: "inherit" });
+}
+function runBunx(args: string[]): void {
+    execFileSync("bunx", args, { cwd: PROJECT_ROOT, stdio: "inherit" });
+}
+
+export function syncPublic(): void {
+    runBun(["run", "scripts/sync-public.mjs"]);
+}
+
+function runPostBuild(): void {
+    runBun(["run", "scripts/minify-html.mjs"]);
+    runBunx(["pagefind", "--site", "dist"]);
+}
+
+export function createAstroBuildBridge(
+    dependencies: AstroBuildBridgeDependencies = {}
+): Plugin {
+    const buildAstro = dependencies.buildAstro ?? (async () => astroBuild({}));
+    const postBuild = dependencies.runPostBuild ?? runPostBuild;
+    const sync = dependencies.syncPublic ?? syncPublic;
+
+    return {
+        name: "civic-ai:astro-build",
+        apply: "build",
+        config(_config, environment) {
+            if (environment.command !== "build") return;
+
+            return {
+                builder: {
+                    async buildApp(builder: ViteBuilder): Promise<void> {
+                        await sync();
+                        await buildAstro();
+                        await postBuild();
+
+                        for (const buildEnvironment of Object.values(
+                            builder.environments
+                        )) {
+                            buildEnvironment.isBuilt = true;
+                        }
+                    },
+                },
+            };
+        },
+    };
+}

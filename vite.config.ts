@@ -1,4 +1,8 @@
 import { defineConfig } from "vite-plus";
+import {
+    createAstroBuildBridge,
+    createAstroDevProxy,
+} from "./src/lib/vitePlusAdapter";
 
 export default defineConfig({
     lint: {
@@ -24,4 +28,12 @@ export default defineConfig({
         printWidth: 80,
         sortPackageJson: false,
     },
+    resolve: {
+        alias: { "bun:test": "vitest" },
+    },
+    server: {
+        host: "127.0.0.1",
+        port: 4321,
+    },
+    plugins: [createAstroBuildBridge(), createAstroDevProxy()],
 });

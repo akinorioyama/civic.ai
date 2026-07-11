@@ -12,6 +12,13 @@ describe("civic-search.js static contract", () => {
         expect(source).toContain("/tw/search-index.json");
     });
 
+    test("uses the English Fuse index in development", () => {
+        expect(source).toMatch(
+            /pageLang === "en"\s*\?\s*"\/search-index\.json"/
+        );
+        expect(source).toContain('"/tw/search-index.json"');
+    });
+
     test("uses Civic AI search copy, not book copy", () => {
         expect(source).toContain("Search Civic AI…");
         expect(source).not.toContain("Search the book");
@@ -37,6 +44,18 @@ describe("civic-search.js static contract", () => {
         );
         expect(styles).toMatch(
             /\.search-overlay \.pagefind-ui\s*\{[^}]*--pagefind-ui-text:\s*var\(--text\);/s
+        );
+    });
+
+    test("styles the development Fuse search shell", () => {
+        expect(styles).toMatch(
+            /\.pagefind-ui--fuse\s*\{[^}]*font-family:\s*var\(--sans\);/s
+        );
+        expect(styles).toMatch(
+            /\.pagefind-ui--fuse \.pagefind-ui__search-input\s*\{[^}]*width:\s*100%;/s
+        );
+        expect(styles).toMatch(
+            /\.pagefind-ui--fuse \.pagefind-ui__results\s*\{[^}]*list-style:\s*none;/s
         );
     });
 

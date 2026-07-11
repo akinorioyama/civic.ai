@@ -38,9 +38,8 @@
         return /^[\x00-\x7F]/.test(t);
     };
 
-    // Detect whether Fuse.js should be used (zh/ja pages with Fuse loaded)
-    var useFuse = typeof Fuse !== "undefined" && pageLang === "zh";
-
+    // Fuse is the development fallback for English and the production engine for zh.
+    var useFuse = typeof Fuse !== "undefined";
     // Fuse.js state
     var fuseIndex = null; // Fuse instance for full-text (searches subsections)
     var fuseSuggestions = null; // Fuse instance for autocomplete terms
@@ -595,7 +594,9 @@
                 ""
             );
         }
-        fetch("/tw/search-index.json")
+        var searchIndexUrl =
+            pageLang === "en" ? "/search-index.json" : "/tw/search-index.json";
+        fetch(searchIndexUrl)
             .then(function (res) {
                 if (!res.ok) throw new Error("HTTP " + res.status);
                 return res.json();

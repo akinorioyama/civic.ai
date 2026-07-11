@@ -4759,6 +4759,83 @@ html[data-theme="dark"] .cmap-arc-5 {
     color: var(--text);
 }
 
+.pagefind-ui--fuse {
+    font-family: var(--sans);
+}
+
+.pagefind-ui--fuse .pagefind-ui__form {
+    margin: 0;
+}
+
+.pagefind-ui--fuse .pagefind-ui__search-input {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 51px;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+}
+
+.pagefind-ui--fuse .pagefind-ui__search-input::placeholder {
+    color: var(--muted);
+}
+
+.pagefind-ui--fuse .pagefind-ui__search-input:focus-visible {
+    outline: 2px solid var(--teal);
+    outline-offset: 2px;
+    border-color: var(--teal);
+}
+
+.pagefind-ui--fuse .pagefind-ui__drawer {
+    margin-top: 12px;
+}
+
+.pagefind-ui--fuse .pagefind-ui__message {
+    margin: 0 0 8px;
+    color: var(--muted);
+}
+
+.pagefind-ui--fuse .pagefind-ui__results {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pagefind-ui--fuse .pagefind-ui__result-inner {
+    min-width: 0;
+}
+
+.pagefind-ui--fuse .pagefind-ui__result-title {
+    margin: 0;
+}
+
+.pagefind-ui--fuse .pagefind-ui__result-nested {
+    margin-top: 8px;
+    padding-left: 12px;
+    border-left: 2px solid var(--border);
+}
+
+.pagefind-ui--fuse .pagefind-ui__result-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pagefind-ui--fuse .pagefind-ui__result-tag {
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: var(--warm);
+    color: var(--muted);
+    font-family: var(--sans);
+    font-size: 0.78rem;
+}
+
 .search-overlay .pagefind-ui .civic-search__row {
     display: flex;
     align-items: center;

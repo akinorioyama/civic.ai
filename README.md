@@ -22,6 +22,8 @@ bun run dev     # Astro dev server → http://127.0.0.1:4321
 bun run build   # production build → dist/
 ```
 
+The equivalent direct Vite+ commands are `vp dev`, `vp build`, and `vp test`. The project Vite config bridges those commands to Astro and Bun while keeping `vp check`, `vp lint`, `vp fmt`, `vp staged`, and `vp preview` native.
+
 ## Scripts
 
 | Command                       | What it does                                                                                             |
