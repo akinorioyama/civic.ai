@@ -3,7 +3,7 @@
 //
 // Usage:
 //   bun run pangu-format              # format all **/*.md
-//   bun run pangu-format file.md …   # format given files (lint-staged compatible)
+//   bun run pangu-format file.md …   # format given files (vp staged compatible)
 //   bun run pangu-format --check      # exit 1 if any file would change
 
 import pangu from "pangu";

@@ -8,7 +8,7 @@
 //
 // Usage:
 //   node scripts/check-tw-typography.mjs           # scan tw-*.md + glossary zh strings
-//   node scripts/check-tw-typography.mjs file.md … # scan given files (lint-staged compatible)
+//   node scripts/check-tw-typography.mjs file.md … # scan given files (vp staged compatible)
 //
 // Exits 1 listing file:line:col for every violation.
 
@@ -97,7 +97,7 @@ for (const file of targets) {
     ) {
         scanText(name, readFileSync(file, "utf8"));
     }
-    // other files (from lint-staged fan-out) are not zh targets — skip
+    // other files (from the vp staged fan-out) are not zh targets — skip
 }
 
 if (offenders.length > 0) {

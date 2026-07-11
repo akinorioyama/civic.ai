@@ -30,8 +30,8 @@ bun run build   # production build → dist/
 | `bun run build`               | Production build of the static site, minified HTML, and Pagefind index → `dist/`.                        |
 | `bun run check`               | TypeScript check: `tsc --noEmit`.                                                                        |
 | `bun test`                    | Focused Bun tests for the renderer, root-content loader, search corpus, and static client contracts.     |
-| `bun run lint`                | Check formatting: `prettier --check` + `pangu-format --check` (CJK spacing).                             |
-| `bun run format`              | Auto-fix formatting: `prettier --write` + `pangu-format`.                                                |
+| `bun run lint`                | Check formatting and lint (Oxfmt + Oxlint via Vite+) + `pangu-format --check` (CJK spacing).             |
+| `bun run format`              | Auto-fix formatting (Oxfmt via Vite+) + `pangu-format`.                                                  |
 | `bun run check-links`         | After a build, validate internal links and anchors across `dist/`.                                       |
 | `bun run check:search`        | After a build, validate the search overlay, Pagefind markup, and `/tw/search-index.json`.                |
 | `bun run vectorize:sync-site` | Upsert the Civic AI search corpus into the `civic-ai-site` Cloudflare Vectorize index.                   |
@@ -40,7 +40,7 @@ bun run build   # production build → dist/
 | `bun run en`/`bun run tw`     | Copy the canonical English/Mandarin page set to the clipboard for translation review (macOS `pbcopy`).   |
 | `bun run import-comics`       | Re-import and optimise Nicky Case's comic pages into `img/` (maintenance helper, not part of the build). |
 
-A husky **pre-commit hook** runs `prettier` + `pangu-format` on staged Markdown.
+A Vite+ **pre-commit hook** runs `vp staged` (Oxfmt + `pangu-format` + Mandarin typography checks) on staged files, and re-validates build parity when content or build files change.
 
 Search uses Pagefind for English pages, a Fuse-backed Traditional Mandarin sidebar from `/tw/search-index.json`, and the `worker/` `/au/:question` API for streamed answers. The Worker retrieves from Cloudflare Vectorize binding `SITE_VECTORIZE` (`civic-ai-site`) and uses `AUDREY_MODEL=nemotron-ultra` with `BASETEN_API_KEY` plus optional `CF_AIG_TOKEN` to stream Nemotron Ultra through the Cloudflare AI Gateway; without those secrets it returns a deterministic excerpt/stub response for tests and local development.
 

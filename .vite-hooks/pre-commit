@@ -1,5 +1,5 @@
-# Husky pre-commit hook: run lint-staged on staged files.
-bunx lint-staged
+# Vite+ pre-commit hook: run staged checks, then gate large diffs behind a full parity build.
+vp staged
 
 if git diff --cached --quiet -- \
     "*.md" "*.html" \

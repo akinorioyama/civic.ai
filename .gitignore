@@ -17,9 +17,11 @@ public/
 # Editor
 .vscode/
 .idea/
+.zed/
 specs/
 *.swp
 *.swo
+.vite-hooks/_/
 
 # Logs
 *.log

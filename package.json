@@ -4,13 +4,20 @@
     "engines": {
         "node": ">=22.12.0"
     },
+    "devEngines": {
+        "packageManager": {
+            "name": "bun",
+            "version": "1.3.14",
+            "onFail": "download"
+        }
+    },
     "scripts": {
         "dev": "bun run sync:public && bunx --bun astro dev --host 127.0.0.1",
         "build": "bun run sync:public && astro build && bun run minify-html && bunx pagefind --site dist",
         "build:parity": "bun run sync:public && astro build",
-        "lint": "prettier --check . && bun run pangu-format.mjs --check && bun scripts/check-tw-typography.mjs",
-        "format": "prettier --write . && bun run pangu-format.mjs",
-        "prepare": "husky",
+        "lint": "vp fmt --check . && vp lint && bun run pangu-format.mjs --check && bun scripts/check-tw-typography.mjs",
+        "format": "vp fmt . && bun run pangu-format.mjs",
+        "prepare": "vp config",
         "check": "tsc --noEmit",
         "test": "bun test",
         "sync:public": "bun run scripts/sync-public.mjs",
@@ -45,19 +52,13 @@
         "fuse.js": "^6.6.2",
         "html-minifier": "^4.0.0",
         "pagefind": "1.5.0-beta.1",
-        "husky": "^9.1.7",
-        "lint-staged": "^16.4.0",
-        "prettier": "^3.8.4",
         "@types/markdown-it": "^14.1.2",
         "typescript": "^7.0.2",
-        "@types/nunjucks": "^3.2.6"
+        "@types/nunjucks": "^3.2.6",
+        "vite": "npm:@voidzero-dev/vite-plus-core@0.2.4",
+        "vite-plus": "0.2.4"
     },
-    "lint-staged": {
-        "**/*": "prettier --write --ignore-unknown",
-        "**/*.md": [
-            "bun run pangu-format.mjs",
-            "bun scripts/check-tw-typography.mjs"
-        ],
-        "_data/glossary.json": "bun scripts/check-tw-typography.mjs"
+    "overrides": {
+        "vite": "npm:@voidzero-dev/vite-plus-core@0.2.4"
     }
 }
