@@ -1,5 +1,6 @@
 import { glossary } from "./site";
 import { loadPages, type PageRecord } from "./pages";
+import { renderMarkdown } from "./legacyMarkdown";
 
 export type SearchLang = "en" | "zh";
 
@@ -133,6 +134,44 @@ function pageSectionLabel(page: PageRecord): string {
     return subtitle ? `${title} — ${subtitle}` : title;
 }
 
+function structuredSummarySubsections(page: PageRecord): SearchSubsection[] {
+    const zh = normalizeSearchLang(page.data.lang) === "zh";
+    const sections: SearchSubsection[] = [];
+    const summary = page.data.summary?.trim();
+    const summaryAnchor = page.data.summary_anchor?.trim();
+
+    if (summary && summaryAnchor) {
+        sections.push({
+            heading:
+                page.data.summary_label?.trim() || (zh ? "簡單講" : "In short"),
+            anchor: summaryAnchor,
+            content: htmlToPlainText(renderMarkdown(summary)),
+        });
+    }
+
+    const takeaways = Array.isArray(page.data.key_takeaways)
+        ? page.data.key_takeaways
+              .filter(
+                  (item): item is string =>
+                      typeof item === "string" && item.trim() !== ""
+              )
+              .map((item) => htmlToPlainText(renderMarkdown(item)))
+              .filter(Boolean)
+        : [];
+    const takeawaysAnchor = page.data.key_takeaways_anchor?.trim();
+    if (takeaways.length && takeawaysAnchor) {
+        sections.push({
+            heading:
+                page.data.key_takeaways_label?.trim() ||
+                (zh ? "重點" : "Key takeaways"),
+            anchor: takeawaysAnchor,
+            content: takeaways.join(" "),
+        });
+    }
+
+    return sections;
+}
+
 function pagePassesSearchFilters(page: PageRecord): boolean {
     return (
         page.includeInSitemap === true &&
@@ -153,7 +192,10 @@ export function getSearchEntries(lang?: SearchLang): SearchPageEntry[] {
             title: page.data.title || page.url,
             section: pageSectionLabel(page),
             url: page.url,
-            subsections: splitRenderedHtmlByHeadings(page.html),
+            subsections: [
+                ...structuredSummarySubsections(page),
+                ...splitRenderedHtmlByHeadings(page.html),
+            ],
         }));
 }
 

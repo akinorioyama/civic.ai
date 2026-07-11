@@ -4,15 +4,41 @@ import siteData from "../../_data/site.json";
 import pathsData from "../../_data/paths.json";
 import glossaryData from "../../_data/glossary.json";
 import comicsData from "../../_data/comics.json";
+import comicsJaOverlaysData from "../../_data/comics-ja-overlays.json";
 import openclawBootstrapData from "../../_data/openclaw_bootstrap.js";
 
-export type Lang = "en-gb" | "zh-tw" | "zh-Hant";
+export type Lang = "en-gb" | "zh-tw" | "zh-Hant" | "ja";
 export type Lang2 = "en" | "zh";
+
+export interface ComicsOverlayFrame {
+    id?: string;
+    text: string;
+    top: string;
+    left: string;
+    width: string;
+    height: string;
+    fontSize: number;
+    align: string;
+    color: string;
+    bg: string;
+    italic: boolean;
+    angle: string;
+    fontFamily: string;
+    pad: number;
+    shapeOn?: boolean;
+    sL?: number[];
+    sR?: number[];
+    sD?: number[];
+}
 
 export const site = siteData;
 export const paths = pathsData;
 export const glossary = glossaryData;
 export const comics = comicsData;
+export const comicsJaOverlays = comicsJaOverlaysData as Record<
+    string,
+    ComicsOverlayFrame[]
+>;
 export const openclawBootstrap = openclawBootstrapData;
 
 export function lang2(lang: string | undefined): Lang2 {

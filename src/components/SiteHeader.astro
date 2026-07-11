@@ -18,7 +18,7 @@ const displaySubtitle = headerSubtitle || page.data.subtitle;
       <HeaderTools lang={page.data.lang} altLangUrl={page.data.alt_lang_url} />
       <SiteLogos lang={page.data.lang} />
       <h1><span style="white-space: nowrap">{displayTitle}</span>{displaySubtitle && <><span style="font-weight: 300">-</span><span style="white-space: nowrap">{displaySubtitle}</span></>}</h1>
-      {page.data.description && <p>{page.data.description}</p>}
+      {page.data.description && <p set:html={page.data.description} />}
       {page.data.manifesto_link && <><br /><a href={page.data.manifesto_link} class="next-action-button"><span class="button-text">{page.data.manifesto_text}</span></a></>}
       <SiteNav lang={page.data.lang} />
     </>
@@ -34,7 +34,7 @@ const displaySubtitle = headerSubtitle || page.data.subtitle;
         <h1>{displayTitle}{displaySubtitle && <span>{displaySubtitle}</span>}</h1>
         {headerDate ? <p class="chapter-date">{headerDate}</p> : page.data.date ? <p class="chapter-date">{formatDateDisplay(page.data.date, page.data.lang)}</p> : null}
         {page.data.author && <p class="chapter-date">{page.data.author}</p>}
-        {page.data.description && <p>{page.data.description}</p>}
+        {page.data.description && <p set:html={page.data.description} />}
       </div>
     </>
   )}

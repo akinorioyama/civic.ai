@@ -47,18 +47,37 @@ describe("civic-search.js static contract", () => {
         );
     });
 
-    test("styles the development Fuse search shell", () => {
-        expect(styles).toMatch(
-            /\.pagefind-ui--fuse\s*\{[^}]*font-family:\s*var\(--sans\);/s
+    test("gives Fuse a full Pagefind-like shell instead of browser defaults", () => {
+        const fuseForm = styles.match(
+            /\.pagefind-ui--fuse \.pagefind-ui__form\s*\{([^}]*)\}/s
         );
-        expect(styles).toMatch(
-            /\.pagefind-ui--fuse \.pagefind-ui__search-input\s*\{[^}]*width:\s*100%;/s
+        const fuseInput = styles.match(
+            /\.pagefind-ui--fuse \.pagefind-ui__search-input\s*\{([^}]*)\}/s
         );
-        expect(styles).toMatch(
-            /\.pagefind-ui--fuse \.pagefind-ui__results\s*\{[^}]*list-style:\s*none;/s
+        const fuseResults = styles.match(
+            /\.pagefind-ui--fuse \.pagefind-ui__results\s*\{([^}]*)\}/s
         );
-    });
+        const fuseResult = styles.match(
+            /\.pagefind-ui--fuse \.pagefind-ui__result\s*\{([^}]*)\}/s
+        );
+        const fuseTag = styles.match(
+            /\.pagefind-ui--fuse \.pagefind-ui__result-tag\s*\{([^}]*)\}/s
+        );
 
+        expect(fuseForm).not.toBeNull();
+        expect(fuseInput).not.toBeNull();
+        expect(fuseResults).not.toBeNull();
+        expect(fuseResult).not.toBeNull();
+        expect(fuseTag).not.toBeNull();
+        expect(fuseForm[1]).toContain("position: relative");
+        expect(fuseInput[1]).toContain("width: 100%");
+        expect(fuseInput[1]).toContain("appearance: none");
+        expect(fuseResults[1]).toContain("list-style: none");
+        expect(fuseResults[1]).toContain("padding: 0");
+        expect(fuseResult[1]).toContain("list-style: none");
+        expect(fuseResult[1]).toContain("display: flex");
+        expect(fuseTag[1]).toContain("margin: 0");
+    });
     test("guards Pagefind and exposes CivicSearch", () => {
         expect(source).toMatch(/typeof PagefindUI === (["'])undefined\1/);
         expect(source).toContain("window.CivicSearch");

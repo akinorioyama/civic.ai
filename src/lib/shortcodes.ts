@@ -1,6 +1,14 @@
 import type { PageRecord } from "./pages";
 import { renderConceptMap } from "./conceptMap";
-import { comics, glossary, lang2, openclawBootstrap, paths } from "./site";
+import {
+    type ComicsOverlayFrame,
+    comics,
+    comicsJaOverlays,
+    glossary,
+    lang2,
+    openclawBootstrap,
+    paths,
+} from "./site";
 
 function escapeHtml(value: string | number | null | undefined): string {
     return String(value ?? "")
@@ -27,6 +35,7 @@ export function expandShortcodes(
             "<!-- astro:comics-gallery -->",
             renderComicsGallery(page.data.lang)
         )
+        .replaceAll("<!-- astro:comics-gallery-ja -->", renderComicsGalleryJa())
         .replaceAll(
             "<!-- astro:glossary-list -->",
             renderGlossaryList(page.data.lang)
@@ -98,6 +107,113 @@ export function renderComicsGallery(lang: string | undefined): string {
         ? `插圖由 <a href="https://ncase.me">Nicky Case</a> 繪製（CC0）。<a href="${escapeAttr(comics.source_repo)}">原始檔案</a>見 GitHub。`
         : `Illustrated by <a href="https://ncase.me">Nicky Case</a> (CC0). <a href="${escapeAttr(comics.source_repo)}">Source files</a> on GitHub.`;
     return `<div class="comics-gallery"><section class="comics-overview"><a href="${base}#the-6-pack" class="comics-overview-link"><noscript><img src="${escapeAttr(overview.src)}" alt="${escapeAttr(overview.alt)}" class="overview-image" width="${overview.width}" height="${overview.height}" loading="lazy" decoding="async" /></noscript></a>${caption}</section><div class="comics-grid">${pages}</div><p class="comics-credit">${credit}</p></div>`;
+}
+
+// Builds the three polygons (background clip, left float, right float) that
+// let a five-tier shape frame's text flow along a curve — same formula as
+// the overlay editor that produced comics-ja-overlays.json.
+function shapePolys(
+    sL: number[],
+    sR: number[],
+    sD: number[]
+): { clip: string; left: string; right: string } {
+    const d = [0, ...[...sD].sort((a, b) => a - b), 100];
+    const clamp = (v: number) => Math.max(0, Math.min(100, v));
+    const clipPts: string[] = [];
+    for (let k = 0; k < 5; k++)
+        clipPts.push(`${sR[k]}% ${d[k]}%`, `${sR[k]}% ${d[k + 1]}%`);
+    for (let k = 4; k >= 0; k--)
+        clipPts.push(`${sL[k]}% ${d[k + 1]}%`, `${sL[k]}% ${d[k]}%`);
+    const leftPts = ["0% 0%"];
+    for (let k = 0; k < 5; k++)
+        leftPts.push(
+            `${clamp((sL[k] ?? 0) * 2)}% ${d[k]}%`,
+            `${clamp((sL[k] ?? 0) * 2)}% ${d[k + 1]}%`
+        );
+    leftPts.push("0% 100%");
+    const rightBound = (k: number) => clamp(((sR[k] ?? 100) - 50) * 2);
+    const rightPts = [`${rightBound(0)}% 0%`, "100% 0%", "100% 100%"];
+    for (let k = 4; k >= 0; k--)
+        rightPts.push(
+            `${rightBound(k)}% ${d[k + 1]}%`,
+            `${rightBound(k)}% ${d[k]}%`
+        );
+    return {
+        clip: `polygon(${clipPts.join(", ")})`,
+        left: `polygon(${leftPts.join(", ")})`,
+        right: `polygon(${rightPts.join(", ")})`,
+    };
+}
+
+function renderOverlayFrame(frame: ComicsOverlayFrame): string {
+    // The gallery now draws on the wordless (no baked-in lettering) art, so
+    // a background box is no longer needed to hide original English text —
+    // always transparent, regardless of the authored frame.bg value.
+    const background = "transparent";
+    // --fs carries the authored size (frame.fontSize is a bare cqw number,
+    // e.g. 2.5 -> "2.5cqw"); the shared stylesheet rule turns it into the
+    // real font-size via calc(--fs * --ov-scale), which is fixed at 1 —
+    // every frame renders at exactly its authored size, no auto-fit.
+    const base = `top:${frame.top};left:${frame.left};width:${frame.width};height:${frame.height};--fs:${frame.fontSize}cqw;padding:${frame.pad}%;color:${frame.color};font-family:${frame.fontFamily};font-style:${frame.italic ? "italic" : "normal"};transform:rotate(${frame.angle});`;
+    // Encode line breaks as a numeric character reference rather than a raw
+    // "\n" — keeps the whole gallery output on one physical line, so the
+    // markdown-it HTML block parser can't mistake an embedded blank-looking
+    // line for the block's end. white-space: pre-wrap renders it the same.
+    const text = escapeHtml(frame.text).replace(/\n/g, "&#10;");
+    if (frame.shapeOn && frame.sL && frame.sR && frame.sD) {
+        const { clip, left, right } = shapePolys(frame.sL, frame.sR, frame.sD);
+        return `<div class="ov shaped" style="${base}background:${background};text-align:${frame.align};line-height:1.3;-webkit-clip-path:${clip};clip-path:${clip};"><span style="float:left;width:50%;height:100%;shape-outside:${left};"></span><span style="float:right;width:50%;height:100%;shape-outside:${right};"></span><span class="shaped-text">${text}</span></div>`;
+    }
+    const meaningfulLines = frame.text
+        .split("\n")
+        .map((line) => line.trim())
+        .filter((line) => line !== "");
+    const boxWidthPct = parseFloat(frame.width);
+    const eachSegmentFitsOneLine = meaningfulLines.every(
+        (line) => line.length * frame.fontSize <= boxWidthPct
+    );
+    const noSoftWrap =
+        meaningfulLines.length > 1 && eachSegmentFitsOneLine
+            ? " data-no-soft-wrap"
+            : "";
+    return `<div class="ov rect" style="${base}background:${background};"><span${noSoftWrap} style="text-align:${frame.align}">${text}</span></div>`;
+}
+
+function renderOverlayLayer(key: string, arVar?: string): string {
+    // Drop empty-text frames (stray artifacts from the overlay editor) —
+    // an invisible box would still sit pointer-events: auto and steal
+    // hover/click from the image underneath it for no visible reason.
+    const frames = (comicsJaOverlays[key] ?? []).filter(
+        (frame) => frame.text.trim() !== ""
+    );
+    if (!frames.length) return "";
+    const style = arVar ? ` style="--ov-ar:${arVar};"` : "";
+    return `<div class="ja-ov-layer"${style}>${frames.map(renderOverlayFrame).join("")}</div>`;
+}
+
+// Provisional Japanese-language overlay for the comics gallery: the source
+// images and links stay the English ones (no ja chapter pages exist), and a
+// real-DOM text layer from comics-ja-overlays.json is drawn on top of each
+// panel. See claude_aki/civic-ai-ja-overlay-instructions.md for the source
+// brief this implements.
+export function renderComicsGalleryJa(): string {
+    // Wordless (no baked-in lettering) art from the same upstream repo —
+    // see import-comics-wordless.mjs. Dimensions match the lettered
+    // versions exactly, so width/height and comics.overview stay shared.
+    const overview = comics.overview.en;
+    const caption = `<p class="figure-caption"><strong>概要。</strong>Nicky Case が描いた「ケアの6つの力」全体図。</p>`;
+    const pages = comics.packs
+        .flatMap((pack) =>
+            pack.pages.map((page) => {
+                const img = `/img/pack${pack.num}-${page.id}-wordless.jpg`;
+                const key = `pack${pack.num}-${page.id}`;
+                return `<a href="/${pack.slug}/" class="comics-page-link" id="pack-${pack.num}-${page.id}"><noscript><img src="${escapeAttr(img)}" alt="${escapeAttr(page.alt.en)}" width="1437" height="1999" loading="lazy" decoding="async" /></noscript>${renderOverlayLayer(key)}<span class="comics-page-label"><span class="comics-page-pack">${escapeHtml(pack.title.en)}</span><span class="comics-page-type">${escapeHtml(page.type.en)}</span></span></a>`;
+            })
+        )
+        .join("");
+    const credit = `イラスト：<a href="https://ncase.me">Nicky Case</a>（CC0）。日本語テキストは暫定訳です。<a href="${escapeAttr(comics.source_repo)}">原資料</a>は GitHub を参照。`;
+    const overviewImg = "/img/overview-small-wordless.jpg";
+    return `<div class="comics-gallery"><section class="comics-overview"><a href="/#the-6-pack" class="comics-overview-link"><noscript><img src="${escapeAttr(overviewImg)}" alt="${escapeAttr(overview.alt)}" class="overview-image" width="${overview.width}" height="${overview.height}" loading="lazy" decoding="async" /></noscript>${renderOverlayLayer("overview-small", "1280 / 1781")}</a>${caption}</section><div class="comics-grid">${pages}</div><p class="comics-credit">${credit}</p></div>`;
 }
 
 export function renderGlossaryList(lang: string | undefined): string {
