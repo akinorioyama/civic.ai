@@ -20,6 +20,7 @@ const searchJs = assetVersion("assets/js/civic-search.js");
 <div class="search-overlay" id="search-overlay" role="dialog" aria-label={zh ? "搜尋仁工智慧" : "Search Civic AI"} aria-hidden="true">
   <div class="search-overlay__inner">
     <div id="civic-ask-answer" class="civic-ask-answer" aria-live="polite" hidden></div>
+    <div id="civic-ask-history" class="civic-ask-history" hidden></div>
     <div id="search-container"></div>
   </div>
 </div>
@@ -30,7 +31,7 @@ const searchJs = assetVersion("assets/js/civic-search.js");
     ))}
   </datalist>
 )}
-{usePagefind && <script is:inline src="/pagefind/pagefind-ui.js"></script>}
+{usePagefind && !import.meta.env.DEV && <script is:inline src="/pagefind/pagefind-ui.js"></script>}
 {useFuse && <script is:inline src={`/assets/vendor/fuse.min.js?v=${fuseVendor}`} />}
 <script is:inline src={`/assets/js/civic-ask.js?v=${askJs}`} />
 <script is:inline src={`/assets/js/civic-search.js?v=${searchJs}`} />

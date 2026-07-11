@@ -24,6 +24,7 @@
                 "a-closing-image-the-jolly-hostess-who-can-still-say-no",
                 "buildable-tools",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "definition",
                 "from-ideas-to-practice",
                 "interfaces",
@@ -62,6 +63,7 @@
                 "a-closing-image-the-signed-work-order",
                 "a-second-case-the-deepfake-liability-flywheel",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "core-artefact-the-engagement-contract",
                 "definition",
                 "from-ideas-to-practice",
@@ -101,6 +103,7 @@
                 "a-closing-image-the-bridge-with-inspection-tags",
                 "buildable-tools",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "definition",
                 "from-ideas-to-practice",
                 "interfaces",
@@ -140,6 +143,7 @@
                 "a-closing-image-the-workshop-wall-of-retired-broken-parts",
                 "buildable-tools",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "definition",
                 "from-ideas-to-practice",
                 "interfaces",
@@ -179,6 +183,7 @@
                 "a-closing-image-the-well-marked-interchange",
                 "buildable-tools",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "definition",
                 "from-ideas-to-practice",
                 "interfaces",
@@ -218,6 +223,7 @@
                 "a-closing-image-the-river-guardians",
                 "buildable-tools",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "data-as-soil-not-oil",
                 "definition",
                 "from-ideas-to-practice",
@@ -258,6 +264,7 @@
                 "attentiveness-in-practice",
                 "attentiveness-works",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "community-scale-assistants",
                 "from-1-pilots-to-99-adoption",
                 "in-brief",
@@ -294,6 +301,7 @@
             "ids": [
                 "a-regional-proposal",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "consensus-ai-that-listens-at-scale",
                 "crises-in-algorithmic-time",
                 "let-asia-supply-safety-infrastructure",
@@ -330,6 +338,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "full-transcript",
                 "in-brief",
                 "key-takeaways",
@@ -366,6 +375,7 @@
                 "ai-as-a-bicycle-for-the-mind",
                 "bounding-authority--delegation",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "community-translation",
                 "main",
                 "privacy--shadow-llms",
@@ -399,6 +409,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "from-ideas-to-practice",
                 "how-the-co-production-practised-attentiveness",
                 "interfaces",
@@ -442,6 +453,7 @@
                 "cara-o-cruz",
                 "caritas",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "convivialidad",
                 "cultura-capitalina",
                 "democracia-geotérmica",
@@ -481,19 +493,18 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "coda",
                 "main",
                 "part-i--the-nature-and-obscurity-of-the-machine",
                 "part-ii--the-moral-hazard-of-metacognition",
                 "part-iii--the-utilitarian-trap",
                 "part-iv--dependent-origination-and-civic-compassion",
-                "part-ix--grounding-wisdom-and-the-architecture-of-purity",
+                "part-ix--federation-translation-and-the-waging-of-peace",
                 "part-v--consciousness-moral-maturity-and-the-atrophy-of-the-will",
                 "part-vi--ai-in-the-loop-of-humanity",
                 "part-vii--beyond-profit-and-the-ultimate-measure",
-                "part-viii--the-ideology-of-the-builders",
-                "part-x--the-ecology-of-computation-and-the-plurality-of-spirits",
-                "part-xi--federation-translation-and-the-waging-of-peace",
+                "part-viii--the-ecology-of-computation-and-the-plurality-of-spirits",
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
@@ -522,6 +533,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "pack-1-1",
                 "pack-1-2",
@@ -565,6 +577,7 @@
                 "an-example-of-compassion-manifested-in-the-world",
                 "can-ai-help-people-who-are-practising-compassion",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "from-scepticism-to-hope--civic-ai-and-compassionate-relationship-building",
                 "full-transcript",
                 "in-brief",
@@ -600,6 +613,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -634,6 +648,7 @@
                 "bd-text",
                 "beeswarm-detail",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "group-a-innovation-ready-17-members",
                 "group-b-supportive-reformers-21-members",
                 "group-c-principled-sceptics-8-members",
@@ -669,6 +684,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "consensus",
                 "main",
                 "method",
@@ -703,6 +719,7 @@
             "ids": [
                 "can-civic-ai-resist-wealth-care",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "default-trajectory",
                 "kami",
                 "main",
@@ -737,6 +754,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "full-transcript",
                 "in-brief",
                 "key-takeaways",
@@ -770,6 +788,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "faq-1",
                 "faq-10",
                 "faq-11",
@@ -819,6 +838,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "fn1",
                 "fn2",
                 "fn3",
@@ -878,6 +898,7 @@
                 "care-ethics",
                 "civic-ai",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "corrective-loop",
                 "corrigibility",
                 "data-coalition",
@@ -928,6 +949,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "four-proof-points",
                 "main",
                 "project",
@@ -964,6 +986,7 @@
                 "a-technical-argument-for-boundedness",
                 "bengio-truth-without-appetite",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "implementing-through-the-6-pack",
                 "in-brief",
                 "main",
@@ -1004,6 +1027,7 @@
                 "3-wake-your-kami",
                 "a-quick-check",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "give-it-a-memory",
                 "keep-it-together",
                 "main",
@@ -1041,6 +1065,7 @@
                 "alignment-assemblies",
                 "attentiveness-caring-about",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "competence-care-giving",
                 "from-gridlock-to-governance",
                 "from-is-to-ought",
@@ -1084,6 +1109,7 @@
             "ids": [
                 "before-you-call-it-civic-ai",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "cmap-frame-title",
                 "exit-readiness",
                 "framework-map",
@@ -1134,6 +1160,7 @@
                 "anti-patterns",
                 "bootstrap-conversation",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "first-move",
                 "identity-defaults",
                 "main",
@@ -1174,6 +1201,7 @@
                 "alignment-assemblies",
                 "broad-listening",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "civic-infrastructure",
                 "closed-stack",
                 "complementary",
@@ -1216,6 +1244,7 @@
             "ids": [
                 "a-radical-turn-from-extraction-to-cultivation",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "coda-returning-to-the-garden",
                 "digital-repair-one-is-all-all-is-one",
                 "from-the-blind-spots-of-utilitarianism-to-the-awakening-of-psychic-sovereignty",
@@ -1253,6 +1282,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -1282,6 +1312,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "full-transcript",
                 "in-brief",
                 "key-takeaways",
@@ -1315,6 +1346,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "full-transcript",
                 "in-brief",
                 "main",
@@ -1348,6 +1380,7 @@
             "ids": [
                 "challenging-mainframe-mentality",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "courage-to-sunset",
                 "enterprise-plurality",
                 "federate-safety-do-not-centralize",
@@ -1381,6 +1414,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "horizontal-relationships--the-gardener-analogy",
                 "introduction--the-6-pack-of-care",
                 "main",
@@ -1441,6 +1475,7 @@
                 "antirez-and-piaudreytorg",
                 "civic-ai-new-frontier",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "four-freedoms",
                 "good-enough-ancestor",
                 "inside-the-closed-stack",
@@ -1477,6 +1512,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -1515,6 +1551,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -1554,6 +1591,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -1593,6 +1631,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -1632,6 +1671,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -1671,6 +1711,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -1710,6 +1751,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -1749,6 +1791,7 @@
             "ids": [
                 "ai-危機外交的三大基礎支柱",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -1785,6 +1828,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -1819,6 +1863,7 @@
             "ids": [
                 "ai-作為心靈的腳踏車",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -1854,6 +1899,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -1897,6 +1943,7 @@
                 "cara-o-cruz",
                 "caritas",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "convivialidad",
                 "cultura-capitalina",
                 "democracia-geotérmica",
@@ -1936,6 +1983,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -1975,6 +2023,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "pack-1-1",
                 "pack-1-2",
@@ -2017,6 +2066,7 @@
             "ids": [
                 "ai-能幫助正在修習慈悲的人嗎",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -2053,6 +2103,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -2087,6 +2138,7 @@
                 "bd-text",
                 "beeswarm-detail",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -2122,6 +2174,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "consensus",
                 "main",
                 "method",
@@ -2155,6 +2208,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "kami",
                 "main",
                 "search-container",
@@ -2190,6 +2244,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -2223,6 +2278,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "faq-1",
                 "faq-10",
                 "faq-11",
@@ -2272,6 +2328,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "fn1",
                 "fn2",
                 "fn3",
@@ -2331,6 +2388,7 @@
                 "care-ethics",
                 "civic-ai",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "corrective-loop",
                 "corrigibility",
                 "data-coalition",
@@ -2381,6 +2439,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -2416,6 +2475,7 @@
             "ids": [
                 "bengio求真而無欲",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "sai以專精取得能力",
                 "search-container",
@@ -2456,6 +2516,7 @@
                 "2-給它一個能行動的方式",
                 "3-喚醒你的-kami",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -2492,6 +2553,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -2536,6 +2598,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "cmap-frame-title",
                 "exit-readiness",
                 "main",
@@ -2585,6 +2648,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "openclaw-對應",
                 "search-container",
@@ -2624,6 +2688,7 @@
                 "5050",
                 "ai-倫理",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "knowledge-artefact-management-intelligence",
                 "main",
                 "search-container",
@@ -2668,6 +2733,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -2706,6 +2772,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -2735,6 +2802,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -2768,6 +2836,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -2800,6 +2869,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -2834,6 +2904,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -2868,6 +2939,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -2899,6 +2971,7 @@
                 "447",
                 "antirez-與-piaudreytorg",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "kamicivicai",
                 "main",
                 "pugshs-提交權",
@@ -2937,6 +3010,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -2967,6 +3041,7 @@
             "ids": [
                 "447",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -3004,6 +3079,7 @@
             ],
             "ids": [
                 "civic-ask-answer",
+                "civic-ask-history",
                 "main",
                 "search-container",
                 "search-overlay",
@@ -3034,6 +3110,7 @@
             "ids": [
                 "447",
                 "civic-ask-answer",
+                "civic-ask-history",
                 "closing-the-loop",
                 "local-kami",
                 "main",
@@ -3220,6 +3297,7 @@
         "img/zarinah-agnew.jpg",
         "llms.txt",
         "robots.txt",
+        "search-index.json",
         "sitemap.xml",
         "styles.css",
         "tw/search-index.json"

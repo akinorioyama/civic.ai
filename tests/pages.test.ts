@@ -56,3 +56,22 @@ test("excludes OpenClaw human guide from sitemap", () => {
     );
     expect(getSitemapPages().some((page) => page.url === "/1/")).toBe(true);
 });
+
+test("normalizes front-matter action and navigation links", () => {
+    const indexPage = getPageByUrl("/");
+    expect(indexPage.data.manifesto_link).toBe("/manifesto/");
+    expect(indexPage.data.prev_action?.url).toBe("/faq/");
+    expect(indexPage.data.next_action?.url).toBe("/1/");
+
+    const comicsPage = getPageByUrl("/comics/");
+    expect(comicsPage.data.nav_prev?.url).toBe("/");
+    expect(comicsPage.data.nav_next?.url).toBe("/1/");
+
+    const twIndexPage = getPageByUrl("/tw/");
+    expect(twIndexPage.data.manifesto_link).toBe("/tw/manifesto/");
+    expect(twIndexPage.data.prev_action?.url).toBe("/tw/faq/");
+    expect(twIndexPage.data.next_action?.url).toBe("/tw/1/");
+
+    expect(indexPage.data.alt_lang_url).toBe("/tw/");
+    expect(getPageByUrl("/1/").data.alt_lang_url).toBe("/tw/1/");
+});

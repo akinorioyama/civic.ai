@@ -11,6 +11,7 @@ og_image: "/img/software-freedom-as-civic-care.jpg"
 nav_next:
     url: "/tw/"
     text: "首頁"
+audio: /audio/software-freedom-as-civic-care.mp3
 ---
 
 感謝各位共同在這裡搭建起一條從自由軟體通往 AI 倫理的橋樑。

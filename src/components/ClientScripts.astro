@@ -376,9 +376,15 @@ window.__GLOSSARY_BASE__ = glossaryBase;
                 var main = document.getElementById("main");
                 if (!main) return;
                 if (main.querySelector(".page-toc")) return;
-                var heads = main.querySelectorAll(
-                    "h1[id],h2[id],h3[id],h4[id]"
-                );
+                var heads = Array.prototype.slice
+                    .call(
+                        main.querySelectorAll(
+                            "h1[id],h2[id],h3[id],h4[id]"
+                        )
+                    )
+                    .filter(function (head) {
+                        return !head.hasAttribute("data-toc-exclude");
+                    });
                 if (heads.length < 6) return;
                 var zh =
                     (document.documentElement.lang || "").indexOf("zh") === 0;

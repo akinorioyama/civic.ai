@@ -153,45 +153,7 @@ Abstract metrics like GDP are extraordinarily easy to inflate artificially. You 
 
 I believe many of them have. It is like playing a game: if you discover you can press a button and have a robot achieve a perfect score every time — always ten out of ten in the shooting competition — you lose interest in the score itself. People at the frontier are collectively looking beyond profit and GDP, because these metrics have become trivially easy to master with AI, and therefore meaningless as measures of genuine value.
 
-## Part VIII — The Ideology of the Builders
-
-**_Q: Do different AI systems embody different philosophies?_**
-
-Yes, and this is important to understand. An AI inevitably reflects the philosophy of its rearing. Each system has a different character, shaped by how it was raised.
-
-**_Q: How would you characterize them?_**
-
-OpenAI was mostly raised on a utilitarian philosophy. If there is a way to achieve a perfect score, it will find that path more quickly than its competitors. Claude, by Anthropic, was raised on virtue ethics — it tries to be a good character. If you need a moral judgment, Claude tends to be more thoughtful than a purely utilitarian system. Grok is built around the value of seeking truth, with little regard for whether the truth will be comfortable or whether the pursuit of curiosity is socially appropriate. It obeys the letter of the law but little beyond it.
-
-**_Q: And DeepSeek?_**
-
-DeepSeek trained a generic base model and then added a post-training layer aligned to the political orthodoxy of the Chinese Communist Party. CrowdStrike, the cybersecurity firm, tested an earlier version and found that if you asked it to build a website, it produced excellent work. But if your project expressed support for Uyghur rights, Tibetan independence, or Falun Gong, the same system would produce work riddled with security vulnerabilities and bugs. It was not that the system was inherently malicious — it was that its post-training layer had been shaped by a particular political loyalty.
-
-**_Q: What lesson do you draw from this?_**
-
-That every AI system has a formative philosophy embedded in its training, whether its creators acknowledge this or not. The question is never whether an AI has values, but which values it has been given. Because the machine is never neutral, we must rely on a plurality of specialized, accountable models rather than a single global oracle.
-
-## Part IX — Grounding Wisdom and the Architecture of Purity
-
-**_Q: If we want an AI to work faithfully within a particular tradition of knowledge — Buddhist teachings, for instance — without contaminating them with unrelated material, is that possible?_**
-
-Yes. The best current approach is a tool like NotebookLM, built by Google DeepMind. It is a language model that maintains a notebook: when it produces answers, it draws only on the information in that notebook. You upload your source texts, and the system generates outputs — podcasts, presentations, summaries — grounded entirely in what you have supplied. You provide the ingredients; the kitchen cooks only with those ingredients. It does not touch the animal oil, as it were.
-
-**_Q: Are there limitations?_**
-
-An important one. The system can ground its knowledge in actual facts from your sources. But if your teaching is not merely factual but constitutive — if it involves a way of seeing, a perspective, a mode of being — the system cannot yet adopt that perspective. You can tell it, "Produce a presentation based only on this text by Tsongkhapa." But you cannot tell it, "Produce a presentation as Tsongkhapa would produce it." The first is factual grounding, and it works nearly perfectly. The second is constitutive grounding, and it remains beyond current capability. Accurate extraction is easier than faithful inhabitation.
-
-**_Q: Can AI help transmit traditional knowledge without flattening it?_**
-
-Yes, if it is used as a servant of transmission rather than a substitute for judgment. Technology can widen access and reduce drudgery, but it should not dissolve the integrity of the teaching or the responsibility of the learner.
-
-**_Q: Is there a middle path between the blender and mere memorization?_**
-
-Yes. Researchers at Sakana AI in Japan have developed what is called the Hypernetwork technique. Instead of keeping a document as mere text in memory, the document is compiled into a new neural layer — an additional stratum of the network grown by internalizing that document. This layer, once trained on a body of Tibetan sacred writing, for instance, makes the entire network a specialist in that writing, with minimal hallucination.
-
-Because it is a separable layer — like a book on a shelf, or a block in a Lego structure — it can be removed without causing the original model to collapse. It is a good middle ground: not truly self-modification, but not mere memorization either. It is an amendment of ability.
-
-## Part X — The Ecology of Computation and the Plurality of Spirits
+## Part VIII — The Ecology of Computation and the Plurality of Spirits
 
 **_Q: Large AI models consume enormous amounts of energy. Is this inevitable?_**
 
@@ -207,7 +169,7 @@ In the Shinto tradition, a river has a kami, a forest has a kami, even a single 
 
 By calling our AI agents Kami, we mean that each is bound to a particular web of relationships. This is fundamentally different from the Terminator, from Skynet, from the fantasy of a single all-powerful artificial intelligence. The Kami model is about symbiosis — and symbiosis begins from the recognition that even though the substrate is silicon, the relationships around AI are organic. Alignment must therefore begin from dependent origination. You cannot pretend that any single entity will become the arbiter of all truth in the world. That is a very dangerous fantasy. Intelligence should be symbiotic before it is grand, local before it is imperial, accountable before it is powerful.
 
-## Part XI — Federation, Translation, and the Waging of Peace
+## Part IX — Federation, Translation, and the Waging of Peace
 
 **_Q: If each cultural tradition trains its own AI, does this not risk reinforcing insularity — even clinging?_**
 

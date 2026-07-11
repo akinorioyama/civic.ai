@@ -20,6 +20,11 @@ export interface PageFrontmatter {
     description?: string;
     meta_description?: string;
     summary?: string;
+    summary_label?: string;
+    summary_anchor?: string;
+    key_takeaways?: string[];
+    key_takeaways_label?: string;
+    key_takeaways_anchor?: string;
     lang?: "en-gb" | "zh-tw" | "zh-Hant" | "ja";
     permalink?: string;
     alt_lang_url?: string;
@@ -105,6 +110,55 @@ function loadPage(sourceName: string): PageRecord {
     const sourcePath = join(root, sourceName);
     const parsed = matter(readFileSync(sourcePath, "utf8"));
     const data = parsed.data as PageFrontmatter;
+
+    // Normalize links to ensure trailingSlash parity
+    if (data.alt_lang_url) data.alt_lang_url = normalizeUrl(data.alt_lang_url);
+    if (data.manifesto_link)
+        data.manifesto_link = normalizeUrl(data.manifesto_link);
+    if (data.prev_action?.url)
+        data.prev_action.url = normalizeUrl(data.prev_action.url);
+    if (data.next_action?.url)
+        data.next_action.url = normalizeUrl(data.next_action.url);
+    if (data.nav_prev?.url) data.nav_prev.url = normalizeUrl(data.nav_prev.url);
+    if (data.nav_next?.url) data.nav_next.url = normalizeUrl(data.nav_next.url);
+    if (data.packs_link_url)
+        data.packs_link_url = normalizeUrl(data.packs_link_url);
+    if (Array.isArray(data.packs)) {
+        for (const p of data.packs) {
+            if (
+                p &&
+                typeof p === "object" &&
+                "url" in p &&
+                typeof p.url === "string"
+            ) {
+                p.url = normalizeUrl(p.url);
+            }
+        }
+    }
+    if (Array.isArray(data.agenda)) {
+        for (const slot of data.agenda) {
+            if (
+                slot &&
+                typeof slot === "object" &&
+                "url" in slot &&
+                typeof slot.url === "string"
+            ) {
+                slot.url = normalizeUrl(slot.url);
+            }
+        }
+    }
+    if (Array.isArray(data.hosts)) {
+        for (const host of data.hosts) {
+            if (
+                host &&
+                typeof host === "object" &&
+                "url" in host &&
+                typeof host.url === "string"
+            ) {
+                host.url = normalizeUrl(host.url);
+            }
+        }
+    }
     const url = deriveUrl(sourceName, data);
     const isRawHtmlDocument = sourceName === "sensemaker.html";
     const rawBody = parsed.content;

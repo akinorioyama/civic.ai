@@ -49,12 +49,28 @@ export function normalizeUrl(path: string): string {
     if (!path) return "";
     if (path === "/") return "/";
     if (path.startsWith("#")) return path;
-    if (path.includes("#")) return path;
     if (/^[a-z][a-z0-9+.-]*:/i.test(path)) return path;
-    if (path.endsWith("/")) return path;
-    const last = path.split("/").pop() || "";
-    if (last.includes(".")) return path;
-    return `${path}/`;
+
+    // Split on hash first
+    const hashParts = path.split("#", 2);
+    const pathAndQuery = hashParts[0] || "";
+    const hash = hashParts[1];
+    // Split on query
+    const queryParts = pathAndQuery.split("?", 2);
+    const pathPart = queryParts[0] || "";
+    const query = queryParts[1];
+
+    let normalizedPath = pathPart;
+    if (!normalizedPath.endsWith("/")) {
+        const last = normalizedPath.split("/").pop() || "";
+        if (!last.includes(".")) {
+            normalizedPath = `${normalizedPath}/`;
+        }
+    }
+
+    const queryStr = query !== undefined ? `?${query}` : "";
+    const hashStr = hash !== undefined ? `#${hash}` : "";
+    return `${normalizedPath}${queryStr}${hashStr}`;
 }
 
 export function normalizeAltUrl(path: string | undefined): string | undefined {

@@ -6,23 +6,22 @@ alt_lang_url: "/tw/doom-debate/"
 permalink: "/doom-debate/"
 date: 2026-01-20
 description: 'Originally recorded for <a href="https://www.youtube.com/watch?v=bvcmiirT8ME">Doom Debates</a> with Liron Shapira.'
+summary: "This debate places the 6-Pack inside the superintelligence-risk conversation. It is useful if you want the strongest contrast between top-down safety narratives and the case for bounded, democratic governance."
+summary_label: "In brief"
+summary_anchor: "in-brief"
+key_takeaways_label: "Key takeaways"
+key_takeaways_anchor: "key-takeaways"
+key_takeaways:
+    - "Tang argues that `P(Doom)` is not a number when the denominator is unknown."
+    - "Governance should upgrade with capability rather than lag behind it."
+    - "The alternative to one permanent centre is many bounded local stewards, or Kami (**k**nowledge **a**rtefact **m**anagement **i**ntelligence)."
+    - "Civic resilience depends on participatory institutions, not only lab-side safety techniques."
 nav_next:
     url: "/"
     text: "Home"
 ---
 
 <em>Audrey Tang joins Liron Shapira on Doom Debates — a series on superintelligence risk. Ninety minutes on why P(Doom) is Not a Number, what a glass-horse architecture looks like, and how the 6-Pack of Care provides a blueprint for Civic AI governance at civilisational scale.</em>
-
-## In brief
-
-This debate places the 6-Pack inside the superintelligence-risk conversation. It is useful if you want the strongest contrast between top-down safety narratives and the case for bounded, democratic governance.
-
-### Key takeaways
-
-- Tang argues that `P(Doom)` is not a number when the denominator is unknown.
-- Governance should upgrade with capability rather than lag behind it.
-- The alternative to one permanent centre is many bounded local stewards, or Kami (**k**nowledge **a**rtefact **m**anagement **i**ntelligence).
-- Civic resilience depends on participatory institutions, not only lab-side safety techniques.
 
 ## Watch
 
