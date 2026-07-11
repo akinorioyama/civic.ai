@@ -25,7 +25,7 @@ export interface PageFrontmatter {
     key_takeaways?: string[];
     key_takeaways_label?: string;
     key_takeaways_anchor?: string;
-    lang?: "en-gb" | "zh-tw" | "zh-Hant";
+    lang?: "en-gb" | "zh-tw" | "zh-Hant" | "ja";
     permalink?: string;
     alt_lang_url?: string;
     exclude_from_sitemap?: boolean;
