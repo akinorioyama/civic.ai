@@ -1,4 +1,5 @@
 import { execFileSync } from "node:child_process";
+import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { build as astroBuild, dev as astroDev } from "astro";
 import type { ConfigEnv, Plugin, ViteBuilder } from "vite";
@@ -76,17 +77,42 @@ export function createAstroDevProxy(
 function runBun(args: string[]): void {
     execFileSync("bun", args, { cwd: PROJECT_ROOT, stdio: "inherit" });
 }
-function runBunx(args: string[]): void {
-    execFileSync("bunx", args, { cwd: PROJECT_ROOT, stdio: "inherit" });
-}
 
 export function syncPublic(): void {
-    runBun(["run", "scripts/sync-public.mjs"]);
+    runBun(["scripts/sync-public.mjs"]);
+}
+
+type PagefindExecutor = (cwd: string) => void;
+
+/**
+ * Runs Pagefind directly from the local `node_modules/.bin`, not via
+ * ambient `bunx`. `bunx` resolves package binaries from Bun's global
+ * cache/registry rather than the project's pinned `pagefind` dependency,
+ * so it can silently run a different version than `package.json`
+ * declares. Resolving the local bin keeps `vp build` deterministic.
+ */
+function execPagefind(cwd: string): void {
+    execFileSync(
+        join(cwd, "node_modules", ".bin", "pagefind"),
+        ["--site", "dist"],
+        { cwd, stdio: "inherit" }
+    );
+}
+
+/**
+ * Indexes `dist/` with Pagefind. `cwd` and `exec` are both injectable so
+ * tests can cover this without shelling out to a real Pagefind binary.
+ */
+export function runPagefind(
+    cwd: string = PROJECT_ROOT,
+    exec: PagefindExecutor = execPagefind
+): void {
+    exec(cwd);
 }
 
 function runPostBuild(): void {
-    runBun(["run", "scripts/minify-html.mjs"]);
-    runBunx(["pagefind", "--site", "dist"]);
+    runBun(["scripts/minify-html.mjs"]);
+    runPagefind();
 }
 
 export function createAstroBuildBridge(

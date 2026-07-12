@@ -12,39 +12,59 @@ Civic AI is artificial intelligence that answers to the people it affects: many 
 - **Working in the codebase** → build, architecture, and conventions live in [AGENTS.md](AGENTS.md).
 - **This README** → how the repository is laid out, and how to run and contribute to it.
 
+Built with [Astro 7](https://astro.build/) and [Vite+](https://viteplus.dev/).
+
 ## Quickstart
 
-Requires [Bun](https://bun.sh/).
+Install the global Vite+ CLI, then install project dependencies:
 
 ```bash
-bun install     # install dependencies
-bun run dev     # Astro dev server → http://127.0.0.1:4321
-bun run build   # production build → dist/
+curl -fsSL https://vite.plus | bash
+vp install
 ```
 
-The equivalent direct Vite+ commands are `vp dev`, `vp build`, and `vp test`. The project Vite config bridges those commands to Astro and Bun while keeping `vp check`, `vp lint`, `vp fmt`, `vp staged`, and `vp preview` native.
+If the current shell has not refreshed its PATH, use the installed binary at `~/.vite-plus/bin/vp`.
+
+## Development
+
+```bash
+vp dev     # Astro dev server → http://127.0.0.1:4321
+vp build   # production build → dist/
+```
+
+## Checks and tests
+
+```bash
+vp check
+vp test
+```
+
+`vp check` runs formatting, linting, and type-aware checks. `vp test` is the root test suite — the renderer, root-content loader, search corpus, and static client contracts — under a 100% statement/branch/function/line coverage gate; its global setup also runs a full TypeScript compile check, the CJK-spacing gate, and the Mandarin typography gate before any test executes (this project keeps canonical content in root `*.md`/`tw-*.md`, not Astro content collections, so no `astro sync` step runs).
 
 ## Scripts
 
-| Command                       | What it does                                                                                             |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `bun run dev`                 | Sync generated public assets, then start Astro with live reload at `http://127.0.0.1:4321`.              |
-| `bun run build`               | Production build of the static site, minified HTML, and Pagefind index → `dist/`.                        |
-| `bun run check`               | TypeScript check: `tsc --noEmit`.                                                                        |
-| `bun test`                    | Focused Bun tests for the renderer, root-content loader, search corpus, and static client contracts.     |
-| `bun run lint`                | Check formatting and lint (Oxfmt + Oxlint via Vite+) + `pangu-format --check` (CJK spacing).             |
-| `bun run format`              | Auto-fix formatting (Oxfmt via Vite+) + `pangu-format`.                                                  |
-| `bun run check-links`         | After a build, validate internal links and anchors across `dist/`.                                       |
-| `bun run check:search`        | After a build, validate the search overlay, Pagefind markup, and `/tw/search-index.json`.                |
-| `bun run vectorize:sync-site` | Upsert the Civic AI search corpus into the `civic-ai-site` Cloudflare Vectorize index.                   |
-| `bun run worker:typecheck`    | Type-check the isolated `worker/` Cloudflare `/au` package.                                              |
-| `bun run worker:test`         | Run the isolated `worker/` route, RAG, and citation tests.                                               |
-| `bun run en`/`bun run tw`     | Copy the canonical English/Mandarin page set to the clipboard for translation review (macOS `pbcopy`).   |
-| `bun run import-comics`       | Re-import and optimise Nicky Case's comic pages into `img/` (maintenance helper, not part of the build). |
+| Command                      | What it does                                                                                             |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `vp dev`                     | Sync generated public assets, then start Astro with live reload at `http://127.0.0.1:4321`.              |
+| `vp build`                   | Production build of the static site, minified HTML, and Pagefind index → `dist/`.                        |
+| `vp check`                   | Formatting check, linting, and type-aware checks.                                                        |
+| `vp test`                    | Root test suite (100% coverage gate).                                                                    |
+| `vp run lint`                | Formatting check + lint + type-aware checks + CJK spacing check + Mandarin typography check.             |
+| `vp run format`              | Auto-fix formatting and CJK spacing.                                                                     |
+| `vp run check-links`         | After a build, validate internal links and anchors across `dist/`.                                       |
+| `vp run check:hybrid`        | After a build, validate the hybrid Astro/legacy-content design contract.                                 |
+| `vp run check:astro-output`  | After a build, validate Astro-specific output shape.                                                     |
+| `vp run check:search`        | After a build, validate the search overlay, Pagefind markup, and `/tw/search-index.json`.                |
+| `vp run check:parity`        | After a build, validate output parity against the historical build baseline.                             |
+| `vp run vectorize:sync-site` | Upsert the Civic AI search corpus into the `civic-ai-site` Cloudflare Vectorize index.                   |
+| `vp run worker:typecheck`    | Type-check the isolated `worker/` Cloudflare `/au` package.                                              |
+| `vp run worker:test`         | Run the isolated `worker/` route, RAG, and citation tests.                                               |
+| `vp run en`/`vp run tw`      | Copy the canonical English/Mandarin page set to the clipboard for translation review (macOS `pbcopy`).   |
+| `vp run import-comics`       | Re-import and optimise Nicky Case's comic pages into `img/` (maintenance helper, not part of the build). |
 
-A Vite+ **pre-commit hook** runs `vp staged` (Oxfmt + `pangu-format` + Mandarin typography checks) on staged files, and re-validates build parity when content or build files change.
+A Vite+ **pre-commit hook** runs `vp staged` (formatting + CJK spacing + Mandarin typography checks) on staged files, and re-validates build parity when content or build files change.
 
-Search uses Pagefind for English pages, a Fuse-backed Traditional Mandarin sidebar from `/tw/search-index.json`, and the `worker/` `/au/:question` API for streamed answers. The Worker retrieves from Cloudflare Vectorize binding `SITE_VECTORIZE` (`civic-ai-site`) and uses `AUDREY_MODEL=nemotron-ultra` with `BASETEN_API_KEY` plus optional `CF_AIG_TOKEN` to stream Nemotron Ultra through the Cloudflare AI Gateway; without those secrets it returns a deterministic excerpt/stub response for tests and local development.
+Search uses Pagefind for English pages, a Fuse-backed Traditional Mandarin sidebar from `/tw/search-index.json`, and a separately configured `worker/` `/au/:question` API for streamed answers — see `worker/README.md` for that package's own setup. The Worker retrieves from Cloudflare Vectorize binding `SITE_VECTORIZE` (`civic-ai-site`) and uses `AUDREY_MODEL=nemotron-ultra` with `BASETEN_API_KEY` plus optional `CF_AIG_TOKEN` to stream Nemotron Ultra through the Cloudflare AI Gateway; without those secrets it returns a deterministic excerpt/stub response for tests and local development.
 
 ## Repository layout
 
@@ -56,7 +76,7 @@ Search uses Pagefind for English pages, a Fuse-backed Traditional Mandarin sideb
 | `tw-*.md`                       | Traditional Mandarin twin of each English page (served under `/tw/…`); kept in parity.                             |
 | `assets/js/`                    | Source client scripts for the search overlay and `/au` answer stream, copied into generated `public/`.             |
 | `img/`, `fonts/`, `audio`       | Source static assets copied through generated `public/` into the build.                                            |
-| `worker/`                       | Isolated Cloudflare Worker for the `/capacity` and streaming `/au/:question` answer API.                           |
+| `worker/`                       | Isolated Cloudflare Worker for the `/capacity` and streaming `/au/:question` answer API, with its own README.      |
 | `scripts/`                      | Content, validation, search, Vectorize, build, and migration helper scripts (see [Scripts](#scripts)).             |
 | `styles.css`                    | All site styles (mobile-first; CSS custom properties).                                                             |
 | `astro.config.mjs`              | Astro static build config: custom-domain root, directory URLs, `dist/` output.                                     |
@@ -70,7 +90,7 @@ Search uses Pagefind for English pages, a Fuse-backed Traditional Mandarin sideb
 - Each page is a single Markdown file with YAML front matter. `permalink` sets the URL — e.g. `1.md` → `/1/`, `manifesto.md` → `/manifesto/`.
 - Every English page `foo.md` has a Traditional Mandarin twin `tw-foo.md` served at `/tw/foo/`. The two link to each other through the `alt_lang_url` front-matter key — **keep them in parity** when you change either.
 - Front-matter keys in use: `layout`, `title`, `meta_description`, `summary`, `lang`, `permalink`, `alt_lang_url`.
-- Formatting rules (em dashes, four-space YAML, locked Mandarin terminology) are enforced by `bun run lint` and the pre-commit hook; details in [AGENTS.md](AGENTS.md).
+- Formatting rules (em dashes, four-space YAML, locked Mandarin terminology) are enforced in CI by `vp check` and `vp test`'s global setup, and locally by the pre-commit hook (staged files) or `vp run lint` (full repo); details in [AGENTS.md](AGENTS.md).
 
 ## Contributing
 

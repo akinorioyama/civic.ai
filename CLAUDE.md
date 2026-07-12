@@ -1,5 +1,23 @@
 @AGENTS.md
 
+## Testing
+
+`vp test` is the entry for the root test suite (`tests/**/*.test.{ts,js}`, 100% statement/branch/function/line coverage gate; see `vite.config.ts`'s `test` block). Import from `vite-plus/test`, never `bun:test` or `vitest` directly:
+
+```ts#index.test.ts
+import { test, expect } from "vite-plus/test";
+
+test("hello world", () => {
+  expect(1).toBe(1);
+});
+```
+
+The `worker/` package is a separate Bun package with its own lockfile and keeps `bun test` (`vp run worker:test`).
+
+## The Bun boundary
+
+`vp` runs under Vite+'s own managed Node.js runtime (pinned via `package.json#devEngines.runtime`), not Bun — Bun stays pinned as the package manager (`devEngines.packageManager`) and as the runtime for the utility scripts (`pangu-format.mjs`, `scripts/*.mjs`) and `worker/` package noted above. Never wrap a `vp` lifecycle command in `bun --bun`/`bunx --bun`: it silently forces `vp test`'s Vitest coverage-v8 provider onto Bun, which does not implement the `node:inspector` API coverage collection needs, and the run fails outright.
+
 <!--VITE PLUS START-->
 
 # Using Vite+, the Unified Toolchain for the Web

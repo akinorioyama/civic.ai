@@ -1,4 +1,4 @@
-import { expect, test } from "bun:test";
+import { expect, test } from "vite-plus/test";
 import { getPageByUrl, getSitemapPages } from "../src/lib/pages";
 
 test("loads canonical root pages", () => {

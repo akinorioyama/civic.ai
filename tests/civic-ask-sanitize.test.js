@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test";
+import { describe, expect, test } from "vite-plus/test";
 import { readFileSync } from "node:fs";
 
 const source = readFileSync("assets/js/civic-ask.js", "utf8");

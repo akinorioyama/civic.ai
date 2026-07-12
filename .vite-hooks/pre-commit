@@ -13,5 +13,5 @@ then
     exit 0
 fi
 
-bun run build:parity
-bun run check:parity
+vp run build:parity
+vp run check:parity

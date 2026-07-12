@@ -28,8 +28,12 @@ function installCjkDelimiterPatch(md: MarkdownIt) {
         const marker = this.src.charCodeAt(start);
         let pos = start;
         while (pos < this.posMax && this.src.charCodeAt(pos) === marker) pos++;
-        const lastChar = start > 0 ? (this.src[start - 1] ?? " ") : " ";
-        const nextChar = pos < this.posMax ? (this.src[pos] ?? " ") : " ";
+        // `start`/`pos` are already bounds-checked above, so `slice`
+        // (unlike indexing under `noUncheckedIndexedAccess`) needs no
+        // nullish fallback: it always returns a defined string, "" when
+        // out of range, which is exactly as CJK-inert as " ".
+        const lastChar = start > 0 ? this.src.slice(start - 1, start) : " ";
+        const nextChar = pos < this.posMax ? this.src.slice(pos, pos + 1) : " ";
         if (!result.can_close && CJK.test(lastChar)) result.can_close = true;
         if (!result.can_open && CJK.test(nextChar)) result.can_open = true;
         return result;

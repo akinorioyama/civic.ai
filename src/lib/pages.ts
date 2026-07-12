@@ -75,7 +75,7 @@ export interface PageRecord {
 const root = process.cwd();
 let pageCache: PageRecord[] | undefined;
 
-function isRootContentFile(name: string): boolean {
+export function isRootContentFile(name: string): boolean {
     if (["README.md", "AGENTS.md", "CLAUDE.md", "DESIGN.md"].includes(name))
         return false;
     if (
@@ -92,7 +92,7 @@ function isRootContentFile(name: string): boolean {
     return name === "sensemaker.html" || name === "tw-sensemaker.html";
 }
 
-function deriveUrl(name: string, data: PageFrontmatter): string {
+export function deriveUrl(name: string, data: PageFrontmatter): string {
     if (data.permalink) return normalizeUrl(data.permalink);
     if (name === "index.md") return "/";
     if (name === "tw-index.md") return "/tw/";
@@ -104,6 +104,26 @@ function deriveUrl(name: string, data: PageFrontmatter): string {
 
 function slugFromUrl(url: string): string {
     return url.replace(/^\//, "").replace(/\/$/, "");
+}
+
+/**
+ * Rewrites `url` on every well-formed `{ url: string }` item in `items`
+ * (front-matter action-link arrays such as `packs`, `agenda`, `hosts`) to
+ * its trailing-slash-normalized form, in place. Non-array input, and
+ * array items that are not `{ url: string }`-shaped, are left untouched.
+ */
+export function normalizeUrlFields(items: unknown): void {
+    if (!Array.isArray(items)) return;
+    for (const item of items) {
+        if (
+            item &&
+            typeof item === "object" &&
+            "url" in item &&
+            typeof item.url === "string"
+        ) {
+            item.url = normalizeUrl(item.url);
+        }
+    }
 }
 
 function loadPage(sourceName: string): PageRecord {
@@ -123,42 +143,9 @@ function loadPage(sourceName: string): PageRecord {
     if (data.nav_next?.url) data.nav_next.url = normalizeUrl(data.nav_next.url);
     if (data.packs_link_url)
         data.packs_link_url = normalizeUrl(data.packs_link_url);
-    if (Array.isArray(data.packs)) {
-        for (const p of data.packs) {
-            if (
-                p &&
-                typeof p === "object" &&
-                "url" in p &&
-                typeof p.url === "string"
-            ) {
-                p.url = normalizeUrl(p.url);
-            }
-        }
-    }
-    if (Array.isArray(data.agenda)) {
-        for (const slot of data.agenda) {
-            if (
-                slot &&
-                typeof slot === "object" &&
-                "url" in slot &&
-                typeof slot.url === "string"
-            ) {
-                slot.url = normalizeUrl(slot.url);
-            }
-        }
-    }
-    if (Array.isArray(data.hosts)) {
-        for (const host of data.hosts) {
-            if (
-                host &&
-                typeof host === "object" &&
-                "url" in host &&
-                typeof host.url === "string"
-            ) {
-                host.url = normalizeUrl(host.url);
-            }
-        }
-    }
+    normalizeUrlFields(data.packs);
+    normalizeUrlFields(data.agenda);
+    normalizeUrlFields(data.hosts);
     const url = deriveUrl(sourceName, data);
     const isRawHtmlDocument = sourceName === "sensemaker.html";
     const rawBody = parsed.content;

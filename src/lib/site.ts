@@ -51,14 +51,19 @@ export function normalizeUrl(path: string): string {
     if (path.startsWith("#")) return path;
     if (/^[a-z][a-z0-9+.-]*:/i.test(path)) return path;
 
-    // Split on hash first
-    const hashParts = path.split("#", 2);
-    const pathAndQuery = hashParts[0] || "";
-    const hash = hashParts[1];
+    // Split on hash first. `indexOf`/`slice` (rather than `split(sep, 2)`
+    // plus a `|| ""` guard) always yield defined strings, so there is no
+    // dead not-found fallback to carry: the guards above already rule out
+    // an empty `path` or one starting with `#`.
+    const hashIndex = path.indexOf("#");
+    const pathAndQuery = hashIndex === -1 ? path : path.slice(0, hashIndex);
+    const hash = hashIndex === -1 ? undefined : path.slice(hashIndex + 1);
     // Split on query
-    const queryParts = pathAndQuery.split("?", 2);
-    const pathPart = queryParts[0] || "";
-    const query = queryParts[1];
+    const queryIndex = pathAndQuery.indexOf("?");
+    const pathPart =
+        queryIndex === -1 ? pathAndQuery : pathAndQuery.slice(0, queryIndex);
+    const query =
+        queryIndex === -1 ? undefined : pathAndQuery.slice(queryIndex + 1);
 
     let normalizedPath = pathPart;
     if (!normalizedPath.endsWith("/")) {

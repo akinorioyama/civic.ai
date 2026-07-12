@@ -1,18 +1,19 @@
 ## Build & Development
 
-**Package manager:** Bun
+**Root lifecycle:** [Vite+](https://viteplus.dev/) (`vp`), running under its own managed Node.js runtime (pinned via `package.json#devEngines.runtime`, currently 22.23.1). Bun remains the configured package manager (`package.json#devEngines.packageManager`) and is the intentional runtime for standalone utility scripts (`pangu-format.mjs`, `scripts/*.mjs`) entered through `vp run <script>`, and for the isolated `worker/` Cloudflare package, which keeps its own `bun.lock`, install, and test run, entirely separate from the root `vp` lifecycle — see `worker:typecheck`/`worker:test` below. Never wrap a `vp` lifecycle command (`vp test`, `vp check`, `vp build`) in Bun's own runner: it silently forces `vp test`'s Vitest coverage-v8 provider onto Bun, which does not implement the `node:inspector` API coverage collection needs, and the run fails outright.
+
 **Static site generator:** Astro 7
 
 ```bash
-bun install          # install dependencies
-bun run dev          # local Astro dev server at http://127.0.0.1:4321
-bun run check        # astro check + tsgo --noEmit
-bun test             # focused Bun tests
-bun run build        # production build → ./dist/
-bun run check-links  # validate built internal links in ./dist/
+vp install              # install dependencies
+vp dev                  # local Astro dev server at http://127.0.0.1:4321
+vp check                # formatting check + lint + type-aware checks
+vp test                 # root test suite, 100% coverage gate
+vp build                # production build → ./dist/
+vp run check-links      # validate built internal links in ./dist/
 ```
 
-Verify significant changes with the relevant focused test plus `bun run build`; before completion run the full validation chain in README/CI.
+Verify significant changes with the relevant focused test plus `vp build`; before completion run the full validation chain in README/CI.
 
 ## Architecture
 
@@ -44,7 +45,7 @@ Verify significant changes with the relevant focused test plus `bun run build`; 
 - Commits: short imperative style (e.g. `add manifesto link`, `ch7: fix anchor ids`)
 - Never edit `dist/` or generated `public/`; they are build artifacts
 - Optimize images before committing; reuse existing typography tokens in CSS
-- When adding/editing content, maintain parity between British English and Traditional Mandarin variants. `bun run en`/`bun run tw` cat the paired page sets to the clipboard and warn on stderr about any page missing its twin — see `scripts/review-set.md`.
+- When adding/editing content, maintain parity between British English and Traditional Mandarin variants. `vp run en`/`vp run tw` cat the paired page sets to the clipboard and warn on stderr about any page missing its twin — see `scripts/review-set.md`.
 - Em dashes: English files use `—` (spaced single); Mandarin `tw-*.md` files use `——` (double, no spaces)
 
 <!--VITE PLUS START-->

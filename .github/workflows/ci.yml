@@ -19,20 +19,27 @@ jobs:
                   ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.head_ref || github.ref }}
                   persist-credentials: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository }}
 
+            - name: Setup Vite+
+              uses: voidzero-dev/setup-vp@v1
+              with:
+                  node-version: "22.23.1"
+                  cache: true
+                  run-install: false
+
+            - name: Install dependencies
+              run: vp install --frozen-lockfile
+
             - name: Setup Bun
               uses: oven-sh/setup-bun@v2
 
-            - name: Install dependencies
-              run: bun --bun install --frozen-lockfile
-
             - name: Install worker dependencies
               working-directory: worker
-              run: bun --bun install --frozen-lockfile
+              run: bun install --frozen-lockfile
 
             - name: Auto-format
               if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
               run: |
-                  bun --bun run format
+                  vp run format
                   git diff --quiet || {
                     git config user.name "github-actions[bot]"
                     git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -41,35 +48,32 @@ jobs:
                     git push
                   }
 
-            - name: Lint
-              run: bun --bun run lint
-
-            - name: Typecheck
-              run: bun --bun run check
+            - name: Check
+              run: vp check
 
             - name: Typecheck worker
-              run: bun --bun run worker:typecheck
+              run: vp run worker:typecheck
 
             - name: Test
-              run: bun --bun test
+              run: vp test
 
             - name: Test worker
-              run: bun --bun run worker:test
+              run: vp run worker:test
 
             - name: Build
-              run: bun --bun run build
+              run: vp build
 
             - name: Check internal links
-              run: bun --bun run check-links
+              run: vp run check-links
 
             - name: Check hybrid design
-              run: bun --bun run check:hybrid
+              run: vp run check:hybrid
 
             - name: Check Astro output
-              run: bun --bun run check:astro-output
+              run: vp run check:astro-output
 
             - name: Check search output
-              run: bun --bun run check:search
+              run: vp run check:search
 
             - name: Check build parity
-              run: bun --bun run check:parity
+              run: vp run check:parity

@@ -5,6 +5,11 @@
         "node": ">=22.12.0"
     },
     "devEngines": {
+        "runtime": {
+            "name": "node",
+            "version": "22.23.1",
+            "onFail": "download"
+        },
         "packageManager": {
             "name": "bun",
             "version": "1.3.14",
@@ -12,27 +17,24 @@
         }
     },
     "scripts": {
-        "dev": "bun run sync:public && bunx --bun astro dev --host 127.0.0.1",
-        "build": "bun run sync:public && astro build && bun run minify-html && bunx pagefind --site dist",
-        "build:parity": "bun run sync:public && astro build",
-        "lint": "vp fmt --check . && vp lint && bun run pangu-format.mjs --check && bun scripts/check-tw-typography.mjs",
-        "format": "vp fmt . && bun run pangu-format.mjs",
         "prepare": "vp config",
-        "check": "tsc --noEmit",
-        "test": "bun test",
-        "sync:public": "bun run scripts/sync-public.mjs",
-        "minify-html": "bun run scripts/minify-html.mjs",
-        "check-links": "BUILD_DIR=dist bun run check-links.mjs",
-        "check:hybrid": "BUILD_DIR=dist bun run scripts/check-hybrid-design.mjs",
-        "check:astro-output": "BUILD_DIR=dist bun run scripts/check-astro-output.mjs",
-        "check:parity": "BUILD_DIR=dist BASELINE_IN=tests/fixtures/eleventy-build-baseline.json bun run scripts/check-build-parity.mjs",
-        "check:search": "BUILD_DIR=dist bun run scripts/check-search-output.mjs",
+        "sync:public": "bun scripts/sync-public.mjs",
+        "minify-html": "bun scripts/minify-html.mjs",
+        "lint": "vp fmt --check . && vp lint && bun pangu-format.mjs --check && bun scripts/check-tw-typography.mjs",
+        "format": "vp fmt . && bun pangu-format.mjs",
+        "build:parity": "vp run sync:public && vp exec astro build",
+        "check-links": "BUILD_DIR=dist bun check-links.mjs",
+        "check:hybrid": "BUILD_DIR=dist bun scripts/check-hybrid-design.mjs",
+        "check:astro-output": "BUILD_DIR=dist bun scripts/check-astro-output.mjs",
+        "check:parity": "BUILD_DIR=dist BASELINE_IN=tests/fixtures/eleventy-build-baseline.json bun scripts/check-build-parity.mjs",
+        "check:search": "BUILD_DIR=dist bun scripts/check-search-output.mjs",
         "vectorize:sync-site": "bun scripts/vectorize-sync-site.mjs",
         "worker:typecheck": "cd worker && bun run typecheck",
         "worker:test": "cd worker && bun run test",
         "import-comics": "bun import-comics.mjs",
         "en": "bun scripts/review-set.mjs en",
-        "tw": "bun scripts/review-set.mjs tw"
+        "tw": "bun scripts/review-set.mjs tw",
+        "ci": "vp check && vp test && vp build && vp run check-links && vp run check:hybrid && vp run check:astro-output && vp run check:search && vp run check:parity && vp run worker:typecheck && vp run worker:test"
     },
     "dependencies": {
         "markdown-it-anchor": "^9.2.0",
@@ -48,7 +50,7 @@
         "nunjucks": "^3.2.4"
     },
     "devDependencies": {
-        "@types/bun": "latest",
+        "@vitest/coverage-v8": "4.1.10",
         "fuse.js": "^6.6.2",
         "html-minifier": "^4.0.0",
         "pagefind": "1.5.0-beta.1",

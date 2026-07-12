@@ -9,7 +9,7 @@
         "allowImportingTsExtensions": true,
         "verbatimModuleSyntax": true,
         "noEmit": true,
-        "types": ["astro/client", "bun-types"],
+        "types": ["astro/client"],
         "strict": true,
         "skipLibCheck": true,
         "noFallthroughCasesInSwitch": true,

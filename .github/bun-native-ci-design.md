@@ -1,7 +1,7 @@
-# Bun-Native CI Design
+# Bun-Native CI Design (superseded)
 
 Date: 2026-07-10
-Status: Approved for implementation
+Status: Superseded 2026-07-12 by the Vite+-managed runtime cutover — see `vp-runtime-ci-design.md`. Kept as the historical record of the Bun-native boundary that preceded it; the workflow design and validation steps below no longer match `.github/workflows/ci.yml`/`static.yml`.
 
 ## Problem
 

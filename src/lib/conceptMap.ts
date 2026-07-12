@@ -16,7 +16,7 @@ interface MeasureRef {
     name: Bilingual;
 }
 
-interface PackNode {
+export interface PackNode {
     num: number;
     slug: string;
     hue: string;
@@ -147,7 +147,7 @@ export function chipPos(
 
 // ─── render helpers ───
 
-function escapeHtml(value: string | number | null | undefined): string {
+export function escapeHtml(value: string | number | null | undefined): string {
     return String(value ?? "")
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
@@ -174,20 +174,20 @@ function mapHrefAttrs(href: string): string {
         : `href="${escaped}" target="_blank" rel="noopener"`;
 }
 
-function packVars(pack: PackNode): string {
+export function packVars(pack: PackNode): string {
     const ink = pack.inkLight || pack.hue;
     const inkDark = pack.inkDark || pack.hue;
     return `--hue:${pack.hue};--ink-l:${ink};--ink-d:${inkDark}`;
 }
 
-function byNum(num: number): PackNode {
+export function byNum(num: number): PackNode {
     if (num === 6) return conceptMap.membrane;
     const pack = conceptMap.packs.find((p) => p.num === num);
     if (!pack) throw new Error(`concept map: unknown pack ${num}`);
     return pack;
 }
 
-function badge(
+export function badge(
     target: PackNode,
     zh: boolean,
     key: Key,
@@ -202,7 +202,7 @@ function badge(
 const TW_NUMERALS = ["一", "二", "三", "四", "五", "六"];
 const ENCLOSED_NUMERALS = ["①", "②", "③", "④", "⑤", "⑥"];
 
-function numeral(num: number, zh: boolean): string {
+export function numeral(num: number, zh: boolean): string {
     return zh ? TW_NUMERALS[num - 1] || String(num) : String(num);
 }
 
@@ -282,7 +282,7 @@ function renderStation(pack: PackNode, key: Key, zh: boolean): string {
     return `<article class="cmap-station" id="st-p${pack.num}" style="${packVars(pack)}" data-pack="${pack.num}"><h3 class="cmap-station-title"><a ${mapHrefAttrs(packUrl(pack, zh))}>${escapeHtml(pack.title[key])}</a></h3><p class="cmap-measure"><a ${mapHrefAttrs(measureUrl(pack.measure, zh))}><span class="cmap-measure-tag">${escapeHtml(conceptMap.measureLabel[key])}</span>${escapeHtml(pack.measure.name[key])}</a></p>${renderSends(pack, key, zh)}</article>`;
 }
 
-function cycleHand(from: number): Handoff {
+export function cycleHand(from: number): Handoff {
     const hand = conceptMap.handoffs.find(
         (h) => h.kind === "cycle" && h.from === from
     );

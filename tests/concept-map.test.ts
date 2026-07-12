@@ -1,10 +1,17 @@
-import { describe, expect, test } from "bun:test";
+import { describe, expect, test } from "vite-plus/test";
 import {
     DIAL,
+    anchorOf,
     arcPath,
     arrowAt,
+    badge,
+    byNum,
     chipPos,
     conceptMap,
+    cycleHand,
+    escapeHtml,
+    numeral,
+    packVars,
     polar,
     renderConceptMap,
 } from "../src/lib/conceptMap";
@@ -50,6 +57,57 @@ describe("dial geometry", () => {
             expect(top).toBeGreaterThan(0);
             expect(top).toBeLessThan(100);
         }
+    });
+});
+
+describe("anchorOf", () => {
+    test("resolves a known pack anchor", () => {
+        expect(anchorOf(1)).toBe(DIAL.anchors[1]);
+    });
+
+    test("throws for a pack with no dial anchor", () => {
+        expect(() => anchorOf(9999)).toThrow(
+            "concept map: no dial anchor for pack 9999"
+        );
+    });
+});
+
+describe("render helper edge cases", () => {
+    test("escapeHtml treats null/undefined as an empty string", () => {
+        expect(escapeHtml(undefined)).toBe("");
+        expect(escapeHtml(null)).toBe("");
+        expect(escapeHtml('<a href="x">&y</a>')).toBe(
+            "&lt;a href=&quot;x&quot;&gt;&amp;y&lt;/a&gt;"
+        );
+    });
+
+    test("packVars falls back to the base hue when ink overrides are absent", () => {
+        const pack = {
+            ...conceptMap.packs[0]!,
+            inkLight: undefined,
+            inkDark: undefined,
+        };
+        expect(packVars(pack)).toBe(
+            `--hue:${pack.hue};--ink-l:${pack.hue};--ink-d:${pack.hue}`
+        );
+    });
+
+    test("byNum resolves the membrane for pack 6 and throws for an unknown pack", () => {
+        expect(byNum(6)).toBe(conceptMap.membrane);
+        expect(() => byNum(9999)).toThrow("concept map: unknown pack 9999");
+    });
+
+    test("badge and numeral fall back past the enclosed-numeral glyph set", () => {
+        const pack = { ...conceptMap.packs[0]!, num: 7 };
+        expect(numeral(7, true)).toBe("7");
+        expect(numeral(7, false)).toBe("7");
+        expect(badge(pack, false, "en")).toContain(">7</span>");
+    });
+
+    test("cycleHand throws for a pack with no cycle handoff", () => {
+        expect(() => cycleHand(9999)).toThrow(
+            "concept map: missing cycle handoff 9999"
+        );
     });
 });
 

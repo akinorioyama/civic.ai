@@ -82,12 +82,12 @@ export function splitRenderedHtmlByHeadings(html: string): SearchSubsection[] {
 
     for (const match of cleaned.matchAll(HEADING_RE)) {
         const full = match[0];
-        const index = match.index ?? 0;
+        const index = match.index!;
         matches.push({
             index,
             end: index + full.length,
-            anchor: match[2] ?? "",
-            headingHtml: match[3] ?? "",
+            anchor: match[2]!,
+            headingHtml: match[3]!,
         });
     }
 
@@ -213,7 +213,7 @@ export function getSearchSuggestions(lang: SearchLang): string[] {
     const terms = new Set<string>();
 
     for (const entry of getSearchEntries(lang)) {
-        if (entry.title) terms.add(entry.title);
+        terms.add(entry.title);
     }
 
     for (const entry of glossary as GlossaryEntry[]) {
