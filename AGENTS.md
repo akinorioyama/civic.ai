@@ -51,7 +51,7 @@ Verify significant changes with the relevant focused test plus `bun run build`; 
 
 # Using Vite+, the Unified Toolchain for the Web
 
-This project uses Vite+, a unified toolchain built on top of Vite, Rolldown, Vitest, tsdown, Oxlint, Oxfmt, and Vite Task. The root `vite.config.ts` keeps Vite+ configuration in one place and bridges its direct commands to this Astro/Bun project: `vp dev` proxies the Astro dev server, `vp build` runs Astro plus HTML minification and Pagefind, and `vp test` maps the Bun test module to Vitest. `vp check`, `vp lint`, `vp fmt`, `vp staged`, and `vp preview` retain their native Vite+ behavior. `vp run <script>` remains available for the underlying `package.json` scripts. Run `vp help` to print the command list and `vp <command> --help` for command details.
+This project is using Vite+, a unified toolchain built on top of Vite, Rolldown, Vitest, tsdown, Oxlint, Oxfmt, and Vite Task. Vite+ wraps runtime management, package management, and frontend tooling in a single global CLI called `vp`. Vite+ is distinct from Vite, and it invokes Vite through `vp dev` and `vp build`. Run `vp help` to print a list of commands and `vp <command> --help` for information about a specific command.
 
 Docs are local at `node_modules/vite-plus/docs` or online at https://viteplus.dev/guide/.
 
