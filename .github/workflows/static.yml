@@ -33,12 +33,9 @@ jobs:
             - name: Install dependencies
               run: vp install --frozen-lockfile
 
-            - name: Setup Bun
-              uses: oven-sh/setup-bun@v2
-
             - name: Install worker dependencies
               working-directory: worker
-              run: bun install --frozen-lockfile
+              run: vp install --frozen-lockfile
 
             - name: Check
               run: vp check
