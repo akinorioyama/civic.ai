@@ -45,7 +45,7 @@ Each pack then answers a distinct public audit question. To preserve the public 
 - **Pack 1 — Attentiveness.** Coverage of affected people; voice equity between least-heard and most-heard groups. Evidence artefact: the bridging map.
 - **Pack 2 — Responsibility.** Named-owner coverage; authority-match rate; adopt-or-explain rate.
 - **Pack 3 — Competence.** Guardrail integrity; trace completeness; canary health; audit overturn rate.
-- **Pack 4 — Responsiveness.** Appeal closure time; repair completion rate; harm recurrence within 90 days.
+- **Pack 4 — Responsiveness.** Appeal closure time; repair completion rate; correction throughput ratio; correction backlog depth and age; harm recurrence within 90 days.
 - **Pack 5 — Solidarity.** Portability success rate; accountable-identity coverage; federation participation — the structural conditions that keep co-action freely given rather than captive.
 - **Pack 6 — Symbiosis.** Scope compliance; sunset compliance; ecology diversity; handover rehearsal pass rate.
 
@@ -63,6 +63,7 @@ The book's Parts List catalogues every instrument a practitioner is asked to bui
 - **Decision trace** (Pack 3) — the per-action record showing which rule fired, which sources were consulted, and what uncertainty the system carried, the operational counterpart that makes the engagement contract live rather than merely written. When a Kami draws on a community's knowledge, the same trace is designed to double as a **civic receipt** (Pack 6), settling value back to the custodians through pre-funded escrow — a design commitment, not yet a running settlement, and distinct from Pack 1's perspective receipts, which let contributors see and correct how they were represented.
 - **The brake (circuit breaker)** (Packs 3-4) — a single, prominent, wired-and-tested control that stops the system now, accessible at the speed of human recognition, so a person can halt a wrong action in the moment rather than only signalling for later.
 - **Override ledger** (Pack 4) — a room's plain-text working memory recording every time a human said "no" to the Kami — evidence that its [governance charter](/kami/) is live and the room still holds standing to correct it.
+- **Correction backlog board** (Pack 4) — a public queue of unresolved corrections with age, ownership, and escalation status, used to prevent hidden correction debt and ensure aging cases are actively reassigned or elevated.
 
 ### What each measure refuses to reward
 
