@@ -1,7 +1,7 @@
 ---
 layout: chapter
 title: "社群 AI 之聲"
-description: "2026 公民 AI 研討會 Polis 集體感知報告——牛津大學羅德樓"
+description: "2026 仁工智慧研討會 Polis 集體感知報告——牛津大學羅德樓"
 lang: zh-tw
 alt_lang_url: "/conference/report"
 permalink: "/tw/conference/report/"
@@ -13,7 +13,7 @@ nav_next:
     text: "宣言"
 ---
 
-本報告彙集了在牛津大學羅德樓舉辦的 [2026 公民 AI 研討會](/tw/conference/)中 61 位與會者的意見。活動期間，參與者透過 [Polis](https://pol.is) 集體感知平台就 AI 與社區關懷進行討論。Polis 運用機器學習識別共識領域並繪製意見群組圖譜——同時避免社群媒體的極化效應。參與者對簡短陳述表達同意、不同意或略過，也可以提交自己的意見。
+本報告彙集了在牛津大學羅德樓舉辦的 [2026 仁工智慧研討會](/tw/conference/)中 61 位與會者的意見。活動期間，參與者透過 [Polis](https://pol.is) 集體感知平台就 AI 與社區關懷進行討論。Polis 運用機器學習識別共識領域並繪製意見群組圖譜——同時避免社群媒體的極化效應。參與者對簡短陳述表達同意、不同意或略過，也可以提交自己的意見。
 
 <div class="polis-overview">
 <div class="polis-stat">
@@ -93,41 +93,41 @@ svg.addEventListener("mouseover",e=>{const c=e.target.closest("[data-stmt]");if(
 
 <div class="polis-statement">
 <span class="polis-consensus-badge">共識</span>
-<p class="polis-statement-text">在使用政府服務時，即使AI處理了大部分工作，人們仍應隨時能夠聯繫到真人。</p>
+<p class="polis-statement-text">在使用政府服務時，即使 AI 處理了大部分工作，人們仍應隨時能夠聯繫到真人。</p>
 <div class="polis-bar"><div class="polis-bar-agree" style="width:96.8%"></div></div>
 <div class="polis-bar-labels"><span class="polis-label-agree">97% 同意</span> <span>3% 略過</span></div>
 </div>
 
 <div class="polis-statement">
 <span class="polis-consensus-badge">共識</span>
-<p class="polis-statement-text">學校應該教導孩子質疑AI告訴他們的內容，而不僅僅是如何使用它。</p>
+<p class="polis-statement-text">學校應該教導孩子質疑 AI 告訴他們的內容，而不僅僅是如何使用它。</p>
 <div class="polis-bar"><div class="polis-bar-agree" style="width:93.1%"></div><div class="polis-bar-disagree" style="width:3.4%"></div></div>
 <div class="polis-bar-labels"><span class="polis-label-agree">93% 同意</span> <span class="polis-label-disagree">3% 不同意</span></div>
 </div>
 
 <div class="polis-statement">
 <span class="polis-consensus-badge">共識</span>
-<p class="polis-statement-text">當AI協助做出關於你的福利、住房或健康的決定時，你應該被告知。</p>
+<p class="polis-statement-text">當 AI 協助做出關於你的福利、住房或健康的決定時，你應該被告知。</p>
 <div class="polis-bar"><div class="polis-bar-agree" style="width:92.9%"></div></div>
 <div class="polis-bar-labels"><span class="polis-label-agree">93% 同意</span> <span>7% 略過</span></div>
 </div>
 
 <div class="polis-statement">
 <span class="polis-consensus-badge">共識</span>
-<p class="polis-statement-text">AI在照護機構中應該為工作人員騰出更多時間與住民相處，而非取代人與人之間的接觸。</p>
+<p class="polis-statement-text">AI 在照護機構中應該為工作人員騰出更多時間與住民相處，而非取代人與人之間的接觸。</p>
 <div class="polis-bar"><div class="polis-bar-agree" style="width:90.6%"></div></div>
 <div class="polis-bar-labels"><span class="polis-label-agree">91% 同意</span> <span>9% 略過</span></div>
 </div>
 
 <div class="polis-statement">
 <span class="polis-consensus-badge">共識</span>
-<p class="polis-statement-text">AI公司在使用藝術家和作家的作品來訓練AI系統時，應該付費給他們。</p>
+<p class="polis-statement-text">AI 公司在使用藝術家和作家的作品來訓練 AI 系統時，應該付費給他們。</p>
 <div class="polis-bar"><div class="polis-bar-agree" style="width:87.1%"></div><div class="polis-bar-disagree" style="width:6.5%"></div></div>
 <div class="polis-bar-labels"><span class="polis-label-agree">87% 同意</span> <span class="polis-label-disagree">6% 不同意</span></div>
 </div>
 
 <div class="polis-statement">
-<p class="polis-statement-text">當我與聊天機器人或AI助手交談時，我應該總是被告知它不是真人。</p>
+<p class="polis-statement-text">當我與聊天機器人或 AI 助手交談時，我應該總是被告知它不是真人。</p>
 <div class="polis-bar"><div class="polis-bar-agree" style="width:90%"></div><div class="polis-bar-disagree" style="width:3.3%"></div></div>
 <div class="polis-bar-labels"><span class="polis-label-agree">90% 同意</span> <span class="polis-label-disagree">3% 不同意</span></div>
 </div>
@@ -139,25 +139,25 @@ svg.addEventListener("mouseover",e=>{const c=e.target.closest("[data-stmt]");if(
 </div>
 
 <div class="polis-statement">
-<p class="polis-statement-text">失智症患者應該對是否使用AI工具來照護他們擁有發言權。</p>
+<p class="polis-statement-text">失智症患者應該對是否使用 AI 工具來照護他們擁有發言權。</p>
 <div class="polis-bar"><div class="polis-bar-agree" style="width:86.2%"></div><div class="polis-bar-disagree" style="width:3.4%"></div></div>
 <div class="polis-bar-labels"><span class="polis-label-agree">86% 同意</span> <span class="polis-label-disagree">3% 不同意</span></div>
 </div>
 
 <div class="polis-statement">
-<p class="polis-statement-text">如果AI系統因為種族、年齡或身心障礙而不公平地對待人們，應該有人為此負責。</p>
+<p class="polis-statement-text">如果 AI 系統因為種族、年齡或身心障礙而不公平地對待人們，應該有人為此負責。</p>
 <div class="polis-bar"><div class="polis-bar-agree" style="width:84.8%"></div><div class="polis-bar-disagree" style="width:6.1%"></div></div>
 <div class="polis-bar-labels"><span class="polis-label-agree">85% 同意</span> <span class="polis-label-disagree">6% 不同意</span></div>
 </div>
 
 <div class="polis-statement">
-<p class="polis-statement-text">社區應該在決定如何在當地學校和醫院使用AI時擁有發言權。</p>
+<p class="polis-statement-text">社區應該在決定如何在當地學校和醫院使用 AI 時擁有發言權。</p>
 <div class="polis-bar"><div class="polis-bar-agree" style="width:84.8%"></div><div class="polis-bar-disagree" style="width:6.1%"></div></div>
 <div class="polis-bar-labels"><span class="polis-label-agree">85% 同意</span> <span class="polis-label-disagree">6% 不同意</span></div>
 </div>
 
 <div class="polis-statement">
-<p class="polis-statement-text">人們正在因AI驅動的決策而受到傷害，而政府的行動太慢了。</p>
+<p class="polis-statement-text">人們正在因 AI 驅動的決策而受到傷害，而政府的行動太慢了。</p>
 <div class="polis-bar"><div class="polis-bar-agree" style="width:84.4%"></div><div class="polis-bar-disagree" style="width:9.4%"></div></div>
 <div class="polis-bar-labels"><span class="polis-label-agree">84% 同意</span> <span class="polis-label-disagree">9% 不同意</span></div>
 </div>
@@ -169,13 +169,13 @@ svg.addEventListener("mouseover",e=>{const c=e.target.closest("[data-stmt]");if(
 </div>
 
 <div class="polis-statement">
-<p class="polis-statement-text">因AI失去工作的勞工應該得到實際幫助來找到新工作，而不只是建議。</p>
+<p class="polis-statement-text">因 AI 失去工作的勞工應該得到實際幫助來找到新工作，而不只是建議。</p>
 <div class="polis-bar"><div class="polis-bar-agree" style="width:79.4%"></div><div class="polis-bar-disagree" style="width:11.8%"></div></div>
 <div class="polis-bar-labels"><span class="polis-label-agree">79% 同意</span> <span class="polis-label-disagree">12% 不同意</span></div>
 </div>
 
 <div class="polis-statement">
-<p class="polis-statement-text">英國應該建立一個獨立機構，擁有關閉有害AI系統的實權。</p>
+<p class="polis-statement-text">英國應該建立一個獨立機構，擁有關閉有害 AI 系統的實權。</p>
 <div class="polis-bar"><div class="polis-bar-agree" style="width:73.5%"></div><div class="polis-bar-disagree" style="width:8.8%"></div></div>
 <div class="polis-bar-labels"><span class="polis-label-agree">74% 同意</span> <span class="polis-label-disagree">9% 不同意</span></div>
 </div>
@@ -185,7 +185,7 @@ svg.addEventListener("mouseover",e=>{const c=e.target.closest("[data-stmt]");if(
 六項陳述在三個意見群組之間顯示出明顯的分歧。這些張力值得進一步探討。
 
 <div class="polis-statement">
-<p class="polis-statement-text">在沒有人陪伴的情況下，用AI來陪伴長者，好過讓他們獨自一人。</p>
+<p class="polis-statement-text">在沒有人陪伴的情況下，用 AI 來陪伴長者，好過讓他們獨自一人。</p>
 <div class="polis-bar"><div class="polis-bar-agree" style="width:66.7%"></div><div class="polis-bar-disagree" style="width:16.7%"></div></div>
 <div class="polis-bar-labels"><span class="polis-label-agree">67% 同意</span> <span class="polis-label-disagree">17% 不同意</span> <span>17% 略過</span></div>
 <div class="polis-group-bars">
@@ -196,7 +196,7 @@ svg.addEventListener("mouseover",e=>{const c=e.target.closest("[data-stmt]");if(
 </div>
 
 <div class="polis-statement">
-<p class="polis-statement-text">在更好地了解AI對人們的影響之前，我們應該放慢AI的發展速度。</p>
+<p class="polis-statement-text">在更好地了解 AI 對人們的影響之前，我們應該放慢 AI 的發展速度。</p>
 <div class="polis-bar"><div class="polis-bar-agree" style="width:63.6%"></div><div class="polis-bar-disagree" style="width:24.2%"></div></div>
 <div class="polis-bar-labels"><span class="polis-label-agree">64% 同意</span> <span class="polis-label-disagree">24% 不同意</span> <span>12% 略過</span></div>
 <div class="polis-group-bars">
@@ -207,7 +207,7 @@ svg.addEventListener("mouseover",e=>{const c=e.target.closest("[data-stmt]");if(
 </div>
 
 <div class="polis-statement">
-<p class="polis-statement-text">照顧重病家人的家庭應該被提供AI工具來協助，即使這些工具並不完美。</p>
+<p class="polis-statement-text">照顧重病家人的家庭應該被提供 AI 工具來協助，即使這些工具並不完美。</p>
 <div class="polis-bar"><div class="polis-bar-agree" style="width:48.6%"></div><div class="polis-bar-disagree" style="width:35.1%"></div></div>
 <div class="polis-bar-labels"><span class="polis-label-agree">49% 同意</span> <span class="polis-label-disagree">35% 不同意</span> <span>16% 略過</span></div>
 <div class="polis-group-bars">
@@ -218,7 +218,7 @@ svg.addEventListener("mouseover",e=>{const c=e.target.closest("[data-stmt]");if(
 </div>
 
 <div class="polis-statement">
-<p class="polis-statement-text">除非公司幫助員工找到新職位，否則不應被允許用AI取代他們。</p>
+<p class="polis-statement-text">除非公司幫助員工找到新職位，否則不應被允許用 AI 取代他們。</p>
 <div class="polis-bar"><div class="polis-bar-agree" style="width:42.9%"></div><div class="polis-bar-disagree" style="width:42.9%"></div></div>
 <div class="polis-bar-labels"><span class="polis-label-agree">43% 同意</span> <span class="polis-label-disagree">43% 不同意</span> <span>14% 略過</span></div>
 <div class="polis-group-bars">
@@ -229,7 +229,7 @@ svg.addEventListener("mouseover",e=>{const c=e.target.closest("[data-stmt]");if(
 </div>
 
 <div class="polis-statement">
-<p class="polis-statement-text">牛津郡新建的AI資料中心將為當地居民創造好的工作機會，而不只是為外地的科技工作者。</p>
+<p class="polis-statement-text">牛津郡新建的 AI 資料中心將為當地居民創造好的工作機會，而不只是為外地的科技工作者。</p>
 <div class="polis-bar"><div class="polis-bar-agree" style="width:39.3%"></div><div class="polis-bar-disagree" style="width:25%"></div></div>
 <div class="polis-bar-labels"><span class="polis-label-agree">39% 同意</span> <span class="polis-label-disagree">25% 不同意</span> <span>36% 略過</span></div>
 <div class="polis-group-bars">
@@ -240,7 +240,7 @@ svg.addEventListener("mouseover",e=>{const c=e.target.closest("[data-stmt]");if(
 </div>
 
 <div class="polis-statement">
-<p class="polis-statement-text">學校中的AI工具對幫助落後學生趕上進度的效果，大於它對學習造成的傷害。</p>
+<p class="polis-statement-text">學校中的 AI 工具對幫助落後學生趕上進度的效果，大於它對學習造成的傷害。</p>
 <div class="polis-bar"><div class="polis-bar-agree" style="width:25%"></div><div class="polis-bar-disagree" style="width:46.9%"></div></div>
 <div class="polis-bar-labels"><span class="polis-label-agree">25% 同意</span> <span class="polis-label-disagree">47% 不同意</span> <span>28% 略過</span></div>
 <div class="polis-group-bars">

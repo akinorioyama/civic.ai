@@ -2115,7 +2115,7 @@
             "path": "tw/conference/report/index.html",
             "lang": "zh-tw",
             "title": "社群 AI 之聲 — 仁工智慧",
-            "description": "2026 公民 AI 研討會 Polis 集體感知報告——牛津大學羅德樓",
+            "description": "2026 仁工智慧研討會 Polis 集體感知報告——牛津大學羅德樓",
             "canonical": "https://civic.ai/tw/conference/report/",
             "alternates": [
                 {
@@ -2209,14 +2209,14 @@
             "ids": [
                 "civic-ask-answer",
                 "civic-ask-history",
-                "kami",
                 "main",
                 "search-container",
                 "search-overlay",
                 "search-suggestions",
                 "search-toggle",
                 "仁工智慧能抵抗-wealth-care-嗎",
-                "單一文化-vs-多元路徑",
+                "單一文化-vs--多元宇宙",
+                "地神",
                 "超級智慧",
                 "關懷六力",
                 "預設軌跡"
@@ -2630,7 +2630,7 @@
             "path": "tw/openclaw/index.html",
             "lang": "zh-tw",
             "title": "仁工智慧 OpenClaw 啟動指南",
-            "description": "給新 claws 的公開第一次啟動指南。",
+            "description": "給仁工智慧打造的新 claws 的公開第一次啟動指南。",
             "canonical": "https://civic.ai/tw/openclaw/",
             "alternates": [
                 {
@@ -2701,7 +2701,7 @@
                 "問答",
                 "四大自由",
                 "孤單的維護者",
-                "家庭裡的-kami",
+                "家庭裡的地神",
                 "封閉的堆疊",
                 "對齊大會",
                 "廣泛傾聽",
