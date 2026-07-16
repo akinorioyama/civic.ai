@@ -2395,10 +2395,6 @@ body.comics-page main {
     overflow-wrap: break-word;
 }
 
-.ja-ov-layer .ov.rect > span[data-no-soft-wrap] {
-    white-space: pre;
-}
-
 .ja-ov-layer .ov.shaped {
     --ov-scale: 1;
 }

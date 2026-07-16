@@ -146,12 +146,15 @@ function shapePolys(
 }
 
 function renderOverlayFrame(frame: ComicsOverlayFrame): string {
+    // renderOverlayLayer already filters out blank-after-trim frames before
+    // calling this, so at least one non-whitespace line always survives —
+    // ariaText is guaranteed non-empty here.
     const ariaText = frame.text
         .split("\n")
         .map((line) => line.trim())
         .filter((line) => line !== "")
         .join(" ");
-    const labelAttr = ariaText ? ` aria-label="${escapeAttr(ariaText)}"` : "";
+    const labelAttr = ` aria-label="${escapeAttr(ariaText)}"`;
     // The gallery now draws on the wordless (no baked-in lettering) art, so
     // a background box is no longer needed to hide original English text —
     // always transparent, regardless of the authored frame.bg value.

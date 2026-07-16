@@ -91,16 +91,40 @@
             return a ? a.querySelector("img") : null;
         };
         const imgs = () => layers().map(imgFor).filter(Boolean);
-        const toWordless = (src) =>
-            src.replace(/-ja(\.[a-z0-9]+)(?=($|[?#]))/i, "-wordless$1");
         const toJa = (src) =>
             src.replace(/-wordless(\.[a-z0-9]+)(?=($|[?#]))/i, "-ja$1");
-        const swapImages = (toBaked) => {
-            imgs().forEach((img) => {
-                const cur = img.getAttribute("src") || "";
-                const next = toBaked ? toJa(cur) : toWordless(cur);
-                if (next !== cur) img.setAttribute("src", next);
+        // Print swaps every overlay image to its lettered `-ja` variant so
+        // the Japanese text prints inline (no live overlay in print CSS —
+        // see the `@media print { .ja-ov-layer { display: none } }` rule).
+        // beforeprint/afterprint and the matchMedia("print") change event
+        // can all fire for a single print — Safari only does beforeprint/
+        // afterprint, Firefox relies on the matchMedia listener, and
+        // browsers that fire both would otherwise call enter/exit twice.
+        // printState guards that reentrancy AND (more importantly) captures
+        // each image's literal pre-print `src` — including the async AVIF
+        // src rewrite in ClientScripts.astro — so exit restores exactly
+        // what was on screen rather than recomputing a "-wordless" guess
+        // that would clobber a `.avif` extension or any src not currently
+        // wordless.
+        const printState = { active: false, snapshot: null };
+        const enterPrint = () => {
+            if (printState.active) return;
+            printState.active = true;
+            printState.snapshot = imgs().map((img) => [
+                img,
+                img.getAttribute("src") || "",
+            ]);
+            printState.snapshot.forEach(([img, src]) => {
+                const next = toJa(src);
+                if (next !== src) img.setAttribute("src", next);
             });
+        };
+        const exitPrint = () => {
+            if (!printState.active) return;
+            printState.active = false;
+            const snapshot = printState.snapshot || [];
+            printState.snapshot = null;
+            snapshot.forEach(([img, src]) => img.setAttribute("src", src));
         };
         const preloadJa = () => {
             imgs().forEach((img) => {
@@ -166,10 +190,13 @@
         setTimeout(run, 500);
         run();
 
-        window.addEventListener("beforeprint", () => swapImages(true));
-        window.addEventListener("afterprint", () => swapImages(false));
+        window.addEventListener("beforeprint", enterPrint);
+        window.addEventListener("afterprint", exitPrint);
         const mq = window.matchMedia && window.matchMedia("print");
         if (mq && mq.addEventListener)
-            mq.addEventListener("change", (e) => swapImages(e.matches));
+            mq.addEventListener("change", (e) => {
+                if (e.matches) enterPrint();
+                else exitPrint();
+            });
     })();
 </script>
