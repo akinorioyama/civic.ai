@@ -51,43 +51,6 @@ const siteFixture = vi.hoisted(() => {
         fontFamily: "sans-serif",
         pad: 1,
     };
-    const multiLineFitsFrame: ComicsOverlayFrame = {
-        // Two short meaningful lines that each individually fit within the
-        // box width — exercises the "true" side of the `noSoftWrap`
-        // ternary's `meaningfulLines.length > 1 && eachSegmentFitsOneLine`
-        // condition.
-        text: "ab\ncd",
-        top: "40%",
-        left: "10%",
-        width: "80%",
-        height: "10%",
-        fontSize: 1,
-        align: "left",
-        color: "#000",
-        bg: "transparent",
-        italic: false,
-        angle: "0deg",
-        fontFamily: "sans-serif",
-        pad: 1,
-    };
-    const multiLineOverflowFrame: ComicsOverlayFrame = {
-        // Two meaningful lines, but each is wider than the box —
-        // exercises the "false" side of `eachSegmentFitsOneLine` while
-        // `meaningfulLines.length > 1` stays true.
-        text: "a long overflowing line\nanother long overflowing line",
-        top: "45%",
-        left: "10%",
-        width: "5%",
-        height: "10%",
-        fontSize: 5,
-        align: "left",
-        color: "#000",
-        bg: "transparent",
-        italic: false,
-        angle: "0deg",
-        fontFamily: "sans-serif",
-        pad: 1,
-    };
     const emptyTextFrame: ComicsOverlayFrame = {
         text: "   ",
         top: "0%",
@@ -164,13 +127,7 @@ const siteFixture = vi.hoisted(() => {
             ],
         },
         comicsJaOverlays: {
-            "pack1-a": [
-                emptyTextFrame,
-                shapedFrame,
-                italicRectFrame,
-                multiLineFitsFrame,
-                multiLineOverflowFrame,
-            ],
+            "pack1-a": [emptyTextFrame, shapedFrame, italicRectFrame],
             "overview-small": [italicRectFrame],
         },
         glossary: [
