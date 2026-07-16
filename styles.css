@@ -2293,6 +2293,13 @@ body.comics-page main {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+.comics-cell > .comics-page-link {
+    border: none;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+}
+
 .comics-page-link img {
     width: 100%;
     height: auto;
@@ -2400,6 +2407,45 @@ body.comics-page main {
     display: block;
     white-space: pre-wrap;
     overflow-wrap: break-word;
+}
+
+.comics-cell {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--surface);
+    transition:
+        border-color 0.15s,
+        box-shadow 0.15s;
+}
+
+.comics-cell:hover,
+.comics-cell:focus-within {
+    border-color: var(--gold-light);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.comics-gallery .next-action-button {
+    align-self: center;
+    margin: 8px 0 12px;
+    color: var(--heading);
+    border-color: var(--border);
+}
+
+.comics-gallery .next-action-button:hover {
+    color: var(--heading);
+    background: var(--warm);
+    border-color: var(--gold-light);
+}
+
+@media print {
+    .ja-ov-layer,
+    .comics-gallery .next-action-button,
+    .comics-gallery .comics-page-label {
+        display: none !important;
+    }
 }
 
 /* ─── POLIS REPORT ─── */
