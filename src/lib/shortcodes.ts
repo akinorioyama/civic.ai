@@ -145,8 +145,7 @@ function shapePolys(
     };
 }
 
-function renderOverlayFrame(frame: ComicsOverlayFrame, key: string): string {
-    const idAttr = frame.id ? ` id="${escapeAttr(`${key}-${frame.id}`)}"` : "";
+function renderOverlayFrame(frame: ComicsOverlayFrame): string {
     const ariaText = frame.text
         .split("\n")
         .map((line) => line.trim())
@@ -169,17 +168,9 @@ function renderOverlayFrame(frame: ComicsOverlayFrame, key: string): string {
     const text = escapeHtml(frame.text).replace(/\n/g, "&#10;");
     if (frame.shapeOn && frame.sL && frame.sR && frame.sD) {
         const { clip, left, right } = shapePolys(frame.sL, frame.sR, frame.sD);
-        return `<div class="ov shaped"${idAttr}${labelAttr} style="${base}background:${background};text-align:${frame.align};line-height:1.3;-webkit-clip-path:${clip};clip-path:${clip};"><span style="float:left;width:50%;height:100%;shape-outside:${left};"></span><span style="float:right;width:50%;height:100%;shape-outside:${right};"></span><span class="shaped-text">${text}</span></div>`;
+        return `<div class="ov shaped"${labelAttr} style="${base}background:${background};text-align:${frame.align};line-height:1.3;-webkit-clip-path:${clip};clip-path:${clip};"><span style="float:left;width:50%;height:100%;shape-outside:${left};"></span><span style="float:right;width:50%;height:100%;shape-outside:${right};"></span><span class="shaped-text">${text}</span></div>`;
     }
-    const meaningfulLines = frame.text
-        .split("\n")
-        .map((line) => line.trim())
-        .filter((line) => line !== "");
-    const boxWidthPct = parseFloat(frame.width);
-    const eachSegmentFitsOneLine = meaningfulLines.every(
-        (line) => line.length * frame.fontSize <= boxWidthPct
-    );
-    return `<div class="ov rect"${idAttr}${labelAttr} style="${base}background:${background};"><span style="text-align:${frame.align}">${text}</span></div>`;
+    return `<div class="ov rect"${labelAttr} style="${base}background:${background};"><span style="text-align:${frame.align}">${text}</span></div>`;
 }
 
 function renderOverlayLayer(key: string, arVar?: string): string {
@@ -191,7 +182,7 @@ function renderOverlayLayer(key: string, arVar?: string): string {
     );
     if (!frames.length) return "";
     const style = arVar ? ` style="--ov-ar:${arVar};"` : "";
-    return `<div class="ja-ov-layer"${style}>${frames.map((frame) => renderOverlayFrame(frame, key)).join("")}</div>`;
+    return `<div class="ja-ov-layer"${style}>${frames.map((frame) => renderOverlayFrame(frame)).join("")}</div>`;
 }
 
 export function renderComicsGalleryJa(): string {
