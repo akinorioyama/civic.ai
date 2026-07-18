@@ -66,6 +66,44 @@ const siteFixture = vi.hoisted(() => {
         fontFamily: "sans-serif",
         pad: 1,
     };
+    // A frame carrying a baked crop background (bgImageURL + bgImageParameter)
+    // exercises the `if (frame.bgImageURL)` branch and the "parameter present"
+    // side of the `bgImageParameter ?? ...` fallback.
+    const bakedBgFrame: ComicsOverlayFrame = {
+        text: "Baked bg text",
+        top: "40%",
+        left: "10%",
+        width: "30%",
+        height: "10%",
+        fontSize: 2,
+        align: "center",
+        color: "#000",
+        bg: "white",
+        italic: false,
+        angle: "0deg",
+        fontFamily: "sans-serif",
+        pad: 1,
+        bgImageURL: "/img/pack1-a-wordless.jpg",
+        bgImageParameter: "8.00% 30.00% / 218.00% 2600.00%",
+    };
+    // Same, but without bgImageParameter — exercises the "parameter absent"
+    // side of the `?? "center center / contain"` fallback.
+    const containBgFrame: ComicsOverlayFrame = {
+        text: "Contain bg text",
+        top: "55%",
+        left: "10%",
+        width: "30%",
+        height: "10%",
+        fontSize: 2,
+        align: "center",
+        color: "white",
+        bg: "white",
+        italic: false,
+        angle: "0deg",
+        fontFamily: "sans-serif",
+        pad: 1,
+        bgImageURL: "/img/pack1-a-wordless.jpg",
+    };
 
     return {
         lang2: (lang: string | undefined) =>
@@ -127,7 +165,13 @@ const siteFixture = vi.hoisted(() => {
             ],
         },
         comicsJaOverlays: {
-            "pack1-a": [emptyTextFrame, shapedFrame, italicRectFrame],
+            "pack1-a": [
+                emptyTextFrame,
+                shapedFrame,
+                italicRectFrame,
+                bakedBgFrame,
+                containBgFrame,
+            ],
             "overview-small": [italicRectFrame],
         },
         glossary: [
