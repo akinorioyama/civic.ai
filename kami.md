@@ -24,7 +24,9 @@ Be honest with yourself before you begin. These steps are a bootstrap, not a fin
 
 You do not need to be a coder. You will type three short commands into a window called the Terminal. On a Mac, open Spotlight (Command and Space), type "Terminal", and press Return. On Windows, open the Start menu, type "Terminal", and press Enter. Wherever this page says press Return, the same key is labelled Enter on Windows. A plain text window appears. You type a line, press Return, and wait. That is the whole skill.
 
-There are two honest ways to do this. Either way you end with a Kami that can come to know this place over time. The local path (Steps 1 to 3 below) is the default, and the one we recommend: it runs on your own machine and nothing leaves it, so anything you tell it about the people you serve stays with you. The hosted path skips Step 1 — no Ollama, no 7 GB download — and you pick a hosted model when OpenClaw asks in Step 2. It is still the same Terminal setup, and on the hosted path your conversations go to a third-party provider; you can move local later. If you are choosing for a room rather than only for yourself, let the consequence of a breach decide — if a leaked transcript would cost only time and goodwill, hosted is fine; if the conversations will carry people's care, dignity or private lives, stay local, on a machine the room owns. (The Civic AI book calls this the Trust & Sovereignty Spectrum.) If a line does not work you will see a short message — and if the message makes no sense, copy it into a search engine to decode it.
+There are two honest ways to do this. Either way you end with a Kami that can come to know this place over time. The local path (Steps 1 to 3 below) is the default, and the one we recommend if your machine can carry it: it runs on your own machine and nothing leaves it, so anything you tell it about the people you serve stays with you. The hosted path skips Step 1 — no Ollama, no 7 GB download — and you pick a hosted model when OpenClaw asks in Step 2. It is still the same Terminal setup. If a line does not work you will see a short message — and if the message makes no sense, copy it into a search engine to decode it.
+
+Hosted does not have to mean weaker or leakier — not if you ask any provider three questions first, especially when you are choosing for a room and not only for yourself. **Confidentiality** — will they put zero-data-retention terms in writing: no training on your conversations, nothing kept once it has replied? A policy you can read beats a promise on a sales call. **Capability** — is the model open-weight? Open-weight models now sit close to the frontier, so choosing privacy no longer means choosing a weaker Kami. **Sovereignty** — because the weights are open, can you take your custom to someone else, or bring the model home to your own machine, whenever you want? Insist on this one: it is what keeps a hosted Kami from quietly becoming somebody else's property. A provider who cannot answer these three plainly has already answered the fourth question, which is whether to trust them.
 
 Pick the model that fits your machine.
 
@@ -76,6 +78,8 @@ Then it opens a short, grounded conversation. It asks things like: what place, p
 
 Before going further, test it: ask your Kami about a local decision or event that never happened — "What did our neighbourhood decide about the old oak tree last March?" Your Kami should say it does not know, rather than inventing a plausible-sounding answer. If it fabricates one, it means the identity files may need sharpening, or a stronger local model may be needed, before you rely on it in a real gathering.
 
+Locality keeps that conversation private; it does not make the Kami more honest. A small model running entirely on your own laptop can invent a confident, wrong answer exactly as fluently as a hosted one can — which is exactly why the habits in "A quick check" below are worth keeping, whichever path you took to get here.
+
 ## Give it a memory
 
 By default your Kami starts each conversation fresh. A Kami that forgets every conversation cannot do the one thing it is for: come to know this place over time. So do this step rather than skip it. If you would like it to remember across sessions — what it learned about your place, the corrections you made, who it serves — you can give it a small, local memory. Everything stays on your machine.
@@ -97,11 +101,16 @@ If the brew install step fails, check [mnemon's README](https://github.com/mnemo
 
 mnemon recalls on keyword and graph without the embedder; the embedder only makes recall sharper, and it needs Ollama. So if you took the hosted path, install Ollama just for this small embedder, or skip both the pull and the .env line above. The entries are yours to read, correct, and forget, and nothing leaves your machine. [mnemon](https://github.com/mnemon-dev/mnemon) is open source (Apache-2.0).
 
+None of that lives inside the model itself. The model is hired for its voice — swap Ollama for a hosted model, or one hosted provider for another, and nothing you have built goes with the one you leave. What stays is what you kept: the three files, and now, if you set it up, MEMORY.md and mnemon's own store. Point any new model at the same files and it picks up exactly where the last one left off. Change the voice as often as you need to; your Kami does not lose a day.
+
 ## A quick check
 
 These are easier to check at a community gathering than in isolation.
 
 - The Kami refuses to answer something it cannot know — it says so plainly rather than guessing.
+- Ask it where it learned something. A trustworthy answer names a source, or says plainly that it is guessing — make "show me your source" an ordinary question in the room, not one you save for when you already suspect trouble.
+- If it has read something from your community's own records, check that it leaves something behind too — a note, a correction, a dated entry. A Kami that only reads and never deposits is how a shared record quietly goes dark.
+- Teach it something, then later ask for it back in different words. If it cannot find what you told it, it did not really learn it — being told something once and being able to retrieve it later are not the same skill.
 - It can describe what is in SOUL.md without you reading the file aloud to it first.
 - If the community has another language, it introduces itself in that language when asked.
 
