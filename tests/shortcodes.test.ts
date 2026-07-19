@@ -71,6 +71,10 @@ const siteFixture = vi.hoisted(() => {
     // side of the `bgImageParameter ?? ...` fallback.
     const bakedBgFrame: ComicsOverlayFrame = {
         text: "Baked bg text",
+        // An explicit `aria` reading exercises the "override present" side of
+        // the `frame.aria ?? frame.text` fallback; every other frame omits it
+        // and covers the "fall back to text" side.
+        aria: "Baked bg reading",
         top: "40%",
         left: "10%",
         width: "30%",

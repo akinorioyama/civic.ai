@@ -149,7 +149,10 @@ function renderOverlayFrame(frame: ComicsOverlayFrame): string {
     // renderOverlayLayer already filters out blank-after-trim frames before
     // calling this, so at least one non-whitespace line always survives —
     // ariaText is guaranteed non-empty here.
-    const ariaText = frame.text
+    // Prefer the authored `aria` reading (e.g. a hiragana gloss so screen
+    // readers pronounce a kanji spelling correctly); fall back to the
+    // visible text when no override is given.
+    const ariaText = (frame.aria ?? frame.text)
         .split("\n")
         .map((line) => line.trim())
         .filter((line) => line !== "")
